@@ -8,6 +8,7 @@ metadata:
   description: Description
   ms.topic: landing-page
   author: cwatson-cat
+  ms.service: azure-local
   ms.author: cwatson
   ms.date: 03/12/2025
 
