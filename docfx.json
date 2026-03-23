@@ -38,6 +38,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
       "breadcrumb_path": "~/breadcrumb/Azure-Sovereign-Clouds/toc.yml",
       "permissioned-type": "public"
