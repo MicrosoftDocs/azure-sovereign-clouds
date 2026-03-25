@@ -1,0 +1,63 @@
+### YamlMime:Landing
+
+title: Foundry Local on Azure Local documentation # < 60 chars
+summary: Deploy and run AI inference workloads on Azure Local with Arc-enabled Kubernetes. Use OpenAI-compatible APIs with your AI models while keeping data on-premises. # < 160 chars
+
+metadata:
+  title: Foundry Local on Azure Local documentation
+  description: Foundry Local on Azure Local enables you to deploy and run generative and predictive AI models on an Arc-enabled Kubernetes cluster for on-premises AI inference.
+  ms.topic: landing-page
+  author: cwatson-cat
+  ms.author: cwatson
+  ms.date: 03/25/2026
+  ms.service: azure
+  ms.subservice: sovereign-private-clouds
+
+landingContent:
+  - title: About Foundry Local on Azure Local
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Foundry Local on Azure Local?
+            url: what-is-foundry-local-on-azure-local.md
+          - text: Known issues
+            url: known-issues.md
+
+  - title: Key concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Inference operator and model lifecycle
+            url: concept-inference-operator.md
+
+  - title: Get started
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Deploy Foundry Local on Azure Local
+            url: deploy-foundry-local-on-azure-local.md
+
+  - title: Configure and secure
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure TLS and authentication
+            url: how-to-configure-tls-authentication.md
+
+  - title: Run inference
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run inference
+            url: how-to-run-inference.md
+
+  - title: Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Inference API endpoints and payload reference
+            url: reference-inference-api-endpoints-payload.md
+          - text: ModelDeployment and operator configuration reference
+            url: reference-model-deployment-operator.md
+          - text: Glossary
+            url: glossary.md
