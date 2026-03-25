@@ -33,7 +33,7 @@ Digital sovereignty is best understood through three interrelated pillars:
 Data controls define who can access data, where it's stored, and how it's processed. These controls include:
 
 - Data residency: Ensuring data remains within specific geographic or jurisdictional boundaries.
-- Access governance: Using tools such as [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview), [Azure Confidential Computing?](public/confidential-computing.md), and [External Key Management](public/external-key-management.md) to restrict unauthorized access.
+- Access governance: Using tools such as [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview), [Azure Confidential Computing](public/confidential-computing.md), and [External Key Management](public/external-key-management.md) to restrict unauthorized access.
 - Encryption and privacy: Using technologies like [Azure Key Vault Managed HSM](/azure/key-vault/managed-hsm/overview) and [Azure Key Vault Premium](/azure/key-vault/general/basic-concepts) to protect sensitive information.
 
 > Data controls are foundational to sovereignty. They help organizations comply with local regulations and reduce surveillance or unauthorized access. Learn more at [Data controls](data-controls.md).

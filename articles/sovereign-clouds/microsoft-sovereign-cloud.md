@@ -43,11 +43,11 @@ Public sector agencies and regulated industries must meet strict legal and polic
 
 Organizations can choose deployment models that align with their sovereignty needs:
 
-- [Sovereign Public Cloud](../sovereign-public-cloud/overview-sovereign-public-cloud.md): This deployment model is hosted in Microsoft-operated datacenters within defined geopolitical boundaries (for example, EU Data Boundary). It offers data residency, customer-managed encryption keys, and operational transparency. In addition, the model is built on Microsoft’s global Azure infrastructure with enhanced sovereignty controls, such as Data Guardian, External Key Management, and tamper-evident access logs.
+- [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md): This deployment model is hosted in Microsoft-operated datacenters within defined geopolitical boundaries (for example, EU Data Boundary). It offers data residency, customer-managed encryption keys, and operational transparency. In addition, the model is built on Microsoft’s global Azure infrastructure with enhanced sovereignty controls, such as Data Guardian, External Key Management, and tamper-evident access logs.
 
-- [Sovereign Private Cloud](../sovereign-private-cloud/overview-sovereign-private-cloud.md): This model runs in customer-controlled or partner-operated datacenters, supporting hybrid or disconnected operations. The model is delivered via Azure Local and Microsoft 365 Local. The model is ideal for defense, critical infrastructure, and national security scenarios.
+- [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md): This model runs in customer-controlled or partner-operated datacenters, supporting hybrid or disconnected operations. The model is delivered via Azure Local and Microsoft 365 Local. The model is ideal for defense, critical infrastructure, and national security scenarios.
 
-- [National Partner Clouds](../national-partner-clouds/overview-national-partner-clouds.md): These clouds are localized sovereign cloud instances delivered with an approved national or regional partner. The instances combine Microsoft sovereign capabilities with partner-operated or jointly governed operational processes to meet localized sovereignty, governance participation, and economic development requirements while retaining access to selected Microsoft cloud innovations under enhanced operational assurances. Their service scope, latency characteristics, and rollout sequencing can differ from those offered by global Azure. As a result, customers need to review the published service matrices for each national implementation.
+- [National Partner Clouds](partner/overview-national-partner-clouds.md): These clouds are localized sovereign cloud instances delivered with an approved national or regional partner. The instances combine Microsoft sovereign capabilities with partner-operated or jointly governed operational processes to meet localized sovereignty, governance participation, and economic development requirements while retaining access to selected Microsoft cloud innovations under enhanced operational assurances. Their service scope, latency characteristics, and rollout sequencing can differ from those offered by global Azure. As a result, customers need to review the published service matrices for each national implementation.
 
 ### Security and confidentiality
 
@@ -57,10 +57,10 @@ Microsoft Sovereign Cloud uses hardware-based confidential computing, customer-m
 
 | Component | Purpose |
 |-----------|---------|
-|[Sovereign Landing Zone (SLZ)](../sovereign-public-cloud/sovereign-landing-zone/overview-slz.md) | Preconfigured Azure environment with policy-as-code templates to enforce compliance and security baselines.|
+|[Sovereign Landing Zone (SLZ)](public/overview-slz.md) | Preconfigured Azure environment with policy-as-code templates to enforce compliance and security baselines.|
 |Azure Local | Brings core Azure services (compute, storage, networking) to customer premises, supporting disconnected and hybrid scenarios. | 
 |Microsoft 365 Local | Runs Exchange, SharePoint, and Teams in a sovereign environment, built on Azure Stack HCI. | 
-|[Confidential Computing](../sovereign-public-cloud/capabilities/confidential-computing.md) | Protects data in use with Trusted Execution Environments (TEEs). |
+|[Confidential Computing](public/confidential-computing.md) | Protects data in use with Trusted Execution Environments (TEEs). |
 
 ## Customer value
 
@@ -72,9 +72,8 @@ Microsoft Sovereign Cloud uses hardware-based confidential computing, customer-m
 
 ## See also
 
-- [Discover Microsoft Sovereign Cloud](../index.yml)
-- [European Digital Commitments](./european-digital-commitments.md)
+- [European Digital Commitments](european-digital-commitments.md)
 - [Digital sovereignty](digital-sovereignty.md)  
-- [Sovereign Public Cloud](../sovereign-public-cloud/overview-sovereign-public-cloud.md)
-- [Sovereign Private Cloud](../sovereign-private-cloud/overview-sovereign-private-cloud.md)
-- [National Partner Clouds](../national-partner-clouds/overview-national-partner-clouds.md)
+- [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md)
+- [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md)
+- [National Partner Clouds](partner/overview-national-partner-clouds.md)

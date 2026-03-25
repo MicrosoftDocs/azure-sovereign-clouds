@@ -72,9 +72,9 @@ Transparency is a core principle of operational sovereignty. Organizations must 
 
 ## See also
 
-- [Data controls](./data-controls.md)
-- [Digital sovereignty](../overview/digital-sovereignty.md)
-- [Key controls](./key-controls.md)
-- [Technological independence](./technological-independence.md)
-- [Data Guardian](../sovereign-public-cloud/capabilities/data-guardian.md)
-- [Regulated Environment Management](../sovereign-public-cloud/capabilities/regulated-environment-management.md)
+- [Data controls](data-controls.md)
+- [Digital sovereignty](digital-sovereignty.md)
+- [Key controls](key-controls.md)
+- [Technological independence](technological-independence.md)
+- [Data Guardian](public/data-guardian.md)
+- [Regulated Environment Management](public/regulated-environment-management.md)

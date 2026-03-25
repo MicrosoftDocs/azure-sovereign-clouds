@@ -17,6 +17,7 @@ ms.collection:
 This article details key management controls for sovereign cloud scenarios, focusing on the security considerations and trade-offs between different approaches to key management and sovereignty. It provides guidance for organizations evaluating where to store and manage their cryptographic keys based on sovereignty, compliance, and operational requirements.
 
 For comprehensive information on Azure's key management solutions, including detailed product comparisons and selection guidance, see:
+
 - [Key management in Azure](/azure/security/fundamentals/key-management)
 - [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose)
 - [Managed HSM technical details](/azure/key-vault/managed-hsm/managed-hsm-technical-details)
@@ -49,7 +50,7 @@ The service addresses key security requirements through confidential computing a
 
 ### Security architecture highlights
 
-Azure Key Vault Managed HSM leverages [Azure Confidential Computing](../sovereign-public-cloud/capabilities/confidential-computing.md) to create an environment that matches or exceeds external HSM security. For comprehensive technical details, see [Managed HSM technical details](/azure/key-vault/managed-hsm/managed-hsm-technical-details).
+Azure Key Vault Managed HSM leverages [Azure Confidential Computing](public/confidential-computing.md) to create an environment that matches or exceeds external HSM security. For comprehensive technical details, see [Managed HSM technical details](/azure/key-vault/managed-hsm/managed-hsm-technical-details).
 
 - A Trusted Execution Environment (TEE) is created for each instance that the customer uses.
 - The TEE is based on external trust and keys outside of Microsoft control (Intel Software Guard Extensions (SGX)).
@@ -88,6 +89,7 @@ Because Azure hosts the HSM and keys, you need to evaluate protection against th
 - Management and operational procedures on the HSMs are limited to Azure Fabric controllers. Therefore out-of-bound operations that aren't built-into the service can't be called upon. Direct access to the partitions (and therefore key operations or partition wide operations) is restricted to each unique instance inside their respective TEEs. No human or out-of-bound access to the partition is possible, simply because the credentials to a partition are only known to each instance.
 
 For comprehensive details on Managed HSM architecture, security features, and best practices, see:
+
 - [What is Azure Key Vault Managed HSM?](/azure/key-vault/managed-hsm/overview)
 - [Managed HSM best practices](/azure/key-vault/managed-hsm/best-practices)
 
@@ -96,6 +98,7 @@ For comprehensive details on Managed HSM architecture, security features, and be
 External key management is a conceptual approach where organizations use their own hardware security modules (HSMs) for cryptographic operations while consuming cloud services. This approach physically separates keys from data and cloud infrastructure.
 
 This section provides educational context for understanding external key management architectures, their security considerations, and operational trade-offs. You can compare this architectural pattern against cloud-managed HSM services like Azure Key Vault Managed HSM when evaluating sovereignty requirements. For information about Azure's key management capabilities, see:
+
 - [Key management in Azure](/azure/security/fundamentals/key-management)
 - [What is Azure Key Vault Managed HSM?](/azure/key-vault/managed-hsm/overview)
 - [Managed HSM technical details](/azure/key-vault/managed-hsm/managed-hsm-technical-details)
@@ -151,13 +154,15 @@ Organizations considering external key stores must evaluate protection against t
 Trust in key management extends beyond the physical location of key material. Regardless of approach, trust is required in encryption methods, firmware, and services that mediate between consuming applications and key storage.
 
 **External key management approach:**
+
 - Physical separation of keys from cloud infrastructure
 - Requires trust in proxy components that translate cloud-initiated calls into HSM-specific operations
 - Maintains dependency on cloud-based key management service integration points
 - Places full responsibility for security, reliability, durability, and performance on the organization
 
 **Azure Key Vault Managed HSM:**
-- Delivers key sovereignty through [Azure Confidential Computing](../sovereign-public-cloud/capabilities/confidential-computing.md) architecture with Intel SGX-protected credentials
+
+- Delivers key sovereignty through [Azure Confidential Computing](public/confidential-computing.md) architecture with Intel SGX-protected credentials
 - Provides FIPS 140-3 Level 3 validated HSM protection within Azure datacenters
 - Enables multifactor authentication, multi-approval processes, and quorum requirements through Microsoft Entra ID and security domain quorum
 - Uses unique security domains with customer-controlled masking keys and protection mechanisms
@@ -187,9 +192,9 @@ Organizations should evaluate approaches based on compliance requirements, opera
 - [How to choose the right key management solution](/azure/security/fundamentals/key-management-choose) - decision guidance based on requirements and scenarios.
 - [Azure Key Vault overview](/azure/key-vault/general/overview) - details on Azure Key Vault Standard and Premium tiers.
 - [What is Azure Key Vault Managed HSM?](/azure/key-vault/managed-hsm/overview) - Managed HSM architecture and capabilities.
-- [External key management](../sovereign-public-cloud/capabilities/external-key-management.md) - understanding external key management approaches.
-- [Azure Confidential Computing](../sovereign-public-cloud/capabilities/confidential-computing.md) - foundational technology for Managed HSM security.
-- [Data controls](./data-controls.md) - complementary data sovereignty controls.
-- [Operational controls](./operational-controls.md) - operational sovereignty considerations.
-- [Digital sovereignty](../overview/digital-sovereignty.md) - overall sovereignty framework.
-- [Technological independence](./technological-independence.md) - technology sovereignty principles.
+- [What is External Key Management?](public/external-key-management.md) - understanding external key management approaches.
+- [Azure Confidential Computing](public/confidential-computing.md) - foundational technology for Managed HSM security.
+- [Data controls](data-controls.md) - complementary data sovereignty controls.
+- [Operational controls](operational-controls.md) - operational sovereignty considerations.
+- [Digital sovereignty](digital-sovereignty.md) - overall sovereignty framework.
+- [Technological independence](technological-independence.md) - technology sovereignty principles.

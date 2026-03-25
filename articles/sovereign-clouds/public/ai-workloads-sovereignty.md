@@ -11,11 +11,12 @@ ms.collection:
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority
 ---
+
 # AI workloads and sovereignty
 
 Artificial intelligence (AI) workloads introduce unique sovereignty considerations. These workloads often involve large volumes of sensitive data, model assets that can embed regulated information, and inference operations that might produce or transform sensitive output. Designing AI solutions in Sovereign Public Cloud requires consistent application of sovereign controls across the AI lifecycle - from data sourcing and labeling to training, fine-tuning, deployment, inference, monitoring, and retirement.
 
-This article provides guidance to help you align AI workloads with sovereignty objectives - data, operational, and technological - using capabilities available in the Microsoft cloud ecosystem. It complements broader guidance on [How to implement workloads in Sovereign Public Cloud](./overview-implement-workloads.md) and specific capabilities such as [External Key Management](../capabilities/external-key-management.md), [Confidential Computing](../capabilities/confidential-computing.md), [Data Guardian](../capabilities/data-guardian.md), and [Regulated Environment Management (REM)](../capabilities/regulated-environment-management.md).
+This article provides guidance to help you align AI workloads with sovereignty objectives - data, operational, and technological - using capabilities available in the Microsoft cloud ecosystem. It complements broader guidance on [How to implement workloads in Sovereign Public Cloud](overview-implement-workloads.md) and specific capabilities such as [External Key Management](external-key-management.md), [Confidential Computing](confidential-computing.md), [Data Guardian](data-guardian.md), and [Regulated Environment Management (REM)](regulated-environment-management.md).
 
 ## Why AI sovereignty matters
 
@@ -53,15 +54,15 @@ Apply existing classification labels early (before model selection). Distinguish
 
 ### Encryption and key strategy
 
-Use CMK by default for persistent storage of sensitive training datasets, model weights, and vector databases. Where regulatory or policy requirements mandate exclusive key custody, integrate [External Key Management](../capabilities/external-key-management.md) so cryptographic operations occur with keys outside Microsoft's cloud boundary. Rotate keys in alignment with model version release cycles and revoke unused keys promptly when decommissioning models.
+Use CMK by default for persistent storage of sensitive training datasets, model weights, and vector databases. Where regulatory or policy requirements mandate exclusive key custody, integrate [External Key Management](external-key-management.md) so cryptographic operations occur with keys outside Microsoft's cloud boundary. Rotate keys in alignment with model version release cycles and revoke unused keys promptly when decommissioning models.
 
 ### Confidential computing (data in use)
 
-Protect high-sensitivity training and inference workloads by using [Confidential Computing](../capabilities/confidential-computing.md) options to reduce reliance on operator trust. You can integrate attestation into pipeline orchestration gates so that secrets (for example, decryption keys or dataset access tokens) are provisioned only after enclave measurement validation.
+Protect high-sensitivity training and inference workloads by using [Confidential Computing](confidential-computing.md) options to reduce reliance on operator trust. You can integrate attestation into pipeline orchestration gates so that secrets (for example, decryption keys or dataset access tokens) are provisioned only after enclave measurement validation.
 
 ### Operational oversight and environment governance
 
-Use [Data Guardian](../capabilities/data-guardian.md) for supervised provider operations in regulated regions and REM (as it matures) for unified configuration, deployment, and monitoring of sovereign AI environments. Combine with Azure Policy initiatives (Level 2 and Level 3) to enforce encryption at rest and confidential compute enablement for specified resource types.
+Use [Data Guardian](data-guardian.md) for supervised provider operations in regulated regions and REM (as it matures) for unified configuration, deployment, and monitoring of sovereign AI environments. Combine with Azure Policy initiatives (Level 2 and Level 3) to enforce encryption at rest and confidential compute enablement for specified resource types.
 
 ### Identity, access, and segmentation
 
@@ -135,12 +136,12 @@ AI sovereignty is achieved by consistently extending existing sovereign controls
 
 ## See also
 
-- [Implementing workloads in the Sovereign Public Cloud](./overview-implement-workloads.md)
-- [Design sovereign policies](./design-sovereign-policies.md)
-- [External Key Management](../capabilities/external-key-management.md)
-- [Confidential Computing](../capabilities/confidential-computing.md)
-- [Data Guardian](../capabilities/data-guardian.md)
-- [Regulated Environment Management](../capabilities/regulated-environment-management.md)
+- [Implementing workloads in the Sovereign Public Cloud](overview-implement-workloads.md)
+- [Design sovereign policies](design-sovereign-policies.md)
+- [External Key Management](external-key-management.md)
+- [Confidential Computing](confidential-computing.md)
+- [Data Guardian](data-guardian.md)
+- [Regulated Environment Management](regulated-environment-management.md)
 - [Encryption overview](/azure/security/fundamentals/encryption-overview)
 - [Confidential computing](/azure/confidential-computing/overview)
 - [EU data boundary](/privacy/eudb/eu-data-boundary-learn)

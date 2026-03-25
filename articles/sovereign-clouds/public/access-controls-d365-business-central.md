@@ -62,6 +62,7 @@ PIM is a service in Microsoft Entra ID that helps you manage, control, and monit
 - **Conditional access**: PIM lets you manage access levels for individual users after they sign in to Microsoft Entra. Microsoft Entra Conditional Access lets you set conditions for signing in to Dynamics 365 Business Central. For example, conditional access lets you limit sign-ins to trusted devices, locations, and acceptable risk levels. 
 
 For Dynamics 365 Business Central, use PIM to:
+
 - [Control role assignment](/entra/id-governance/privileged-identity-management/pim-how-to-add-role-to-user) for the [Dynamics 365 Business Central Administrator Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference#dynamics-365-business-central-administrator).
 - [Control security group memberships](/entra/id-governance/privileged-identity-management/groups-assign-member-owner) that:
   - [Grant access to an environment](/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-manage-access).
@@ -79,5 +80,4 @@ Use the **Delegated BC Admin agent - Partner** [license configuration](/dynamics
 ## See also
 
 * [Data sovereignty in Dynamics 365 Business Central](sovereign-controls-d365-business-central.md)
-
 * [Security controls in Dynamics 365 Business Central](security-controls-d365-business-central.md)
