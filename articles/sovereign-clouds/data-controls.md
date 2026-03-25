@@ -48,7 +48,7 @@ By default, all Azure services use encryption in transit, including region-to-re
 All services in Azure use server-side encryption for data at rest with platform-managed keys (PMKs). The platform generates and maintains these keys for you. Many services also support customer-managed keys (CMKs). Depending on the service, these keys can work in combination with the PMKs for even better protection.
 You can store customer-managed keys in either Azure Key Vault (standard or Premium) or, in many cases, in Azure Key Vault managed HSM. For your most sensitive sovereign workloads, use Azure Key Vault managed HSM, as this service guarantees you have full control over the encryption keys in a single tenant environment. You're fully responsible for safeguarding the [security domain](/azure/key-vault/managed-hsm/security-domain), which [must be downloaded](/azure/key-vault/managed-hsm/security-domain#downloading-the-encrypted-security-domain) upon activating your Managed HSM instance.
 
-You can also consider [External Key Management](../sovereign-public-cloud/capabilities/external-key-management.md) for specific regulated workloads. This service is an extension of Azure Key Vault managed HSM and allows you to own and manage your keys outside of Azure. External key management is a capability that allows customers to use their own Hardware Security Modules (HSMs) to support cryptographic operations for cloud services. With external key management, customers can store their keys in their own HSMs, which are physically separated from the cloud services. This capability, known as Hold Your Own Key (HYOK), ensures that you always retain full control over your keys. This full control comes with more responsibilities as you're responsible for the availability, scalability, and backups of all key material.
+You can also consider [External Key Management?](public/external-key-management.md) for specific regulated workloads. This service is an extension of Azure Key Vault managed HSM and allows you to own and manage your keys outside of Azure. External key management is a capability that allows customers to use their own Hardware Security Modules (HSMs) to support cryptographic operations for cloud services. With external key management, customers can store their keys in their own HSMs, which are physically separated from the cloud services. This capability, known as Hold Your Own Key (HYOK), ensures that you always retain full control over your keys. This full control comes with more responsibilities as you're responsible for the availability, scalability, and backups of all key material.
 
 While most data security measures are based on at-rest and in-transit encryption of data, [Azure Confidential Computing](/azure/confidential-computing/overview) also extends those capabilities to encryption for data in use. This means that the actual compute instance interacting with the (decrypted) data uses encryption itself within its allocated memory space. Azure fully complies with the [Confidential Computing Consortium](https://confidentialcomputing.io/) standards that are available on Intel, AMD, and NVIDIA hardware.
 
@@ -76,8 +76,8 @@ With Azure, Microsoft 365, and Dynamics 365, you can choose where your data is s
 - [Data encryption models](/azure/security/fundamentals/encryption-models)
 - [Azure Rights Management encryption service](/purview/azure-rights-management-learn-about)
 - [Managed HSM disaster recovery](/azure/key-vault/managed-hsm/disaster-recovery-guide)
-- [Digital sovereignty](../overview/digital-sovereignty.md)
+- [Digital sovereignty](digital-sovereignty.md)
 - [Key management](./key-controls.md)
 - [Operational controls](./operational-controls.md)
 - [Technological independence](./technological-independence.md)
-- [Confidential computing](../sovereign-public-cloud/capabilities/confidential-computing.md)
+- [Confidential computing?](public/confidential-computing.md)
