@@ -1,9 +1,13 @@
 {
-    "BaseConfiguration": "docutune-default.json",
-    "Docsets": [],
-    "MetadataDelimiter": "\"",
-    "Exclude": [],
-    "PreloadTOCFiles": [],
-    "TermFiles": [],
-    "ApplyPolicies": []
+  "Docsets": [
+    {
+      "DocsetName": "Azure-Sovereign-Clouds",
+      "BuildSourceFolder": "."
+    }
+  ],
+  "MetadataDelimiter": "\"",
+  "Exclude": [],
+  "PreloadTOCFiles": [],
+  "TermFiles": [],
+  "ApplyPolicies": []
 }

@@ -1,0 +1,21 @@
+### YamlMime:Landing
+
+title: Welcome to Azure Sovereign Clouds
+summary: Summary
+
+metadata:
+  title: Title
+  description: Description
+  ms.topic: landing-page
+  author: cwatson-cat
+  ms.service: azure-local
+  ms.author: cwatson
+  ms.date: 03/12/2025
+
+landingContent:
+  - title: Title
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Link text
+            url: stub.md
