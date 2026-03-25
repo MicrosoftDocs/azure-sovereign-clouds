@@ -55,7 +55,7 @@ When you create or update a Model or ModelDeployment resource, the operator:
 1. Creates child resources - Deployment, Service, and optionally Ingress.
 1. Updates the resource status with endpoint information.
 
-:::image type="content" source="media/how-inference-operator-works.svg" alt-text="Diagram showing the inference operator reconciliation flow: resource creation triggers validation, model resolution, child resource creation, and status update.":::
+:::image type="content" source="media/how-inference-operator-works.svg" alt-text="Diagram showing the inference operator reconciliation flow: resource creation triggers validation, model resolution, child resource creation, and status update." border="false":::
 
 ### ModelDeployment lifecycle states
 
@@ -72,7 +72,7 @@ When you create or update a Model or ModelDeployment resource, the operator:
 
 The model catalog is a ConfigMap that stores metadata about available models from the Foundry catalog. It serves as a local cache: when you deploy a catalog model, the operator reads from this ConfigMap to get model details like display name, variants, and requirements.
 
-:::image type="content" source="media/model-catalog-data-flow.svg" alt-text="Diagram showing the model catalog data flow: the catalog-sync component fetches metadata from the Azure Foundry Catalog API and stores it in the foundry-local-catalog ConfigMap in the cluster.":::
+:::image type="content" source="media/model-catalog-data-flow.svg" alt-text="Diagram showing the model catalog data flow: the catalog-sync component fetches metadata from the Azure Foundry Catalog API and stores it in the foundry-local-catalog ConfigMap in the cluster." border="false":::
 
 ### Query the catalog
 
