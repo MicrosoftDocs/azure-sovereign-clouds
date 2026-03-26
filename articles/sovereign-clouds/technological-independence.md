@@ -60,8 +60,8 @@ For governments and critical infrastructure, Microsoft supports [National Partne
 Technological independence includes robust security and compliance features:
 
 - Customer-managed keys and [external key management](public/external-key-management.md)
-- [Tamper evident logging](public/capabilities/data-guardian.md) via Azure Confidential Ledger
-- Policy enforcement through [Azure Landing Zones](public/sovereign-landing-zone/overview-slz.md) and Sovereign Baselines
+- [Tamper evident logging](public/data-guardian.md) via Azure Confidential Ledger
+- Policy enforcement through [Azure Landing Zones](public/overview-slz.md) and Sovereign Baselines
 
 ## Implementation strategies
 
