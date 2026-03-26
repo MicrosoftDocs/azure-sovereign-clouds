@@ -16,9 +16,6 @@ ms.collection:
 
 Microsoft’s Sovereign Public Cloud approach lets governments and regulated industries use the hyperscale Microsoft cloud and add controls for data residency, operational oversight, and customer‑controlled encryption. This article introduces four foundational capabilities and provides links to more information.
 
-> [!TIP]
-> For broader context and planning guidance, see the [Microsoft Sovereign Cloud documentation hub](../../index.yml).
-
 ## Data Guardian
 
 Data Guardian enhances operational sovereignty by ensuring that authorized regional personnel approve and monitor remote access by Microsoft personnel to sovereign‑region services. All access is recorded in a tamper‑evident ledger.
@@ -29,7 +26,7 @@ Data Guardian helps customers:
 - Provide transparent, auditable operations via immutable logs.
 - Build trust while retaining the benefits of the hyperscale cloud.
 
-For more information, see [Data Guardian](./data-guardian.md).
+For more information, see [Data Guardian](data-guardian.md).
 
 ## External Key Management
 
@@ -41,7 +38,7 @@ External Key Management enables customers to:
 - Align with regulatory expectations for key ownership and residency.
 - Add a defense‑in‑depth layer separating cloud operations from key custody.
 
-For more information, see [External Key Management](./external-key-management.md) and [Encryption overview](/azure/security/fundamentals/encryption-overview).
+For more information, see [External Key Management](external-key-management.md) and [Encryption overview](/azure/security/fundamentals/encryption-overview).
 
 ## Confidential Computing
 
@@ -53,7 +50,7 @@ Confidential Computing:
 - Helps address operational access concerns by limiting visibility during processing.
 - Aligns with sovereign landing zone patterns for confidential workloads.
 
-For more information, see [Confidential Computing](./confidential-computing.md) and [Sovereign Landing Zone](../sovereign-landing-zone/overview-slz.md).
+For more information, see [Confidential Computing](confidential-computing.md) and [Sovereign Landing Zone](overview-slz.md).
 
 ## Regulated Environment Management (REM)
 
@@ -65,7 +62,7 @@ Regulated Environment Management:
 - Applies policy‑as‑code guardrails consistently at scale.
 - Complements EKM, Data Guardian, and Confidential Computing.
 
-For more information, see [Regulated Environment Management](./regulated-environment-management.md).
+For more information, see [Regulated Environment Management](regulated-environment-management.md).
 
 ## Choose the right capability for your goal
 
@@ -84,9 +81,9 @@ Sovereign Public Cloud capabilities are most effective when used with policy‑a
 
 ## See also
 
-- [External Key Management](./external-key-management.md)  
-- [Data Guardian](./data-guardian.md)  
-- [Confidential Computing](./confidential-computing.md)  
-- [Regulated Environment Management](./regulated-environment-management.md)
-- [Discover Microsoft Sovereign Cloud (product overview and EU focus)](../../overview/microsoft-sovereign-cloud.md)
-- [Sovereign Landing Zone overview](../sovereign-landing-zone/overview-slz.md)
+- [External Key Management](external-key-management.md)  
+- [Data Guardian](data-guardian.md)  
+- [Confidential Computing](confidential-computing.md)  
+- [Regulated Environment Management](regulated-environment-management.md)
+- [Discover Microsoft Sovereign Cloud (product overview and EU focus)](../microsoft-sovereign-cloud.md)
+- [Sovereign Landing Zone overview](overview-slz.md)

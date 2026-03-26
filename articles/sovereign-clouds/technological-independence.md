@@ -14,9 +14,9 @@ ms.collection:
 
 # Technological independence
 
-Technological independence is a dimension of digital sovereignty, along with [data controls](./data-controls.md) and [operational controls](./operational-controls.md). It refers to the ability of organizations to choose, manage, and secure their digital infrastructure without undue reliance on foreign technologies or proprietary constraints. In the context of Azure, this ability means enabling customers to run workloads [on-premises](../sovereign-private-cloud/overview-sovereign-private-cloud.md), in [hybrid environments](../sovereign-private-cloud/overview-sovereign-private-cloud.md), or through [national partner clouds](../national-partner-clouds/overview-national-partner-clouds.md), while maintaining full control over operations, data, and compliance.
+Technological independence is a dimension of digital sovereignty, along with [data controls](data-controls.md) and [operational controls](operational-controls.md). It refers to the ability of organizations to choose, manage, and secure their digital infrastructure without undue reliance on foreign technologies or proprietary constraints. In the context of Azure, this ability means enabling customers to run workloads [on premises](private/overview-sovereign-private-cloud.md), in [hybrid environments](private/overview-sovereign-private-cloud.md), or through [national partner clouds](partner/overview-national-partner-clouds.md), while maintaining full control over operations, data, and compliance.
 
-Microsoft's approach to technological independence is anchored in [Sovereign Private Cloud](../sovereign-private-cloud/overview-sovereign-private-cloud.md) offerings. These offerings are designed for scenarios where public cloud isn't viable due to regulatory, latency, or jurisdictional constraints.
+Microsoft's approach to technological independence is anchored in [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md) offerings. These offerings are designed for scenarios where public cloud isn't viable due to regulatory, latency, or jurisdictional constraints.
 
 ## Why technological independence matters
 
@@ -49,7 +49,7 @@ Azure Local supports a range of deployment models:
 
 ### 3. National Partner Clouds
 
-For governments and critical infrastructure, Microsoft supports [National Partner Clouds](../national-partner-clouds/overview-national-partner-clouds.md) operated by local entities:
+For governments and critical infrastructure, Microsoft supports [National Partner Clouds](partner/overview-national-partner-clouds.md) operated by local entities:
 
 - Government-approved operators
 - Independent infrastructure
@@ -59,9 +59,9 @@ For governments and critical infrastructure, Microsoft supports [National Partne
 
 Technological independence includes robust security and compliance features:
 
-- Customer-managed keys and [external key management](../sovereign-public-cloud/capabilities/external-key-management.md)
-- [Tamper evident logging](../sovereign-public-cloud/capabilities/data-guardian.md) via Azure Confidential Ledger
-- Policy enforcement through [Azure Landing Zones](../sovereign-public-cloud/sovereign-landing-zone/overview-slz.md) and Sovereign Baselines
+- Customer-managed keys and [external key management](public/external-key-management.md)
+- [Tamper evident logging](public/capabilities/data-guardian.md) via Azure Confidential Ledger
+- Policy enforcement through [Azure Landing Zones](public/sovereign-landing-zone/overview-slz.md) and Sovereign Baselines
 
 ## Implementation strategies
 
@@ -80,10 +80,10 @@ To achieve technological independence, organizations should:
 
 ## See also
 
-- [Data controls](./data-controls.md)
-- [Digital sovereignty](../overview/digital-sovereignty.md)
-- [Key controls](./key-controls.md)
-- [Operational controls](./operational-controls.md)
+- [Data controls](data-controls.md)
+- [Digital sovereignty](digital-sovereignty.md)
+- [Key controls](key-controls.md)
+- [Operational controls](operational-controls.md)
 - [Hybrid capabilities with Azure services in Azure Local – Microsoft Learn](/azure/azure-local/hybrid-capabilities-with-azure-services-23h2)
-- [Sovereign Private Cloud](../sovereign-private-cloud/overview-sovereign-private-cloud.md)
-- [National Partner Clouds](../national-partner-clouds/overview-national-partner-clouds.md)
+- [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md)
+- [National Partner Clouds](partner/overview-national-partner-clouds.md)

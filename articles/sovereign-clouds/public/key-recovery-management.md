@@ -83,7 +83,7 @@ Azure Managed HSM offers unmatched security and sovereignty, but with that contr
 
 - [Key management controls](../key-controls.md) - Key management considerations for sovereign cloud
 - [Business continuity and disaster recovery (BCDR) for sovereign workloads](bcdr-impacts-sovereign-controls.md) - BCDR impacts with sovereign controls
-- [External key management](../capabilities/external-key-management.md) - External key management approaches
+- [External key management](external-key-management.md) - External key management approaches
 - [Implement workloads in the Sovereign Public Cloud](overview-implement-workloads.md) - Overview of implementing sovereign workloads
 - [Security domain in Managed HSM](/azure/key-vault/managed-hsm/security-domain) - Detailed information about Security Domain
 - [Disaster Recovery Guide for Managed HSM](/azure/key-vault/managed-hsm/disaster-recovery-guide) - Step-by-step recovery procedures

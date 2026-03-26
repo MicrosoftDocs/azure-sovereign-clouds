@@ -19,9 +19,9 @@ Sovereign Public Cloud is Microsoft’s approach to supporting the digital sover
 
 At a high level, Sovereign Public Cloud:
 
-- Adds sovereignty capabilities on top of Azure and [Advanced Data Residency in Microsoft 365](/microsoft-365/enterprise/advanced-data-residency), [confidential computing](./capabilities/confidential-computing.md), and the ability to [bring and manage your own keys](./capabilities/external-key-management.md) in Hardware Security Modules (HSMs).
-- Uses codified guardrails such as policy-as-code and [landing zones](./sovereign-landing-zone/overview-slz.md) so customers can configure, deploy, and monitor compliant environments at scale.
-- Has specific sovereignty features for EU/EFTA Microsoft datacenters (data stays in Europe, under EU law and control), such as the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Data Guardian](./capabilities/data-guardian.md).
+- Adds sovereignty capabilities on top of Azure and [Advanced Data Residency in Microsoft 365](/microsoft-365/enterprise/advanced-data-residency), [confidential computing](confidential-computing.md), and the ability to [bring and manage your own keys](external-key-management.md) in Hardware Security Modules (HSMs).
+- Uses codified guardrails such as policy-as-code and [landing zones](overview-slz.md) so customers can configure, deploy, and monitor compliant environments at scale.
+- Has specific sovereignty features for EU/EFTA Microsoft datacenters (data stays in Europe, under EU law and control), such as the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Data Guardian](data-guardian.md).
 
 > [!NOTE]
 > For more clarity on the definition of EU, EFTA, European please refer to [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn).
@@ -40,16 +40,16 @@ The core features of Sovereign Public Cloud include:
 ### Operational oversight and transparency
 
 - Enhanced operational controls for access to European cloud services, controlled by European residents, and tracked by using tamper-evident logs to enable auditability and trust.
-- Public documentation for operational transparency programs (for example, registering for [Data Guardian](./capabilities/data-guardian.md) logs) to give eligible customers greater visibility into provider operations.
+- Public documentation for operational transparency programs (for example, registering for [Data Guardian](data-guardian.md) logs) to give eligible customers greater visibility into provider operations.
 
 ### Customer-controlled encryption and key management
 
-- Support for [bringing and managing your own keys](./capabilities/external-key-management.md) with HSM-based key stores, adding another layer of control over encryption keys used by Azure services.
-- Complementary Microsoft Learn guidance on managing keys and certificates, and using [confidential computing](./capabilities/confidential-computing.md) to protect data in use.
+- Support for [bringing and managing your own keys](external-key-management.md) with HSM-based key stores, adding another layer of control over encryption keys used by Azure services.
+- Complementary Microsoft Learn guidance on managing keys and certificates, and using [confidential computing](confidential-computing.md) to protect data in use.
 
 ### Policy as code guardrails with the Sovereign Landing Zone (SLZ)
 
-- Availability of [Sovereign Landing Zone](./sovereign-landing-zone/overview-slz.md) with Bicep and Terraform implementations. Sovereign Landing Zone is an opinionated variant of the Azure Landing Zone that applies policy as code for sovereignty needs (for example, residency, confidential computing, and location controls).
+- Availability of [Sovereign Landing Zone](overview-slz.md) with Bicep and Terraform implementations. Sovereign Landing Zone is an opinionated variant of the Azure Landing Zone that applies policy as code for sovereignty needs (for example, residency, confidential computing, and location controls).
 
 ## How does Sovereign Public Cloud work?
 
@@ -66,9 +66,9 @@ National, regional, and local governments, and regulated industries like energy,
 
 ## See also
 
-- [Sovereignty Controls and Principles](./overview-controls-principles.md)
-- [Confidential Computing](./capabilities/confidential-computing.md)
-- [Sovereign Landing Zone](./sovereign-landing-zone/overview-slz.md)
-- [Data Guardian](./capabilities/data-guardian.md)
-- [External Key Management](./capabilities/external-key-management.md)
-- [Regulated Environment Management](./capabilities/regulated-environment-management.md)
+- [Sovereignty Controls and Principles](overview-controls-principles.md)
+- [Confidential Computing](confidential-computing.md)
+- [Sovereign Landing Zone](overview-slz.md)
+- [Data Guardian](data-guardian.md)
+- [External Key Management](external-key-management.md)
+- [Regulated Environment Management](regulated-environment-management.md)

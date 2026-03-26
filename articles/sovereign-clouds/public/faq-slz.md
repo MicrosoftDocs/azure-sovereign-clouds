@@ -20,7 +20,7 @@ This article answers common questions about the Sovereign Landing Zone (SLZ).
 
 Not necessarily. The Sovereign Landing Zone (SLZ) is a variant of Azure landing zone and not a replacement.
 
-You can extend your existing Azure landing zone with [sovereign controls (Level 1–3)](../overview-controls-principles.md) instead of deploying a separate SLZ or redeploying if you already:
+You can extend your existing Azure landing zone with [sovereign controls (Level 1–3)](overview-controls-principles.md) instead of deploying a separate SLZ or redeploying if you already:
 
 - Use a structured management group hierarchy (platform vs. workload)
 - Enforce region restrictions for sensitive workloads
@@ -40,7 +40,7 @@ Adopt SLZ patterns when you face:
 
 ## What is the difference between Level 1, Level 2, and Level 3 sovereign controls?
 
-The three levels represent a progressive maturity model for [sovereign controls](../overview-controls-principles.md):
+The three levels represent a progressive maturity model for [sovereign controls](overview-controls-principles.md):
 
 | Level   | Scope                            | Common controls                                                                                                 |
 | ------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |

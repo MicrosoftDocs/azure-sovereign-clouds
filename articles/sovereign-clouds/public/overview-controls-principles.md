@@ -105,15 +105,15 @@ Similarly, some applications can require only [Intel SGX](/azure/confidential-co
 
 ## Next steps
 
-- Review the [Sovereign Landing Zone](./sovereign-landing-zone/overview-slz.md) architecture to map controls to management groups.
-- Plan policy layering with the [Design sovereign policies](./implementing-workloads/design-sovereign-policies.md) article.
-- Identify encryption scope and key strategy using [Key management controls](../concepts/key-controls.md).
-- Assess confidential compute applicability via [Confidential Computing](./capabilities/confidential-computing.md).
+- Review the [Sovereign Landing Zone](overview-slz.md) architecture to map controls to management groups.
+- Plan policy layering with the [Design sovereign policies](design-sovereign-policies.md) article.
+- Identify encryption scope and key strategy using [Key management controls](../key-controls.md).
+- Assess confidential compute applicability via [Confidential Computing](confidential-computing.md).
 
 ## See also
 
-- [Implementing sovereign Azure workloads](../sovereign-public-cloud/implementing-workloads/overview-implement-workloads.md)
-- [Confidential Computing](./capabilities/confidential-computing.md)
-- [External Key Management](./capabilities/external-key-management.md)
-- [Data controls](../concepts/data-controls.md)
-- [Operational controls](../concepts/operational-controls.md)
+- [Implementing sovereign Azure workloads](overview-implement-workloads.md)
+- [Confidential Computing](confidential-computing.md)
+- [External Key Management](external-key-management.md)
+- [Data controls](../data-controls.md) 
+- [Operational controls](../operational-controls.md)
