@@ -16,7 +16,7 @@ ms.collection:
 
 Azure Managed HSM is a cornerstone of **sovereign controls** within the Microsoft Sovereign Cloud architecture. It meets stringent regulatory and compliance requirements by ensuring that cryptographic operations and key material remain fully under your control. This sovereignty model provides unmatched assurance for data residency and compliance without impacting service SLAs, but it also shifts significant operational responsibilities to you.
 
-For more information about key management controls and sovereignty considerations, see [Key management controls](../../concepts/key-controls.md).
+For more information about key management controls and sovereignty considerations, see [Key management controls](../key-controls.md).
 
 Unlike Azure Key Vault (standard and premium), where Microsoft is responsible for key durability and service continuity, Managed HSM requires you to manage the **Security Domain (recovery)**, **RSA key pairs**, and key **backups**. This operational overhead includes recovery key generation, offline storage, and disaster recovery planning - tasks that are critical to maintaining accessibility to your encryption keys for your sovereign workloads. For more information, see [Security domain in Managed HSM overview](/azure/key-vault/managed-hsm/security-domain).
 
@@ -71,7 +71,7 @@ If you lose the Security Domain or quorum keys:
 
 If you prefer **Microsoft-managed responsibility for service and key availability**, consider **Azure Key Vault Premium**. Unlike Managed HSM, where you own the Security Domain and recovery process, Key Vault Premium ensures Microsoft handles service continuity and key durability. This option reduces operational overhead and risk.
 
-For more information about choosing the right key management solution, see [Key management controls](../../concepts/key-controls.md) and [External key management](../capabilities/external-key-management.md).
+For more information about choosing the right key management solution, see [Key management controls](../key-controls.md) and [External key management](external-key-management.md).
 
 For more information, see [Overview of Azure Key Vault Premium](/azure/key-vault/general/overview).
 
@@ -81,7 +81,7 @@ Azure Managed HSM offers unmatched security and sovereignty, but with that contr
 
 ## Related content
 
-- [Key management controls](../../concepts/key-controls.md) - Key management considerations for sovereign cloud
+- [Key management controls](../key-controls.md) - Key management considerations for sovereign cloud
 - [Business continuity and disaster recovery (BCDR) for sovereign workloads](bcdr-impacts-sovereign-controls.md) - BCDR impacts with sovereign controls
 - [External key management](../capabilities/external-key-management.md) - External key management approaches
 - [Implement workloads in the Sovereign Public Cloud](overview-implement-workloads.md) - Overview of implementing sovereign workloads

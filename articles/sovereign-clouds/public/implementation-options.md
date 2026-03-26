@@ -11,6 +11,7 @@ ms.collection:
   - microsoftcloud-sovereignty
   - microsoftcloud-seo-priority
 ---
+
 # Sovereign Landing Zone (SLZ) implementation options
 
 The Sovereign Landing Zone (SLZ) is a variant of the [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) that helps organizations implement sovereign controls, such as data residency, customer managed keys, externally managed encryption keys, encryption at rest, encryption in transit, confidential computing, and operational oversight. There's no single mandated deployment path. Organizations can adopt SLZ capabilities incrementally or as a full variant of an existing Azure landing zone.
@@ -72,7 +73,7 @@ For more information, see the following sections in the [Azure landing zone libr
 ## See also
 
 - [Sovereign Landing Zone (SLZ) overview](overview-slz.md)
-- [Design sovereign policies](../implementing-workloads/design-sovereign-policies.md)
+- [Design sovereign policies](design-sovereign-policies.md)
 - [Azure landing zone reference architecture](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure encryption overview](/azure/security/fundamentals/encryption-overview)
 - [Azure confidential computing overview](/azure/confidential-computing/overview)

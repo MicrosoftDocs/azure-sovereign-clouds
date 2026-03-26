@@ -18,7 +18,7 @@ Sovereign policies in Azure help organizations enforce requirements around data 
 
 The diagram shows how sovereign policy components relate within the broader governance framework.
 
-:::image type="content" source="../media/policy-framework.png" alt-text="Diagram shows the policy framework overview." lightbox="../media/policy-framework.png":::
+:::image type="content" source="media/policy-framework.png" alt-text="Diagram shows the policy framework overview." lightbox="media/policy-framework.png":::
 
 ## Sovereign policy initiatives
 
@@ -28,7 +28,7 @@ The sovereign controls are classified as Level‑1 (enforcing data locality and 
 
 The image illustrates how you can design policy initiatives in Azure to enforce sovereign controls across multiple services.
 
-:::image type="content" source="../media/policy-initiatives.png" alt-text="Diagram shows the Sovereign Policy Initiative." lightbox="../media/policy-initiatives.png":::
+:::image type="content" source="media/policy-initiatives.png" alt-text="Diagram shows the Sovereign Policy Initiative." lightbox="media/policy-initiatives.png":::
 
 Azure offers several baseline security policy initiatives that complement sovereign controls. The exact contents of sovereign and security policy initiatives vary by countries/regions, industry, and customer requirements. Organizations can use these starter policies as a baseline:
 
@@ -49,14 +49,14 @@ The Azure Sovereign Landing Zone includes the Secure Landing Zone initiative, a 
 
 Implement policies through management groups to ensure that workloads are logically separated from each other. In the following image, the three different levels indicate the different data classification levels in the workloads.
 
-:::image type="content" source="../media/slz-hierarchy-policy-controls.svg" alt-text="Diagram shows the management group policy overview." lightbox="../media/slz-hierarchy-policy-controls.svg":::
+:::image type="content" source="media/slz-hierarchy-policy-controls.svg" alt-text="Diagram shows the management group policy overview." lightbox="media/slz-hierarchy-policy-controls.svg":::
 
 > [!NOTE]
 > The diagram shows controls that you can apply to help implement the sovereign principles. The actual policies and initiatives that you apply depend on your organization's specific requirements. The diagram shows the Sovereign Landing Zone (SLZ) default architecture and the controls it applies by default.
 
 Apply the sovereign policies to platform‑level supporting services (Identity, Management, Security, and Connectivity).
 
-For more information, see [Sovereign Landing Zones](../sovereign-landing-zone/overview-slz.md).
+For more information, see [Sovereign Landing Zones](overview-slz.md).
 
 ## How it works
 

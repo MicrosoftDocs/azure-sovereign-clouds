@@ -79,4 +79,4 @@ The following common scenarios show how confidential computing can help you meet
 - [Azure Confidential Containers with AKS](/azure/aks/confidential-containers-overview)
 - [Confidential containers on Azure](/azure/confidential-computing/confidential-containers)
 - [Azure Confidential Ledger](/azure/confidential-ledger/overview)  
-- [Sovereign Landing Zone](../sovereign-landing-zone/overview-slz.md)
+- [Sovereign Landing Zone](overview-slz.md)

@@ -11,6 +11,7 @@ ms.collection:
   - microsoftcloud-sovereignty
   - microsoftcloud-seo-priority
 ---
+
 # FAQs for Sovereign Landing Zone
 
 This article answers common questions about the Sovereign Landing Zone (SLZ).
@@ -69,4 +70,4 @@ External Key Management (EKM—hold-your-own-key) is typically applied selective
 - [Sovereign Landing Zone overview](overview-slz.md)
 - [Implementation options](implementation-options.md)
 - [Implement the controls and principles](implement-controls-principles.md)
-- [Design sovereign policies](../implementing-workloads/design-sovereign-policies.md)
+- [Design sovereign policies](design-sovereign-policies.md)
