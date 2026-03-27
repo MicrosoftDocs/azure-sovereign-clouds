@@ -69,13 +69,13 @@
             - name: Apply sovereign controls to Dataverse and Power Platform
               items:
                - name: Access controls
-                 href: sovereign-clouds/public/access-controls-dataverse-powerplatform.md
+                 href: sovereign-clouds/public/access-controls-dataverse-power-platform.md
                - name: Security controls
-                 href: sovereign-clouds/public/security-controls-dataverse-powerplatform.md
+                 href: sovereign-clouds/public/security-controls-dataverse-power-platform.md
                - name: Sovereign controls
-                 href: sovereign-clouds/public/sovereign-controls-dataverse-powerplatform.md   
+                 href: sovereign-clouds/public/sovereign-controls-dataverse-power-platform.md   
                - name: Transparency controls
-                 href: sovereign-clouds/public/operational-transparency-dataverse-powerplatform.md  
+                 href: sovereign-clouds/public/operational-transparency-dataverse-power-platform.md  
             - name: Apply sovereign controls to Dynamics 365 Business Central
               items:
               - name: Access controls
