@@ -46,7 +46,7 @@ Azure Key Vault Managed HSM is a fully managed, cloud-based HSM service that pro
 
 The service addresses key security requirements through confidential computing architecture:
 
-:::image type="content" source="../media/managed-hsm-overview.png" alt-text="Managed HSM Architecture":::
+:::image type="content" source="media/managed-hsm-overview.png" alt-text="Managed HSM Architecture":::
 
 ### Security architecture highlights
 
@@ -104,7 +104,7 @@ This section provides educational context for understanding external key managem
 - [Managed HSM technical details](/azure/key-vault/managed-hsm/managed-hsm-technical-details)
 - [Encryption models - Host Your Own Key (HYOK)](/azure/security/fundamentals/encryption-models)
 
-:::image type="content" source="../media/external-key-management-architecture.png" alt-text="External Key Store Architectures":::
+:::image type="content" source="media/external-key-management-architecture.png" alt-text="External Key Store Architectures":::
 
 ### Architecture components
 

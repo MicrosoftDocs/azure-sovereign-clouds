@@ -31,7 +31,7 @@ Hyperscale cloud platforms deliver scale, agility, and advanced security, but th
 - Cloud value: Innovation, reliability, and cost efficiency.
 - Sovereign controls: Data residency, operational transparency, and compliance guardrails.
 
-:::image type="content" source="../media/cloud-value-overview.png" alt-text="Screenshot shows the cloud value overview." lightbox="../media/cloud-value-overview.png" :::
+:::image type="content" source="media/cloud-value-overview.png" alt-text="Screenshot shows the cloud value overview." lightbox="media/cloud-value-overview.png" :::
 
 ## Why Microsoft Sovereign Cloud is important
 
