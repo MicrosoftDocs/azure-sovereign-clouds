@@ -1,11 +1,12 @@
 ### YamlMime:Hub
 
 title: Welcome to Azure Sovereign Clouds
-summary: Summary
+summary: Discover how to make the most of Azure Sovereign Cloud with docs and how-to articles.
+
 
 metadata:
-  title: Title
-  description: Description
+  title: Welcome to Azure Sovereign Clouds
+  description: Discover how to make the most of Azure Sovereign Cloud with docs and how-to articles.
   ms.topic: hub-page # Required
   author: cwatson-cat
   ms.service: azure-local
@@ -28,7 +29,7 @@ highlightedContent:
 
 additionalContent:
   sections:
-  - title: Discover Microsoft Sovereign Cloud
+  - title: Discover Azure Sovereign Cloud
     items:
 
     - title: Sovereign Private Cloud
