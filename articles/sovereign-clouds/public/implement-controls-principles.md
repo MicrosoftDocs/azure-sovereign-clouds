@@ -18,7 +18,7 @@ As outlined in [Controls and principles in Sovereign Public Cloud](overview-cont
 
 This article describes how to implement the controls and principles outlined in the previous article by using Azure management groups and policies in the context of the Sovereign Landing Zone (SLZ). The following diagram shows the SLZ reference architecture's Management Group hierarchy with the associated controls and principles. These controls and principles translate to various Azure Policy assignments, initiatives, and definitions, and the scope at which you should apply them against the reference architecture.
 
-:::image type="content" source="media/slz-hierarchy-policy-controls.svg" alt-text="Diagram that shows a sovereign landing zone management group."::: lightbox="media/slz-hierarchy-policy-controls.svg":::
+:::image type="content" source="media/sovereign-landing-zone-policy-controls.svg" alt-text="Diagram that shows a sovereign landing zone management group."::: lightbox="media/sovereign-landing-zone-policy-controls.svg":::
 
 *Sovereign landing zone conceptual architecture's Management Group hierarchy with the associated controls and principles applied. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
