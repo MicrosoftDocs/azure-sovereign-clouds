@@ -2,6 +2,7 @@
   "build": {
     "content": [
       {
+        "src" : "articles",
         "files": [
           "**/*.md",
           "**/*.yml"
@@ -41,10 +42,8 @@
     "globalMetadata": {
       "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
-      "breadcrumb_path": "~/breadcrumb/Azure-Sovereign-Clouds/toc.yml",
-      "permissioned-type": "public",
-      "manager":"lizross",
-      "ms.service": "azure"
+      "breadcrumb_path": "/azure/azure-sovereign-clouds/toc.yml",
+      "permissioned-type": "public"
     },
     "fileMetadata": {},
     "template": []
