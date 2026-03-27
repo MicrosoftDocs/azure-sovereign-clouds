@@ -41,13 +41,13 @@
         - name: Sovereign Landing Zone
           items: 
             - name: Overview
-              href: sovereign-clouds/public/overview-slz.md
+              href: sovereign-clouds/public/overview-sovereign-landing-zone.md
             - name: Implement controls and principles
               href: sovereign-clouds/public/implement-controls-principles.md
             - name: Implementation options
               href: sovereign-clouds/public/implementation-options.md
             - name: FAQs for Sovereign Landing Zone
-              href: sovereign-clouds/public/faq-slz.md
+              href: sovereign-clouds/public/questions-sovereign-landing-zone.md
         - name: Implement workloads in the Sovereign Public Cloud
           items:
             - name: Overview
@@ -63,9 +63,9 @@
             - name: Apply sovereign controls to Microsoft 365
               items:
               - name: Overview
-                href: sovereign-clouds/public/m365-sovereign-controls.md
+                href: sovereign-clouds/public/microsoft-365-sovereign-controls.md
               - name: Microsoft 365 Rights Management
-                href: sovereign-clouds/public/m365-rights-management.md
+                href: sovereign-clouds/public/microsoft-365-rights-management.md
             - name: Apply sovereign controls to Dataverse and Power Platform
               items:
                - name: Access controls

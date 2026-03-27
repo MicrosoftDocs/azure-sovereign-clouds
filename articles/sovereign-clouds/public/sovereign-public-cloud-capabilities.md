@@ -50,7 +50,7 @@ Confidential Computing:
 - Helps address operational access concerns by limiting visibility during processing.
 - Aligns with sovereign landing zone patterns for confidential workloads.
 
-For more information, see [Confidential Computing](confidential-computing.md) and [Sovereign Landing Zone](overview-slz.md).
+For more information, see [Confidential Computing](confidential-computing.md) and [Sovereign Landing Zone](overview-sovereign-landing-zone.md).
 
 ## Regulated Environment Management (REM)
 
@@ -86,4 +86,4 @@ Sovereign Public Cloud capabilities are most effective when used with policy‑a
 - [Confidential Computing](confidential-computing.md)  
 - [Regulated Environment Management](regulated-environment-management.md)
 - [Discover Microsoft Sovereign Cloud (product overview and EU focus)](../microsoft-sovereign-cloud.md)
-- [Sovereign Landing Zone overview](overview-slz.md)
+- [Sovereign Landing Zone overview](overview-sovereign-landing-zone.md)

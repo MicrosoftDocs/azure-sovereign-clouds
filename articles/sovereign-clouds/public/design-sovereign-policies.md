@@ -56,7 +56,7 @@ Implement policies through management groups to ensure that workloads are logica
 
 Apply the sovereign policies to platform‑level supporting services (Identity, Management, Security, and Connectivity).
 
-For more information, see [Sovereign Landing Zones](overview-slz.md).
+For more information, see [Sovereign Landing Zones](overview-sovereign-landing-zone.md).
 
 ## How it works
 

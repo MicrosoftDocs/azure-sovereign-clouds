@@ -105,7 +105,7 @@ Similarly, some applications can require only [Intel SGX](/azure/confidential-co
 
 ## Next steps
 
-- Review the [Sovereign Landing Zone](overview-slz.md) architecture to map controls to management groups.
+- Review the [Sovereign Landing Zone](overview-sovereign-landing-zone.md) architecture to map controls to management groups.
 - Plan policy layering with the [Design sovereign policies](design-sovereign-policies.md) article.
 - Identify encryption scope and key strategy using [Key management controls](../key-controls.md).
 - Assess confidential compute applicability via [Confidential Computing](confidential-computing.md).

@@ -46,7 +46,7 @@ Use this glossary to align on common terminology across sovereignty concepts, ca
 ## See also
 
 - [Controls and principles](public/overview-controls-principles.md)
-- [Sovereign landing zone](public/overview-slz.md)
+- [Sovereign landing zone](public/overview-sovereign-landing-zone.md)
 - [Confidential computing](public/confidential-computing.md)
 - [External key management](public/external-key-management.md)
 - [Design sovereign policies](public/design-sovereign-policies.md)

@@ -41,7 +41,7 @@ Dynamics 365 Business Central environments with a localization of a countries/re
 
 ## Azure Policy and sovereign guardrails
 
-Azure services that integrate with Dynamics 365 Business Central can use Azure Policy to enforce sovereign controls on those services. For example, you can make sure no data is deployed outside allowed regions, or require encryption. For more information, see [Overview of Sovereign Landing Zone (SLZ)](overview-slz.md).
+Azure services that integrate with Dynamics 365 Business Central can use Azure Policy to enforce sovereign controls on those services. For example, you can make sure no data is deployed outside allowed regions, or require encryption. For more information, see [Overview of Sovereign Landing Zone (SLZ)](overview-sovereign-landing-zone.md).
 
 ## See also
 

@@ -20,7 +20,7 @@ Sovereign Public Cloud is Microsoft’s approach to supporting the digital sover
 At a high level, Sovereign Public Cloud:
 
 - Adds sovereignty capabilities on top of Azure and [Advanced Data Residency in Microsoft 365](/microsoft-365/enterprise/advanced-data-residency), [confidential computing](confidential-computing.md), and the ability to [bring and manage your own keys](external-key-management.md) in Hardware Security Modules (HSMs).
-- Uses codified guardrails such as policy-as-code and [landing zones](overview-slz.md) so customers can configure, deploy, and monitor compliant environments at scale.
+- Uses codified guardrails such as policy-as-code and [landing zones](overview-sovereign-landing-zone.md) so customers can configure, deploy, and monitor compliant environments at scale.
 - Has specific sovereignty features for EU/EFTA Microsoft datacenters (data stays in Europe, under EU law and control), such as the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Data Guardian](data-guardian.md).
 
 > [!NOTE]
@@ -49,7 +49,7 @@ The core features of Sovereign Public Cloud include:
 
 ### Policy as code guardrails with the Sovereign Landing Zone (SLZ)
 
-- Availability of [Sovereign Landing Zone](overview-slz.md) with Bicep and Terraform implementations. Sovereign Landing Zone is an opinionated variant of the Azure Landing Zone that applies policy as code for sovereignty needs (for example, residency, confidential computing, and location controls).
+- Availability of [Sovereign Landing Zone](overview-sovereign-landing-zone.md) with Bicep and Terraform implementations. Sovereign Landing Zone is an opinionated variant of the Azure Landing Zone that applies policy as code for sovereignty needs (for example, residency, confidential computing, and location controls).
 
 ## How does Sovereign Public Cloud work?
 
@@ -68,7 +68,7 @@ National, regional, and local governments, and regulated industries like energy,
 
 - [Sovereignty Controls and Principles](overview-controls-principles.md)
 - [Confidential Computing](confidential-computing.md)
-- [Sovereign Landing Zone](overview-slz.md)
+- [Sovereign Landing Zone](overview-sovereign-landing-zone.md)
 - [Data Guardian](data-guardian.md)
 - [External Key Management](external-key-management.md)
 - [Regulated Environment Management](regulated-environment-management.md)

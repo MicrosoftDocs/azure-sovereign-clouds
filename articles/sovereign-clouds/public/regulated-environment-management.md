@@ -64,7 +64,7 @@ Use REM to manage regulated workloads through the following scenarios:
 ## Related content
 
 - [What is Microsoft Sovereign Cloud?](../microsoft-sovereign-cloud.md)
-- [Sovereign Landing Zone overview](overview-slz.md)
+- [Sovereign Landing Zone overview](overview-sovereign-landing-zone.md)
 
 
 ## See also
@@ -72,4 +72,4 @@ Use REM to manage regulated workloads through the following scenarios:
 - [External Key Management](external-key-management.md)
 - [Data Guardian](data-guardian.md)
 - [Confidential Computing](confidential-computing.md)
-- [Sovereign Landing Zone](overview-slz.md)
+- [Sovereign Landing Zone](overview-sovereign-landing-zone.md)

@@ -68,11 +68,11 @@ For more information, see the following sections in the [Azure landing zone libr
 ## Next steps
 
 - [Implement controls and principles](implement-controls-principles.md)
-- [FAQs for Sovereign Landing Zone (SLZ)](faq-slz.md)
+- [FAQs for Sovereign Landing Zone (SLZ)](questions-sovereign-landing-zone.md)
 
 ## See also
 
-- [Sovereign Landing Zone (SLZ) overview](overview-slz.md)
+- [Sovereign Landing Zone (SLZ) overview](overview-sovereign-landing-zone.md)
 - [Design sovereign policies](design-sovereign-policies.md)
 - [Azure landing zone reference architecture](/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure encryption overview](/azure/security/fundamentals/encryption-overview)

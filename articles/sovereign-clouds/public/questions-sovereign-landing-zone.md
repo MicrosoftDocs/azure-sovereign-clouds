@@ -67,7 +67,7 @@ External Key Management (EKM—hold-your-own-key) is typically applied selective
 
 ## See also
 
-- [Sovereign Landing Zone overview](overview-slz.md)
+- [Sovereign Landing Zone overview](overview-sovereign-landing-zone.md)
 - [Implementation options](implementation-options.md)
 - [Implement the controls and principles](implement-controls-principles.md)
 - [Design sovereign policies](design-sovereign-policies.md)

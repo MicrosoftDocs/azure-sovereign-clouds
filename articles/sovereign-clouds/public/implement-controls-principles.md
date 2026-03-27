@@ -80,4 +80,4 @@ Sovereign controls are layered on top of existing or newly deployed Azure landin
 ## Next steps
 
 - [Sovereign Landing Zone (SLZ) implementation options](implementation-options.md)
-- [FAQs for Sovereign Landing Zone](faq-slz.md)
+- [FAQs for Sovereign Landing Zone](questions-sovereign-landing-zone.md)

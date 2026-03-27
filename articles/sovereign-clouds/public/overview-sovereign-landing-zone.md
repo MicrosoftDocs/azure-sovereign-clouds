@@ -71,4 +71,4 @@ SLZ differs from Azure landing zone in specific design areas to meet sovereign r
 
 - [Implement controls and principles in SLZ](implement-controls-principles.md)
 - [Sovereign Landing Zone (SLZ) implementation options](implementation-options.md)
-- [FAQs for Sovereign Landing Zone](faq-slz.md)
+- [FAQs for Sovereign Landing Zone](questions-sovereign-landing-zone.md)

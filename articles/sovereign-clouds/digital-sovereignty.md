@@ -44,7 +44,7 @@ Operational controls help organizations maintain transparency and authority over
 
 - Compliance enforcement: Aligning operations with local laws and industry standards.
 - Auditability: Using [immutable ledgers and transparency logs](public/data-guardian.md) to track production touches and access events.
-- Deployment autonomy: Configuring and managing cloud environments independently, often through tools like [Sovereign Landing Zones](public/overview-slz.md) and [Regulated Environment Management (REM)](public/regulated-environment-management.md).
+- Deployment autonomy: Configuring and managing cloud environments independently, often through tools like [Sovereign Landing Zones](public/overview-sovereign-landing-zone.md) and [Regulated Environment Management (REM)](public/regulated-environment-management.md).
 
 > By using operational controls, customers can define how to manage their environments, even under adverse conditions. For more information, see [Operational controls](operational-controls.md).
 
@@ -70,7 +70,7 @@ Organizations pursuing digital sovereignty should consider:
 
 - Explore specific control domains: [Data controls](data-controls.md), [Operational controls](operational-controls.md), and [Technological independence](technological-independence.md).
 - Map your regulatory drivers to control implementation levels (L1–L3) using [Controls and principles](public/overview-controls-principles.md).
-- Start structural design with the [Sovereign Landing Zone](public/overview-slz.md).
+- Start structural design with the [Sovereign Landing Zone](public/overview-sovereign-landing-zone.md).
 
 ## See also
 

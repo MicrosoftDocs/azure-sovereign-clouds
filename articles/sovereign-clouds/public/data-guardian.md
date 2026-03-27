@@ -53,4 +53,4 @@ The Data Guardian process involves the following steps:
 
 - [Digital sovereignty](../digital-sovereignty.md)
 - [What is Microsoft Sovereign Cloud?](../microsoft-sovereign-cloud.md)
-- [Sovereign Landing Zone overview](overview-slz.md)
+- [Sovereign Landing Zone overview](overview-sovereign-landing-zone.md)

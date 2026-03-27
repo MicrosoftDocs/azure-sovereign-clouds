@@ -44,7 +44,7 @@ Rights Management in Microsoft 365, backed by Azure Rights Management (Azure RMS
 
 These capabilities integrate with Microsoft Purview for automated labeling, Data Loss Prevention (DLP), auditing, and insider risk detection, creating an end‑to‑end governance and compliance layer aligned to sovereignty objectives. Conditional access, continuous monitoring, and the ability to revoke or adjust access post‑distribution strengthen operational assurance. Together, Rights Management helps maintain digital sovereignty by ensuring protected content remains governed, compliant, and intentionally usable - internally or with trusted external collaborators.
 
-For more information, see [Microsoft 365 Rights Management](m365-rights-management.md).
+For more information, see [Microsoft 365 Rights Management](microsoft-365-rights-management.md).
 
 ## See also
 
