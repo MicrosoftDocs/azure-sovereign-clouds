@@ -6,16 +6,51 @@ summary: Summary
 metadata:
   title: Title
   description: Description
-  ms.topic: landing-page
+  ms.topic: hub-page # Required
   author: cwatson-cat
   ms.service: azure-local
   ms.author: cwatson
   ms.date: 03/12/2025
 
-landingContent:
-  - title: Title
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Link text
-            url: stub.md
+ighlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+  items:
+    # Card
+    - title: What is digital sovereignty?
+      itemType: concept
+      url: sovereign-clouds/digital-sovereignty.md 
+    # Card
+    - title: What are the European digital commitments?
+      itemType: concept
+      url: sovereign-clouds/european-digital-commitments.md
+
+
+additionalContent:
+  sections:
+  - title: Discover Microsoft Sovereign Cloud
+    items:
+
+    - title: Sovereign Private Cloud
+      links:
+      - url: sovereign-clouds/private/overview-sovereign-private-cloud.md
+        text: Learn about Sovereign Private Cloud
+
+    - title: Sovereign Public Cloud 
+      links:
+      - url: sovereign-clouds/public/overview-sovereign-public-cloud.md
+        text: Learn about Sovereign Public Cloud
+      - url: sovereign-clouds/public/sovereign-public-cloud-capabilities.md
+        text: Learn about Sovereign Public Cloud capabilities
+      - url: sovereign-clouds/public/overview-controls-principles.md
+        text: Learn about controls and principles in Sovereign Public Cloud
+      - url: sovereign-clouds/public/overview-sovereign-landing-zone.md
+        text: Learn about the Sovereign Landing Zone
+      - url: sovereign-clouds/public/overview-implement-workloads.md
+        text: Learn how to implement workloads in Sovereign Public Cloud
+
+  
+    - title: National Partner Clouds
+      links:
+      - url: sovereign-clouds/parter/overview-national-partner-clouds.md
+        text: Learn about National Partner Clouds
