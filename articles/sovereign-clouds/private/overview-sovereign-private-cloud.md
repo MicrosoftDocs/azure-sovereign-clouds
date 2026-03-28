@@ -38,6 +38,7 @@ Azure Local delivers core Azure services directly into customer infrastructure:
 
 - Compute, storage, networking, and virtualization
 - Azure Arc-enabled virtual machines and Azure Kubernetes Service (AKS) clusters
+- AI inference, document retrieval, and video analysis workloads that run on Arc-enabled Kubernetes
 - Software-defined networking and persistent storage
 - Policy enforcement and identity integration
 - Disconnected operations with local-first control plane
