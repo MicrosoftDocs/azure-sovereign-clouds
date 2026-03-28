@@ -3,10 +3,10 @@ items:
   tocHref: /azure/
   topicHref: /azure/index
   items:
-  - name: Azure Arc
-    tocHref: /azure/azure-arc/
-    topicHref: /azure/azure-arc/
+  - name: Azure Sovereign Clouds
+    tocHref: /azure/azure-sovereign-clouds/
+    topicHref: /azure/azure-sovereign-clouds/index
     items:
     - name: Foundry Local on Sovereign Private Cloud
-      tocHref: /azure/sovereign-clouds/private/foundry-local/
-      topicHref: /azure/sovereign-clouds/private/foundry-local/
+      tocHref: /azure/azure-sovereign-clouds/sovereign-clouds/private/foundry-local/
+      topicHref: /azure/azure-sovereign-clouds/sovereign-clouds/private/foundry-local/index
