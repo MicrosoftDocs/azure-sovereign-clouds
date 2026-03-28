@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Foundry Local for Sovereign Private Clouds # < 60 chars
+title: Foundry Local for Azure Sovereign Private Clouds # < 60 chars
 summary: Deploy and run AI inference workloads on Azure Local with Arc-enabled Kubernetes. Use OpenAI-compatible APIs with your AI models while keeping data on-premises. # < 160 chars
 
 metadata:
-  title: Foundry Local for Sovereign Private Clouds documentation
+  title: Foundry Local for Azure Sovereign Private Clouds documentation
   description: Foundry Local on Azure Local enables you to deploy and run generative and predictive AI models on an Arc-enabled Kubernetes cluster for on-premises AI inference.
   ms.topic: landing-page
   author: cwatson-cat
