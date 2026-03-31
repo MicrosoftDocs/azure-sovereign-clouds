@@ -4,7 +4,7 @@ description: "Understand the concept of data controls in the context of cloud se
 author: ronmiab
 ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
-ms.date: 03/31/2026
+ms.date: 10/06/2025
 ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
