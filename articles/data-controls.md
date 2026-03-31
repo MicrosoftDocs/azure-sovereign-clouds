@@ -62,7 +62,7 @@ Data residency primarily focuses on where your data physically resides. Practica
 | Legal jurisdiction       | Data residency revolves around the choice of data center or cloud region where data is stored. While data is typically subject to the laws of its physical location, some countries/regions assert legal authority over data held by domestic cloud providers, regardless of physical location. |
 | Data availability and redundancy | Data residency considerations influence redundancy and disaster recovery strategies. Organizations and cloud providers might replicate data to multiple regions to ensure high availability and resilience. |
 
-With Azure, Microsoft 365, and Dynamics 365, you can choose where your data is stored to meet data residency requirements. By using strategically aligned data center regions within the same geography with the help of [Azure region pairs](/azure/reliability/regions-paired), you can enhance geo-redundancy, ensure prioritized recovery, and benefit from staggered platform updates, all while maintaining compliance and improving data resilience.
+By using Azure, Microsoft 365, and Dynamics 365, you can choose where your data is stored to meet data residency requirements. By using strategically aligned data center regions within the same geography through [Azure region pairs](/azure/reliability/regions-paired), you can enhance geo-redundancy, ensure prioritized recovery, and benefit from staggered platform updates, all while maintaining compliance and improving data resilience.
 
 ## Next steps
 
