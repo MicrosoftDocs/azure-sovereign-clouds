@@ -1,12 +1,11 @@
 ---
 title: "Data controls"
 description: "Understand the concept of data controls in the context of cloud services and data management."
-author: syalandur24
+author: ronmiab
 ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/06/2025
-ms.author: kerabun
-ms.reviewer: syalandur
+ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

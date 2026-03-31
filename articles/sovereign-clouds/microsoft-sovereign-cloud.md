@@ -1,12 +1,11 @@
 ---
 title: "What is Microsoft Sovereign Cloud?"
 description: "Understand Microsoft Sovereign Cloud and its role in addressing sovereignty requirements."
-author: syalandur24
+author: ronmiab
 ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/13/2025
-ms.author: kerabun
-ms.reviewer: syalandur
+ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority
