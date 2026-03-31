@@ -13,4 +13,4 @@ ms.custom: include file
 
 > [!IMPORTANT]
 > - Foundry Local is available in preview. Preview releases provide early access to features that are in active deployment.
-> - Features, approaches, and processes can change or have limited capabilities, before general availability (GA).
+> - Features, approaches, and processes can change or have limited capabilities before general availability (GA).

@@ -47,9 +47,9 @@ For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/
 
 Foundry Local on Azure Local uses these core components:
 
-- **Inference operator**: Kubernetes operator used by Foundry Local on Azure Local to install and manage inference components and reconcile model lifecycle changes.
-- **Model and ModelDeployment CRDs**: Declarative resources used to define available models and active serving deployments.
-- **Catalog sync**: Brings model catalog metadata into the cluster so supported models can be selected and deployed consistently.
+- **Inference operator**: Kubernetes operator that Foundry Local on Azure Local uses to install and manage inference components and reconcile model lifecycle changes.
+- **Model and ModelDeployment CRDs**: Declarative resources that define available models and active serving deployments.
+- **Catalog sync**: Brings model catalog metadata into the cluster so you can select and deploy supported models consistently.
 - **API key authentication**: Protects inference endpoints by requiring bearer-token style API keys for requests.
 - **TLS and ingress**: Secures traffic in transit and enables controlled external access through ingress.
 
