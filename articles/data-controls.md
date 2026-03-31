@@ -67,7 +67,7 @@ By using Azure, Microsoft 365, and Dynamics 365, you can choose where your data 
 ## Next steps
 
 - Determine required residency scope and allowed Azure regions per classification.
-- Inventory encryption coverage (at rest / in transit / in use) against current workloads.
+- Inventory encryption coverage (at rest, in transit, and in use) against current workloads.
 - Define key ownership model (PMK → CMK → Managed HSM → EKM) per data tier.
 
 ## See also
