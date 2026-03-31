@@ -43,7 +43,7 @@ Foundry Local on Azure Local runs on an Arc-enabled Kubernetes cluster and uses 
 
 The following diagram shows how these components work together. Your Azure Local cluster connects through Arc for management and compliance, while the Kubernetes inference operator orchestrates model deployments on Kubernetes nodes. Applications then call deployed models through API endpoints secured with API keys.
 
-:::image type="content" source="media/foundry-local-azure-local-architecture.svg" alt-text="Architecture diagram showing Foundry Local on Azure Local components including Azure Arc, Kubernetes cluster, Inference Operator, Model Deployments, API endpoints, and integration with Azure Foundry Storage and Model Catalog." border="false":::
+:::image type="content" source="media/foundry-local-azure-local-architecture.svg" alt-text="Architecture diagram showing Foundry Local on Azure Local components including Azure Arc, Kubernetes cluster, Inference Operator, Model Deployments, API endpoints, and integration with Azure Foundry Storage and Model Catalog." lightbox="media/foundry-local-azure-local-architecture.svg" border="false":::
 
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).
 
