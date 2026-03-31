@@ -50,6 +50,7 @@
     "fileMetadata": {
       "ms.service": {
         "**/*.md": "azure"
+      }
     },
     "template": []
   }
