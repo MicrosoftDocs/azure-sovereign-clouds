@@ -34,7 +34,7 @@ Data sovereignty is built on four foundational principles:
 
 ## Encryption as a sovereignty control
 
-In cloud environments, encryption plays a central role in enforcing data sovereignty. Data is encrypted by default, ensuring that physical access to infrastructure doesn't equate to access to readable data. Only the data owner or system holds the encryption keys, making encryption the primary mechanism for maintaining control over cloud-hosted data. To provide comprehensive protection across the data lifecycle, encryption is typically applied in three distinct states: at rest, in transit, and in use. Each encryption state addresses different stages of data handling and exposure risk.
+In cloud environments, encryption plays a central role in enforcing data sovereignty. Data is encrypted by default, ensuring that physical access to infrastructure doesn't grant access to readable data. Only the data owner or system holds the encryption keys, making encryption the primary mechanism for maintaining control over cloud-hosted data. To provide comprehensive protection across the data lifecycle, encryption is typically applied in three distinct states: at rest, in transit, and in use. Each encryption state addresses different stages of data handling and exposure risk.
 
 | Encryption Type         | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
