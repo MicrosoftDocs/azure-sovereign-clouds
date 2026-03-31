@@ -1,0 +1,57 @@
+### YamlMime:Hub
+
+title: Welcome to Azure Sovereign Clouds
+summary: Discover how to make the most of Azure Sovereign Clouds with documentation and how-to articles.
+
+
+metadata:
+  title: Welcome to Azure Sovereign Clouds
+  description: Discover how to make the most of Azure Sovereign Clouds with documentation and how-to articles.
+  ms.topic: hub-page # Required
+  author: cwatson-cat
+  ms.service: azure
+  ms.author: cwatson
+  ms.date: 03/12/2025
+
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+  items:
+    # Card
+    - title: What is digital sovereignty?
+      itemType: concept
+      url: digital-sovereignty.md 
+    # Card
+    - title: What are the European digital commitments?
+      itemType: concept
+      url: european-digital-commitments.md
+
+
+additionalContent:
+  sections:
+  - title: Discover Azure Sovereign Clouds
+    items:
+
+    - title: Sovereign Private Cloud
+      links:
+      - url: private/overview-sovereign-private-cloud.md
+        text: Learn about Sovereign Private Cloud
+
+    - title: Sovereign Public Cloud 
+      links:
+      - url: public/overview-sovereign-public-cloud.md
+        text: Learn about Sovereign Public Cloud
+      - url: public/sovereign-public-cloud-capabilities.md
+        text: Learn about Sovereign Public Cloud capabilities
+      - url: public/overview-controls-principles.md
+        text: Learn about controls and principles in Sovereign Public Cloud
+      - url: public/overview-sovereign-landing-zone.md
+        text: Learn about the Sovereign Landing Zone
+      - url: public/overview-implement-workloads.md
+        text: Learn how to implement workloads in Sovereign Public Cloud
+
+  
+    - title: National Partner Clouds
+      links:
+      - url: partner/overview-national-partner-clouds.md
+        text: Learn about National Partner Clouds

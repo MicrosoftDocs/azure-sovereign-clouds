@@ -2,6 +2,7 @@
   "build": {
     "content": [
       {
+        "src" : "articles",
         "files": [
           "**/*.md",
           "**/*.yml"
@@ -24,7 +25,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,11 +40,18 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
-      "breadcrumb_path": "~/breadcrumb/Azure-Sovereign-Clouds/toc.yml",
-      "permissioned-type": "public"
+      "breadcrumb_path": "/azure/azure-sovereign-clouds/toc.yml",
+      "permissioned-type": "public",
+      "manager": "lizross",
+      "recommendations": true
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "azure"
+      }
+    },
     "template": []
   }
 }
