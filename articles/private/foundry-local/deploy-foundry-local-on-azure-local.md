@@ -30,7 +30,7 @@ Before you begin, make sure you have:
 - For external endpoints: an NGINX ingress controller, such as [NGINX-Ingress](https://docs.nginx.com/nginx-ingress-controller/).
 
 > [!IMPORTANT]
-> [Ingress-NGINX](https://github.com/kubernetes/ingress-nginx) is deprecated by March 2026. Microsoft currently supports NGINX annotations and plans to add more in the future. The solution is tested with AKS's managed NGINX ingress controller.
+> [Ingress-NGINX](https://github.com/kubernetes/ingress-nginx) is deprecated by March 2026. Microsoft currently supports NGINX annotations. The solution is tested with AKS's managed NGINX ingress controller.
 
 ### GPU prerequisites
 
