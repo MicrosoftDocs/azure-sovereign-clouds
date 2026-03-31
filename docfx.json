@@ -48,7 +48,8 @@
       "recommendations": true
     },
     "fileMetadata": {
-      "ms.service": "azure"
+      "ms.service": {
+        "**/*.md": "azure"
     },
     "template": []
   }
