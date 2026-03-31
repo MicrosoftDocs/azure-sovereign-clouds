@@ -57,7 +57,7 @@ Data residency primarily focuses on where your data physically resides. Practica
 
 | Aspect                        | Description              |
 |------------------------------|---------------------------|
-| Latency and performance  | Data residency decisions can impact the speed and performance of data access. Placing data closer to end-users reduces latency and improves the overall user experience.                                |
+| Latency and performance  | Data residency decisions can impact the speed and performance of data access. Placing data closer to end users reduces latency and improves the overall user experience.                                |
 | Compliance requirements  | Choose data residency options that align with local and industry-specific compliance requirements. This choice ensures that data is stored in a manner consistent with applicable regulations. |
 | Legal jurisdiction       | Data residency revolves around the choice of data center or cloud region where data is stored. While data is typically subject to the laws of its physical location, some countries/regions assert legal authority over data held by domestic cloud providers, regardless of physical location. |
 | Data availability and redundancy | Data residency considerations influence redundancy and disaster recovery strategies. Organizations and cloud providers might replicate data to multiple regions to ensure high availability and resilience. |
