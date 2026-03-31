@@ -1,12 +1,11 @@
 ---
 title: "Key management controls"
 description: Learn about key management controls in sovereign cloud.
-author: syalandur24
+author: ronmiab
 ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 11/13/2025
-ms.author: rozome
-ms.reviewer: syalandur
+ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

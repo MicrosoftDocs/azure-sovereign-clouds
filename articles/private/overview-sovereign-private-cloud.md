@@ -2,12 +2,11 @@
 title: "Sovereign Private Cloud"
 subtitle: Operational autonomy for sensitive workloads
 description: "Overview of Microsoft's Sovereign Private Cloud."
-author: syalandur24
+author: ronmiab
 ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/08/2025
-ms.author: kerabun
-ms.reviewer: syalandur
+ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

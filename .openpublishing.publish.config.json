@@ -14,10 +14,12 @@
     }
   ],
   "notification_subscribers": [
-    " lizross@microsoft.com"
+    "lizross@microsoft.com",
+    "sethm@microsoft.com"
   ],
   "sync_notification_subscribers": [
-    " lizross@microsoft.com"
+    "lizross@microsoft.com",
+    "sethm@microsoft.com"
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-sovereign-clouds",
@@ -31,6 +33,19 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {},
-  "targets": {}
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "PDF"
+    ],
+    "main": [
+      "Publish",
+      "PDF"
+    ]
+  },
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
