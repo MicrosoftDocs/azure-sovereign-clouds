@@ -53,7 +53,7 @@ While most data security measures are based on at-rest and in-transit encryption
 
 ## Data residency
 
-Data residency primarily focuses on where your data physically resides and is shaped by practical considerations such as performance, compliance, and business continuity. The following table outlines key aspects that influence data residency decisions:
+Data residency primarily focuses on where your data physically resides. Practical considerations such as performance, compliance, and business continuity shape data residency. The following table outlines key aspects that influence data residency decisions:
 
 | Aspect                        | Description              |
 |------------------------------|---------------------------|
