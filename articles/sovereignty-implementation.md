@@ -18,7 +18,7 @@ Building sovereign and resilient cloud environments requires deliberate choices 
 
 ## Foundational considerations for sovereign and resilient solutions
 
-Sovereignty and resiliency requirements are workload-dependent and risk-based. Not all workloads require the same level of sovereignty or resilience. Consider the following principles:
+Sovereignty and resiliency requirements depend on the workload and are based on risk. Not all workloads require the same level of sovereignty or resilience. Consider the following principles:
 
 - Assess workloads individually based on data sensitivity, regulatory exposure, and business criticality. Apply controls that address risk management, legal compliance, costs, innovation, scale, and control accordingly.
 - Treat sovereign design requirements as complementary, not exclusive.
