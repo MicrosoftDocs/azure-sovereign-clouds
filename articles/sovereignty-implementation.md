@@ -18,13 +18,13 @@ Building sovereign and resilient cloud environments requires deliberate choices 
 
 ## Foundational considerations for sovereign and resilient solutions
 
-Sovereignty and resiliency requirements are workload-dependent and risk-based. Not all workloads require the same level of sovereignty or resilience. Consider the following principles:
+Sovereignty and resiliency requirements depend on the workload and are based on risk. Not all workloads require the same level of sovereignty or resilience. Consider the following principles:
 
-- Assess workloads individually based on data sensitivity, regulatory exposure, and business criticality, and apply controls that address risk management, legal compliance, costs, innovation, scale, and control accordingly.
+- Assess workloads individually based on data sensitivity, regulatory exposure, and business criticality. Apply controls that address risk management, legal compliance, costs, innovation, scale, and control accordingly.
 - Treat sovereign design requirements as complementary, not exclusive.
 - Combine technical, operational, and contractual controls into a comprehensive approach that strengthens sovereignty and resilience across cloud environments.
 
-The Microsoft Sovereign Cloud integrates sovereignty controls directly into public, hybrid, and private cloud models, giving organizations flexibility instead of forcing a choice between isolation and hyperscaling cloud benefits. This integration allows organizations to maintain access to innovation while meeting regulatory and geopolitical requirements. 
+The Microsoft Sovereign Cloud integrates sovereignty controls directly into public, hybrid, and private cloud models. It gives organizations flexibility instead of forcing a choice between isolation and hyperscaling cloud benefits. This integration allows organizations to maintain access to innovation while meeting regulatory and geopolitical requirements. 
 
 This risk-based, layered approach enables organizations to apply stronger controls where required, while allowing lower-risk workloads to benefit from broader public cloud capabilities and innovations.
 
