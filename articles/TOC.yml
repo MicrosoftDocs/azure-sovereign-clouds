@@ -9,7 +9,7 @@
           href: microsoft-sovereign-cloud.md
         - name: What are the European digital commitments?
           href: european-digital-commitments.md
-    - name: Concepts and controls
+    - name: Concepts, controls, and considerations
       items:
         - name: Data controls
           href: data-controls.md
@@ -19,7 +19,7 @@
           href: technological-independence.md
         - name: Key Management controls
           href: key-controls.md
-        - name: Sovereign design and implementation considerations
+        - name: Sovereign design and implementation
           href: sovereignty-implementation.md
     - name: Sovereign Public Cloud
       items:
