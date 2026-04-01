@@ -19,6 +19,8 @@
           href: technological-independence.md
         - name: Key Management controls
           href: key-controls.md
+        - name: Sovereign design and implementation considerations
+          href: sovereignty-implementation.md
     - name: Sovereign Public Cloud
       items:
         - name: Overview
