@@ -42,7 +42,7 @@
     "globalMetadata": {
       "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
-      "breadcrumb_path": "/azure/azure-sovereign-clouds/breadcrumb/toc.json",
+      "breadcrumb_path": "/azure/azure-sovereign-clouds/breadcrumb/toc.yml",
       "permissioned-type": "public",
       "manager": "lizross",
       "recommendations": true
