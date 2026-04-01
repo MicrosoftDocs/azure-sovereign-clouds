@@ -50,7 +50,7 @@ The second dimension is the level of control it represents:
 - **Elevated**: controls for more stringent requirements.
 - **Advanced**: controls for the most sensitive workloads or those subject to the strictest regulations.
 
-Start with the baseline considerations and move into higher tiers where needed. A practical starting point for implementation is the [Sovereign landing zone (SLZ)](public/overview-sovereign-landing-zone.md) , which provides reference architectures and guardrails aligned to these levels.
+Start with the baseline considerations and move into higher tiers where needed. A practical starting point for implementation is the [Sovereign landing zone (SLZ)](public/overview-sovereign-landing-zone.md), which provides reference architectures and guardrails aligned to these levels.
 
 For more information, see [Controls and principles in Sovereign Public Cloud](public/overview-controls-principles.md) and [Implement controls and principles in SLZ](public/implement-controls-principles.md).
 
