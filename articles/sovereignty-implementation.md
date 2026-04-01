@@ -24,7 +24,7 @@ Sovereignty and resiliency requirements are workload-dependent and risk-based. N
 - Treat sovereign design requirements as complementary, not exclusive.
 - Combine technical, operational, and contractual controls into a comprehensive approach that strengthens sovereignty and resilience across cloud environments.
 
-The Microsoft Sovereign Cloud integrates sovereignty controls directly into public, hybrid, and private cloud models, giving organizations flexibility instead of forcing a choice between isolation and hyperscaling cloud benefits. This integration allows organizations to maintain access to innovation while meeting regulatory and geopolitical requirements. 
+The Microsoft Sovereign Cloud integrates sovereignty controls directly into public, hybrid, and private cloud models. It gives organizations flexibility instead of forcing a choice between isolation and hyperscaling cloud benefits. This integration allows organizations to maintain access to innovation while meeting regulatory and geopolitical requirements. 
 
 This risk-based, layered approach enables organizations to apply stronger controls where required, while allowing lower-risk workloads to benefit from broader public cloud capabilities and innovations.
 
