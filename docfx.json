@@ -19,7 +19,14 @@
           "ThirdPartyNotices.md",
           "SECURITY.md"
         ]
-      }
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb"
+      }      
     ],
     "resource": [
       {
@@ -42,7 +49,7 @@
     "globalMetadata": {
       "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
-      "breadcrumb_path": "/azure/azure-sovereign-clouds/toc.yml",
+      "breadcrumb_path": "/azure/azure-sovereign-clouds/breadcrumb/toc.json",
       "permissioned-type": "public",
       "manager": "lizross",
       "recommendations": true
