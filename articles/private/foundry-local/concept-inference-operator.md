@@ -26,7 +26,7 @@ The inference operator is a Kubernetes operator that simplifies deploying AI mod
 
 - Creating Kubernetes Deployments, Services, and Ingress resources.
 - Configuring CPU and GPU workloads.
-- Managing API key authentication.
+- Managing API key authentication and Entra ID token validation..
 - Handling TLS certificates for secure communication.
 
 ## Two-resource model
@@ -35,7 +35,7 @@ The operator uses two Custom Resource Definitions (CRDs):
 
 | Resource | Purpose | Short name |
 |----------|---------|------------|
-| **Model** | Defines a model available for deployment | `mdl` |
+| **Model** | Defines a custom (BYO) model available for deployment | `mdl` |
 | **ModelDeployment** | Creates a running inference endpoint | `mdep` |
 
 By separating model definition from deployment, you can:
@@ -196,7 +196,7 @@ The Model resource defines a model that's available for deployment. Models can c
 
 | Source | Description | Use case |
 |--------|-------------|---------|
-| **Catalog** | Models from the Foundry catalog | Standard models (Phi, Llama, and others) |
+| **Catalog** | Resolved from the catalog ConfigMap at deployment time | Standard models (Phi, Llama, and others) |
 | **Custom** | Models from your own OCI registry | Fine-tuned or proprietary models |
 
 ### Create a catalog model
@@ -264,7 +264,7 @@ For the full procedure to deploy a custom model and run inference against it, se
 
 ## Generative models
 
-Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported.
+Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. You can select the runtime using the spec.runtime field on the ModelDeployment.
 
 ### Use models from the Foundry catalog
 
@@ -348,7 +348,7 @@ What happens in this flow:
 
 1. Your POST request goes to `/v1/predict` with the image payload.
 1. The API key in the header authenticates the request - all inference endpoints, generative and predictive, require a key.
-1. NGINX validates the key and routes the request to the predictive model service.
+1. The authentication middleware validates the key (or Entra ID JWT token) and routes the request to the predictive model service.
 1. The model container preprocesses the image, runs ONNX Runtime inference, and returns a structured response with the inference result.
 
 ## Related content
