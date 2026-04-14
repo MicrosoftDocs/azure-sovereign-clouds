@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want definitions for Foundry Local on Azure Local terminology so that I can understand the documentation and configure the platform correctly.
 ---

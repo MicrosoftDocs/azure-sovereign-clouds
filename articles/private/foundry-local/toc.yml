@@ -13,10 +13,6 @@ items:
     items:
     - name: Inference operator and model lifecycle
       href: concept-inference-operator.md
-  - name: Deploy
-    items:
-    - name: Deploy Foundry Local on Azure Local
-      href: deploy-foundry-local-on-azure-local.md
   - name: Configure
     items:
     - name: Configure TLS and authentication

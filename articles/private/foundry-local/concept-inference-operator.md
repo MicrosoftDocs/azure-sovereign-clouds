@@ -9,7 +9,7 @@ appliesto:
 ms.topic: conceptual
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand how the inference operator manages models in Foundry Local on Azure Local so that I can deploy and manage AI workloads effectively.
 ---
@@ -268,7 +268,7 @@ Generative AI models produce new content - like text - in response to prompts. F
 
 ### Use models from the Foundry catalog
 
-You can pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in the model catalog section above. Alternatively, you can deploy them directly from a ModelDeployment. For the full deployment procedure, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+You can pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in the model catalog section above. Alternatively, you can deploy them directly from a ModelDeployment. 
 
 ### Load custom models (BYO)
 
@@ -353,8 +353,8 @@ What happens in this flow:
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)
 

@@ -9,7 +9,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want to send inference requests to models deployed on Foundry Local on Azure Local so that I can integrate AI capabilities into my applications.
 ---
@@ -22,7 +22,9 @@ This article shows you how to retrieve API keys and send inference requests to m
 
 ## Prerequisites
 
-- A running model deployment. For setup steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+Before you begin, request preview deployment access: [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access).
+
+- A running model deployment. 
 - The endpoint URL for your deployment, with or without an ingress controller.
 - kubectl installed and configured for your cluster.
 
@@ -346,8 +348,8 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)
 

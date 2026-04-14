@@ -9,7 +9,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure TLS encryption and API key authentication for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
 ---
@@ -22,13 +22,15 @@ Foundry Local on Azure Local encrypts all internal service communication by usin
 
 ## Prerequisites
 
+Before you begin, request preview deployment access: [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access).
+
 Automated certificate management requires [cert-manager](https://cert-manager.io/) and [Trust Manager](https://cert-manager.io/docs/trust/trust-manager/) installed on your cluster:
 
 - **cert-manager** issues a self-signed root CA and per-service certificates.
 - **trust-manager** distributes the root CA certificate as a trust bundle to all namespaces so other pods can trust the internal certificates.
 
 > [!IMPORTANT]
-> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. For installation steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. 
 
 ## How internal TLS works
 
@@ -233,7 +235,7 @@ After this two-step swap, you have entirely new primary and secondary keys with 
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)

@@ -9,7 +9,7 @@ appliesto:
 ms.topic: troubleshooting
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to know about current limitations and workarounds for Foundry Local on Azure Local so that I can plan deployments and avoid known problems.
 ---
@@ -51,7 +51,7 @@ helm upgrade --install trust-manager jetstack/trust-manager \
   --set secretTargets.authorizedSecretsAll=true
 ```
 
-These flags are required for cross-namespace secret distribution to work correctly. For full installation steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+These flags are required for cross-namespace secret distribution to work correctly.
 
 ---
 
@@ -71,6 +71,6 @@ kubectl apply -f <model-deployment>.yaml
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [What is Foundry Local on Azure Local?](what-is-foundry-local-on-azure-local.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)
