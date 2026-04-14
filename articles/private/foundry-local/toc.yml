@@ -1,0 +1,31 @@
+items:
+- name: Foundry Local for Azure Sovereign Private Clouds
+  href: index.yml
+  items:
+  - name: Overview
+    expanded: true
+    items:
+    - name: What is Foundry Local on Azure Local?
+      href: what-is-foundry-local-on-azure-local.md
+    - name: Known issues
+      href: known-issues.md
+  - name: Concepts
+    items:
+    - name: Inference operator and model lifecycle
+      href: concept-inference-operator.md
+  - name: Configure
+    items:
+    - name: Configure TLS and authentication
+      href: how-to-configure-tls-authentication.md
+  - name: Run inference
+    items:
+    - name: Run inference
+      href: how-to-run-inference.md
+  - name: Reference
+    items:
+    - name: Inference API endpoints and payload reference
+      href: reference-inference-api-endpoints-payload.md
+    - name: ModelDeployment and operator configuration reference
+      href: reference-model-deployment-operator.md
+    - name: Glossary
+      href: glossary.md

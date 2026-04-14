@@ -41,6 +41,8 @@ Azure Local delivers core Azure services directly into customer infrastructure:
 - Policy enforcement and identity integration
 - Disconnected operations with local-first control plane
 
+Azure Local also supports AI workloads on Arc-enabled Kubernetes. Run model inference, document retrieval and generation with RAG, and video and audio analysis while keeping all data processing on-premises.
+
 ### Microsoft 365 Local
 
 Microsoft 365 Local enables sovereign productivity:
