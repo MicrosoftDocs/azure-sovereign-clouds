@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: cwatson-cat
   ms.author: cwatson
-  ms.date: 03/25/2026
+  ms.date: 04/14/2026
   ms.service: azure
   ms.subservice: sovereign-private-clouds
 
@@ -29,13 +29,6 @@ landingContent:
         links:
           - text: Inference operator and model lifecycle
             url: concept-inference-operator.md
-
-  - title: Get started
-    linkLists:
-      - linkListType: deploy
-        links:
-          - text: Deploy Foundry Local on Azure Local
-            url: deploy-foundry-local-on-azure-local.md
 
   - title: Configure and secure
     linkLists:

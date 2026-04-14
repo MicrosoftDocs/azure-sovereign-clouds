@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want a complete reference for ModelDeployment fields and operator configuration so that I can deploy and configure AI inference workloads precisely.
 ---
@@ -214,5 +214,5 @@ catalog:
 ## Related content
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)

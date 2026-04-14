@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want a complete reference for inference API endpoints and payload formats in Foundry Local on Azure Local so that I can integrate AI models into my applications.
 ---
@@ -174,4 +174,5 @@ curl -k -X POST "https://<URL>/v1/predict" \
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
+- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)
 

@@ -7,7 +7,7 @@ ai-usage: ai-assisted
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 ms.topic: include
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ms.custom: include file
 ---
 
