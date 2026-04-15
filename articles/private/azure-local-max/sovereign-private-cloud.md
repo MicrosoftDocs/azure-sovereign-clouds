@@ -5,8 +5,8 @@ author: ronmiab
 ms.author: robess
 ms.reviewer: robess
 ms.date: 04/15/2026
-ms.topic: concept-article
-ms.subservice: hyperconverged
+ms.topic: overview
+ms.subservice: sovereign-private-clouds
 ---
 
 # What's Sovereign Private Cloud
