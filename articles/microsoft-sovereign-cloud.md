@@ -2,9 +2,8 @@
 title: "What is Microsoft Sovereign Cloud?"
 description: "Understand Microsoft Sovereign Cloud and its role in addressing sovereignty requirements."
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
-ms.date: 10/13/2025
+ms.date: 03/31/2026
 ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
@@ -42,7 +41,7 @@ Public sector agencies and regulated industries must meet strict legal and polic
 
 Organizations can choose deployment models that align with their sovereignty needs:
 
-- [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md): This deployment model is hosted in Microsoft-operated datacenters within defined geopolitical boundaries (for example, EU Data Boundary). It offers data residency, customer-managed encryption keys, and operational transparency. In addition, the model is built on Microsoft’s global Azure infrastructure with enhanced sovereignty controls, such as Data Guardian, External Key Management, and tamper-evident access logs.
+- [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md): This deployment model is hosted in Microsoft-operated datacenters within defined geopolitical boundaries (for example, EU Data Boundary). It offers data residency, customer-managed encryption keys, and operational transparency. In addition, the model is built on Microsoft's global Azure infrastructure with enhanced sovereignty controls, such as Data Guardian, External Key Management, and tamper-evident access logs.
 
 - [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md): This model runs in customer-controlled or partner-operated datacenters, supporting hybrid or disconnected operations. The model is delivered via Azure Local and Microsoft 365 Local. The model is ideal for defense, critical infrastructure, and national security scenarios.
 

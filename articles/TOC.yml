@@ -4,88 +4,90 @@
     - name: Overview
       items:
         - name: Overview of digital sovereignty
-          href: sovereign-clouds/digital-sovereignty.md
+          href: digital-sovereignty.md
         - name: What is Microsoft Sovereign Cloud?
-          href: sovereign-clouds/microsoft-sovereign-cloud.md
+          href: microsoft-sovereign-cloud.md
         - name: What are the European digital commitments?
-          href: sovereign-clouds/european-digital-commitments.md
-    - name: Concepts and controls
+          href: european-digital-commitments.md
+    - name: Concepts, controls, and considerations
       items:
         - name: Data controls
-          href: sovereign-clouds/data-controls.md
+          href: data-controls.md
         - name: Operational controls
-          href: sovereign-clouds/operational-controls.md
+          href: operational-controls.md
         - name: Technological independence
-          href: sovereign-clouds/technological-independence.md
+          href: technological-independence.md
         - name: Key Management controls
-          href: sovereign-clouds/key-controls.md
+          href: key-controls.md
+        - name: Sovereign design and implementation
+          href: sovereignty-implementation.md
     - name: Sovereign Public Cloud
       items:
         - name: Overview
-          href: sovereign-clouds/public/overview-sovereign-public-cloud.md
+          href: public/overview-sovereign-public-cloud.md
         - name: Foundational controls and principles
-          href: sovereign-clouds/public/overview-controls-principles.md
+          href: public/overview-controls-principles.md
           items:
         - name: Capabilities
           items:
           - name: Capabilities of Sovereign Public Cloud
-            href: sovereign-clouds/public/sovereign-public-cloud-capabilities.md
+            href: public/sovereign-public-cloud-capabilities.md
           - name: Data Guardian
-            href: sovereign-clouds/public/data-guardian.md
+            href: public/data-guardian.md
           - name: External key management
-            href: sovereign-clouds/public/external-key-management.md
+            href: public/external-key-management.md
           - name: Confidential computing
-            href: sovereign-clouds/public/confidential-computing.md
+            href: public/confidential-computing.md
           - name: Regulated Environment Management (REM)
-            href: sovereign-clouds/public/regulated-environment-management.md
+            href: public/regulated-environment-management.md
         - name: Sovereign Landing Zone
           items: 
             - name: Overview
-              href: sovereign-clouds/public/overview-sovereign-landing-zone.md
+              href: public/overview-sovereign-landing-zone.md
             - name: Implement controls and principles
-              href: sovereign-clouds/public/implement-controls-principles.md
+              href: public/implement-controls-principles.md
             - name: Implementation options
-              href: sovereign-clouds/public/implementation-options.md
+              href: public/implementation-options.md
             - name: FAQs for Sovereign Landing Zone
-              href: sovereign-clouds/public/questions-sovereign-landing-zone.md
+              href: public/questions-sovereign-landing-zone.md
         - name: Implement workloads in the Sovereign Public Cloud
           items:
             - name: Overview
-              href: sovereign-clouds/public/overview-implement-workloads.md
+              href: public/overview-implement-workloads.md
             - name: AI workloads and sovereignty
-              href: sovereign-clouds/public/ai-workloads-sovereignty.md
+              href: public/ai-workloads-sovereignty.md
             - name: Design sovereign policy initiatives in Azure
-              href: sovereign-clouds/public/design-sovereign-policies.md
+              href: public/design-sovereign-policies.md
             - name: BCDR impacts with sovereign controls
-              href: sovereign-clouds/public/bcdr-impacts-sovereign-controls.md
+              href: public/bcdr-impacts-sovereign-controls.md
             - name: Key recovery management with Managed HSM
-              href: sovereign-clouds/public/key-recovery-management.md
+              href: public/key-recovery-management.md
             - name: Apply sovereign controls to Microsoft 365
               items:
               - name: Overview
-                href: sovereign-clouds/public/microsoft-365-sovereign-controls.md
+                href: public/microsoft-365-sovereign-controls.md
               - name: Microsoft 365 Rights Management
-                href: sovereign-clouds/public/microsoft-365-rights-management.md
+                href: public/microsoft-365-rights-management.md
             - name: Apply sovereign controls to Dataverse and Power Platform
               items:
                - name: Access controls
-                 href: sovereign-clouds/public/access-controls-dataverse-power-platform.md
+                 href: public/access-controls-dataverse-power-platform.md
                - name: Security controls
-                 href: sovereign-clouds/public/security-controls-dataverse-power-platform.md
+                 href: public/security-controls-dataverse-power-platform.md
                - name: Sovereign controls
-                 href: sovereign-clouds/public/sovereign-controls-dataverse-power-platform.md   
+                 href: public/sovereign-controls-dataverse-power-platform.md   
                - name: Transparency controls
-                 href: sovereign-clouds/public/operational-transparency-dataverse-power-platform.md  
+                 href: public/operational-transparency-dataverse-power-platform.md  
             - name: Apply sovereign controls to Dynamics 365 Business Central
               items:
               - name: Access controls
-                href: sovereign-clouds/public/access-controls-d365-business-central.md
+                href: public/access-controls-d365-business-central.md
               - name: Security controls
-                href: sovereign-clouds/public/security-controls-d365-business-central.md
+                href: public/security-controls-d365-business-central.md
               - name: Sovereign controls 
-                href: sovereign-clouds/public/sovereign-controls-d365-business-central.md   
+                href: public/sovereign-controls-d365-business-central.md   
               - name: Transparency controls
-                href: sovereign-clouds/public/operational-transparency-d365-business-central.md         
+                href: public/operational-transparency-d365-business-central.md         
             - name: Services compatibility guides
               items:
                 - name: Azure Key Vault and Managed HSM - CMK support by Azure service
@@ -93,12 +95,12 @@
     - name: Sovereign Private Cloud
       items:
         - name: Overview
-          href: sovereign-clouds/private/overview-sovereign-private-cloud.md
+          href: private/overview-sovereign-private-cloud.md
     - name: National Partner Clouds
       items:
         - name: Overview
-          href: sovereign-clouds/partner/overview-national-partner-clouds.md
+          href: partner/overview-national-partner-clouds.md
     - name: Appendix
       items:
         - name: Glossary
-          href: sovereign-clouds/glossary.md 
+          href: glossary.md 
