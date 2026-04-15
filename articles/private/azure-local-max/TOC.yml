@@ -6,7 +6,7 @@ items:
     expanded: true
     items:  
     - name: What is Sovereign Private Cloud?
-      href: ./sovereign-private-cloud-overview.md
+      href: ./sovereign-private-cloud.md
     - name: Sovereign Private Cloud use cases
       href: ./index.yml
 
