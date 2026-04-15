@@ -5,18 +5,18 @@ items:
   expanded: true
   items:  
   - name: What is Sovereign Private Cloud?
-    href: ./overview.md
+    href: ./sovereign-private-cloud-overview.md
   - name: Sovereign Private Cloud use cases
     href: ./overview.md
 
 - name: Azure Local
   items:
   - name: Azure Local overview
-    href: ./overview.md
+    href: ./sovereign-public-cloud-azure-local-overview.md
   - name: Disconnected operations overview
-    href: ./overview.md
+    href: ./index.yml
   - name: Connected operations overview
-    href: ./overview.md
+    href: ./index.yml
   - name: Move between connected and disconnected (future)
     href: ./overview.md
   - name: Sovereign Private Landing Zone (future)

@@ -1,44 +1,26 @@
-items:
-- name: Sovereign Private Cloud documentation
-  href: index.yml
-- name: Overview
-  expanded: true
-  items:  
-  - name: What is Sovereign Private Cloud?
-    href: ./overview.md
-  - name: Sovereign Private Cloud use cases
-    href: ./overview.md
+### YamlMime:Landing
 
-- name: Azure Local
-  items:
-  - name: Azure Local overview
-    href: ./overview.md
-  - name: Disconnected operations overview
-    href: ./overview.md
-  - name: Connected operations overview
-    href: ./overview.md
-  - name: Move between connected and disconnected (future)
-    href: ./overview.md
-  - name: Sovereign Private Landing Zone (future)
-    href: ./overview.md
+title: About Sovereign Private Clouds
+summary: Learn about Sovereign Private Clouds and their capabilities.
 
-- name: Foundry Local on Azure Local
-  items:
-  - name: Foundry Local overview 
-    href: ./overview.md
-  - name: Deploy Foundry Local (contextual link)
-    href: ./overview.md
-  - name: Azure Edge RAG overview
-    href: ./overview.md
-  - name: Azure Video Indexer overview
-    href: ./overview.md
-  
-- name: Microsoft 365 Local
-  items:
-  - name: Microsoft 365 Local overview
-    href: ./overview.md
+metadata:
+  title: Sovereign Private Cloud documentation
+  description: Sovereign Private Cloud documentation provides an overview of the solution, its key components, and related content to help you understand how to achieve sovereignty with Azure Local and other Microsoft solutions.
+  ms.topic: landing-page
+  author: ronmiab
+  ms.author: robess
+  ms.date: 04/15/2026
+  ms.service: azure
+  ms.subservice: sovereign-private-clouds
 
-- name: GitHub Local
-  items:
-  - name: GitHub Local overview
-    href: ./overview.md
+landingContent:
+  - title: About Sovereign Private Clouds
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What's Sovereign Private Cloud?
+            url: sovereign-private-cloud-overview.md
+      - linkListType: concept
+        links:
+          - text: Add text here
+            url: toc.yml
