@@ -26,7 +26,7 @@ The inference operator is a Kubernetes operator that simplifies deploying AI mod
 
 - Creating Kubernetes Deployments, Services, and Ingress resources.
 - Configuring CPU and GPU workloads.
-- Managing API key authentication and Entra ID token validation..
+- Managing API key authentication and Entra ID token validation.
 - Handling TLS certificates for secure communication.
 
 ## Two-resource model
