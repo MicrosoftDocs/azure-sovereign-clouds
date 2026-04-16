@@ -23,7 +23,7 @@ items:
     items:
     - name: Foundry Local overview 
       href: foundry-local/what-is-foundry-local-on-azure-local.md
-    - name: Deploy Foundry Local (contextual link)
+    - name: Deploy Foundry Local
       href: ./index.yml
     - name: Azure Edge RAG overview
       href: ./index.yml
