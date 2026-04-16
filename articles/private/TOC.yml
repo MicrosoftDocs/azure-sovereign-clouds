@@ -6,7 +6,7 @@ items:
     expanded: true
     items:  
     - name: What is Sovereign Private Cloud?
-      href: ./sovereign-private-cloud.md
+      href: overview/sovereign-private-cloud.md
     - name: Sovereign Private Cloud use cases
       href: ./index.yml
 
@@ -17,10 +17,6 @@ items:
     - name: Disconnected operations overview
       href: ./index.yml
     - name: Connected operations overview
-      href: ./index.yml
-    - name: Move between connected and disconnected (future)
-      href: ./index.yml
-    - name: Sovereign Private Landing Zone (future)
       href: ./index.yml
 
   - name: Foundry Local on Azure Local
