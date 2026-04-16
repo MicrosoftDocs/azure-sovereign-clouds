@@ -37,7 +37,7 @@ If you need productivity tools in a private cloud environment, Microsoft 365 Loc
 
 [Azure Local for Azure Sovereign Private Clouds](sovereign-private-cloud.md) <!--once published on Microsoft Learn-->
 
-[Foundry Local for Azure Sovereign Private Clouds documentation](foundry-local-overview.md)
+[Foundry Local for Azure Sovereign Private Clouds documentation](what-is-foundry-local-on-azure-local.md)
 
 [Microsoft 365 Local on Azure Local Infrastructure](sovereign-private-cloud.md) <!--shift from Azure Local TOC to SPC TOC-->
 

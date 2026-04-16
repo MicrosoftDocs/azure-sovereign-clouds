@@ -19,7 +19,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What's Sovereign Private Cloud?
-            url: overview/sovereign-private-cloud-overview.md
+            url: overview/sovereign-private-cloud.md
       - linkListType: concept
         links:
           - text: Add text here
