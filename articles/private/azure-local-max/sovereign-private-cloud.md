@@ -19,7 +19,7 @@ Sovereign Private Cloud consists of three solution areas that run on Azure Local
 
 ## Azure Local
 
-Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer-compute, storage, networking, and lifecycle management-on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments.
+Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer - compute, storage, networking, and lifecycle management - on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments.
 
 ## Foundry Local on Azure Local
 
