@@ -15,7 +15,7 @@ The Sovereign Private Cloud is a portfolio of Microsoft solutions designed to he
 
 Sovereign Private Cloud consists of three solution areas that run on Azure Local:
 
-:::image type="content" source="media/sovereign-private-cloud-overview/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="media/sovereign-private-cloud-overview/solution-areas.png":::
+:::image type="content" source="media/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="media/solution-areas.png":::
 
 ## Azure Local
 
@@ -35,10 +35,10 @@ If you need productivity tools in a private cloud environment, Microsoft 365 Loc
 
 ## Related content
 
-[Azure Local for Azure Sovereign Private Clouds](sovereign-private-cloud-azure-local-overview.md) <!--once published on Microsoft Learn-->
+[Azure Local for Azure Sovereign Private Clouds](sovereign-private-cloud.md) <!--once published on Microsoft Learn-->
 
-[Foundry Local for Azure Sovereign Private Clouds documentation](/azure/azure-sovereign-clouds/private/foundry-local-overview.md)
+[Foundry Local for Azure Sovereign Private Clouds documentation](foundry-local-overview.md)
 
-[Microsoft 365 Local on Azure Local Infrastructure](/azure/azure-sovereign-clouds/sovereignty-private-cloud-overview.md) <!--shift from Azure Local TOC to SPC TOC-->
+[Microsoft 365 Local on Azure Local Infrastructure](sovereign-private-cloud.md) <!--shift from Azure Local TOC to SPC TOC-->
 
-[Sovereign design and implementation considerations](/azure/azure-sovereign-clouds/sovereignty-implementation.md)
+[Sovereign design and implementation considerations](sovereign-private-cloud.md)
