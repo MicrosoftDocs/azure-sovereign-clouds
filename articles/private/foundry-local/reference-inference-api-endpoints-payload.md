@@ -29,22 +29,31 @@ Each deployed model exposes the following endpoints. Replace `<base-url>` with y
 | `/health` | GET | Liveness check. Returns `200 OK` when the service is running. |
 | `/ready` | GET | Readiness check. Returns `200 OK` when the model is loaded and ready to serve requests. |
 | `/v1/model` | GET | Model information. Returns metadata about the loaded model. |
-| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. |
+| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. When using models with tool calling capabilities, the tool_choice: required field must be specified in the request payload. |
+| `/v1/audio/transcriptions` | POST | Generative inference. Use for audio to text transcription. For models with automatic-speech-recognition capabilities (e.g. whisper) |
 | `/v1/predict` | POST | Predictive inference. Use for ONNX-based classification, regression, and other ML tasks. |
 
 ## Authentication
 
-All endpoints require an API key. Include it in your request using one of these header formats:
+All endpoints require authentication. The platform supports two methods: API key authentication and Entra ID (JWT) authentication. For API key auth, include the key in your request using one of these header formats: 
 
 | Header format | Example |
 |--------------|---------|
 | Bearer token (standard) | `Authorization: Bearer <api-key>` |
-| X-API-Key header | `X-API-KEY: <api-key>` |
 | api-key header (OpenAI-compatible) | `api-key: <api-key>` |
+| Entra ID JWT (enterprise) | Authorization: Bearer <jwt-token> |
 
-All three formats are equivalent. The NGINX sidecar proxy validates the key and rejects requests that don't match the deployment's primary or secondary key with `401 Unauthorized`.
+
+The Authorization: Bearer and api-key header formats are supported. The application-layer auth middleware validates the key against the deployment's primary and secondary keys and rejects invalid keys with 401 Unauthorized.
 
 For information about retrieving and rotating API keys, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
+
+## Entra ID (JWT) authentication
+When Entra ID authentication is enabled, clients authenticate by sending a Microsoft Entra ID JWT in the Authorization: Bearer header. The platform detects the credential type automatically - tokens starting with the JWT prefix are validated by the Entra Auth SDK sidecar, while tokens with the fndry-pk- or fndry-sk- prefix are validated as API keys.
+After JWT validation, the middleware performs an Azure ARM RBAC authorization check to verify the caller holds the required DataAction (Cognitive Services OpenAI User role or equivalent) on the cluster's ARM resource scope.
+### To acquire a JWT token:
+Bash JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)  # PowerShell $JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv
+Then use the JWT token in the Authorization: Bearer header, the same way as an API key. The platform routes it to the appropriate validation path based on the token content.
 
 ## Generative inference request examples
 
@@ -56,23 +65,6 @@ The `/v1/chat/completions` endpoint follows OpenAI Chat Completions conventions.
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $API_KEY" \
-  -d '{
-    "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
-    "messages": [
-      {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "What is the capital/major city of France?"}
-    ],
-    "temperature": 0.7,
-    "max_tokens": 100
-  }'
-```
-
-### X-API-KEY
-
-```bash
-curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "X-API-KEY: $API_KEY" \
   -d '{
     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
     "messages": [
@@ -99,6 +91,11 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
     "temperature": 0.7,
     "max_tokens": 100
   }'
+```
+
+### Authorization: Bearer (Entra ID JWT)
+
+```curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \   -H "Content-Type: application/json" \   -H "Authorization: Bearer $JWT_TOKEN" \   -d '{     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",     "messages": [       {"role": "system", "content": "You are a helpful assistant."},       {"role": "user", "content": "What is the capital/major city of France?"}     ],     "temperature": 0.7,     "max_tokens": 100   }'
 ```
 
 ### Generative response
