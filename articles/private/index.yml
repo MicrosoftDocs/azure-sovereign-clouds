@@ -20,6 +20,14 @@ landingContent:
         links:
           - text: What's Sovereign Private Cloud?
             url: overview/sovereign-private-cloud.md
+          - text: Azure Local Overview and Key Benefits
+            url: index.yml
+          - text: Foundry Local on Azure Local
+            url: foundry-local/what-is-foundry-local-on-azure-local.md
+          - text: Microsoft 365 Local on Azure Local
+            url: index.yml
+          - text: GitHub Local on Azure Local
+            url: index.yml  
       - linkListType: concept
         links:
           - text: Add text here
