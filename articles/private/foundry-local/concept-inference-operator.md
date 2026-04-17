@@ -353,6 +353,8 @@ What happens in this flow:
 
 ## Related content
 
+- [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
+- [Automatic GPU inference tuning in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
 - [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
