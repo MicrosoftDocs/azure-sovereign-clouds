@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
-title: About Sovereign Private Clouds
-summary: Learn about Sovereign Private Clouds and their capabilities.
+title: About Sovereign Private Cloud
+summary: Learn about Sovereign Private Cloud and its capabilities.
 
 metadata:
   title: Sovereign Private Cloud documentation
@@ -14,7 +14,7 @@ metadata:
   ms.subservice: sovereign-private-clouds
 
 landingContent:
-  - title: About Sovereign Private Clouds
+  - title: About Sovereign Private Cloud
     linkLists:
       - linkListType: overview
         links:
@@ -26,9 +26,3 @@ landingContent:
             url: foundry-local/what-is-foundry-local-on-azure-local.md
           - text: Microsoft 365 Local on Azure Local
             url: index.yml
-          - text: GitHub Local on Azure Local
-            url: index.yml  
-      - linkListType: concept
-        links:
-          - text: Add text here
-            url: toc.yml
