@@ -9,19 +9,21 @@ items:
       href: what-is-foundry-local-on-azure-local.md
     - name: Known issues
       href: known-issues.md
-  - name: Concepts
+  - name: Plan
     items:
     - name: Inference operator and model lifecycle
       href: concept-inference-operator.md
     - name: Inference runtimes
       href: concept-inference-runtimes.md
+    - name: Authentication and authorization
+      href: concept-authentication-authorization.md
     - name: Automatic GPU inference tuning
       href: concept-gpu-inference-planner.md
   - name: Deploy
     items:
     - name: Deploy Foundry Local on Azure Local
       href: deploy-foundry-local-on-azure-local.md
-  - name: Configure
+  - name: Configure and secure
     items:
     - name: Configure TLS and authentication
       href: how-to-configure-tls-authentication.md
