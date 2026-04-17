@@ -42,7 +42,7 @@ Organizations choose Microsoft 365 Local for several key reasons:
 
 - **Built on Azure Local providing Sovereign Private Cloud capabilities:** Delivers a private cloud environment designed for governments and regulated industries. The environment includes Azure-consistent management and enhanced security features such as encryption, access controls, and compliance mechanisms aligned with local regulatory frameworks.
 
-- **Supports hybrid connectivity and fully disconnected:** Enables centralized management through Azure services for monitoring, updates, and policy enforcement in connected mode. It also provides disconnected mode for complete isolation for environments requiring air-gapped operations, ensuring compliance with strict sovereignty or security mandates. For more information about disconnected operations, see [Disconnected operations for Azure Local overview](../manage/disconnected-operations-overview.md).
+- **Supports hybrid connectivity and fully disconnected:** Enables centralized management through Azure services for monitoring, updates, and policy enforcement in connected mode. It also provides disconnected mode for complete isolation for environments requiring air-gapped operations, ensuring compliance with strict sovereignty or security mandates. For more information about disconnected operations, see [Disconnected operations for Azure Local overview](../index.yml).
 
 ## Microsoft 365 Local hardware requirements
 
