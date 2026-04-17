@@ -22,10 +22,10 @@ items:
   - name: Foundry Local on Azure Local
     items:
     - name: Foundry Local overview 
-      href: ../../foundry-local/what-is-foundry-local-on-azure-local?toc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/toc.json&bc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/breadcrumb/toc.json
+      href: foundry-local/what-is-foundry-local-on-azure-local?toc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/toc.json&bc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/breadcrumb/toc.json
     
   - name: Microsoft 365 Local
     items:
     - name: Microsoft 365 Local overview
-      href: ../../m365-local/microsoft-365-local-overview.md
+      href: m365-local/microsoft-365-local-overview.md
 

@@ -8,5 +8,5 @@ items:
     topicHref: /azure/azure-sovereign-clouds/index
     items:
     - name: Sovereign Private Cloud documentation
-      tocHref: /azure/azure-sovereign-clouds/private/sovereign-private-cloud/
-      topicHref: /azure/azure-sovereign-clouds/private/sovereign-private-cloud/index
+      tocHref: /azure/azure-sovereign-clouds/private/
+      topicHref: /azure/azure-sovereign-clouds/private/index
