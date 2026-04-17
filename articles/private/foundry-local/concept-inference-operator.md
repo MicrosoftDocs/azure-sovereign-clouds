@@ -278,7 +278,7 @@ You can also deploy models you package yourself as Docker or OCI images - for ex
 
 Generative model endpoints follow OpenAI-compatible request patterns. The inference endpoint is `/v1/chat/completions`.
 
-Example using a deployed `phi-3.5-gpu` model:
+Here's an example that uses a deployed `phi-3.5-gpu` model:
 
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
