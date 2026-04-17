@@ -38,7 +38,7 @@ GPU memory is a fixed budget shared between the model context length and the num
 
 ## How automatic tuning works
 
-When you deploy a model with `framework: vllm`, the inference operator runs the vLLM planner before starting the model server. The planner reads the model configuration and detects the GPU hardware, then automatically calculates memory-safe serving parameters.
+When you deploy a model with `framework: vllm`, the inference operator runs the vLLM planner before starting the model server. The planner reads the model configuration and detects the GPU hardware. Then, it automatically calculates memory-safe serving parameters.
 
 The planner:
 
