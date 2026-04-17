@@ -19,7 +19,7 @@ Sovereign Private Cloud consists of three solution areas that run on Azure Local
 - **Productivity suite**:
 - **Your own apps**: 
 
-:::image type="content" source="../media/sovereign-private-cloud/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="../media/sovereign-private-cloud/solution-areas.png":::
+:::image type="content" source="../media/sovereign-private-cloud/overview/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="../media/sovereign-private-cloud/overview/solution-areas.png":::
 
 ## Azure Local
 
@@ -33,7 +33,7 @@ Foundry Local on Azure Local enables you to bring AI closer to your data by depl
 
 Foundry Local on Azure Local also supports a **Model-as-a-Service (MaaS)** approach, enabling you to deploy, manage, and consume AI models locally without building and operating the full model lifecycle yourself.
 
-for more information, see [Foundry Local for Azure Sovereign Private Clouds documentation](../foundry-local/what-is-foundry-local-on-azure-local.md).
+For more information, see [Foundry Local for Azure Sovereign Private Clouds documentation](../../foundry-local/what-is-foundry-local-on-azure-local.md).
 
 ## Microsoft 365 Local
 
@@ -41,7 +41,7 @@ Microsoft 365 Local enables you to run Exchange Server, SharePoint Server, and S
 
 If you need productivity tools in a private cloud environment, Microsoft 365 Local provides an Azure-consistent management experience with a unified control plane. It simplifies deployment and streamlines updates for easy infrastructure management, supporting both hybrid and fully disconnected deployments.
 
-For more information, see [Microsoft 365 Local on Azure Local Infrastructure](microsoft-365-local-overview.md).
+For more information, see [Microsoft 365 Local on Azure Local Infrastructure](../../m365-local/microsoft-365-local-overview.md).
 
 ## Related content
 
