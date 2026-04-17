@@ -6,7 +6,7 @@ items:
     expanded: true
     items:  
     - name: What is Sovereign Private Cloud?
-      href: sovereign-private-cloud/overview/sovereign-private-cloud.md
+      href: overview/sovereign-private-cloud.md
     - name: Sovereign Private Cloud use cases
       href: ./index.yml
 
@@ -22,10 +22,10 @@ items:
   - name: Foundry Local on Azure Local
     items:
     - name: Foundry Local overview 
-      href: /foundry-local/what-is-foundry-local-on-azure-local?toc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/toc.json&bc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/breadcrumb/toc.json
+      href: ../../foundry-local/what-is-foundry-local-on-azure-local?toc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/toc.json&bc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/breadcrumb/toc.json
     
   - name: Microsoft 365 Local
     items:
     - name: Microsoft 365 Local overview
-      href: m365-local/microsoft-365-local-overview.md
+      href: ../../m365-local/microsoft-365-local-overview.md
 
