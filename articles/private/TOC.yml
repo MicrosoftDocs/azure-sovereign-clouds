@@ -33,7 +33,7 @@ items:
   - name: Microsoft 365 Local
     items:
     - name: Microsoft 365 Local overview
-      href: ./index.yml
+      href: m365-local/microsoft-365-local-overview.md
 
   - name: GitHub Local
     items:
