@@ -16,7 +16,7 @@ customer intent: As a platform engineer or developer, I want to understand how t
 
 # Inference operator and model lifecycle in Foundry Local on Azure Local
 
-This article explains how the inference operator works, how it manages the model lifecycle through Kubernetes custom resources, and how the model catalog integrates with your cluster. It also covers how generative and predictive model workloads differ and how to run inference against each.
+This article explains how the inference operator works, how it manages the model lifecycle through Kubernetes custom resources, and how the model catalog integrates with your cluster. It also covers how generative and predictive model workloads differ and how to run inference against each type.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -278,7 +278,7 @@ You can also deploy models you package yourself as Docker or OCI images - for ex
 
 Generative model endpoints follow OpenAI-compatible request patterns. The inference endpoint is `/v1/chat/completions`.
 
-Example using a deployed `phi-3.5-gpu` model:
+Here's an example that uses a deployed `phi-3.5-gpu` model:
 
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
@@ -353,6 +353,8 @@ What happens in this flow:
 
 ## Related content
 
+- [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
+- [Automatic GPU inference tuning in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
 - [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
