@@ -11,6 +11,8 @@ items:
       href: known-issues.md
   - name: Concepts
     items:
+    - name: Models
+      href: concept-models.md
     - name: Inference operator and model lifecycle
       href: concept-inference-operator.md
     - name: Inference runtimes
