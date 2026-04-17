@@ -27,6 +27,8 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
+          - text: Models
+            url: concept-models.md
           - text: Inference operator and model lifecycle
             url: concept-inference-operator.md
           - text: Inference runtimes
@@ -59,6 +61,8 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
+          - text: Model reference
+            url: reference-models.md
           - text: Inference API endpoints and payload reference
             url: reference-inference-api-endpoints-payload.md
           - text: ModelDeployment and operator configuration reference

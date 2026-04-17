@@ -31,6 +31,8 @@ items:
       href: how-to-run-inference.md
   - name: Reference
     items:
+    - name: Model reference
+      href: reference-models.md
     - name: Inference API endpoints and payload reference
       href: reference-inference-api-endpoints-payload.md
     - name: ModelDeployment and operator configuration reference
