@@ -33,6 +33,8 @@ landingContent:
             url: concept-inference-operator.md
           - text: Inference runtimes
             url: concept-inference-runtimes.md
+          - text: Authentication and authorization
+            url: concept-authentication-authorization.md
           - text: Automatic GPU inference tuning
             url: concept-gpu-inference-planner.md
 
