@@ -23,12 +23,6 @@ items:
     items:
     - name: Foundry Local overview 
       href: foundry-local/what-is-foundry-local-on-azure-local?toc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/toc.json&bc=/azure/azure-sovereign-clouds/private/sovereign-private-cloud/breadcrumb/toc.json
-    - name: Deploy Foundry Local
-      href: ./index.yml
-    - name: Azure Edge RAG overview
-      href: ./index.yml
-    - name: Azure Video Indexer overview
-      href: ./index.yml
     
   - name: Microsoft 365 Local
     items:
