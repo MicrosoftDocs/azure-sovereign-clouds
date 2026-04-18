@@ -22,7 +22,7 @@ This article describes known limitations and workarounds for Foundry Local on Az
 
 ## Known issues and workarounds
 
-### No automatic API key rotation
+### No automatic API key rotation when Inference API is disabled
 
 **Issue:** The inference operator doesn't support automatic rotation of API keys.
 
@@ -43,6 +43,24 @@ kubectl delete secret <deployment-name>-api-keys -n foundry-local-operator
 
 **Workaround:** Install Trust Manager by using the following required flags:
 
+***Install Extension***
+```bash
+az k8s-extension create \
+    --cluster-name <cluster_name> \
+    --name azure-cert-manager \
+    --resource-group <resource_group> \
+    --cluster-type connectedClusters \
+    --extension-type Microsoft.CertManagement \
+    --scope cluster \
+    --release-train stable \
+    --config config.enableGatewayAPI=true \
+    --config cert-manager.crds.keep=true \
+    --config trust-manager.defaultPackage.enabled=false \
+    --config trust-manager.secretTargets.enabled=true \
+    --config trust-manager.secretTargets.authorizedSecretsAll=tru
+```
+
+***Install Helm Chart***
 ```bash
 helm upgrade --install trust-manager jetstack/trust-manager \
   --namespace cert-manager \
@@ -52,20 +70,6 @@ helm upgrade --install trust-manager jetstack/trust-manager \
 ```
 
 These flags are required for cross-namespace secret distribution to work correctly. For full installation steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
-
----
-
-### ModelDeployment port update doesn't reconcile the NGINX sidecar
-
-**Problem:** Updating `spec.port` on an existing ModelDeployment doesn't update the NGINX sidecar configuration. The sidecar continues using the original port, which causes inference requests to fail.
-
-**Workaround:** Delete the ModelDeployment, correct the port value, and then reapply it:
-
-```bash
-kubectl delete -f <model-deployment>.yaml
-# Edit the manifest to set the correct port value
-kubectl apply -f <model-deployment>.yaml
-```
 
 ---
 
