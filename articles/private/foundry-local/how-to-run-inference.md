@@ -78,7 +78,7 @@ $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
 
 When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience. Use the same `Authorization: Bearer` header - the platform detects the credential type automatically. 
 
-##### [Bash](#tab/entra-key-bash)
+##### [Bash](#tab/bash)
 
 ```bash
 JWT_TOKEN=$(az account get-access-token \
@@ -86,7 +86,7 @@ JWT_TOKEN=$(az account get-access-token \
   --query accessToken -o tsv)
 ```
 
-##### [PowerShell](#tab/entra-key-powershell)
+##### [PowerShell](#tab/powershell)
 
 ```powershell
 $JWT_TOKEN = az account get-access-token `
@@ -104,7 +104,7 @@ Entra ID authentication requires the [Cognitive Services OpenAI User role](/azur
 
 In this step, you send a chat completions request to your deployed model endpoint and confirm that it returns a response.
 
-#### [CPU — With ingress — Bash](#tab/cpu-ingress-bash)
+#### [CPU — With ingress — Bash](#tab/bash)
 
 ```bash
 # URI uses the model's metadata.name value
@@ -121,7 +121,7 @@ curl -k -X POST "https://<YOUR_INGRESS_ADDRESS>/phi-4-cpu/v1/chat/completions" \
   }'
 ```
 
-#### [CPU — With ingress — PowerShell](#tab/cpu-ingress-powershell)
+#### [CPU — With ingress — PowerShell](#tab/powershell)
 
 ```powershell
 $body = @{
@@ -138,7 +138,7 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/phi-4-cpu/v1/chat/complet
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [CPU — Without ingress](#tab/cpu-no-ingress)
+#### [CPU — Without ingress](#tab/no-ingress)
 
 ```bash
 kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
@@ -150,7 +150,7 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
   -d '{"model": "Phi-4-generic-cpu:1", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "What is the capital/major city of France? Reply in one sentence."}], "max_tokens": 50}'
 ```
 
-#### [GPU — With ingress — Bash](#tab/gpu-ingress-bash)
+#### [GPU — With ingress — Bash](#tab/gpu-bash)
 
 ```bash
 # URI uses the model's metadata.name value
@@ -167,7 +167,7 @@ curl -k -X POST "https://<YOUR_INGRESS_ADDRESS>/phi-4-gpu/v1/chat/completions" \
   }'
 ```
 
-#### [GPU — With ingress — PowerShell](#tab/gpu-ingress-powershell)
+#### [GPU — With ingress — PowerShell](#tab/gpu-powershell)
 
 ```powershell
 $body = @{
@@ -299,14 +299,14 @@ Wait for **State** to show `Running` and **Ready** to show `true`. The model dow
 
 Get an access credential for your BYO deployment by using either an API key or an Entra ID JWT.
 
-#### [Bash](#tab/byo-key-bash)
+#### [Bash](#tab/bash)
 
 ```bash
 API_KEY=$(kubectl get secret <your-model>-api-keys -n foundry-local-operator \
   -o jsonpath='{.data.primary-key}' | base64 -d)
 ```
 
-#### [PowerShell](#tab/byo-key-powershell)
+#### [PowerShell](#tab/powershell)
 
 ```powershell
 $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
@@ -321,7 +321,7 @@ $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
 
 When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience.
 
-##### [Bash](#tab/byo-entra-bash)
+##### [Bash](#tab/bash)
 
 ```bash
 JWT_TOKEN=$(az account get-access-token \
@@ -329,7 +329,7 @@ JWT_TOKEN=$(az account get-access-token \
   --query accessToken -o tsv)
 ```
 
-##### [PowerShell](#tab/byo-entra-powershell)
+##### [PowerShell](#tab/powershell)
 
 ```powershell
 $JWT_TOKEN = az account get-access-token `
@@ -341,7 +341,7 @@ $JWT_TOKEN = az account get-access-token `
 
 ### Step 4: Call the inference endpoint
 
-#### [With ingress — Bash](#tab/byo-ingress-bash)
+#### [With ingress — Bash](#tab/bash)
 
 ```bash
 curl -k -X POST "https://<YOUR_INGRESS_ADDRESS>/<your-model>-cpu/v1/chat/completions" \
@@ -357,7 +357,7 @@ curl -k -X POST "https://<YOUR_INGRESS_ADDRESS>/<your-model>-cpu/v1/chat/complet
   }'
 ```
 
-#### [With ingress — PowerShell](#tab/byo-ingress-powershell)
+#### [With ingress — PowerShell](#tab/powershell)
 
 ```powershell
 $body = @{
@@ -374,7 +374,7 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/<your-model>-cpu/v1/chat/
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [Without ingress](#tab/byo-no-ingress)
+#### [Without ingress](#tab/no-ingress)
 
 ```bash
 kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
