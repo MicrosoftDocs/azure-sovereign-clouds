@@ -38,7 +38,7 @@ Foundry Local on Azure Local supports two authentication methods: API key authen
 
 #### Option A: API key authentication (default) 
 
-Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header.
+Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header. Select the CPU or GPU section that matches the compute value in your ModelDeployment.
 
 ##### [CPU — Bash](#tab/bash)
 
@@ -56,14 +56,16 @@ $API_KEY = kubectl get secret phi-4-cpu-api-keys -n foundry-local-operator `
   }
 ```
 
-#### [GPU — Bash](#tab/gpu-key-bash)
+---
+
+#### [GPU — Bash](#tab/bash)
 
 ```bash
 API_KEY=$(kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator \
   -o jsonpath='{.data.primary-key}' | base64 -d)
 ```
 
-##### [GPU — PowerShell](#tab/gpu-key-powershell)
+##### [GPU — PowerShell](#tab/powershell)
 
 ```powershell
 $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
@@ -150,7 +152,9 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
   -d '{"model": "Phi-4-generic-cpu:1", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "What is the capital/major city of France? Reply in one sentence."}], "max_tokens": 50}'
 ```
 
-#### [GPU — With ingress — Bash](#tab/gpu-bash)
+---
+
+#### [GPU — With ingress — Bash](#tab/bash)
 
 ```bash
 # URI uses the model's metadata.name value
@@ -167,7 +171,7 @@ curl -k -X POST "https://<YOUR_INGRESS_ADDRESS>/phi-4-gpu/v1/chat/completions" \
   }'
 ```
 
-#### [GPU — With ingress — PowerShell](#tab/gpu-powershell)
+#### [GPU — With ingress — PowerShell](#tab/powershell)
 
 ```powershell
 $body = @{
@@ -184,7 +188,7 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/phi-4-gpu/v1/chat/complet
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [GPU — Without ingress](#tab/gpu-no-ingress)
+#### [GPU — Without ingress](#tab/no-ingress)
 
 ```bash
 kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
@@ -340,6 +344,8 @@ $JWT_TOKEN = az account get-access-token `
 ---
 
 ### Step 4: Call the inference endpoint
+
+Choose the endpoint that matches your deployment compute type, then send a chat completions request with your API key or JWT token to confirm the model responds.
 
 #### [With ingress — Bash](#tab/bash)
 
