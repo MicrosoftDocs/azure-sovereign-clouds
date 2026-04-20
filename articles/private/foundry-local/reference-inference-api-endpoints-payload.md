@@ -52,8 +52,20 @@ For information about retrieving and rotating API keys, see [Configure TLS and a
 When Entra ID authentication is enabled, clients authenticate by sending a Microsoft Entra ID JWT in the Authorization: Bearer header. The platform detects the credential type automatically - tokens starting with the JWT prefix are validated by the Entra Auth SDK sidecar, while tokens with the fndry-pk- or fndry-sk- prefix are validated as API keys.
 After JWT validation, the middleware performs an Azure ARM RBAC authorization check to verify the caller holds the required DataAction (Cognitive Services OpenAI User role or equivalent) on the cluster's ARM resource scope.
 ### To acquire a JWT token:
-Bash JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)  # PowerShell $JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv
-Then use the JWT token in the Authorization: Bearer header, the same way as an API key. The platform routes it to the appropriate validation path based on the token content.
+
+```bash
+JWT_TOKEN=$(az account get-access-token \
+  --resource api://<ENTRA_CLIENT_ID> \
+  --query accessToken -o tsv)
+```
+
+```powershell
+$JWT_TOKEN = az account get-access-token `
+  --resource "api://<ENTRA_CLIENT_ID>" `
+  --query accessToken -o tsv
+```
+
+Then use the JWT token in the `Authorization: Bearer` header, the same way as an API key. The platform routes it to the appropriate validation path based on the token content.
 
 ## Generative inference request examples
 
@@ -95,7 +107,19 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
 
 ### Authorization: Bearer (Entra ID JWT)
 
-```curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \   -H "Content-Type: application/json" \   -H "Authorization: Bearer $JWT_TOKEN" \   -d '{     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",     "messages": [       {"role": "system", "content": "You are a helpful assistant."},       {"role": "user", "content": "What is the capital/major city of France?"}     ],     "temperature": 0.7,     "max_tokens": 100   }'
+```bash
+curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+    "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "What is the capital/major city of France?"}
+    ],
+    "temperature": 0.7,
+    "max_tokens": 100
+  }'
 ```
 
 ### Generative response

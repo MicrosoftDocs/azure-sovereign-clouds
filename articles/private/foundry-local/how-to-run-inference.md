@@ -77,15 +77,15 @@ $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
 When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience. Use the same `Authorization: Bearer` header - the platform detects the credential type automatically. 
 
 ```bash
-
-JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)
-
+JWT_TOKEN=$(az account get-access-token \
+  --resource api://<ENTRA_CLIENT_ID> \
+  --query accessToken -o tsv)
 ```
 
-```PowerShell 
-
-$JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv 
-
+```powershell
+$JWT_TOKEN = az account get-access-token `
+  --resource "api://<ENTRA_CLIENT_ID>" `
+  --query accessToken -o tsv
 ```
 
 Then use $JWT_TOKEN (or $env:JWT_TOKEN) in place of $API_KEY in the inference calls below. The Authorization: Bearer header accepts both API keys and JWTs. 
@@ -305,12 +305,17 @@ $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
 
 Alternatively, if you enable Entra ID authentication, acquire a JWT token: 
 
-# Bash JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)  # PowerShell $JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv 
-
-# Bash
+```bash
 JWT_TOKEN=$(az account get-access-token \
   --resource api://<ENTRA_CLIENT_ID> \
   --query accessToken -o tsv)
+```
+
+```powershell
+$JWT_TOKEN = az account get-access-token `
+  --resource "api://<ENTRA_CLIENT_ID>" `
+  --query accessToken -o tsv
+```
 
 ### Step 4: Call the inference endpoint
 
@@ -387,5 +392,5 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
-- [https://developers.openai.com/api/reference/chat-completions/overview)
+- [OpenAI Chat Completions API reference](https://developers.openai.com/api/reference/chat-completions/overview)
 
