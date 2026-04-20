@@ -96,7 +96,7 @@ $JWT_TOKEN = az account get-access-token `
 
 Then use `$JWT_TOKEN` (or `$env:JWT_TOKEN`) in place of `$API_KEY` in the inference calls below. The `Authorization: Bearer` header accepts both API keys and JWTs.
 
-Entra ID authentication requires the [Cognitive Services OpenAI User role](azure/role-based-access-control/built-in-roles/ai-machine-learning#cognitive-services-openai-user) (or equivalent) assigned to the caller identity on the cluster scope. API key authentication grants full access without role checks.
+Entra ID authentication requires the [Cognitive Services OpenAI User role](/azure/role-based-access-control/built-in-roles/ai-machine-learning#cognitive-services-openai-user) (or equivalent) assigned to the caller identity on the cluster scope. API key authentication grants full access without role checks.
 
 ### Step 2: Call the inference endpoint
 
