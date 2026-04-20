@@ -313,15 +313,19 @@ $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
   }
 ```
 
-#### Entra ID (JWT) authentication 
+#### Option B: Entra ID (JWT) authentication
 
-Alternatively, if you enable Entra ID authentication, acquire a JWT token: 
+When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience.
+
+##### [Bash](#tab/byo-entra-bash)
 
 ```bash
 JWT_TOKEN=$(az account get-access-token \
   --resource api://<ENTRA_CLIENT_ID> \
   --query accessToken -o tsv)
 ```
+
+##### [PowerShell](#tab/byo-entra-powershell)
 
 ```powershell
 $JWT_TOKEN = az account get-access-token `
