@@ -56,7 +56,7 @@ After JWT validation, the middleware performs an Azure ARM RBAC authorization ch
 
 Retrieve a JWT token by running the Azure CLI command for your shell environment:
 
-#### [Bash](#tab/jwt-bash)
+#### [Bash](#tab/bash)
 
 ```bash
 JWT_TOKEN=$(az account get-access-token \
@@ -64,7 +64,7 @@ JWT_TOKEN=$(az account get-access-token \
   --query accessToken -o tsv)
 ```
 
-#### [PowerShell](#tab/jwt-powershell)
+#### [PowerShell](#tab/powershell)
 
 ```powershell
 $JWT_TOKEN = az account get-access-token `
@@ -156,7 +156,24 @@ The `/v1/predict` endpoint accepts ONNX model inputs. The exact payload structur
 
 Convert your image to base64 format by using one of the following commands:
 
-#### [PowerShell](#tab/predict-powershell)
+#### [Bash](#tab/bash)
+
+```bash
+BASE64_IMAGE=$(base64 -w 0 <PATH_TO_IMAGE_FILE>)
+
+curl -k -X POST "https://<URL>/v1/predict" \
+  -H "Content-Type: application/json" \
+  -H "X-API-KEY: $API_KEY" \
+  -d "{
+    \"items\": [{
+      \"content_type\": \"image/jpeg\",
+      \"encoder\": \"base64\",
+      \"data\": \"$BASE64_IMAGE\"
+    }]
+  }"
+```
+
+#### [PowerShell](#tab/powershell)
 
 ```powershell
 $base64Image = [Convert]::ToBase64String(
@@ -176,23 +193,6 @@ $body = @{
 Invoke-RestMethod -Uri https://<URL>/v1/predict -Method Post `
   -Body $body -ContentType "application/json" `
   -Headers @{ "X-API-Key" = $API_KEY } -SkipCertificateCheck
-```
-
-#### [Bash](#tab/predict-bash)
-
-```bash
-BASE64_IMAGE=$(base64 -w 0 <PATH_TO_IMAGE_FILE>)
-
-curl -k -X POST "https://<URL>/v1/predict" \
-  -H "Content-Type: application/json" \
-  -H "X-API-KEY: $API_KEY" \
-  -d "{
-    \"items\": [{
-      \"content_type\": \"image/jpeg\",
-      \"encoder\": \"base64\",
-      \"data\": \"$BASE64_IMAGE\"
-    }]
-  }"
 ```
 
 ---
