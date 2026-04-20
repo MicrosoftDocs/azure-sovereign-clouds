@@ -140,18 +140,6 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/phi-4-cpu/v1/chat/complet
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [CPU — Without ingress](#tab/no-ingress)
-
-```bash
-kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
-  -n foundry-local-operator -- \
-  curl -ks -X POST \
-    "https://phi-4-cpu.foundry-local-operator.svc.cluster.local:5000/v1/chat/completions" \
-  -H "Authorization: Bearer $API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"model": "Phi-4-generic-cpu:1", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "What is the capital/major city of France? Reply in one sentence."}], "max_tokens": 50}'
-```
-
 ---
 
 #### [GPU — With ingress — Bash](#tab/bash)
@@ -188,7 +176,24 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/phi-4-gpu/v1/chat/complet
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [GPU — Without ingress](#tab/no-ingress)
+---
+
+> [!NOTE]
+> When you use an ingress controller, the `-k` flag (curl) and `-SkipCertificateCheck` (PowerShell) skip certificate validation because these examples use self-signed certificates. In production, configure proper TLS certificates.
+
+#### [CPU — Without ingress](#tab/no-ingress)
+
+```bash
+kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
+  -n foundry-local-operator -- \
+  curl -ks -X POST \
+    "https://phi-4-cpu.foundry-local-operator.svc.cluster.local:5000/v1/chat/completions" \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "Phi-4-generic-cpu:1", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "What is the capital/major city of France? Reply in one sentence."}], "max_tokens": 50}'
+```
+
+#### [GPU — Without ingress](#tab/gpu-no-ingress)
 
 ```bash
 kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
@@ -201,9 +206,6 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 ```
 
 ---
-
-> [!NOTE]
-> When you use an ingress controller, the `-k` flag (curl) and `-SkipCertificateCheck` (PowerShell) skip certificate validation because these examples use self-signed certificates. In production, configure proper TLS certificates.
 
 ### Expected response
 
@@ -303,6 +305,10 @@ Wait for **State** to show `Running` and **Ready** to show `true`. The model dow
 
 Get an access credential for your BYO deployment by using either an API key or an Entra ID JWT.
 
+### Option A: API key authentication
+
+Retrieve the primary API key from the Kubernetes Secret created for your deployment and pass it in the `Authorization: Bearer` header.
+
 #### [Bash](#tab/bash)
 
 ```bash
@@ -380,7 +386,9 @@ Invoke-RestMethod -Uri "https://<YOUR_INGRESS_ADDRESS>/<your-model>-cpu/v1/chat/
   -Headers @{ "Authorization" = "Bearer $API_KEY" } -SkipCertificateCheck
 ```
 
-#### [Without ingress](#tab/no-ingress)
+---
+
+#### Without ingress
 
 ```bash
 kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
@@ -391,8 +399,6 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
   -H "Content-Type: application/json" \
   -d '{"model": "<your-model>:<tag>", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "What is the capital/major city of France? Reply in one sentence."}], "max_tokens": 50}'
 ```
-
----
 
 > [!NOTE]
 > The example uses self-signed certificates, so it includes the `-k` flag for curl and the `-SkipCertificateCheck` flag for PowerShell. In production, configure proper TLS certificates.
