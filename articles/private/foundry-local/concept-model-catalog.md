@@ -40,11 +40,11 @@ Catalog models come from model registries. A component named **catalog-sync** ge
 - **Initial sync:** A Helm post-install hook Job runs once when you first install the operator.
 - **Scheduled sync:** A CronJob runs every six hours by default (`0 */6 * * *`).
 
-**At deployment time**, when a ModelDeployment references a catalog model by name, the operator reads the ConfigMap, finds the matching entry by alias/id/displayName, and extracts the variant, source provider, framework, and version. No external API calls are made during deployment.
+**At deployment time**, when a ModelDeployment references a catalog model by name, the operator reads the ConfigMap, finds the matching entry by alias, ID, or display name, and extracts the variant, source provider, framework, and version. The operator makes no external API calls during deployment.
 
 ### Query the catalog
 
-To see what models are available in your cluster:
+To see what models are available in your cluster, use the following steps:
 
 ```bash
 kubectl get cm foundry-local-catalog -n foundry-local-operator -o json \
@@ -77,9 +77,9 @@ BYO models let you deploy any model you package as an OCI artifact in a containe
 **How BYO model resolution works:**
 
 1. You specify `model.custom` in the ModelDeployment with the registry URL, repository path, tag, and a Kubernetes Secret containing registry credentials.
-2. The operator validates the registry hostname against SSRF protections (rejects raw IPs, localhost, and hostnames resolving to internal addresses). The operator's own internal model-store registry is exempt.
-3. A StoreModel CR is created, which triggers a cache Job. The Job pulls the OCI artifact from the external registry and pushes it to the local model store.
-4. Subsequent deployments of the same model reuse the local cache.
+1. The operator validates the registry hostname against SSRF protections (rejects raw IPs, localhost, and hostnames resolving to internal addresses). The operator's own internal model-store registry is exempt.
+1. A StoreModel CR is created, which triggers a cache Job. The Job pulls the OCI artifact from the external registry and pushes it to the local model store.
+1. Subsequent deployments of the same model reuse the local cache.
 
 For generative models, package your model in ONNX format. The inference runtime (ONNX Runtime GenAI) loads it directly. For predictive models, package your ONNX model and any preprocessing logic.
 
@@ -137,7 +137,7 @@ The operator selects the container image for the inference pod based on four dim
 | Predictive | CPU | Custom | onnx-genai | predictive-cpu-byo (ORAS) |
 | Predictive | GPU | Custom | onnx-genai | predictive-gpu-byo (ORAS) |
 
-Predictive workloads do not support catalog models. vLLM runtime requires GPU compute.
+Predictive workloads don't support catalog models. vLLM runtime requires GPU compute.
 
 ### Runtimes
 

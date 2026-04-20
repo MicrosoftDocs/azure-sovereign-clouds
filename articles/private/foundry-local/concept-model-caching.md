@@ -38,12 +38,12 @@ StoreModel is an internal CRD the operator uses to track whether model artifacts
 When the operator processes a ModelDeployment:
 
 1. It generates a deterministic StoreModel name from the model source, alias, compute type, framework, and version.
-2. It checks if a StoreModel CR with that name already exists.
-3. If the StoreModel is `Available`, the operator reads the cached OCI path from `status.storeRef` and proceeds.
-4. If no StoreModel exists, the operator creates one, which triggers a cache Job.
-5. The operator raises a temporary retry (with a configurable poll interval) until the StoreModel reaches `Available`.
-6. If the StoreModel enters `Error`, the operator deletes it and marks the ModelDeployment as failed.
-7. A configurable timeout prevents indefinite waiting.
+1. It checks if a StoreModel CR with that name already exists.
+1. If the StoreModel is `Available`, the operator reads the cached OCI path from `status.storeRef` and proceeds.
+1. If no StoreModel exists, the operator creates one, which triggers a cache Job.
+1. The operator raises a temporary retry (with a configurable poll interval) until the StoreModel reaches `Available`.
+1. If the StoreModel enters `Error`, the operator deletes it and marks the ModelDeployment as failed.
+1. A configurable timeout prevents indefinite waiting.
 
 The inference pods use an init container (the model-store-retriever) that pulls model files from the local registry into the pod's filesystem before the main inference container starts.
 
@@ -52,8 +52,8 @@ The inference pods use an init container (the model-store-retriever) that pulls 
 The caching step occurs early in the ModelDeployment reconciliation flow, after model resolution but before child resource creation:
 
 1. The operator validates the ModelDeployment spec and resolves the model source.
-2. The operator ensures the model is cached locally by creating a StoreModel CR and waiting for the cache job to complete.
-3. Once the StoreModel is `Available`, the operator proceeds to select the container image, generate API key secrets, and create the remaining child resources (Deployment, Service, ConfigMap, and others).
+1. The operator ensures the model is cached locally by creating a StoreModel CR and waiting for the cache job to complete.
+1. Once the StoreModel is `Available`, the operator proceeds to select the container image, generate API key secrets, and create the remaining child resources (Deployment, Service, ConfigMap, and others).
 
 For the full reconciliation flow, see [Inference operator and model lifecycle](concept-inference-operator.md).
 

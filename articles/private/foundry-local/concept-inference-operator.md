@@ -60,7 +60,7 @@ When you create or update a ModelDeployment resource, the operator performs the 
 1. Selects the container image based on workload type, compute type, runtime, and model source.
 1. Generates API key secrets for authentication.
 1. Builds and creates child resources: Deployment, Service, nginx ConfigMap, Certificate (when TLS is enabled), and optionally Ingress.
-1. Sets owner references on all child resources so they are garbage-collected when the ModelDeployment is deleted.
+1. Sets owner references on all child resources so they're garbage-collected when the ModelDeployment is deleted.
 1. Updates the resource status with endpoint information.
 
 ### Child resources created per ModelDeployment
@@ -168,7 +168,7 @@ Invoke-RestMethod -Uri https://<URL>/v1/predict -Method Post `
 When deploying on GPU nodes, the ModelDeployment supports:
 
 - **`resources.limits.gpu`**: Set the number of GPUs (1-8) for the pod. Required when `compute: gpu`.
-- **`skipGpuResource`**: When true, the operator does not set the nvidia.com/gpu resource limit. Use with nodeSelector to target GPU nodes where GPU allocation is managed externally.
+- **`skipGpuResource`**: When true, the operator doesn't set the `nvidia.com/gpu` resource limit. Use with `nodeSelector` to target GPU nodes where GPU allocation is managed externally.
 - **`nodeSelector`**: Target specific nodes by label. Required when `skipGpuResource` is true.
 - **`tolerations`**: Tolerate GPU node taints (NoSchedule, PreferNoSchedule, NoExecute).
 
