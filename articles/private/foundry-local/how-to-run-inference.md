@@ -40,14 +40,14 @@ Foundry Local on Azure Local supports two authentication methods: API key authen
 
 Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header.
 
-##### [CPU — Bash](#tab/cpu-key-bash)
+##### [CPU — Bash](#tab/bash)
 
 ```bash
 API_KEY=$(kubectl get secret phi-4-cpu-api-keys -n foundry-local-operator \
   -o jsonpath='{.data.primary-key}' | base64 -d)
 ```
 
-##### [CPU — PowerShell](#tab/cpu-key-powershell)
+##### [CPU — PowerShell](#tab/powershell)
 
 ```powershell
 $API_KEY = kubectl get secret phi-4-cpu-api-keys -n foundry-local-operator `
