@@ -39,6 +39,10 @@ This article is a reference for the `ModelDeployment` CRD spec and status fields
 | `resources.limits.cpu` | string | No | `1000m` | CPU limit. |
 | `resources.limits.memory` | string | No | `1Gi` | Memory limit. |
 | `resources.limits.gpu` | integer | No | — | Number of GPUs (0–8). |
+| `runtime` | string | No | onnx-genai | Inference runtime: `onnx-genai` or `vllm`. vLLM requires `compute: gpu`. |
+| `vllm` | object | No | - | vLLM-specific configuration. Only used when `runtime: vllm`. |
+| `vllm.preferences` | object | No | - | vLLM engine argument overrides (open schema). See vLLM planner documentation |
+| `Vllm.modelCacheStorageGi` | integer | No | 100 | Size of the model cache PVC in GiB (minimum 1). |
 | `nodeSelector` | object | No | — | Node selector labels for pod scheduling. |
 | `skipGpuResource` | boolean | No | `false` | Skip the `nvidia.com/gpu` limit. Requires `nodeSelector` when set to `true`. |
 | `tolerations` | array | No | — | Pod tolerations. |
@@ -112,7 +116,10 @@ spec:
 |-------|------|-------------|
 | `state` | string | Deployment state: `Pending`, `Creating`, `Running`, `Updating`, `Error`, or `Terminating`. |
 | `message` | string | Human-readable status message. |
-| `readyReplicas` | integer | Number of ready replicas. |
+| `replicas.desired` | integer | Desired number of replicas. |
+| `replicas.ready` | integer | Number of ready replicas. |
+| `replicas.available` | integer | Number of available replicas. |
+| `readyReplicas` | integer | Deprecated. Use replicats.ready instead. |
 | `deploymentReady` | boolean | `true` when all replicas are ready. |
 | `serviceReady` | boolean | `true` when the Service resource is created. |
 | `internalEndpoint` | string | Internal cluster endpoint URL. |
@@ -126,6 +133,7 @@ spec:
 | `lastUpdated` | datetime | Timestamp of last status update. |
 
 ## Model CRD spec fields
+Note: The Model CRD is for BYO (custom) models only. Catalog models are resolved from the catalog ConfigMap and do not use this CRD. To deploy a catalog model, use model.catalog in the ModelDeployment spec instead.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -150,7 +158,7 @@ spec:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `phase` | string | Model phase: `Pending`, `Syncing`, `Available`, or `Error`. |
+| `phase` | string | Model phase: `Pending`, `Available`, or `Error`. |
 | `message` | string | Human-readable status message. |
 | `catalogSync.lastSynced` | datetime | Timestamp of the last catalog sync. |
 | `catalogSync.syncStatus` | string | `Syncing`, `Synced`, or `Error`. |
@@ -181,6 +189,10 @@ images:
   predictive_gpu_oras:
     repository: predictive-gpu-byo
     tag: "latest"
+  Vllm_gpu:
+    repository: vllm-server
+    tag: "latest"
+
 
 # Ingress defaults
 ingress:
@@ -193,7 +205,6 @@ ingress:
 catalog:
   configmapName: "foundry-local-catalog"
   configmapNamespace: "foundry-local-operator"
-  lazyRegistrationEnabled: true
 ```
 
 ### Configuration fields
@@ -201,7 +212,7 @@ catalog:
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
 | `registry` | string | `""` | Container registry prefix for inference images. |
-| `images.<type>.repository` | string | Varies by workload type | Image repository path. |
+| `images.<type>.repository` | string | Varies by workload type | Image repository path. Types: `generative_cpu`, `generative_gpu`, `generative_cpu_oras`, `generative_gpu_oras`, `predictive_cpu_oras`, `predictive_gpu_oras`, `vllm_gpu`.|
 | `images.<type>.tag` | string | `latest` | Image tag. |
 | `ingress.pathTemplate` | string | `/{name}(/\|$)(.*)` | Ingress path template. `{name}` is replaced with the deployment name. |
 | `ingress.rewritePathTemplate` | string | `/$2` | Rewrite target path for NGINX. |
