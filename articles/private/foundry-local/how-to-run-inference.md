@@ -30,16 +30,22 @@ This article shows you how to retrieve API keys and send inference requests to m
 
 The following steps use Phi-4 as an example. Substitute your deployment name and model ID as needed.
 
-### Step 1: Get the API key
+### Step 1: Authenticate
 
-#### [CPU — Bash](#tab/cpu-key-bash)
+Foundry Local on Azure Local supports two authentication methods: API key authentication and Entra ID (JWT) authentication. Choose the method that fits your scenario. 
+
+#### Option A: API key authentication (default) 
+
+Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header. 
+
+##### [CPU — Bash](#tab/cpu-key-bash)
 
 ```bash
 API_KEY=$(kubectl get secret phi-4-cpu-api-keys -n foundry-local-operator \
   -o jsonpath='{.data.primary-key}' | base64 -d)
 ```
 
-#### [CPU — PowerShell](#tab/cpu-key-powershell)
+##### [CPU — PowerShell](#tab/cpu-key-powershell)
 
 ```powershell
 $API_KEY = kubectl get secret phi-4-cpu-api-keys -n foundry-local-operator `
@@ -55,7 +61,7 @@ API_KEY=$(kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator \
   -o jsonpath='{.data.primary-key}' | base64 -d)
 ```
 
-#### [GPU — PowerShell](#tab/gpu-key-powershell)
+##### [GPU — PowerShell](#tab/gpu-key-powershell)
 
 ```powershell
 $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
@@ -65,6 +71,28 @@ $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
 ```
 
 ---
+
+#### Option B: Entra ID (JWT) authentication 
+
+When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience. Use the same `Authorization: Bearer` header - the platform detects the credential type automatically. 
+
+```bash
+
+JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)
+
+```
+
+```PowerShell 
+
+$JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv 
+
+```
+
+Then use $JWT_TOKEN (or $env:JWT_TOKEN) in place of $API_KEY in the inference calls below. The Authorization: Bearer header accepts both API keys and JWTs. 
+
+Note: Entra ID authentication requires the Cognitive Services OpenAI User role (or equivalent) assigned to the caller identity on the cluster scope. API key authentication grants full access without role checks. 
+
+ 
 
 ### Step 2: Call the inference endpoint
 
@@ -255,7 +283,7 @@ kubectl get ingress -A
 
 Wait for **State** to show `Running` and **Ready** to show `true`. The model downloads from the internet during this step, so it might take some time depending on your connection.
 
-### Step 3: Get the API key
+### Step 3: Authenticate
 
 #### [Bash](#tab/byo-key-bash)
 
@@ -273,7 +301,16 @@ $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
   }
 ```
 
----
+#### Entra ID (JWT) authentication 
+
+Alternatively, if you enable Entra ID authentication, acquire a JWT token: 
+
+# Bash JWT_TOKEN=$(az account get-access-token \   --resource api://<ENTRA_CLIENT_ID> \   --query accessToken -o tsv)  # PowerShell $JWT_TOKEN = az account get-access-token `   --resource "api://<ENTRA_CLIENT_ID>" `   --query accessToken -o tsv 
+
+# Bash
+JWT_TOKEN=$(az account get-access-token \
+  --resource api://<ENTRA_CLIENT_ID> \
+  --query accessToken -o tsv)
 
 ### Step 4: Call the inference endpoint
 
@@ -350,4 +387,5 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
+- [https://developers.openai.com/api/reference/chat-completions/overview)
 
