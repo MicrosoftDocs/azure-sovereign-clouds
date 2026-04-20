@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want a complete reference for ModelDeployment fields and operator configuration so that I can deploy and configure AI inference workloads precisely.
 ---
@@ -133,7 +133,8 @@ spec:
 | `lastUpdated` | datetime | Timestamp of last status update. |
 
 ## Model CRD spec fields
-Note: The Model CRD is for BYO (custom) models only. Catalog models are resolved from the catalog ConfigMap and do not use this CRD. To deploy a catalog model, use model.catalog in the ModelDeployment spec instead.
+
+The Model CRD is for BYO (custom) models only. Catalog models are resolved from the catalog ConfigMap and do not use this CRD. To deploy a catalog model, use model.catalog in the ModelDeployment spec instead.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
