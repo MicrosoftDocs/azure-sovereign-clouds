@@ -1,6 +1,5 @@
 ---
 title: "Model catalog and sourcing in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Understand how the model catalog works, how catalog-sync populates model metadata, and how to reference catalog and BYO models in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds

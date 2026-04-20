@@ -1,6 +1,5 @@
 ---
 title: "Inference operator and model lifecycle in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Understand how the inference operator manages model lifecycle, custom resources, and resource reconciliation in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -112,7 +111,7 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
     "messages": [
       {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "What is the capital of France?"}
+      {"role": "user", "content": "What is the capital/majory city of France?"}
     ],
     "temperature": 0.7,
     "max_tokens": 100
@@ -137,7 +136,7 @@ Key capabilities:
 - **BYO model support**: Load custom ONNX models from ORAS-compatible registries.
 
 > [!NOTE]
-> The catalog does not include predictive models. To deploy predictive models, use BYO methods. For the full procedure, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+> The catalog doesn't include predictive models. To deploy predictive models, use BYO methods. For the full procedure, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ### Run predictive inference
 

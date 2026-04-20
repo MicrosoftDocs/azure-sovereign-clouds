@@ -1,6 +1,5 @@
 ---
 title: "StoreModel and model caching in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Understand how the StoreModel CRD tracks model caching in the local OCI registry and how model artifacts are downloaded and served in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
