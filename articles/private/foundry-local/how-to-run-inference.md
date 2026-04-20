@@ -351,7 +351,7 @@ $JWT_TOKEN = az account get-access-token `
 
 ### Step 4: Call the inference endpoint
 
-Choose the endpoint that matches your deployment compute type, then send a chat completions request with your API key or JWT token to confirm the model responds.
+Choose the endpoint that matches your deployment compute type. Then, send a chat completions request with your API key or JWT token to confirm the model responds.
 
 #### [With ingress — Bash](#tab/bash)
 
