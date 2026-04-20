@@ -313,6 +313,8 @@ $API_KEY = kubectl get secret <your-model>-api-keys -n foundry-local-operator `
   }
 ```
 
+---
+
 #### Option B: Entra ID (JWT) authentication
 
 When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience.
@@ -332,6 +334,8 @@ $JWT_TOKEN = az account get-access-token `
   --resource "api://<ENTRA_CLIENT_ID>" `
   --query accessToken -o tsv
 ```
+
+---
 
 ### Step 4: Call the inference endpoint
 
