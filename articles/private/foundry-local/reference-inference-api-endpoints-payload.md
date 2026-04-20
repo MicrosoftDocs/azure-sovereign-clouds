@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want a complete reference for inference API endpoints and payload formats in Foundry Local on Azure Local so that I can integrate AI models into my applications.
 ---
@@ -29,29 +29,34 @@ Each deployed model exposes the following endpoints. Replace `<base-url>` with y
 | `/health` | GET | Liveness check. Returns `200 OK` when the service is running. |
 | `/ready` | GET | Readiness check. Returns `200 OK` when the model is loaded and ready to serve requests. |
 | `/v1/model` | GET | Model information. Returns metadata about the loaded model. |
-| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. When using models with tool calling capabilities, the tool_choice: required field must be specified in the request payload. |
-| `/v1/audio/transcriptions` | POST | Generative inference. Use for audio to text transcription. For models with automatic-speech-recognition capabilities (e.g. whisper) |
+| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. When using models with tool calling capabilities, include the `tool_choice` field in the request payload. |
+| `/v1/audio/transcriptions` | POST | Generative inference. Use for audio to text transcription. For models with automatic-speech-recognition capabilities (for example, whisper). |
 | `/v1/predict` | POST | Predictive inference. Use for ONNX-based classification, regression, and other ML tasks. |
 
 ## Authentication
 
-All endpoints require authentication. The platform supports two methods: API key authentication and Entra ID (JWT) authentication. For API key auth, include the key in your request using one of these header formats: 
+All endpoints require authentication. The platform supports two methods: API key authentication and Microsoft Entra ID JSON Web Token (JWT) authentication. For API key authentication, include the key in your request using one of these header formats: 
 
 | Header format | Example |
 |--------------|---------|
 | Bearer token (standard) | `Authorization: Bearer <api-key>` |
 | api-key header (OpenAI-compatible) | `api-key: <api-key>` |
-| Entra ID JWT (enterprise) | Authorization: Bearer <jwt-token> |
+| Entra ID JWT (enterprise) | `Authorization: Bearer <jwt-token>` |
 
-
-The Authorization: Bearer and api-key header formats are supported. The application-layer auth middleware validates the key against the deployment's primary and secondary keys and rejects invalid keys with 401 Unauthorized.
+The platform supports the `Authorization: Bearer` and `api-key` header formats. The application-layer authentication middleware validates the key against the deployment's primary and secondary keys and rejects invalid keys with 401 Unauthorized.
 
 For information about retrieving and rotating API keys, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
 
 ## Entra ID (JWT) authentication
-When Entra ID authentication is enabled, clients authenticate by sending a Microsoft Entra ID JWT in the Authorization: Bearer header. The platform detects the credential type automatically - tokens starting with the JWT prefix are validated by the Entra Auth SDK sidecar, while tokens with the fndry-pk- or fndry-sk- prefix are validated as API keys.
+
+When you enable Entra ID authentication, clients authenticate by sending a Entra ID JWT in the `Authorization: Bearer` header. The platform automatically detects the credential type. The Entra Auth SDK sidecar validates tokens that start with the JWT prefix. The platform validates tokens with the `fndry-pk-` or `fndry-sk-` prefix as API keys.
 After JWT validation, the middleware performs an Azure ARM RBAC authorization check to verify the caller holds the required DataAction (Cognitive Services OpenAI User role or equivalent) on the cluster's ARM resource scope.
-### To acquire a JWT token:
+
+### To acquire a JWT token
+
+Retrieve a JWT token by running the Azure CLI command for your shell environment:
+
+#### [Bash](#tab/jwt-bash)
 
 ```bash
 JWT_TOKEN=$(az account get-access-token \
@@ -59,13 +64,17 @@ JWT_TOKEN=$(az account get-access-token \
   --query accessToken -o tsv)
 ```
 
+#### [PowerShell](#tab/jwt-powershell)
+
 ```powershell
 $JWT_TOKEN = az account get-access-token `
   --resource "api://<ENTRA_CLIENT_ID>" `
   --query accessToken -o tsv
 ```
 
-Then use the JWT token in the `Authorization: Bearer` header, the same way as an API key. The platform routes it to the appropriate validation path based on the token content.
+---
+
+Use the JWT token in the `Authorization: Bearer` header, just like an API key. The platform routes it to the appropriate validation path based on the token content.
 
 ## Generative inference request examples
 
@@ -144,6 +153,8 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
 The `/v1/predict` endpoint accepts ONNX model inputs. The exact payload structure depends on your model's input schema.
 
 ### Image input (base64-encoded)
+
+Convert your image to base64 format by using one of the following commands:
 
 #### [PowerShell](#tab/predict-powershell)
 

@@ -9,7 +9,7 @@ appliesto:
 ms.topic: overview
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/10/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
 ---
@@ -20,7 +20,7 @@ Foundry Local on Azure Local brings AI inference to your Azure Local environment
 
 This deployment model is designed for organizations that need local control, low-latency inference, and integration with existing Kubernetes operations on Azure Local.
 
-Please note that working with Foundry Local enabled by Arc is via API calls or Kubernetes directly. For more information, see [Inference API endpoints and payload](reference-inference-api-endpoints-payload.md).
+Work with Foundry Local enabled by Azure Arc through API calls or directly through Kubernetes. For more information, see [Inference API endpoints and payload](reference-inference-api-endpoints-payload.md).
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 

@@ -9,7 +9,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want to send inference requests to models deployed on Foundry Local on Azure Local so that I can integrate AI capabilities into my applications.
 ---
@@ -22,6 +22,8 @@ This article shows you how to retrieve API keys and send inference requests to m
 
 ## Prerequisites
 
+Before you begin, you must have the following resources:
+
 - A running model deployment. For setup steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
 - The endpoint URL for your deployment, with or without an ingress controller.
 - kubectl installed and configured for your cluster.
@@ -32,11 +34,11 @@ The following steps use Phi-4 as an example. Substitute your deployment name and
 
 ### Step 1: Authenticate
 
-Foundry Local on Azure Local supports two authentication methods: API key authentication and Entra ID (JWT) authentication. Choose the method that fits your scenario. 
+Foundry Local on Azure Local supports two authentication methods: API key authentication and Microsoft Entra ID JSON Web Token (JWT) authentication. Choose the method that fits your scenario.
 
 #### Option A: API key authentication (default) 
 
-Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header. 
+Each model deployment has a primary and secondary API key stored in a Kubernetes Secret. Retrieve the key and pass it in the `Authorization: Bearer` header.
 
 ##### [CPU — Bash](#tab/cpu-key-bash)
 
@@ -76,11 +78,15 @@ $API_KEY = kubectl get secret phi-4-gpu-api-keys -n foundry-local-operator `
 
 When you enable Entra ID authentication, acquire a JWT token from Microsoft Entra ID scoped to the Foundry application registration audience. Use the same `Authorization: Bearer` header - the platform detects the credential type automatically. 
 
+##### [Bash](#tab/entra-key-bash)
+
 ```bash
 JWT_TOKEN=$(az account get-access-token \
   --resource api://<ENTRA_CLIENT_ID> \
   --query accessToken -o tsv)
 ```
+
+##### [PowerShell](#tab/entra-key-powershell)
 
 ```powershell
 $JWT_TOKEN = az account get-access-token `
@@ -88,13 +94,13 @@ $JWT_TOKEN = az account get-access-token `
   --query accessToken -o tsv
 ```
 
-Then use $JWT_TOKEN (or $env:JWT_TOKEN) in place of $API_KEY in the inference calls below. The Authorization: Bearer header accepts both API keys and JWTs. 
+Then use `$JWT_TOKEN` (or `$env:JWT_TOKEN`) in place of `$API_KEY` in the inference calls below. The `Authorization: Bearer` header accepts both API keys and JWTs.
 
-Note: Entra ID authentication requires the Cognitive Services OpenAI User role (or equivalent) assigned to the caller identity on the cluster scope. API key authentication grants full access without role checks. 
-
- 
+Entra ID authentication requires the [Cognitive Services OpenAI User role](azure/role-based-access-control/built-in-roles/ai-machine-learning#cognitive-services-openai-user) (or equivalent) assigned to the caller identity on the cluster scope. API key authentication grants full access without role checks.
 
 ### Step 2: Call the inference endpoint
+
+In this step, you send a chat completions request to your deployed model endpoint and confirm that it returns a response.
 
 #### [CPU — With ingress — Bash](#tab/cpu-ingress-bash)
 
@@ -195,6 +201,8 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 
 ### Expected response
 
+The following example shows a successful chat completions response from a catalog model deployment.
+
 ```json
 {
   "model": "Phi-4-generic-cpu:1",
@@ -215,6 +223,8 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 Use these steps to deploy a custom model from your own OCI registry and run inference against it.
 
 ### Step 1: Create a registry secret
+
+Create a Kubernetes secret with your registry credentials so the cluster can pull your model image.
 
 ```bash
 kubectl create secret generic registry-credentials \
@@ -284,6 +294,8 @@ kubectl get ingress -A
 Wait for **State** to show `Running` and **Ready** to show `true`. The model downloads from the internet during this step, so it might take some time depending on your connection.
 
 ### Step 3: Authenticate
+
+Get an access credential for your BYO deployment by using either an API key or an Entra ID JWT.
 
 #### [Bash](#tab/byo-key-bash)
 
@@ -370,6 +382,8 @@ kubectl run curl-run --rm -it --restart=Never --image=curlimages/curl \
 > The example uses self-signed certificates, so it includes the `-k` flag for curl and the `-SkipCertificateCheck` flag for PowerShell. In production, configure proper TLS certificates.
 
 ### Expected response
+
+The following example shows a successful chat completions response from a bring-your-own model deployment.
 
 ```json
 {
