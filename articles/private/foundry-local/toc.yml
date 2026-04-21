@@ -13,6 +13,8 @@ items:
     items:
     - name: Models
       href: concept-models.md
+    - name: Bring your own models
+      href: concept-bring-your-own-models.md
     - name: Inference operator and model lifecycle
       href: concept-inference-operator.md
     - name: Inference runtimes
