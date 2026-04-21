@@ -9,7 +9,7 @@ appliesto:
 ms.topic: overview
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/10/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
 ---
@@ -23,6 +23,8 @@ This deployment model is designed for organizations that need local control, low
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
 ## Key capabilities
+
+The following capabilities highlight what you can do with Foundry Local on Azure Local.
 
 - Run AI inference workloads on Azure Local with Kubernetes-native operations.
 - Deploy and manage models through custom resources instead of manual service wiring.
@@ -56,6 +58,8 @@ Foundry Local on Azure Local is installed as an Azure Arc extension and includes
 - **API key authentication**: Protects inference endpoints by requiring bearer-token style API keys for requests.
 - **Entra ID authentication**: Validates Azure Active Directory JSON web tokens through the Microsoft identity sidecar engine for identity-based access control, as an alternative to API keys.
 - **TLS and ingress**: Secures traffic in transit and enables controlled external access through ingress.
+
+Work with Foundry Local enabled by Azure Arc through REST APIs or directly through Kubernetes resources. For more information, see [Inference API endpoints and payload](reference-inference-api-endpoints-payload.md).
 
 ## Prerequisites scope
 

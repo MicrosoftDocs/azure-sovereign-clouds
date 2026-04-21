@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/20/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want a complete reference for inference API endpoints and payload formats in Foundry Local on Azure Local so that I can integrate AI models into my applications.
 ---
@@ -29,22 +29,52 @@ Each deployed model exposes the following endpoints. Replace `<base-url>` with y
 | `/health` | GET | Liveness check. Returns `200 OK` when the service is running. |
 | `/ready` | GET | Readiness check. Returns `200 OK` when the model is loaded and ready to serve requests. |
 | `/v1/model` | GET | Model information. Returns metadata about the loaded model. |
-| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. |
+| `/v1/chat/completions` | POST | Generative inference. Use for chat and text generation workloads. When using models with tool calling capabilities, include the `tool_choice` field in the request payload. |
+| `/v1/audio/transcriptions` | POST | Generative inference. Use for audio to text transcription. For models with automatic-speech-recognition capabilities (for example, whisper). |
 | `/v1/predict` | POST | Predictive inference. Use for ONNX-based classification, regression, and other ML tasks. |
 
 ## Authentication
 
-All endpoints require an API key. Include it in your request using one of these header formats:
+All endpoints require authentication. The platform supports two methods: API key authentication and Microsoft Entra ID JSON Web Token (JWT) authentication. For API key authentication, include the key in your request using one of these header formats: 
 
 | Header format | Example |
 |--------------|---------|
 | Bearer token (standard) | `Authorization: Bearer <api-key>` |
-| X-API-Key header | `X-API-KEY: <api-key>` |
 | api-key header (OpenAI-compatible) | `api-key: <api-key>` |
+| Entra ID JWT (enterprise) | `Authorization: Bearer <jwt-token>` |
 
-All three formats are equivalent. The NGINX sidecar proxy validates the key and rejects requests that don't match the deployment's primary or secondary key with `401 Unauthorized`.
+The platform supports the `Authorization: Bearer` and `api-key` header formats. The application-layer authentication middleware validates the key against the deployment's primary and secondary keys and rejects invalid keys with 401 Unauthorized.
 
 For information about retrieving and rotating API keys, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
+
+## Entra ID (JWT) authentication
+
+When you enable Entra ID authentication, clients authenticate by sending a Entra ID JWT in the `Authorization: Bearer` header. The platform automatically detects the credential type. The Entra Auth SDK sidecar validates tokens that start with the JWT prefix. The platform validates tokens with the `fndry-pk-` or `fndry-sk-` prefix as API keys.
+After JWT validation, the middleware performs an Azure ARM RBAC authorization check to verify the caller holds the required DataAction (Cognitive Services OpenAI User role or equivalent) on the cluster's ARM resource scope.
+
+### To acquire a JWT token
+
+Retrieve a JWT token by running the Azure CLI command for your shell environment:
+
+#### [Bash](#tab/bash)
+
+```bash
+JWT_TOKEN=$(az account get-access-token \
+  --resource api://<ENTRA_CLIENT_ID> \
+  --query accessToken -o tsv)
+```
+
+#### [PowerShell](#tab/powershell)
+
+```powershell
+$JWT_TOKEN = az account get-access-token `
+  --resource "api://<ENTRA_CLIENT_ID>" `
+  --query accessToken -o tsv
+```
+
+---
+
+Use the JWT token in the `Authorization: Bearer` header, just like an API key. The platform routes it to the appropriate validation path based on the token content.
 
 ## Generative inference request examples
 
@@ -67,12 +97,12 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   }'
 ```
 
-### X-API-KEY
+### api-key
 
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "X-API-KEY: $API_KEY" \
+  -H "api-key: $API_KEY" \
   -d '{
     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
     "messages": [
@@ -84,12 +114,12 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   }'
 ```
 
-### api-key
+### Authorization: Bearer (Entra ID JWT)
 
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "api-key: $API_KEY" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
   -d '{
     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
     "messages": [
@@ -124,7 +154,26 @@ The `/v1/predict` endpoint accepts ONNX model inputs. The exact payload structur
 
 ### Image input (base64-encoded)
 
-#### [PowerShell](#tab/predict-powershell)
+Convert your image to base64 format by using one of the following commands:
+
+#### [Bash](#tab/bash)
+
+```bash
+BASE64_IMAGE=$(base64 -w 0 <PATH_TO_IMAGE_FILE>)
+
+curl -k -X POST "https://<URL>/v1/predict" \
+  -H "Content-Type: application/json" \
+  -H "X-API-KEY: $API_KEY" \
+  -d "{
+    \"items\": [{
+      \"content_type\": \"image/jpeg\",
+      \"encoder\": \"base64\",
+      \"data\": \"$BASE64_IMAGE\"
+    }]
+  }"
+```
+
+#### [PowerShell](#tab/powershell)
 
 ```powershell
 $base64Image = [Convert]::ToBase64String(
@@ -144,23 +193,6 @@ $body = @{
 Invoke-RestMethod -Uri https://<URL>/v1/predict -Method Post `
   -Body $body -ContentType "application/json" `
   -Headers @{ "X-API-Key" = $API_KEY } -SkipCertificateCheck
-```
-
-#### [Bash](#tab/predict-bash)
-
-```bash
-BASE64_IMAGE=$(base64 -w 0 <PATH_TO_IMAGE_FILE>)
-
-curl -k -X POST "https://<URL>/v1/predict" \
-  -H "Content-Type: application/json" \
-  -H "X-API-KEY: $API_KEY" \
-  -d "{
-    \"items\": [{
-      \"content_type\": \"image/jpeg\",
-      \"encoder\": \"base64\",
-      \"data\": \"$BASE64_IMAGE\"
-    }]
-  }"
 ```
 
 ---
