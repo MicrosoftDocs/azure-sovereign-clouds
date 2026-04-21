@@ -64,6 +64,8 @@ When you create or update a ModelDeployment resource, the operator performs the 
 
 ### Child resources created per ModelDeployment
 
+Use this table to see which Kubernetes resources the operator creates for each deployment and what each resource does.
+
 | Resource | Always created | Purpose |
 |----------|---------------|---------|
 | Deployment | Yes | Runs the inference pods. |
@@ -75,6 +77,8 @@ When you create or update a ModelDeployment resource, the operator performs the 
 | StoreModel | Yes | Triggers and tracks model caching in the local OCI registry. |
 
 ### ModelDeployment lifecycle states
+
+A ModelDeployment moves through a set of lifecycle states that show where it is in provisioning, update, and cleanup.
 
 | State | Description |
 |-------|-------------|
@@ -135,8 +139,7 @@ Key capabilities:
 - **Batch processing**: Process multiple requests with configurable batch sizes (default: 32).
 - **BYO model support**: Load custom ONNX models from ORAS-compatible registries.
 
-> [!NOTE]
-> The catalog doesn't include predictive models. To deploy predictive models, use BYO methods. For the full procedure, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+The catalog doesn't include predictive models. To deploy predictive models, use BYO methods. For more information, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ### Run predictive inference
 

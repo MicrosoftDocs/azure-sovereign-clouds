@@ -1,5 +1,5 @@
 ---
-title: "StoreModel and model caching in Foundry Local on Azure Local"
+title: "Model caching and StoreModel lifecycle in Foundry Local on Azure Local"
 description: "Understand how the StoreModel CRD tracks model caching in the local OCI registry and how model artifacts are downloaded and served in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to understand how model caching works in Foundry Local on Azure Local so that I can troubleshoot deployment issues and manage model storage effectively.
 ---
 
-# StoreModel and model caching in Foundry Local on Azure Local
+# Model caching and StoreModel lifecycle in Foundry Local on Azure Local
 
 This article explains how the StoreModel custom resource definition (CRD) tracks model caching in the cluster's local OCI registry, how cache jobs download and store model artifacts, and how inference pods retrieve cached models.
 
@@ -24,6 +24,8 @@ This article explains how the StoreModel custom resource definition (CRD) tracks
 StoreModel is an internal CRD the operator uses to track whether model artifacts are downloaded and cached in the cluster's local OCI registry. You never create StoreModel resources directly. The inference operator creates and manages them as part of the ModelDeployment reconciliation process.
 
 ## StoreModel lifecycle
+
+The StoreModel status phase shows where model caching is in its lifecycle and whether the model is ready for use.
 
 | Phase | Description |
 |-------|-------------|
