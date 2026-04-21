@@ -25,8 +25,8 @@ items:
     items:
     - name: Deploy Foundry Local on Azure Local
       href: deploy-foundry-local-on-azure-local.md
-    - name: Package and deploy a bring-your-own model
-      href: how-to-deploy-byo-model.md
+    - name: Package and deploy your own model
+      href: how-to-deploy-custom-model.md
   - name: Configure and secure
     items:
     - name: Configure TLS and authentication
@@ -39,7 +39,7 @@ items:
     items:
     - name: Model reference
       href: reference-models.md
-    - name: Foundry inference API reference
+    - name: Inference API reference
       href: reference-inference-api.md
     - name: Inference API endpoints and payload reference
       href: reference-inference-api-endpoints-payload.md
