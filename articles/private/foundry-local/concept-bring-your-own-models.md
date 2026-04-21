@@ -249,7 +249,7 @@ Bring your own (BYO) packaging and deployment follow a consistent flow:
 
 Use inline custom model configuration when you want the simplest deployment path for a single deployment. Use a named `Model` resource when you want to reuse the same model definition across multiple deployments or manage model metadata separately from deployments.
 
-For the full task flow, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md).
+For the full task flow, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
 
 ## Validation pipeline
 
@@ -296,7 +296,7 @@ The following sequence shows how a BYO model moves from your external registry i
 1. The model cache job pulls the artifact, unpacks it, validates the files, and pushes the model to the internal model store.
 1. The pod starts, loads the model from the internal store, and serves requests.
 
-For the deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md).
+For the deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
 
 ## Limitations
 
@@ -316,7 +316,7 @@ Review the following limitations before you package and deploy a BYO model.
 
 ## Related content
 
-- [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md)
+- [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
 - [Inference operator and model lifecycle in Foundry Local on Azure Local](concept-inference-operator.md)

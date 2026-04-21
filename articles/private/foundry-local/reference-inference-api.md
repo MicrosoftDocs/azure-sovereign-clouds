@@ -98,10 +98,10 @@ Use these query parameters to filter, sort, and page model list results.
 | Parameter | Type | Req. | Description |
 |-----------|------|------|-------------|
 | **name** | string | No | Partial, case-insensitive match on model ID, alias, or displayName |
-| **compute** | enum | No | Filter by compute type: cpu | gpu | npu |
+| **compute** | enum | No | Filter by compute type: cpu, gpu, npu |
 | **task** | string | No | Exact, case-insensitive match (e.g., chat-completion) |
 | **publisher** | string | No | Partial, case-insensitive match on publisher name |
-| **source** | string | No | Filter by source: foundry-local | foundry | custom |
+| **source** | string | No | Filter by source: foundry-local, foundry, custom |
 | **limit** | integer | No | Max results per page (1–100, server-clamped) |
 | **offset** | integer | No | Number of items to skip for pagination (≥ 0) |
 
@@ -115,11 +115,11 @@ This response includes pagination metadata and the list of returned models.
 | **total** | integer | Total count after filtering (before pagination) |
 | **count** | integer | Number of models returned in this response |
 | **hasMore** | boolean | Whether more results exist beyond this page |
-| **limit** | integer | null | The limit parameter used |
-| **offset** | integer | null | The offset parameter used |
+| **limit** | integer or null | The limit parameter used |
+| **offset** | integer or null | The offset parameter used |
 | **unfilteredTotal** | integer | Total models before any filtering applied |
-| **version** | string | null | Catalog version / timestamp |
-| **lastSync** | string | null | Last catalog sync timestamp (ISO 8601) |
+| **version** | string or null | Catalog version / timestamp |
+| **lastSync** | string or null | Last catalog sync timestamp (ISO 8601) |
 
 #### Model summary fields
 
@@ -127,15 +127,15 @@ Each model in the list includes the following summary fields.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| **alias** | string | null | Short model alias |
-| **publisher** | string | null | Publisher / author |
-| **description** | string | null | Model description |
-| **license** | string | null | License identifier |
-| **task** | string | null | Task type (e.g., chat-completion) |
-| **source** | string | null | Source: foundry-local, foundry, huggingface, or custom |
-| **framework** | string | null | Model framework (e.g., ONNX, Custom/PyTorch) |
-| **modelVersion** | string | null | Model version string |
-| **supportedCompute** | enum[] | null | List of CPU, GPU, NPU |
+| **alias** | string or null | Short model alias |
+| **publisher** | string or null | Publisher / author |
+| **description** | string or null | Model description |
+| **license** | string or null | License identifier |
+| **task** | string or null | Task type (e.g., chat-completion) |
+| **source** | string or null | Source: foundry-local, foundry, huggingface, or custom |
+| **framework** | string or null | Model framework (e.g., ONNX, Custom/PyTorch) |
+| **modelVersion** | string or null | Model version string |
+| **supportedCompute** | enum[] or null | List of CPU, GPU, NPU |
 
 #### Create BYO model — request body
 
@@ -287,15 +287,15 @@ These fields describe deployment state, readiness, and resolved endpoints.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| **state** | enum | null | Pending, Creating, Running, Updating, Error, Terminating |
-| **message** | string | null | Human-readable status message |
-| **readyReplicas** | integer | null | Number of pods in ready state |
-| **deploymentReady** | boolean | null | Whether all requested replicas are ready |
-| **serviceReady** | boolean | null | Whether the K8s Service is created |
-| **internalEndpoint** | string | null | Internal cluster URL for the deployment |
-| **externalEndpoint** | string | null | External URL (when Ingress is configured) |
-| **resolvedModel** | object | null | Resolved model info: {name, variant, image} |
-| **authentication** | object | null | Auth status: {keysSecretName, key rotation timestamps} |
+| **state** | enum or null | Pending, Creating, Running, Updating, Error, Terminating |
+| **message** | string or null | Human-readable status message |
+| **readyReplicas** | integer or null | Number of pods in ready state |
+| **deploymentReady** | boolean or null | Whether all requested replicas are ready |
+| **serviceReady** | boolean or null | Whether the K8s Service is created |
+| **internalEndpoint** | string or null | Internal cluster URL for the deployment |
+| **externalEndpoint** | string or null | External URL (when Ingress is configured) |
+| **resolvedModel** | object or null | Resolved model info: {name, variant, image} |
+| **authentication** | object or null | Auth status: {keysSecretName, key rotation timestamps} |
 | **conditions** | Condition[] | K8s-style conditions array with type/status/reason/message |
 
 #### Partial update (PATCH)

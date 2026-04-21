@@ -259,7 +259,7 @@ spec:
           passwordKey: password
 ```
 
-For the full procedure to package and deploy a custom model, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+For the full procedure to package and deploy a custom model, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ## Generative models
 
@@ -271,7 +271,7 @@ Pull and deploy models directly from the Azure AI Foundry catalog through the in
 
 ### Load custom models (BYO)
 
-Deploy models you package yourself as Docker or OCI images - for example, custom or third-party models not in the Azure AI Foundry catalog. Deploy any model you can convert to ONNX Runtime format. For the full BYO packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+Deploy models you package yourself as Docker or OCI images - for example, custom or third-party models not in the Azure AI Foundry catalog. Deploy any model you can convert to ONNX Runtime format. For the full BYO packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ### Run generative inference
 
@@ -315,7 +315,7 @@ In addition to generative AI, Foundry Local on Azure Local supports predictive A
 - **BYO model support**: Load custom ONNX models from ORAS-compatible container registries such as Azure Container Registry, GitHub Container Registry, and Docker Hub.
 
 > [!NOTE]
-> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md).
+> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
 
 Ideally, have your model in ONNX format. It's framework-agnostic, and the ModelDeployment is built around ONNX Runtime.
 
