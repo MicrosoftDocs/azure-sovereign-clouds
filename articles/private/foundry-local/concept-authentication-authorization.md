@@ -126,5 +126,5 @@ The system also supports custom roles that include the required DataAction. The 
 
 - [Configure TLS authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Run inference with Foundry Local on Azure Local](how-to-run-inference.md)
-- [Inference API endpoints and payload reference for Foundry Local on Azure Local](reference-inference-api-endpoints-payload.md).
+- [Inference API endpoints and payload reference for Foundry Local on Azure Local](reference-inference-api-endpoints-payload.md)
 - [Foundry inference API reference for Foundry Local on Azure Local](reference-inference-api.md)

@@ -164,13 +164,13 @@ Use this option when you want to reuse the same model definition across multiple
        streaming: true
    ```
 
-2. Apply the model resource.
+1. Apply the model resource.
 
    ```bash
    kubectl apply -f model-byo.yaml
    ```
 
-3. Create a file named `modeldeployment-byo-ref.yaml`.
+1. Create a file named `modeldeployment-byo-ref.yaml`.
 
    ```yaml
    apiVersion: foundrylocal.azure.com/v1
@@ -186,7 +186,7 @@ Use this option when you want to reuse the same model definition across multiple
        ref: my-custom-model
    ```
 
-4. Apply the deployment manifest.
+1. Apply the deployment manifest.
 
    ```bash
    kubectl apply -f modeldeployment-byo-ref.yaml
@@ -201,14 +201,14 @@ Use this option when you want to reuse the same model definition across multiple
    kubectl describe modeldeployment my-custom-model -n foundry-local-operator
    ```
 
-2. If you used a named model resource, check the `Model` status.
+1. If you used a named model resource, check the `Model` status.
 
    ```bash
    kubectl get model -n foundry-local-operator
    kubectl describe model my-custom-model -n foundry-local-operator
    ```
 
-3. Review pod status and model cache job progress.
+1. Review pod status and model cache job progress.
 
    ```bash
    kubectl get pods -n foundry-local-operator

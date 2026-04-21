@@ -89,7 +89,7 @@ vLLM expects a standard Hugging Face model layout with configuration, weights, a
 | `*.safetensors` or `*.bin` | Yes | Model weight files |
 | `tokenizer.json` or `tokenizer_config.json` | Yes | Tokenizer files |
 
-vLLM expects the standard Hugging Face model directory layout. If you download your model from Hugging Face Hub or export it in the Hugging Face format, it'll work as-is.
+vLLM expects the standard Hugging Face model directory layout. If you download your model from Hugging Face Hub or export it in the Hugging Face format, it works as-is.
 
 #### Example config.json (minimum required fields)
 
@@ -133,7 +133,7 @@ The following constraints apply when you deploy an ONNX model for predictive wor
 
 - **Single input only** — the model must have exactly one input tensor. Multi-input ONNX models aren't supported.
 - **Multiple outputs supported** — the model can have multiple output tensors. Each output is returned in the response keyed by its name.
-- **Single ONNX file** — only one `.onnx` file should be present in the model directory. If multiple `.onnx` files exist, the runtime loads only one file and doesn't guarantee which file it selects.
+- **Single ONNX file** — the model directory should contain only one `.onnx` file. If multiple `.onnx` files exist, the runtime loads only one file and doesn't guarantee which file it selects.
 - **Dynamic dimensions supported** — input shapes can include dynamic dimensions (marked as -1 or string names like "batch_size"). The server doesn't validate these dimensions at inference time.
 
 ### API contract
@@ -240,7 +240,7 @@ Use this endpoint to verify that your model loads correctly and to inspect its e
 
 ## Packaging and deployment overview
 
-BYO packaging and deployment follow a consistent flow:
+Bring your own (BYO) packaging and deployment follow a consistent flow:
 
 1. Prepare model files that match the selected runtime and workload type.
 1. Package the model as an OCI artifact and push it to your registry.
