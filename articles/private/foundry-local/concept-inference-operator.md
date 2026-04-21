@@ -1,6 +1,5 @@
 ---
 title: "Inference operator and model lifecycle in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Understand how the inference operator manages model lifecycle, catalog sync, and resource reconciliation in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -48,7 +47,7 @@ For quick deployments, you can skip creating a Model resource. The ModelDeployme
 
 ## How the operator reconciles resources
 
-When you create or update a Model or ModelDeployment resource, the operator:
+When you create or update a `Model` or `ModelDeployment` resource, the operator:
 
 1. Validates the resource specification.
 1. Resolves the model source (catalog or custom registry).
@@ -70,9 +69,9 @@ When you create or update a Model or ModelDeployment resource, the operator:
 
 ## Model catalog
 
-The model catalog is a ConfigMap that stores metadata about available models from the Foundry catalog. It serves as a local cache: when you deploy a catalog model, the operator reads from this ConfigMap to get model details like display name, variants, and requirements.
+The model catalog is a `ConfigMap` that stores metadata about available models from the Azure AI Foundry catalog. It serves as a local cache: when you deploy a catalog model, the operator reads from this `ConfigMap` to get model details like display name, variants, and requirements.
 
-:::image type="content" source="media/concept-inference-operator/model-catalog-data-flow.svg" alt-text="Diagram showing the model catalog data flow: the catalog-sync component fetches metadata from the Azure Foundry Catalog API and stores it in the foundry-local-catalog ConfigMap in the cluster." border="false":::
+:::image type="content" source="media/concept-inference-operator/model-catalog-data-flow.svg" alt-text="Diagram showing the model catalog data flow: the catalog-sync component fetches metadata from the Azure AI Foundry catalog API and stores it in the foundry-local-catalog ConfigMap in the cluster." border="false":::
 
 ### Query the catalog
 
@@ -160,9 +159,9 @@ The catalog-sync component automatically populates the catalog:
 
 Each sync cycle:
 
-1. Fetches model metadata from the Azure Foundry Catalog API.
+1. Fetches model metadata from the Azure AI Foundry catalog API.
 1. Transforms the metadata to a concise format.
-1. Creates or updates the `foundry-local-catalog` ConfigMap.
+1. Creates or updates the `foundry-local-catalog` `ConfigMap`.
 
 Check the last sync time:
 
@@ -192,7 +191,7 @@ Model CRs persist after creation for reuse. To turn off lazy registration, set `
 
 ## Work with Model resources
 
-The Model resource defines a model that's available for deployment. Models can come from two sources:
+The `Model` resource defines a model that's available for deployment. Models can come from two sources:
 
 | Source | Description | Use case |
 |--------|-------------|---------|
@@ -260,19 +259,19 @@ spec:
           passwordKey: password
 ```
 
-For the full procedure to deploy a custom model and run inference against it, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+For the full procedure to package and deploy a custom model, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ## Generative models
 
-Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. You can select the runtime using the spec.runtime field on the ModelDeployment.
+Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. Select the runtime by using the `spec.runtime` field on the ModelDeployment.
 
-### Use models from the Foundry catalog
+### Use models from the Azure AI Foundry catalog
 
-You can pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in the model catalog section above. Alternatively, you can deploy them directly from a ModelDeployment. For the full deployment procedure, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+Pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in [Model catalog](#model-catalog). Alternatively, deploy them directly from a `ModelDeployment`. For the full deployment procedure, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
 
 ### Load custom models (BYO)
 
-You can also deploy models you package yourself as Docker or OCI images - for example, custom or third-party models not in the Foundry catalog. You can deploy any model you can convert to ONNX Runtime format. For the full BYO deployment and inference procedure, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+Deploy models you package yourself as Docker or OCI images - for example, custom or third-party models not in the Azure AI Foundry catalog. Deploy any model you can convert to ONNX Runtime format. For the full BYO packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ### Run generative inference
 
@@ -316,7 +315,7 @@ In addition to generative AI, Foundry Local on Azure Local supports predictive A
 - **BYO model support**: Load custom ONNX models from ORAS-compatible container registries such as Azure Container Registry, GitHub Container Registry, and Docker Hub.
 
 > [!NOTE]
-> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full procedure, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-byo-model.md).
 
 Ideally, have your model in ONNX format. It's framework-agnostic, and the ModelDeployment is built around ONNX Runtime.
 
