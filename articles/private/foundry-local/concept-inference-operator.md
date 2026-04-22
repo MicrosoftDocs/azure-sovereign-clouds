@@ -1,6 +1,6 @@
 ---
 title: "Inference operator and model lifecycle in Foundry Local on Azure Local"
-description: "Understand how the inference operator manages model lifecycle, custom resources, and resource reconciliation in Foundry Local on Azure Local."
+description: "Understand how the inference operator manages model lifecycle, catalog sync, and resource reconciliation in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -51,7 +51,7 @@ For quick deployments, you can skip creating a Model resource. The ModelDeployme
 
 ## How the operator reconciles resources
 
-When you create or update a ModelDeployment resource, the operator performs the following steps in order:
+When you create or update a `Model` or `ModelDeployment` resource, the operator:
 
 1. Validates the resource specification.
 1. Resolves the model source (catalog lookup, Model CR reference, or inline custom config).
@@ -86,22 +86,192 @@ A ModelDeployment moves through a set of lifecycle states that show where it is 
 | `Creating` | Operator is creating child resources and waiting for model cache. |
 | `Running` | All replicas are ready and serving traffic. |
 | `Updating` | Applying configuration changes. |
-| `Error` | Something went wrong. Check the `status.message` and `status.conditions` fields. |
-| `Terminating` | Resource is being deleted. The operator cleans up child resources through owner references. |
+| `Error` | Something went wrong - check the status message. |
+| `Terminating` | Resource is being deleted. |
+
+## Model catalog
+
+The model catalog is a `ConfigMap` that stores metadata about available models from the Azure AI Foundry catalog. It serves as a local cache: when you deploy a catalog model, the operator reads from this `ConfigMap` to get model details like display name, variants, and requirements.
+
+:::image type="content" source="media/concept-inference-operator/model-catalog-data-flow.svg" alt-text="Diagram showing the model catalog data flow: the catalog-sync component fetches metadata from the Azure AI Foundry catalog API and stores it in the foundry-local-catalog ConfigMap in the cluster." border="false":::
+
+### Query the catalog
+
+To see what models are available in your cluster, use the following methods:
+
+#### [Bash](#tab/catalog-bash)
+
+```bash
+kubectl get cm foundry-local-catalog -n foundry-local-operator -o json \
+  | jq -r '.data."catalog.json"' \
+  | jq -r '["ALIAS", "DEVICE", "SIZE", "MODEL_ID"],
+    (.models[] | [.alias, (.variants[0].compute | ascii_upcase),
+    ((.variants[0].fileSizeBytes / 1073741824 * 100 | floor) / 100 | tostring + "GB"),
+    .variants[0].id]) | @tsv' \
+  | column -t
+```
+
+#### [PowerShell](#tab/catalog-powershell)
+
+```powershell
+$json    = kubectl get cm foundry-local-catalog -n foundry-local-operator -o json | ConvertFrom-Json
+$catalog = $json.data.'catalog.json' | ConvertFrom-Json
+
+$results  = @()
+$results += [PSCustomObject]@{ ALIAS = "ALIAS"; DEVICE = "DEVICE"; SIZE = "SIZE"; MODEL_ID = "MODEL_ID" }
+
+foreach ($model in $catalog.models) {
+  $variant = $model.variants[0]
+  $sizeGB  = [math]::Floor($variant.fileSizeBytes / 1073741824 * 100) / 100
+  $results += [PSCustomObject]@{
+    ALIAS    = $model.alias
+    DEVICE   = $variant.compute.ToUpper()
+    SIZE     = "$($sizeGB)GB"
+    MODEL_ID = $variant.id
+  }
+}
+
+$results | Format-Table -AutoSize
+```
+
+---
+
+The output looks similar to the following example:
+
+```
+ALIAS                                    DEVICE  SIZE     MODEL_ID
+Phi-4-generic-cpu                        CPU     8.13GB   Phi-4-generic-cpu:1
+Phi-4-cuda-gpu                           GPU     8.13GB   Phi-4-cuda-gpu:1
+qwen2.5-coder-0.5b-instruct-cpu          CPU     0.43GB   qwen2.5-coder-0.5b-instruct-generic-cpu:4
+...
+```
+
+### Catalog ConfigMap structure
+
+The catalog is stored in a ConfigMap with a single key (`catalog.json`). Each model entry in the `models` array contains:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Unique model identifier |
+| `alias` | string | Short name for the model |
+| `displayName` | string | Human-readable name |
+| `description` | string | Model description |
+| `publisher` | string | Model publisher (for example, "Microsoft") |
+| `license` | string | License identifier (for example, "MIT") |
+| `task` | string | Model task (for example, "chat-completion") |
+| `contextLength` | integer | Maximum context window size |
+| `variants` | array | Hardware-specific variants |
+| `supportedCompute` | array | Supported compute types (`cpu`, `gpu`) |
+
+Each variant contains:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Variant identifier |
+| `compute` | string | Compute type (`cpu` or `gpu`) |
+| `executionProvider` | string | ONNX execution provider |
+| `fileSizeBytes` | integer | Model file size |
+
+### How catalog sync works
+
+The catalog-sync component automatically populates the catalog:
+
+- **Initial sync**: Runs as a Helm post-install hook when you install the operator.
+- **Scheduled sync**: Runs daily through a Kubernetes CronJob.
+
+Each sync cycle:
+
+1. Fetches model metadata from the Azure AI Foundry catalog API.
+1. Transforms the metadata to a concise format.
+1. Creates or updates the `foundry-local-catalog` `ConfigMap`.
+
+Check the last sync time:
+
+```bash
+kubectl get configmap foundry-local-catalog -n foundry-local-operator \
+  -o jsonpath='{.metadata.annotations.foundry\.azure\.com/last-sync}'
+```
+
+Trigger a manual sync:
+
+```bash
+kubectl create job --from=cronjob/foundry-local-catalog-sync manual-sync \
+  -n foundry-local-operator
+```
+
+### Lazy model registration
+
+When you create a ModelDeployment that references a catalog model, the operator automatically creates a Model CR if one doesn't exist:
+
+1. You create a ModelDeployment with `model.catalog.name: Phi-4-generic-cpu`.
+1. The operator checks whether a Model CR named `phi-4-generic-cpu` exists.
+1. If not, it reads the catalog ConfigMap and finds the matching model.
+1. It creates a Model CR with data from the catalog.
+1. The ModelDeployment proceeds with the newly created Model.
+
+Model CRs persist after creation for reuse. To turn off lazy registration, set `catalog.lazyRegistrationEnabled: false` in the operator configuration.
+
+## Work with Model resources
+
+The `Model` resource defines a model that's available for deployment. Models can come from two sources:
+
+| Source | Description | Use case |
+|--------|-------------|---------|
+| **Catalog** | Resolved from the catalog ConfigMap at deployment time | Standard models (Phi, Llama, and others) |
+| **Custom** | Models from your own OCI registry | Fine-tuned or proprietary models |
+
+### Create a catalog model
 
 ### Model phases
 
 Model CRs track their own lifecycle:
 
-| Phase | Description |
-|-------|-------------|
-| `Pending` | Initial state, waiting for validation. |
-| `Available` | Model definition is valid and ready for use in a ModelDeployment. |
-| `Error` | Validation failed. Check `status.message`. |
+First, create a secret with your registry credentials:
+
+```bash
+kubectl create secret generic my-registry-credentials \
+  --from-literal=username=<your-username> \
+  --from-literal=password=<your-password>
+```
+
+Then create the Model resource:
+
+```yaml
+apiVersion: foundrylocal.azure.com/v1
+kind: Model
+metadata:
+  name: my-custom-model
+spec:
+  displayName: "My Custom Model"
+  description: "A fine-tuned model for my use case"
+  publisher: "My Organization"
+  license: "Proprietary"
+  source:
+    type: custom
+    custom:
+      registry: myregistry.azurecr.io
+      repository: models/my-custom-model
+      tag: v1.0.0
+      credentials:
+        secretRef:
+          name: my-registry-credentials
+          usernameKey: username
+          passwordKey: password
+```
+
+For the full procedure to package and deploy a custom model, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ## Generative models
 
-Generative AI models create new content in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. You can select the runtime by using the `spec.runtime` field on the `ModelDeployment` object.
+Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. Select the runtime by using the `spec.runtime` field on the ModelDeployment.
+
+### Use models from the Azure AI Foundry catalog
+
+Pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in [Model catalog](#model-catalog). Alternatively, deploy them directly from a `ModelDeployment`. For the full deployment procedure, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+
+### Load custom models (BYO)
+
+Deploy models you package yourself as Docker or OCI images - for example, custom or third-party models not in the Azure AI Foundry catalog. Deploy any model you can convert to ONNX Runtime format. For the full BYO packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md). For inference requests after deployment, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
 ### Run generative inference
 
@@ -139,7 +309,10 @@ Key capabilities:
 - **Batch processing**: Process multiple requests with configurable batch sizes (default: 32).
 - **BYO model support**: Load custom ONNX models from ORAS-compatible registries.
 
-The catalog doesn't include predictive models. To deploy predictive models, use BYO methods. For more information, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
+> [!NOTE]
+> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
+
+Ideally, have your model in ONNX format. It's framework-agnostic, and the ModelDeployment is built around ONNX Runtime.
 
 ### Run predictive inference
 
