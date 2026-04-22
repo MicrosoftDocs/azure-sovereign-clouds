@@ -255,7 +255,8 @@ Use this structure to set CPU, memory, and GPU requests and limits.
 }
 ```
 
-> **Note:** When compute is "gpu" and `skipGpuResource` is false, `resources.limits.gpu` is required (1–8).
+> [!NOTE]
+> When compute is "gpu" and `skipGpuResource` is false, `resources.limits.gpu` is required (1–8).
 
 #### Create deployment — example request
 
