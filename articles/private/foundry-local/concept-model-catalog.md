@@ -84,7 +84,11 @@ For generative models, package your model in ONNX format. The inference runtime 
 
 ## Three ways to reference a model
 
-### 1. Catalog reference (`model.catalog`)
+When you create a model deployment, you can reference a model using one of three approaches, depending on your model source and deployment needs.
+
+### Catalog reference (`model.catalog`)
+
+Specify a catalog model by name and version. The operator reads the catalog `ConfigMap`, finds the model by name, and resolves all metadata. You don't create a Model custom resource.
 
 ```yaml
 spec:
@@ -94,9 +98,9 @@ spec:
       version: latest
 ```
 
-The operator reads the catalog ConfigMap, finds the model by name, and resolves all metadata. You don't create a Model custom resource.
+### Model CR reference (`model.ref`)
 
-### 2. Model CR reference (`model.ref`)
+Reference an existing Model custom resource in the same namespace. The Model custom resource must be in Available phase. Model custom resources are BYO-only: they always contain `source.custom` with registry, repository, tag, and credentials.
 
 ```yaml
 spec:
@@ -104,9 +108,9 @@ spec:
     ref: my-custom-model
 ```
 
-References an existing Model custom resource in the same namespace. The Model custom resource must be in Available phase. Model custom resources are BYO-only: they always contain `source.custom` with registry, repository, tag, and credentials.
+### Inline custom reference (`model.custom`)
 
-### 3. Inline custom reference (`model.custom`)
+Define the BYO model inline. The operator automatically creates a Model custom resource for reuse.
 
 ```yaml
 spec:
@@ -119,8 +123,6 @@ spec:
         secretRef:
           name: my-registry-credentials
 ```
-
-Defines the BYO model inline. The operator automatically creates a Model custom resource for reuse.
 
 ## Image selection
 
@@ -157,13 +159,15 @@ A single model can appear multiple times in the catalog, with each entry represe
 
 All three entries share the same alias (phi-4-mini) and serve the same underlying Phi-4-mini-instruct model. The differences are:
 
-- The foundry-local entries use ONNX Runtime and are optimized for on-device inference quantization. One targets CPUs, and the other targets CUDA GPUs.
+- The foundry-local entries use ONNX Runtime and are optimized for on-device inference quantization. One targets CPUs, and the other targets Compute Unified Device Architecture (CUDA) GPUs.
 - The foundry entry uses the vLLM runtime engine for high-throughput GPU inference.
 - Each entry has its own unique ID (for example, Phi-4-mini-instruct-generic-cpu:5) that you reference in a ModelDeployment.
 
 The following JSON shows the actual catalog entries for this model, taken directly from the catalog ConfigMap:
 
-**CPU entry (foundry-local, ONNX)**
+#### CPU entry
+
+This catalog entry represents the CPU-optimized variant from the foundry-local source:
 
 ```json
 {
@@ -188,7 +192,9 @@ The following JSON shows the actual catalog entries for this model, taken direct
 }
 ```
 
-**GPU entry (foundry-local, ONNX with CUDA)**
+#### GPU entry
+
+This catalog entry represents the GPU variant with CUDA acceleration from the foundry-local source
 
 ```json
 {
@@ -213,7 +219,9 @@ The following JSON shows the actual catalog entries for this model, taken direct
 }
 ```
 
-**vLLM entry (foundry, high-throughput GPU)**
+#### vLLM entry 
+
+This catalog entry represents the high-throughput vLLM variant from the foundry source:
 
 ```json
 {

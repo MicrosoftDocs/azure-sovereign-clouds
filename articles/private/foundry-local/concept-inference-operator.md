@@ -220,8 +220,6 @@ The `Model` resource defines a model that's available for deployment. Models can
 | **Catalog** | Resolved from the catalog ConfigMap at deployment time | Standard models (Phi, Llama, and others) |
 | **Custom** | Models from your own OCI registry | Fine-tuned or proprietary models |
 
-### Create a catalog model
-
 ### Model phases
 
 Model CRs track their own lifecycle:
@@ -263,7 +261,7 @@ For the full procedure to package and deploy a custom model, see [Package and de
 
 ## Generative models
 
-Generative AI models produce new content - like text - in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. Select the runtime by using the `spec.runtime` field on the ModelDeployment.
+Generative AI models produce new content like text in response to prompts. Foundry Local on Azure Local supports generative text models for conversations, question answering, and text generation tasks. Both CPU and GPU hardware are supported. Two runtime engines are available: the default ONNX-GenAI engine (CPU or GPU) and the vLLM engine (GPU only) for high-throughput scenarios. Select the runtime by using the `spec.runtime` field on the ModelDeployment.
 
 ### Use models from the Azure AI Foundry catalog
 
