@@ -9,22 +9,21 @@ ms.topic: overview
 ms.subservice: sovereign-private-clouds
 ---
 
-# What's Sovereign Private Cloud
+# What's Sovereign Private Cloud?
 
 Sovereign Private Cloud is a portfolio of Microsoft solutions designed to help organizations run cloud services in **sovereign, regulated, and disconnected environments**. Sovereign Private Cloud provides a consistent Microsoft cloud experience while allowing customers to retain full control over infrastructure, data residency, and operations.
 
 Sovereign Private Cloud consists of three solution areas that run on Azure Local:
 
-- **Private cloud infrastructure**: Azure Local
-- **AI suite**: Foundry Local on Azure Local
-- **Productivity suite**: Microsoft 365 Local
-
+- **AI suite**: [Foundry Local on Azure Local](#foundry-local-on-azure-local)
+- **Productivity suite**: [Microsoft 365 Local](#microsoft-365-local) 
+- **Custom applications**: [Custom applications on Azure Local](#custom-applications-on-azure-local)
 
 :::image type="content" source="./media/sovereign-private-cloud/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="./media/sovereign-private-cloud/solution-areas.png":::
 
 ## Azure Local
 
-Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer - compute, storage, networking, and lifecycle management - on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments.
+Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer - compute, storage, networking, and lifecycle management - on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments. Azure Local supports running workloads as virtual machines (VMs) or on Azure Kubernetes Service (AKS) Arc-enabled clusters.
 
 For more information, see [Azure Local for Azure Sovereign Private Clouds](../overview/sovereign-private-cloud.md).
 
@@ -43,6 +42,10 @@ Microsoft 365 Local enables you to run Exchange Server, SharePoint Server, and S
 If you need productivity tools in a private cloud environment, Microsoft 365 Local provides an Azure-consistent management experience with a unified control plane. It simplifies deployment and streamlines updates for easy infrastructure management, supporting both hybrid and fully disconnected deployments.
 
 For more information, see [Microsoft 365 Local on Azure Local Infrastructure](../m365-local/microsoft-365-local-overview.md).
+
+## Custom applications
+
+Azure Sovereign Private Cloud provides a consistent private cloud infrastructure that supports multiple workload types on the same foundation. You can run Microsoft AI services, productivity workloads, and your own applications side by side, using the execution model that fits each workload. All workloads are built on the same secure, sovereign private cloud infrastructure, enabling shared governance, identity, and operations while giving you flexibility to modernize at your own pace.
 
 ## Related content
 
