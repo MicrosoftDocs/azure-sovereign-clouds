@@ -8,7 +8,7 @@ appliesto:
 ms.topic: conceptual
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/20/2026
+ms.date: 04/22/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand how the inference operator manages models in Foundry Local on Azure Local so that I can deploy and manage AI workloads effectively.
 ---
@@ -292,7 +292,7 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   }'
 ```
 
-**Notes:**
+Keep these details in mind when you send a generative inference request:
 
 - **URL**: With an ingress controller, use the ingress IP or DNS. Without ingress, use `kubectl port-forward` and set the URL to 127.0.0.1.
 - **Authorization header**: The inference operator generates API keys stored in a Kubernetes Secret. Pass the key as a Bearer token.

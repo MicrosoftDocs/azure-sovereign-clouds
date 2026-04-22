@@ -15,16 +15,14 @@ items:
       items:
       - name: Small language models
         href: concept-models.md
-      - name: Bring your own models
-        href: concept-bring-your-own-models.md
       - name: Model catalog and sourcing
         href: concept-model-catalog.md
+      - name: Bring your own models
+        href: concept-bring-your-own-models.md
       - name: Inference operator and model lifecycle
         href: concept-inference-operator.md
       - name: Model caching and StoreModel lifecycle
         href: concept-model-caching.md
-    - name: Inference operator and model lifecycle
-      href: concept-inference-operator.md
     - name: Inference runtimes
       href: concept-inference-runtimes.md
     - name: Authentication and authorization
