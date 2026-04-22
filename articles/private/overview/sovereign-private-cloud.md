@@ -15,9 +15,10 @@ Sovereign Private Cloud is a portfolio of Microsoft solutions designed to help o
 
 Sovereign Private Cloud consists of three solution areas that run on Azure Local:
 
-- **AI suite**:
-- **Productivity suite**:
-- **Your own apps**: 
+- **Private cloud infrastructure**: Azure Local
+- **AI suite**: Foundry Local on Azure Local
+- **Productivity suite**: Microsoft 365 Local
+
 
 :::image type="content" source="./media/sovereign-private-cloud/solution-areas.png" alt-text="Diagram of the Sovereign Private Cloud solution areas that run on Azure Local." lightbox="./media/sovereign-private-cloud/solution-areas.png":::
 
