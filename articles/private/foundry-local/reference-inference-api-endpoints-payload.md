@@ -1,7 +1,6 @@
 ---
-title: "Inference API endpoints and payload reference for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
-description: "Reference for inference API endpoints, request payload formats, and authentication header options in Foundry Local on Azure Local."
+title: "Inference API Endpoints and Payload Reference for Foundry Local on Azure Local"
+description: "Reference for data-plane inference API endpoints, request and response payload formats, and authentication header options in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -9,14 +8,18 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/20/2026
+ms.date: 04/21/2026
 ai-usage: ai-assisted
-customer intent: As a developer, I want a complete reference for inference API endpoints and payload formats in Foundry Local on Azure Local so that I can integrate AI models into my applications.
+customer intent: As a developer, I want a reference of data-plane inference endpoint paths, payload formats, and authentication headers so that I can correctly construct and validate requests to deployed models in Foundry Local on Azure Local.
 ---
 
 # Inference API endpoints and payload reference for Foundry Local on Azure Local
 
-This article is a reference for inference API endpoints, request and response payload formats, and authentication header options for models deployed on Foundry Local on Azure Local.
+This article is a reference for inference API endpoints, request and response payload formats, and authentication header options for models deployed on Foundry Local on Azure Local. Use this article for data-plane endpoint paths and methods, request and response payload shapes, and client request examples for chat, transcription, and predictive inference.
+
+For platform API surface and control-plane contracts, see [Foundry inference API reference for Foundry Local on Azure Local](reference-inference-api.md).
+
+For authentication architecture and authorization behavior, see [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md).
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -47,40 +50,19 @@ The platform supports the `Authorization: Bearer` and `api-key` header formats. 
 
 For information about retrieving and rotating API keys, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
 
-## Entra ID (JWT) authentication
+To use Microsoft Entra ID authentication, acquire a JWT and send it in the `Authorization: Bearer` header.
 
-When you enable Entra ID authentication, clients authenticate by sending a Entra ID JWT in the `Authorization: Bearer` header. The platform automatically detects the credential type. The Entra Auth SDK sidecar validates tokens that start with the JWT prefix. The platform validates tokens with the `fndry-pk-` or `fndry-sk-` prefix as API keys.
-After JWT validation, the middleware performs an Azure ARM RBAC authorization check to verify the caller holds the required DataAction (Cognitive Services OpenAI User role or equivalent) on the cluster's ARM resource scope.
+For token acquisition steps, see [Run inference on Foundry Local on Azure Local](how-to-run-inference.md).
 
-### To acquire a JWT token
-
-Retrieve a JWT token by running the Azure CLI command for your shell environment:
-
-#### [Bash](#tab/bash)
-
-```bash
-JWT_TOKEN=$(az account get-access-token \
-  --resource api://<ENTRA_CLIENT_ID> \
-  --query accessToken -o tsv)
-```
-
-#### [PowerShell](#tab/powershell)
-
-```powershell
-$JWT_TOKEN = az account get-access-token `
-  --resource "api://<ENTRA_CLIENT_ID>" `
-  --query accessToken -o tsv
-```
-
----
-
-Use the JWT token in the `Authorization: Bearer` header, just like an API key. The platform routes it to the appropriate validation path based on the token content.
+For JWT validation, API key detection, and Azure RBAC authorization behavior, see [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md).
 
 ## Generative inference request examples
 
 The `/v1/chat/completions` endpoint follows OpenAI Chat Completions conventions.
 
 ### Authorization: Bearer
+
+The following example authenticates by using an API key in a standard Bearer token header.
 
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
@@ -99,6 +81,8 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
 
 ### api-key
 
+Use this format for OpenAI-compatible clients that send the key in an `api-key` header.
+
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -116,6 +100,8 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
 
 ### Authorization: Bearer (Entra ID JWT)
 
+For enterprise scenarios, you can authenticate by using a Microsoft Entra ID JSON Web Token instead of an API key.
+
 ```bash
 curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -132,6 +118,8 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
 ```
 
 ### Generative response
+
+The following example shows the response shape from a successful chat completion request.
 
 ```json
 {
