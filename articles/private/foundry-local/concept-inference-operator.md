@@ -285,7 +285,7 @@ curl -X POST https://<your-domain>/phi-3.5-gpu/v1/chat/completions \
     "model": "Phi-3.5-mini-instruct-cuda-gpu:1",
     "messages": [
       {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "What is the capital/majory city of France?"}
+      {"role": "user", "content": "What is the capital/major city of France?"}
     ],
     "temperature": 0.7,
     "max_tokens": 100
