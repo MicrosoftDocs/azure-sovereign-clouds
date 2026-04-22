@@ -94,6 +94,14 @@
       items:
         - name: Overview
           href: private/overview-sovereign-private-cloud.md
+        - name: AI workloads on Azure Local
+          items:
+            - name: Foundry Local on Azure Local
+              href: private/foundry-local/what-is-foundry-local-on-azure-local.md
+            - name: Edge Retrieval Augmented Generation (RAG)
+              href: /azure/azure-arc/edge-rag/overview?toc=/industry/sovereign-cloud/toc.json&bc=/industry/sovereign-cloud/_bread/toc.json
+            - name: Azure AI Video Indexer enabled by Arc
+              href: /azure/azure-video-indexer/azure-video-indexer-enabled-by-arc-overview?toc=/industry/sovereign-cloud/toc.json&bc=/industry/sovereign-cloud/_bread/toc.json
     - name: National Partner Clouds
       items:
         - name: Overview
