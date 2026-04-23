@@ -63,5 +63,5 @@ Azure Local provides a platform for running both traditional and cloud-native wo
 
 To learn more about Azure Local, see the following articles:
 
-[Azure Local Overview](/azure/azure-local/overview.md)
-[Azure Local Scalability and Deployments](/azure/azure-local/scalability-deployments.md)
+[Azure Local Overview](/azure/azure-local/overview)
+[Azure Local Scalability and Deployments](/azure/azure-local/scalability-deployments)
