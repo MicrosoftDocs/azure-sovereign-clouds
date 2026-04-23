@@ -13,7 +13,9 @@ ms.subservice: sovereign-private-clouds
 
 Sovereign Private Cloud is a portfolio of Microsoft solutions designed to help organizations run cloud services in **sovereign, regulated, and disconnected environments**. Sovereign Private Cloud provides a consistent Microsoft cloud experience while allowing customers to retain full control over infrastructure, data residency, and operations.
 
-Azure Sovereign Private Cloud provides a consistent private cloud infrastructure that supports multiple workload types on the same foundation. You can run Microsoft AI services, productivity workloads, and your own applications side by side, using the execution model that fits each workload. All workloads are built on the same secure, sovereign private cloud infrastructure, enabling shared governance, identity, and operations while giving you flexibility to modernize at your own pace.
+Azure Sovereign Private Cloud provides a consistent, private cloud infrastructure that supports multiple workload types on the same foundation. You can run Microsoft AI services, productivity workloads, and your own applications side by side, using the execution model that fits each workload. All workloads are built on the same secure, Sovereign Private Cloud infrastructure, enabling shared governance, identity, and operations while giving you flexibility to modernize at your own pace.
+
+:::image type="content" source="media\sovereign-private-cloud\sovereign-private-cloud.png" alt-text="Sovereign Private Cloud overview diagram showing supported components." lightbox="../media/sovereign-private-cloud/sovereign-private-cloud.png":::
 
 ## Azure Local
 
