@@ -6,4 +6,9 @@ items:
   - name: Sovereign Cloud
     tocHref: /azure/azure-sovereign-clouds/
     topicHref: /azure/azure-sovereign-clouds/index
-
+  - name: Sovereign Cloud
+    tocHref: /azure/azure-video-indexer # Destination doc set route
+    topicHref: /azure/azure-sovereign-clouds/index # Original doc set route
+  - name: Sovereign Cloud
+    tocHref: /azure/azure-arc/edge-rag # Destination doc set route
+    topicHref: /azure/azure-sovereign-clouds/index # Original doc set route
