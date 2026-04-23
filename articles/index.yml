@@ -37,8 +37,8 @@ additionalContent:
       - url: private/overview-sovereign-private-cloud.md
         text: Learn about Sovereign Private Cloud
       - url: private/overview/sovereign-private-cloud.md
-        text: What's Sovereign Private Cloud?
-      - url: private/azure-local/index.yml
+        text: What is Sovereign Private Cloud?
+      - url: index.yml
         text: Azure Local Overview and Key Benefits
       - url: private/foundry-local/what-is-foundry-local-on-azure-local.md
         text: What is Foundry Local on Azure Local?
