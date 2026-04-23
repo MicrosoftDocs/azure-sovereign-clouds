@@ -9,7 +9,7 @@ appliesto:
 ms.topic: overview
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/14/2026
+ms.date: 04/23/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
 ---
@@ -21,6 +21,12 @@ Foundry Local on Azure Local brings AI inference to your Azure Local environment
 This deployment model is designed for organizations that need local control, low-latency inference, and integration with existing Kubernetes operations on Azure Local.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
+
+## Request deployment access
+
+Foundry Local on Azure Local deployment is currently available by request during preview.
+To get started, submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest).
+After your request is reviewed, you'll receive guidance on next steps for deployment.
 
 ## Key capabilities
 
@@ -82,12 +88,6 @@ Use Foundry Local on Azure Local when you need to:
 - Reduce round-trip latency by serving models near applications and data sources.
 - Standardize AI serving with Kubernetes-native operations in existing platform workflows.
 - Use Azure-connected management patterns while running inference on local infrastructure.
-
-## Request deployment access
-
-Foundry Local on Azure Local deployment is currently available by request during preview.
-To get started, submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest).
-After your request is reviewed, you'll receive guidance on next steps for deployment.
 
 ## Related content
 
