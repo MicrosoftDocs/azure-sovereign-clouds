@@ -3,7 +3,7 @@ items:
   tocHref: /azure/
   topicHref: /azure/index
   items:
-  - name: Azure Sovereign Clouds
+  - name: Microsoft Sovereign Clouds
     tocHref: /azure/azure-sovereign-clouds/
     topicHref: /azure/azure-sovereign-clouds/index
     items:
