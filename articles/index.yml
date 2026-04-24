@@ -41,7 +41,7 @@ additionalContent:
       - url: private/foundry-local/what-is-foundry-local-on-azure-local.md
         text: What is Foundry Local on Azure Local?
       - url: private/m365-local/microsoft-365-local-overview.md
-        text: Overview of Microsoft 365 Local on Azure Local Infrastructure
+        text: What is Microsoft 365 Local on Azure Local Infrastructure?
 
     - title: Sovereign Public Cloud 
       links:
