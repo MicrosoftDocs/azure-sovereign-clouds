@@ -2,11 +2,11 @@
 title: "Rights Management in Microsoft 365"
 description: "Learn how Rights Management can be used as a sovereign control."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: kerabun
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

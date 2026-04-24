@@ -2,11 +2,11 @@
 title: Security controls in Dataverse and Power Platform
 description: Learn more about the security controls in Dataverse and Power Platform.
 author: deeptibusireddy
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 05/31/2024
 ms.author: kerabun
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

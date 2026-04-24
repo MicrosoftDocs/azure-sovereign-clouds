@@ -2,11 +2,11 @@
 title: Configure your Dataverse and Power Platform environments for more data sovereignty
 description: Configure your Dataverse and Power Platform environments for more data sovereignty
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 03/24/2025
 ms.author: kerabun
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
 ---
