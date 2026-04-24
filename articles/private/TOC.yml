@@ -11,7 +11,7 @@ items:
   - name: Azure Local
     items:
     - name: Azure Local overview
-      href: ./azure-local/what-is-azure-local.md
+      href: azure-local/azure-local-overview.md
     - name: Disconnected operations overview
       href: /azure/azure-local/manage/disconnected-operations-overview
 
