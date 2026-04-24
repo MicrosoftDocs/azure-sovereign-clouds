@@ -2,7 +2,7 @@
 title: "Technological independence"
 description: "Understand the concept of Technological independence in the context of cloud services and data management."
 author: ronmiab
-ms.subservice: sovereign-private clouds
+ms.subservice: sovereign-private-clouds
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: robess
