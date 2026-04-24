@@ -50,16 +50,16 @@
       "uhfHeaderId": "Azure",
       "feedback_system": "Standard",
       "breadcrumb_path": "/azure/azure-sovereign-clouds/breadcrumb/toc.json",
+      "ms.service": "azure",
       "permissioned-type": "public",
       "manager": "lizross",
       "recommendations": true
     },
-    "fileMetadata": {
-      "ms.service": {
-        "**/*.md": "azure",
-        "articles/**/*.md": "azure"
-      }
-    },
+    // "fileMetadata": {
+    //   "ms.service": {
+    //     "**/*.md": "azure"
+    //   }
+    // },
     "template": []
   }
 }
