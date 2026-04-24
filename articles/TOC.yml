@@ -95,7 +95,15 @@
     - name: Sovereign Private Cloud
       items:
         - name: Overview
-          href: private/overview-sovereign-private-cloud.md
+          href: private/overview/sovereign-private-cloud.md
+        - name: Azure Local
+          items:
+            - name: Azure Local overview
+              href: private/azure-local/azure-local-overview.md
+        - name: Microsoft 365 Local
+          items:
+            - name: Microsoft 365 Local overview
+              href: private/m365-local/microsoft-365-local-overview.md
         - name: AI suite
           items:
             - name: Foundry Local preview
