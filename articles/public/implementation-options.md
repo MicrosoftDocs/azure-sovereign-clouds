@@ -2,7 +2,6 @@
 title: "Sovereign Landing Zone (SLZ) implementation options"
 description: "Implementation options for deploying a Sovereign Landing Zone (SLZ)."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 01/28/2026
 ms.author: jatracey

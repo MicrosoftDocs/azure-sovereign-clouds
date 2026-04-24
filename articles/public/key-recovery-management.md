@@ -2,7 +2,6 @@
 title: "Key Recovery Management with Managed HSM"
 description: "Learn the operational impacts when using Managed HSM or External Key Stores"
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 11/14/2025
 ms.author: rozome

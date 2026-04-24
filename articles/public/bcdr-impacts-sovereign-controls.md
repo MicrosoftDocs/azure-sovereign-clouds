@@ -2,7 +2,6 @@
 title: "Business continuity and disaster recovery (BCDR) for sovereign workloads"
 description: "Learn BCDR impacts for workloads in a sovereign public cloud."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: kerabun

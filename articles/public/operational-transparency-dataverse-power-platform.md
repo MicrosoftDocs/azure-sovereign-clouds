@@ -2,7 +2,6 @@
 title: Transparency controls in Dataverse and Power Platform
 description: Provide customers with transparency into what is happening with their resources and data in Dataverse and Power Platform.
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 03/24/2025
 ms.author: kerabun

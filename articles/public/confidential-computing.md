@@ -2,7 +2,6 @@
 title: "Confidential computing overview"
 description: "Protect data in use with confidential computing in the Sovereign Public Cloud."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: kerabun

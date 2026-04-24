@@ -2,7 +2,6 @@
 title: "Regulated Environment Management (REM) overview"
 description: "Overview of REM for managing regulated workloads in the Sovereign Public Cloud."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: kerabun

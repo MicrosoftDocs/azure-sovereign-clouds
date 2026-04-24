@@ -2,7 +2,6 @@
 title: "Microsoft Sovereign Cloud glossary"
 description: "Key terms and abbreviations used across Microsoft Sovereign Cloud guidance."
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
 ms.topic: concept-article
 ms.date: 10/13/2025
 ms.author: robess

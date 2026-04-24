@@ -2,7 +2,6 @@
 title: Access controls for Dataverse and Power Platform
 description: Access controls for Dataverse and Power Platform 
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 03/24/2025
 ms.author: kerabun

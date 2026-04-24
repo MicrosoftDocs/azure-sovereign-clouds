@@ -2,7 +2,6 @@
 title: "What are the European digital commitments?"
 description: "Understand the European digital commitments and their significance in cloud sovereignty."
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/13/2025
 ms.author: robess

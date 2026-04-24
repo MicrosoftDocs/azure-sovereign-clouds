@@ -2,7 +2,6 @@
 title: "Sovereign design and implementation considerations"
 description: "Understand sovereign design and implementation considerations."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 03/31/2026
 ms.author: rburdea
