@@ -7,17 +7,13 @@ items:
     items:  
     - name: What is Sovereign Private Cloud?
       href: overview/sovereign-private-cloud.md
-    - name: Sovereign Private Cloud use cases
-      href: ./index.yml
 
   - name: Azure Local
     items:
     - name: Azure Local overview
-      href: ./index.yml
+      href: ./azure-local/what-is-azure-local.md
     - name: Disconnected operations overview
-      href: ./index.yml
-    - name: Connected operations overview
-      href: ./index.yml
+      href: /azure/azure-local/manage/disconnected-operations-overview
 
   - name: Foundry Local on Azure Local
     items:
