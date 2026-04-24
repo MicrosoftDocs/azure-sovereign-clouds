@@ -100,18 +100,10 @@
           items:
             - name: Azure Local overview
               href: private/azure-local/azure-local-overview.md
-            - name: Disconnected operations overview
-              href: /azure/azure-local/manage/disconnected-operations-overview
-        - name: Foundry Local on Azure Local
-          items:
-            - name: Foundry Local overview
-              href: private/foundry-local/what-is-foundry-local-on-azure-local.md
         - name: Microsoft 365 Local
           items:
             - name: Microsoft 365 Local overview
               href: private/m365-local/microsoft-365-local-overview.md
-        - name: AI workloads on Azure Local
-          href: private/overview-sovereign-private-cloud.md
         - name: AI suite
           items:
             - name: Foundry Local preview
