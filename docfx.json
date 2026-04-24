@@ -56,7 +56,8 @@
     },
     "fileMetadata": {
       "ms.service": {
-        "**/*.md": "azure"
+        "**/*.md": "azure",
+        "articles/**/*.md": "azure"
       }
     },
     "template": []
