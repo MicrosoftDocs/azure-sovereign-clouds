@@ -2,6 +2,7 @@
 title: "Sovereign design and implementation considerations"
 description: "Understand sovereign design and implementation considerations."
 author: lavanyapg
+ms.subservice: sovereign-private clouds
 ms.topic: overview
 ms.date: 03/31/2026
 ms.author: rburdea

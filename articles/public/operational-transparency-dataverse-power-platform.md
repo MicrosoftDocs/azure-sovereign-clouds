@@ -6,6 +6,7 @@ ms.topic: overview
 ms.date: 03/24/2025
 ms.author: kerabun
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

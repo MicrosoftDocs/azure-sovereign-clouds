@@ -2,6 +2,7 @@
 title: "Operational controls"
 description: "Learn about operational controls in cloud services and data management."
 author: ronmiab
+ms.subservice: sovereign-private clouds
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: robess

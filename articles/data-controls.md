@@ -2,6 +2,7 @@
 title: "Data controls"
 description: "Understand the concept of data controls in the context of cloud services and data management."
 author: ronmiab
+ms.subservice: sovereign-private clouds
 ms.topic: overview
 ms.date: 10/06/2025
 ms.author: robess
