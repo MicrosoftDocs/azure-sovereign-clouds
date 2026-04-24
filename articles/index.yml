@@ -34,8 +34,6 @@ additionalContent:
 
     - title: Sovereign Private Cloud
       links:
-      - url: private/overview-sovereign-private-cloud.md
-        text: Learn about Sovereign Private Cloud
       - url: private/overview/sovereign-private-cloud.md
         text: What's Sovereign Private Cloud?
       - url: private/azure-local/azure-local-overview.md
