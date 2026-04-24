@@ -95,7 +95,21 @@
     - name: Sovereign Private Cloud
       items:
         - name: Overview
-          href: private/overview-sovereign-private-cloud.md
+          href: private/overview/sovereign-private-cloud.md
+        - name: Azure Local
+          items:
+            - name: Azure Local overview
+              href: azure-local/azure-local-overview.md
+            - name: Disconnected operations overview
+              href: /azure/azure-local/manage/disconnected-operations-overview
+        - name: Foundry Local on Azure Local
+          items:
+            - name: Foundry Local overview
+              href: foundry-local/what-is-foundry-local-on-azure-local.md
+        - name: Microsoft 365 Local
+          items:
+            - name: Microsoft 365 Local overview
+              href: m365-local/microsoft-365-local-overview.md
         - name: AI workloads on Azure Local
           items:
             - name: Foundry Local preview
