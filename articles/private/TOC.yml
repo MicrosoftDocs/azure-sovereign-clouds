@@ -1,6 +1,6 @@
 items:
 - name: Sovereign Private Cloud documentation
-  href: index.yml
+  href: /azure/azure-sovereign-clouds
   items:
   - name: Overview
     expanded: true
