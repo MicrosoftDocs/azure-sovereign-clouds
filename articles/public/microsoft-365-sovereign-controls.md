@@ -2,11 +2,11 @@
 title: "Sovereign Controls in Microsoft 365"
 description: "Learn how Sovereign controls work in Microsoft 365."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: kerabun
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

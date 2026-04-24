@@ -2,11 +2,11 @@
 title: "Design sovereign policy initiatives in Azure"
 description: "Learn how to design sovereign policy initiatives"
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/13/2025
 ms.author: rozome
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority
