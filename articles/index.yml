@@ -56,7 +56,7 @@ additionalContent:
       - url: partner/overview-national-partner-clouds.md
         text: Learn about National Partner Clouds
 
-    - title: AI workloads on Azure Local
+    - title: AI suite on Sovereign Private Cloud
       links:
       - url: private/foundry-local/what-is-foundry-local-on-azure-local.md
         text: Foundry Local preview
