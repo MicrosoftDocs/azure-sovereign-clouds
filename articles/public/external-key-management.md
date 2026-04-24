@@ -2,7 +2,6 @@
 title: "External Key Management overview"
 description: "Learn about external key management approaches for encryption key control in sovereign cloud scenarios."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/22/2025
 ms.author: kerabun

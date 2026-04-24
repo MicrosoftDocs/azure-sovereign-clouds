@@ -2,7 +2,6 @@
 title: Transparency controls in Dynamics 365 Business Central
 description: Provide customers with transparency into what is happening with their resources and data in Dynamics 365 Business Central.
 author: jobulsin
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 08/13/2025
 ms.author: jobulsin

@@ -2,7 +2,6 @@
 title: Configure your Dynamics 365 Business Central environments for more data sovereignty
 description: Configure your Dynamics 365 Business Central environments for more data sovereignty
 author: jobulsin
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 08/13/2025
 ms.author: jobulsin

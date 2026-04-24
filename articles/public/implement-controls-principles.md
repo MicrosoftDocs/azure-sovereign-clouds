@@ -2,7 +2,6 @@
 title: "Implement controls and principles in SLZ"
 description: "Design for Sovereign Landing Zone (SLZ)."
 author: lavanyapg
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/07/2025
 ms.author: jatracey
