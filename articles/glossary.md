@@ -2,6 +2,7 @@
 title: "Microsoft Sovereign Cloud glossary"
 description: "Key terms and abbreviations used across Microsoft Sovereign Cloud guidance."
 author: ronmiab
+ms.subservice: sovereign-private-clouds
 ms.topic: concept-article
 ms.date: 10/13/2025
 ms.author: robess
@@ -22,11 +23,11 @@ Use this glossary to align on common terminology across sovereignty concepts, ca
 | Data residency | Restricting storage and processing of customer data to approved geographic regions. |
 | CMK (Customer‑managed key) | Encryption key owned/managed by the customer in Azure Key Vault or Managed HSM (Hardware security module), used for service encryption at rest. |
 | Managed HSM | FIPS 140‑3 Level 3 validated, single‑tenant Hardware Security Module service for hosting customer-managed keys. |
-| External Key Management (EKM) | Capability allowing cryptographic operations with keys stored outside Microsoft’s cloud boundary (Hold Your Own Key). |
+| External Key Management (EKM) | Capability allowing cryptographic operations with keys stored outside Microsoft's cloud boundary (Hold Your Own Key). |
 | HYOK (Hold Your Own Key) | Pattern where encryption keys never leave customer‑controlled HSM infrastructure. |
 | Confidential computing | Protecting data in use via hardware‑based Trusted Execution Environments (TEEs) with attestation. |
 | TEE (Trusted Execution Environment) | Hardware‑backed isolated execution context providing confidentiality and integrity for code and data. |
-| Attestation | Cryptographic verification of a TEE’s identity and measured launch state before releasing secrets. |
+| Attestation | Cryptographic verification of a TEE's identity and measured launch state before releasing secrets. |
 | SKR (Secure Key Release) | Mechanism tying key release from Key Vault / Managed HSM to attestation policies for confidential workloads. |
 | L1 / L2 / L3 | Sovereign policy levels: L1 (data residency and service scope), L2 (encryption at rest with CMK/HSM), L3 (confidential compute / in‑use encryption). |
 | REM (Regulated Environment Management) | Unified orchestration and monitoring layer for sovereign operations. |

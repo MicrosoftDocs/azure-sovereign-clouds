@@ -7,6 +7,7 @@ ms.topic: overview
 ms.date: 10/30/2025
 ms.author: kerabun
 ms.reviewer: syalandur
+ms.subservice: national-partner-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority
