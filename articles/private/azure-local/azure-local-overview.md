@@ -25,7 +25,7 @@ Azure Local can run in **connected** environments. In this model, systems mainta
 
 Azure Local can also run in **disconnected** environments. In this model, systems operate without a connection to the Azure public cloud. You can build, deploy, and manage virtual machines (VMs) and containerized applications by using select Azure Arc-enabled services from a local control plane. This approach is useful for sovereign, regulated, or isolated scenarios where workloads must remain fully local.
 
-:::image type="content" source="./media/azure-local-overview/connected-disconnected-environments.png" alt-text="Diagram showing Azure Local connected and disconnected environments." border="true" lightbox="./media/azure-local-overview/connected-disconnected-environments.png":::
+:::image type="content" source="media/azure-local-overview/connected-disconnected-environments.png" alt-text="Diagram showing Azure Local connected and disconnected environments." border="true" lightbox="media/azure-local-overview/connected-disconnected-environments.png":::
 
 ### Deployment sizes
 
@@ -33,11 +33,11 @@ Azure Local supports multiple deployment sizes to meet different scale and opera
 
 For larger environments, Azure Local supports large, multi-node clusters and multi-rack deployments. These configurations are typically used for centralized datacenters, shared platforms, or sovereign environments that need higher capacity and consistent operations across multiple racks.
 
-:::image type="content" source="./media/azure-local-overview/scale-points.png" alt-text="Diagram showing composable scale points from single nodes up to multiple racks clusters." border="true" lightbox="./media/azure-local-overview/scale-points.png":::
+:::image type="content" source="media/azure-local-overview/scale-points.png" alt-text="Diagram showing composable scale points from single nodes up to multiple racks clusters." border="true" lightbox="media/azure-local-overview/scale-points.png":::
 
 ## Run specialized workloads on Azure Local
 
-Azure Local provides a platform for running both traditional and cloud-native workloads. It supports Azure-consistent tools and services, so you can modernize applications while meeting local operational and compliance requirements. Some of the most popular services include, but aren't limited to, the following services:
+Azure Local provides a platform for running both traditional and cloud-native workloads. It supports Azure-consistent tools and services, so you can modernize applications while meeting local operational and compliance requirements. Some of the most popular services include, but aren't limited to:
 
 - Run **virtual machines** (VMs) for existing and modernized applications.
 
