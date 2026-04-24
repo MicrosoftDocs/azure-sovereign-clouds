@@ -96,7 +96,7 @@
       items:
         - name: Overview
           href: private/overview-sovereign-private-cloud.md
-        - name: AI workloads on Azure Local
+        - name: AI suite
           items:
             - name: Foundry Local preview
               href: private/foundry-local/what-is-foundry-local-on-azure-local.md?context=/azure/azure-sovereign-clouds/context/context

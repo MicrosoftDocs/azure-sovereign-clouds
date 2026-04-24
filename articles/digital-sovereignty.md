@@ -2,7 +2,7 @@
 title: "Digital sovereignty"
 description: Learn about digital sovereignty in the context of cloud services and data management.
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
+ms.subservice: sovereign-public-clouds
 ms.topic: overview
 ms.date: 10/06/2025
 ms.author: robess
