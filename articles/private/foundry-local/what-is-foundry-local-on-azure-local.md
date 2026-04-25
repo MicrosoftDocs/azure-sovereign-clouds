@@ -45,7 +45,7 @@ Foundry Local on Azure Local runs on an Arc-enabled Kubernetes cluster and is de
 
 The following diagram shows how these components work together. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
 
-:::image type="content" source="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" alt-text="Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." border="false":::
+:::image type="content" source="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" alt-text="Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" border="false":::
 
 
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).
