@@ -30,7 +30,7 @@ The following capabilities highlight what you can do with Foundry Local on Azure
 - Deploy and manage models through custom resources instead of manual service wiring.
 - Use OpenAI-compatible REST patterns for application integration.
 - Support CPU and GPU-backed deployments based on workload and hardware profile.
-- Secure endpoint access using API keys, Entra ID authentication, and TLS-enabled ingress patterns.
+- Secure endpoint access using API keys, Microsoft Entra ID authentication, and TLS-enabled ingress patterns.
 - Sync model catalog metadata so teams can discover and deploy supported models consistently.
 
 ## Architecture summary
@@ -45,7 +45,7 @@ Foundry Local on Azure Local runs on an Arc-enabled Kubernetes cluster and is de
 
 The following diagram shows how these components work together. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
 
-:::image type="content" source="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" alt-text="Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" border="false":::
+:::image type="content" source="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" alt-text="Diagram of Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" border="false":::
 
 
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).

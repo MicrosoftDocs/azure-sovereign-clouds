@@ -76,7 +76,7 @@ The nginx sidecar operates as a pure TLS termination proxy and doesn't perform a
 
 The following diagram shows how external HTTPS traffic enters through nginx and how the inference backend, Entra Auth SDK sidecar, and msi-adapter communicate over localhost within the pod.
 
-:::image type="content" source="media/concept-authentication-authorization/inference-pod-architecture.svg" alt-text="Foundry Local inference pod with HTTPS traffic through nginx to the backend and localhost calls to Entra Auth SDK and msi-adapter." lightbox="media/concept-authentication-authorization/inference-pod-architecture.svg" border="false":::
+:::image type="content" source="media/concept-authentication-authorization/inference-pod-architecture.svg" alt-text="Diagram of the Foundry Local inference pod with HTTPS traffic through nginx to the backend and localhost calls to Entra Auth SDK and msi-adapter." lightbox="media/concept-authentication-authorization/inference-pod-architecture.svg" border="false":::
 
 ## Request flow
 
@@ -99,7 +99,7 @@ When a request arrives at an inference endpoint, it follows this path:
 
 The following diagram shows the end-to-end authentication request flow, including public-path bypass, API key validation, and JWT plus Azure RBAC authorization.
 
-:::image type="content" source="media/concept-authentication-authorization/authentication-request-flow.svg" alt-text="Request flow with HTTPS ingress to nginx, middleware routing to public-path bypass, API key validation, or JWT validation and Azure RBAC before inference." lightbox="media/concept-authentication-authorization/authentication-request-flow.svg" border="false":::
+:::image type="content" source="media/concept-authentication-authorization/authentication-request-flow.svg" alt-text="Diagram of the request flow with HTTPS ingress to nginx, middleware routing to public-path bypass, API key validation, or JWT validation and Azure RBAC before inference." lightbox="media/concept-authentication-authorization/authentication-request-flow.svg" border="false":::
 
 ## Resilience and connectivity loss
 
