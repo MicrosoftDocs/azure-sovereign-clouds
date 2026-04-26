@@ -82,7 +82,6 @@ The following diagram shows how external HTTPS traffic enters through nginx and 
 
 When a request arrives at an inference endpoint, it follows this path:
 
-
 1. **TLS termination** — The request arrives at the nginx sidecar over HTTPS (port 8443). nginx terminates TLS and forwards the plain HTTP request to the inference backend on `localhost:5000`.
 
 1. **Public path check** — The auth middleware checks whether the request targets a public path (`/healthz`, `/readyz`, `/v1/models`). Public paths bypass all authentication and proceed directly to the inference backend.

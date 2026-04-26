@@ -47,7 +47,6 @@ The following diagram shows how these components work together. An Arc-enabled K
 
 :::image type="content" source="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" alt-text="Diagram of Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/what-is-foundry-local-on-azure-local/foundry-local-enabled-azure-arc.svg" border="false":::
 
-
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).
 
 ## How it works
