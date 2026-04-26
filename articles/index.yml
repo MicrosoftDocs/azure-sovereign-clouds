@@ -1,12 +1,12 @@
 ### YamlMime:Hub
 
-title: Welcome to Azure Sovereign Clouds
-summary: Discover how to make the most of Azure Sovereign Clouds with documentation and how-to articles.
+title: Welcome to Microsoft Sovereign Cloud
+summary: Discover how to make the most of Microsoft Sovereign Cloud with documentation and how-to articles.
 
 
 metadata:
-  title: Welcome to Azure Sovereign Clouds
-  description: Discover how to make the most of Azure Sovereign Clouds with documentation and how-to articles.
+  title: Welcome to Microsoft Sovereign Cloud
+  description: Discover how to make the most of Microsoft Sovereign Cloud with documentation and how-to articles.
   ms.topic: hub-page # Required
   author: cwatson-cat
   ms.service: azure
@@ -29,13 +29,17 @@ highlightedContent:
 
 additionalContent:
   sections:
-  - title: Discover Azure Sovereign Clouds
+  - title: Discover Microsoft Sovereign Cloud
     items:
 
     - title: Sovereign Private Cloud
       links:
-      - url: private/overview-sovereign-private-cloud.md
-        text: Learn about Sovereign Private Cloud
+      - url: private/overview/sovereign-private-cloud.md
+        text: What is Sovereign Private Cloud?
+      - url: private/azure-local/azure-local-overview.md
+        text: Azure Local Overview and Key Benefits
+      - url: private/m365-local/microsoft-365-local-overview.md
+        text: What is Microsoft 365 Local on Azure Local Infrastructure?
 
     - title: Sovereign Public Cloud 
       links:
