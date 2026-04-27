@@ -13,7 +13,7 @@ ms.collection:
 
 # Technological independence
 
-Technological independence is a dimension of digital sovereignty, along with [data controls](data-controls.md) and [operational controls](operational-controls.md). It refers to the ability of organizations to choose, manage, and secure their digital infrastructure without undue reliance on foreign technologies or proprietary constraints. In the context of Azure, this ability means enabling customers to run workloads [on premises](private/overview/sovereign-private-cloud.md), in [hybrid environments](private/overview/sovereign-private-cloud.md), or through [national partner clouds](partner/overview-national-partner-clouds.md), while maintaining full control over operations, data, and compliance.
+Technological independence is a dimension of digital sovereignty, along with [data controls](data-controls.md) and [operational controls](operational-controls.md). It refers to the ability of organizations to choose, manage, and secure their digital infrastructure without undue reliance on foreign technologies or proprietary constraints. In the context of Azure, this ability means enabling customers to run workloads [on-premises](private/overview/sovereign-private-cloud.md), in [hybrid environments](private/overview/sovereign-private-cloud.md), or through [national partner clouds](partner/overview-national-partner-clouds.md), while maintaining full control over operations, data, and compliance.
 
 Microsoft's approach to technological independence is anchored in [Sovereign Private Cloud](private/overview/sovereign-private-cloud.md) offerings. These offerings are designed for scenarios where public cloud isn't viable due to regulatory, latency, or jurisdictional constraints.
 
