@@ -17,13 +17,13 @@ Microsoft Sovereign Private Cloud provides a consistent, private cloud infrastru
 
 :::image type="content" source="media/sovereign-private-cloud/sovereign-private-cloud.png" alt-text="Sovereign Private Cloud overview diagram showing supported components." lightbox="media/sovereign-private-cloud/sovereign-private-cloud.png":::
 
-## Private cloud infrastructure (Azure Local)
+## Private cloud infrastructure: Azure Local
 
 Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer - compute, storage, networking, and lifecycle management - on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments. Azure Local supports running workloads as virtual machines (VMs) or on Azure Kubernetes Service (AKS) Arc-enabled clusters.
 
 For more information, see [Azure Local for Microsoft Sovereign Private Cloud](/azure/azure-local/overview).
 
-## AI suite (Foundry Local on Azure Local)
+## AI suite: Foundry Local on Azure Local
 
 Foundry Local on Azure Local enables you to bring AI closer to your data by deploying and running AI models entirely within your Azure Local environment. Foundry Local supports scenarios where you need AI sovereignty, low-latency inference, and control over where your data is processed. It integrates with Arc-enabled Kubernetes so you can operationalize AI using familiar Kubernetes-native workflows while keeping AI workloads on-premises.
 
@@ -31,7 +31,7 @@ Foundry Local on Azure Local also supports a **Model-as-a-Service (MaaS)** appro
 
 For more information, see [Foundry Local for Microsoft Sovereign Private Cloud](../foundry-local/what-is-foundry-local-on-azure-local.md).
 
-## Productivity suite (Microsoft 365 Local)
+## Productivity suite: Microsoft 365 Local
 
 Microsoft 365 Local enables you to run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure that you own and manage. You gain enhanced control over data residency, access, and compliance, helping you meet your sovereignty requirements.
 
