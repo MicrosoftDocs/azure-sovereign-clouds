@@ -31,7 +31,7 @@ Foundry Local on Azure Local also supports a **Model-as-a-Service (MaaS)** appro
 
 For more information, see [Foundry Local for Microsoft Sovereign Private Cloud](../foundry-local/what-is-foundry-local-on-azure-local.md).
 
-## Microsoft 365 Local
+## Productivity Suite (Microsoft 365 Local)
 
 Microsoft 365 Local enables you to run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure that you own and manage. You gain enhanced control over data residency, access, and compliance, helping you meet your sovereignty requirements.
 
