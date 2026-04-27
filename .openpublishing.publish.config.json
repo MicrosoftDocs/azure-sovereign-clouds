@@ -47,5 +47,8 @@
     "Pdf": {
       "template_folder": "_themes.pdf"
     }
-  }
+  },
+  "redirection_files": [
+    ".openpublishing.redirection.json"
+  ]
 }
