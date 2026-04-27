@@ -44,7 +44,7 @@ Organizations can choose deployment models that align with their sovereignty nee
 
 - [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md): This deployment model is hosted in Microsoft-operated datacenters within defined geopolitical boundaries (for example, EU Data Boundary). It offers data residency, customer-managed encryption keys, and operational transparency. In addition, the model is built on Microsoft's global Azure infrastructure with enhanced sovereignty controls, such as Data Guardian, External Key Management, and tamper-evident access logs.
 
-- [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md): This model runs in customer-controlled or partner-operated datacenters, supporting hybrid or disconnected operations. The model is delivered via Azure Local and Microsoft 365 Local. The model is ideal for defense, critical infrastructure, and national security scenarios.
+- [Sovereign Private Cloud](private/overview/sovereign-private-cloud.md): This model runs in customer-controlled or partner-operated datacenters, supporting hybrid or disconnected operations. The model is delivered via Azure Local and Microsoft 365 Local. The model is ideal for defense, critical infrastructure, and national security scenarios.
 
 - [National Partner Clouds](partner/overview-national-partner-clouds.md): These clouds are localized sovereign cloud instances delivered with an approved national or regional partner. The instances combine Microsoft sovereign capabilities with partner-operated or jointly governed operational processes to meet localized sovereignty, governance participation, and economic development requirements while retaining access to selected Microsoft cloud innovations under enhanced operational assurances. Their service scope, latency characteristics, and rollout sequencing can differ from those offered by global Azure. As a result, customers need to review the published service matrices for each national implementation.
 
@@ -74,5 +74,5 @@ Microsoft Sovereign Cloud uses hardware-based confidential computing, customer-m
 - [European Digital Commitments](european-digital-commitments.md)
 - [Digital sovereignty](digital-sovereignty.md)  
 - [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md)
-- [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md)
+- [Sovereign Private Cloud](private/overview/sovereign-private-cloud.md)
 - [National Partner Clouds](partner/overview-national-partner-clouds.md)

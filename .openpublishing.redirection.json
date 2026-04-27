@@ -1,4 +1,10 @@
 {
   "redirections": [
+
+      {
+        "source_path": "articles/private/overview-sovereign-private-cloud.md",
+        "redirect_url": "/articles/private/overview/sovereign-private-cloud.md",
+        "redirect_document_id": false
+      }
   ]
 }
