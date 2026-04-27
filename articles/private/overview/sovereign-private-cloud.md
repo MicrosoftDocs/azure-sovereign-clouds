@@ -17,13 +17,13 @@ Microsoft Sovereign Private Cloud provides a consistent, private cloud infrastru
 
 :::image type="content" source="media/sovereign-private-cloud/sovereign-private-cloud.png" alt-text="Sovereign Private Cloud overview diagram showing supported components." lightbox="media/sovereign-private-cloud/sovereign-private-cloud.png":::
 
-## Azure Local
+## Private Cloud Infrastructure (Azure Local)
 
 Azure Local is the foundation of the Sovereign Private Cloud. Azure Local provides the core infrastructure layer - compute, storage, networking, and lifecycle management - on which sovereign workloads run. All Sovereign Private Cloud solutions are built on and depend on Azure Local to deliver Azure-consistent services in customer-managed environments. Azure Local supports running workloads as virtual machines (VMs) or on Azure Kubernetes Service (AKS) Arc-enabled clusters.
 
 For more information, see [Azure Local for Microsoft Sovereign Private Cloud](/azure/azure-local/overview).
 
-## Foundry Local on Azure Local
+## AI Suite (Foundry Local on Azure Local)
 
 Foundry Local on Azure Local enables you to bring AI closer to your data by deploying and running AI models entirely within your Azure Local environment. Foundry Local supports scenarios where you need AI sovereignty, low-latency inference, and control over where your data is processed. It integrates with Arc-enabled Kubernetes so you can operationalize AI using familiar Kubernetes-native workflows while keeping AI workloads on-premises.
 
@@ -39,6 +39,6 @@ If you need productivity tools in a private cloud environment, Microsoft 365 Loc
 
 For more information, see [Microsoft 365 Local on Azure Local Infrastructure](../m365-local/microsoft-365-local-overview.md).
 
-## Related content
+## Next step
 
-[Sovereign design and implementation considerations](../../sovereignty-implementation.md)
+[What is Azure Local?](../azure-local/azure-local-overview.md)
