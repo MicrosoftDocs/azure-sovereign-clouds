@@ -7,8 +7,6 @@ items:
     items:
     - name: What is Foundry Local on Azure Local?
       href: what-is-foundry-local-on-azure-local.md
-    - name: Deploy and run your first model
-      href: deploy-run-first-model.md
     - name: Known issues
       href: known-issues.md
   - name: Plan
@@ -39,6 +37,8 @@ items:
       href: deploy-foundry-local-arc-extension.md
     - name: Package and deploy your own model
       href: how-to-deploy-custom-model.md
+    - name: Deploy and run your first model
+      href: deploy-run-first-model.md
   - name: Configure and secure
     items:
     - name: Configure TLS and authentication
