@@ -6,7 +6,7 @@ ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
 - Foundry Local on Azure Local
-ms.topic: quickstart
+ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
 ms.date: 04/28/2026
@@ -16,35 +16,45 @@ customer intent: As a platform engineer or developer, I want to deploy and run m
 
 # Deploy and run your first model on Foundry Local on Azure Local
 
-This guide walks you through your first steps with Foundry Local — from deploying the platform to running inference against your first model.
+This article walks you through deploying Foundry Local, browsing the model catalog, creating your first model deployment, and sending inference requests.
+
+In this article, you:
+
+> [!div class="checklist"]
+> - Request deployment access for the preview
+> - Deploy Foundry Local to your Kubernetes cluster
+> - List available models from the catalog
+> - Deploy a model by using kubectl or the REST API
+> - Send a chat completion inference request
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
-## Request deployment access
+## Prerequisites
 
-Foundry Local on Azure Local deployment is currently available by request during preview. To get started, submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you'll receive guidance on next steps for deployment.
+Before you begin, make sure you have:
 
-## Deployment
+- An active Azure subscription. If you don't have one, [create one](https://azure.microsoft.com/free/) before you begin.
+- A Kubernetes cluster (version 1.29 or later) connected to Azure Arc, or a direct Kubernetes deployment.
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
+- Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
 
-Before you can start working with models, Foundry Local must be deployed to your Kubernetes cluster. There are two supported installation methods:
+## Deploy Foundry Local to your cluster
+
+Before you can work with models, deploy Foundry Local to your Kubernetes cluster. Choose one of the two supported installation methods:
 
 - **Helm chart** — For direct Kubernetes deployments. See [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
 - **Arc extension** — For Azure Arc-enabled Kubernetes clusters. See [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md).
 
 If you want to deploy models in namespaces other than the default, see [Configure namespaces for model deployments](how-to-configure-namespaces.md).
 
-## Inference quick start
+## List available models
 
-Once Foundry Local is deployed and you complete authentication, you can begin listing, deploying, and interacting with models. Foundry Local supports two approaches:
+After Foundry Local is deployed and you complete authentication, you can browse the model catalog. Foundry Local supports two approaches for managing models:
 
 - **kubectl** — Work directly with Kubernetes custom resources (ModelDeployment CRDs).
 - **Foundry Local REST API** — Use HTTP endpoints exposed by the inference operator.
 
-The sections below provide a command-by-command reference for both approaches.
-
-### Using kubectl
-
-#### List available models
+### [kubectl](#tab/kubectl)
 
 View the full model catalog to see which models are available for deployment:
 
@@ -58,42 +68,92 @@ For a table-style catalog:
 kubectl get configmap foundry-local-catalog -n foundry-local-operator -o jsonpath="{.data['catalog\.json']}" | ConvertFrom-Json | Select-Object -ExpandProperty models | Format-Table alias, displayName, task, framework
 ```
 
-#### Deploy a model
+### [REST API](#tab/rest-api)
 
-Create a YAML file (for example, `model-deployment.yaml`) with a ModelDeployment resource. Replace the placeholder values with the model name from the catalog and your desired configuration:
-
-```yaml
-apiVersion: foundrylocal.azure.com/v1
-kind: ModelDeployment
-metadata:
-  name: <deployment-name>
-  namespace: foundry-local-operator
-spec:
-  model:
-    catalog:
-      name: <model-name-from-catalog>
-      version: "latest"
-  compute: gpu              # or cpu
-  runtime: vllm             # or onnx-genai
-  workloadType: generative
-  replicas: 1
-  resources:
-    requests:
-      cpu: "2"
-      memory: "32Gi"
-    limits:
-      cpu: "4"
-      memory: "64Gi"
-      gpu: 1
-```
-
-Apply the manifest to deploy the model:
+Set up port forwarding to the API service:
 
 ```bash
-kubectl apply -f model-deployment.yaml
+kubectl port-forward -n foundry-local-operator svc/inference-operator-api 8080:8080
 ```
 
-#### Check deployment status
+In a new terminal, obtain an access token for API authentication:
+
+```bash
+token=$(az account get-access-token --resource "<client-id>" --query accessToken -o tsv)
+```
+
+List the available models:
+
+```bash
+curl -k -s https://localhost:8080/api/v1/models -H "Authorization: Bearer $token"
+```
+
+Or in a table format:
+
+```powershell
+$response = curl -k -s https://localhost:8080/api/v1/models -H "Authorization: Bearer $token" | ConvertFrom-Json
+$response.models | Format-Table alias, source, framework, @{L='compute';E={$_.supportedCompute -join ','}} -AutoSize
+```
+
+---
+
+## Deploy a model
+
+Choose the model you want from the catalog and create a deployment.
+
+### [kubectl](#tab/kubectl)
+
+1. Create a YAML file (for example, `model-deployment.yaml`) with a ModelDeployment resource. Replace the placeholder values with the model name from the catalog and your desired configuration:
+
+    ```yaml
+    apiVersion: foundrylocal.azure.com/v1
+    kind: ModelDeployment
+    metadata:
+      name: <deployment-name>
+      namespace: foundry-local-operator
+    spec:
+      model:
+        catalog:
+          name: <model-name-from-catalog>
+          version: "latest"
+      compute: gpu              # or cpu
+      runtime: vllm             # or onnx-genai
+      workloadType: generative
+      replicas: 1
+      resources:
+        requests:
+          cpu: "2"
+          memory: "32Gi"
+        limits:
+          cpu: "4"
+          memory: "64Gi"
+          gpu: 1
+    ```
+
+1. Apply the manifest to deploy the model:
+
+    ```bash
+    kubectl apply -f model-deployment.yaml
+    ```
+
+### [REST API](#tab/rest-api)
+
+Send a POST request to create the deployment:
+
+```bash
+curl -k -X POST https://localhost:8080/api/v1/namespaces/foundry-local-operator/deployments \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $token" \
+  -d '{"name":"<deployment-name>","spec":{"model":{"catalog":{"name":"<model-name>","version":"latest"}},"workloadType":"generative","compute":"cpu","runtime":"onnx-genai","replicas":1,"authentication":{"enabled":true}}}'
+```
+
+---
+
+## Verify the deployment status
+
+Confirm the model deployment is ready before sending inference requests.
+
+### [kubectl](#tab/kubectl)
 
 Check whether a specific model deployment is ready:
 
@@ -113,75 +173,45 @@ To list all deployed models across all namespaces:
 kubectl get modeldeployment -A
 ```
 
-#### Send an inference request
-
-Once the model's status shows **Running**, set up port forwarding to the model's service:
-
-```bash
-kubectl port-forward svc/<deployment-name> -n foundry-local-operator 5000:5000
-```
-
-Retrieve the model's API key (the value is Base64-encoded):
-
-```bash
-kubectl get secret <deployment-name>-api-keys -n foundry-local-operator -o jsonpath="{.data.primary-key}"
-```
-
-Decode the key, then open a new terminal and send a chat completion request:
-
-```bash
-curl -k -X POST https://localhost:5000/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "api-key: <your-decoded-api-key>" \
-  -d '{"model":"<model-name>","messages":[{"role":"user","content":"Hello, what can you do?"}]}'
-```
-
-### Using the Foundry Local REST API
-
-The Foundry Local API provides REST endpoints for managing models. Start by setting up port forwarding to the API service:
-
-```bash
-kubectl port-forward -n foundry-local-operator svc/inference-operator-api 8080:8080
-```
-
-In a new terminal, obtain an access token for API authentication:
-
-```bash
-token=$(az account get-access-token --resource "<client-id>" --query accessToken -o tsv)
-```
-
-#### List available models
-
-```bash
-curl -k -s https://localhost:8080/api/v1/models -H "Authorization: Bearer $token"
-```
-
-Or in a table format:
-
-```powershell
-$response = curl -k -s https://localhost:8080/api/v1/models -H "Authorization: Bearer $token" | ConvertFrom-Json
-$response.models | Format-Table alias, source, framework, @{L='compute';E={$_.supportedCompute -join ','}} -AutoSize
-```
-
-#### Deploy a model
-
-```bash
-curl -k -X POST https://localhost:8080/api/v1/namespaces/foundry-local-operator/deployments \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $token" \
-  -d '{"name":"<deployment-name>","spec":{"model":{"catalog":{"name":"<model-name>","version":"latest"}},"workloadType":"generative","compute":"cpu","runtime":"onnx-genai","replicas":1,"authentication":{"enabled":true}}}'
-```
-
-#### Check deployment status
+### [REST API](#tab/rest-api)
 
 ```bash
 curl -k -s https://localhost:8080/api/v1/namespaces/foundry-local-operator/deployments/<deployment-name> \
   -H "Authorization: Bearer $token"
 ```
 
-#### Send an inference request
+---
 
-Set up port forwarding to the model's service and retrieve the API key (using the same kubectl commands shown in the kubectl section), then send a chat completion request:
+## Send an inference request
+
+Once the model's status shows **Running**, you can send inference requests.
+
+### [kubectl](#tab/kubectl)
+
+1. Set up port forwarding to the model's service:
+
+    ```bash
+    kubectl port-forward svc/<deployment-name> -n foundry-local-operator 5000:5000
+    ```
+
+1. Retrieve the model's API key (the value is Base64-encoded):
+
+    ```bash
+    kubectl get secret <deployment-name>-api-keys -n foundry-local-operator -o jsonpath="{.data.primary-key}"
+    ```
+
+1. Decode the key, then open a new terminal and send a chat completion request:
+
+    ```bash
+    curl -k -X POST https://localhost:5000/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -H "api-key: <your-decoded-api-key>" \
+      -d '{"model":"<model-name>","messages":[{"role":"user","content":"Hello, what can you do?"}]}'
+    ```
+
+### [REST API](#tab/rest-api)
+
+Set up port forwarding to the model's service and retrieve the API key (using the same kubectl commands shown in the kubectl tab), then send a chat completion request:
 
 ```bash
 curl -k -X POST https://localhost:5000/v1/chat/completions \
@@ -189,6 +219,8 @@ curl -k -X POST https://localhost:5000/v1/chat/completions \
   -H "api-key: <your-decoded-api-key>" \
   -d '{"model":"<model-name>","messages":[{"role":"user","content":"Hello, what can you do?"}],"max_tokens":256}'
 ```
+
+---
 
 ## Related content
 
