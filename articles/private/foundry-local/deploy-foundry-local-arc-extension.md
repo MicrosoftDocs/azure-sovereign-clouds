@@ -29,6 +29,7 @@ Make sure you have:
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.
 - For external endpoints: an NGINX ingress controller, such as [NGINX-Ingress](https://github.com/kubernetes/ingress-nginx).
+- (Optional) A namespace strategy if you plan to deploy models outside the default `foundry-local-operator` namespace. Namespace configuration must be set during installation. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
 
 > [!IMPORTANT]
 > [Ingress-NGINX](https://github.com/kubernetes/ingress-nginx) is deprecated since March 2026. Microsoft currently supports NGINX annotations. The solution is tested with AKS's managed NGINX ingress controller.
@@ -193,5 +194,4 @@ kubectl describe model <name>
 
 - [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)
 - [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
-- [Configure namespaces for model deployments](how-to-configure-namespaces.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

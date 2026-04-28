@@ -45,8 +45,6 @@ items:
       href: how-to-configure-tls-authentication.md
     - name: Configure Entra ID authentication
       href: how-to-configure-authentication.md
-    - name: Configure namespaces for model deployments
-      href: how-to-configure-namespaces.md
   - name: Run inference
     items:
     - name: Run inference

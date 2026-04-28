@@ -366,6 +366,24 @@ Key configuration areas:
 | storeModel | Local registry URL, cache job timeout, and poll interval. |
 | authentication | App-level authentication toggle. |
 
+### Namespace configuration for model deployments
+
+By default, the inference extension monitors only the `foundry-local-operator` namespace, along with its own release namespace. To deploy and manage models in additional namespaces, you must explicitly specify them using the `watch.namespaces` configuration during extension installation or update.
+
+Example configuration:
+
+```yaml
+watch:
+  namespaces:
+    - "foundry-local-operator"
+    - "foundry-local-workloads"
+```
+
+If a model deployment is created in a namespace that isn't listed under `watch.namespaces`, the operator doesn't have the required cluster-scoped RBAC permissions for that namespace. As a result, the model deployment fails during reconciliation due to missing permissions.
+
+> [!IMPORTANT]
+> Plan your namespace strategy carefully before installation. Changes to this configuration require an extension update to take effect, as RBAC permissions are provisioned at install/update time.
+
 For the full configuration fields and example, see [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md#inference-operator-configuration).
 
 ## Related content

@@ -45,7 +45,7 @@ Before you can work with models, deploy Foundry Local to your Kubernetes cluster
 - **Helm chart** — For direct Kubernetes deployments. See [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
 - **Arc extension** — For Azure Arc-enabled Kubernetes clusters. See [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md).
 
-If you want to deploy models in namespaces other than the default, see [Configure namespaces for model deployments](how-to-configure-namespaces.md).
+If you want to deploy models in namespaces other than the default, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
 
 ## List available models
 
