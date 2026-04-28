@@ -72,5 +72,5 @@ The commitments reinforce existing privacy options and documentation, such as th
 * [Operational controls](operational-controls.md)
 * [Technological controls](technological-independence.md)
 * [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md)
-* [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md)
+* [Sovereign Private Cloud](./private/overview/sovereign-private-cloud.md)
 * [National Partner Clouds](partner/overview-national-partner-clouds.md)
