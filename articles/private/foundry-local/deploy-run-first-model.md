@@ -18,15 +18,6 @@ customer intent: As a platform engineer or developer, I want to deploy and run m
 
 This article walks you through deploying Foundry Local, browsing the model catalog, creating your first model deployment, and sending inference requests.
 
-In this article, you:
-
-> [!div class="checklist"]
-> - Request deployment access for the preview
-> - Deploy Foundry Local to your Kubernetes cluster
-> - List available models from the catalog
-> - Deploy a model by using kubectl or the REST API
-> - Send a chat completion inference request
-
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
 ## Prerequisites
@@ -37,19 +28,13 @@ Before you begin, make sure you have:
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc, or a direct Kubernetes deployment.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
-
-## Deploy Foundry Local to your cluster
-
-Before you can work with models, deploy Foundry Local to your Kubernetes cluster. Choose one of the two supported installation methods:
-
-- **Helm chart** — For direct Kubernetes deployments. See [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
-- **Arc extension** — For Azure Arc-enabled Kubernetes clusters. See [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md).
+- Foundry Local deployed to your Kubernetes cluster. Choose one of the two supported installation methods, Helm or as an Azure Arc extension. For more information, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md) or [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md).
 
 If you want to deploy models in namespaces other than the default, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
 
 ## List available models
 
-After Foundry Local is deployed and you complete authentication, you can browse the model catalog. Foundry Local supports two approaches for managing models:
+After you deploy Foundry Local and complete authentication, you can browse the model catalog. Foundry Local supports two approaches for managing models:
 
 - **kubectl** — Work directly with Kubernetes custom resources (ModelDeployment CRDs).
 - **Foundry Local REST API** — Use HTTP endpoints exposed by the inference operator.
@@ -184,7 +169,7 @@ curl -k -s https://localhost:8080/api/v1/namespaces/foundry-local-operator/deplo
 
 ## Send an inference request
 
-Once the model's status shows **Running**, you can send inference requests.
+When the model's status shows **Running**, you can send inference requests.
 
 ### [kubectl](#tab/kubectl)
 
@@ -200,7 +185,7 @@ Once the model's status shows **Running**, you can send inference requests.
     kubectl get secret <deployment-name>-api-keys -n foundry-local-operator -o jsonpath="{.data.primary-key}"
     ```
 
-1. Decode the key, then open a new terminal and send a chat completion request:
+1. Decode the key, open a new terminal, and send a chat completion request:
 
     ```bash
     curl -k -X POST https://localhost:5000/v1/chat/completions \

@@ -1,7 +1,7 @@
 ---
-title: "Deploy Foundry Local as an Arc extension"
+title: "Deploy Foundry Local as an Azure Arc extension"
 titleSuffix: Foundry Local on Azure Local
-description: "Install cert-manager, trust-manager, and the Foundry inference operator as an Azure Arc extension on your AKS enabled by Arc cluster."
+description: "Install cert-manager, trust-manager, and the Foundry inference operator as an Azure Arc extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -11,21 +11,21 @@ ms.author: cwatson
 author: cwatson-cat
 ms.date: 04/28/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to deploy Foundry Local as an Arc extension so that I can run AI inference workloads on my Arc-enabled Kubernetes cluster.
+customer intent: As a platform engineer, I want to deploy Foundry Local as an Azure Arc extension so that I can run AI inference workloads on my Azure Arc–enabled Kubernetes cluster.
 ---
 
-# Deploy Foundry Local as an Arc extension
+# Deploy Foundry Local as an Azure Arc extension
 
-This article shows you how to set up Foundry Local as an extension on your AKS enabled by Arc cluster.
+This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
 ## Prerequisites
 
-Make sure you have:
+Before you begin, make sure you have:
 
-- A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
-- An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md).
+- A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
+- An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.
 - For external endpoints: an NGINX ingress controller, such as [NGINX-Ingress](https://github.com/kubernetes/ingress-nginx).
@@ -47,7 +47,7 @@ For more information, see [NVIDIA GPU Operator](https://docs.nvidia.com/datacent
 
 Foundry Local on Azure Local requires cert-manager and trust-manager for automated certificate management.
 
-### Install using Extension CLI
+Use the Azure CLI to create the cert-manager extension on your cluster. Choose the appropriate command for your shell environment:
 
 #### [Bash](#tab/install-bash)
 
@@ -89,7 +89,7 @@ az k8s-extension create `
 
 ## Step 2: Install the inference operator
 
-### Install using Extension CLI
+Use the Azure CLI to deploy the inference operator extension. Choose the appropriate command for your shell environment:
 
 #### [Bash](#tab/operator-bash)
 
@@ -129,6 +129,8 @@ az k8s-extension create `
 
 ## Step 3: Verify the operator
 
+Verify that the inference operator extension is installed and that all pods are running. Use the following commands to check the operator status:
+
 #### [Bash](#tab/verify-bash)
 
 ```bash
@@ -147,7 +149,7 @@ kubectl get crd | Select-String -Pattern "foundry"
 
 Wait until all pods show a `Running` status before you proceed.
 
-## Debug commands
+## Troubleshoot your deployment
 
 Use the following commands to troubleshoot issues with your deployment.
 
