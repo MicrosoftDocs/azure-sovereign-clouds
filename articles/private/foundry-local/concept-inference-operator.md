@@ -378,7 +378,7 @@ watch:
 
 If you create a model deployment in a namespace that isn't listed under `watch.namespaces`, the operator doesn't have the required cluster-scoped Azure role-based access permissions (Azure RBAC) for that namespace. As a result, the model deployment fails during reconciliation due to missing permissions.
 
-Plan your namespace strategy carefully before installation. Changes to this configuration require an extension update to take effect, as Azure RBAC permissions are provisioned at install/update time.
+Plan your namespace strategy carefully before installation. Changes to this configuration require an extension update to take effect, as Azure RBAC permissions are provisioned at install or update time.
 
 For the full configuration fields and example, see [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md#inference-operator-configuration).
 
