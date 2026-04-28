@@ -7,8 +7,8 @@ items:
     items:
     - name: What is Foundry Local on Azure Local?
       href: what-is-foundry-local-on-azure-local.md
-    - name: Get started
-      href: getting-started.md
+    - name: Deploy and run your first model
+      href: deploy-run-first-model.md
     - name: Known issues
       href: known-issues.md
   - name: Plan

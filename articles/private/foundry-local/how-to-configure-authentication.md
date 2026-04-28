@@ -221,4 +221,4 @@ az role assignment create \
 
 - [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md)
 - [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md)
-- [Get started with Foundry Local on Azure Local](getting-started.md)
+- [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)

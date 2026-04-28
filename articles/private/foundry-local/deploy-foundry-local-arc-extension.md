@@ -191,7 +191,7 @@ kubectl describe model <name>
 
 ## Related content
 
-- [Get started with Foundry Local on Azure Local](getting-started.md)
+- [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)
 - [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
 - [Configure namespaces for model deployments](how-to-configure-namespaces.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

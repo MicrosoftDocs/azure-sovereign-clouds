@@ -37,4 +37,4 @@ If a model deployment is created in a namespace that isn't listed under `watch.n
 ## Related content
 
 - [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md)
-- [Get started with Foundry Local on Azure Local](getting-started.md)
+- [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)

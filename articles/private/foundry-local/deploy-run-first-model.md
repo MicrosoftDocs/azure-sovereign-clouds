@@ -1,20 +1,20 @@
 ---
-title: "Get started with Foundry Local on Azure Local"
+title: "Deploy and run your first model on Foundry Local on Azure Local"
 titleSuffix: Foundry Local on Azure Local
-description: "Walk through your first steps with Foundry Local — from deploying the platform to running inference against your first model."
+description: "Deploy Foundry Local, list the model catalog, create your first model deployment, and send inference requests by using kubectl or the REST API."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
 - Foundry Local on Azure Local
-ms.topic: get-started
+ms.topic: quickstart
 ms.author: cwatson
 author: cwatson-cat
 ms.date: 04/28/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer or developer, I want to get started with Foundry Local on Azure Local so that I can deploy and run inference against AI models on my on-premises cluster.
+customer intent: As a platform engineer or developer, I want to deploy and run my first model on Foundry Local on Azure Local so that I can validate AI inference on my on-premises cluster.
 ---
 
-# Get started with Foundry Local on Azure Local
+# Deploy and run your first model on Foundry Local on Azure Local
 
 This guide walks you through your first steps with Foundry Local — from deploying the platform to running inference against your first model.
 
