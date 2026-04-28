@@ -1,0 +1,197 @@
+---
+title: "Deploy Foundry Local as an Arc extension"
+titleSuffix: Foundry Local on Azure Local
+description: "Install cert-manager, trust-manager, and the Foundry inference operator as an Azure Arc extension on your AKS enabled by Arc cluster."
+ms.service: azure
+ms.subservice: sovereign-private-clouds
+appliesto:
+- Foundry Local enabled by Azure Arc
+ms.topic: how-to
+ms.author: cwatson
+author: cwatson-cat
+ms.date: 04/28/2026
+ai-usage: ai-assisted
+customer intent: As a platform engineer, I want to deploy Foundry Local as an Arc extension so that I can run AI inference workloads on my Arc-enabled Kubernetes cluster.
+---
+
+# Deploy Foundry Local as an Arc extension
+
+This article shows you how to set up Foundry Local as an extension on your AKS enabled by Arc cluster.
+
+[!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
+
+## Prerequisites
+
+Make sure you have:
+
+- A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
+- An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md).
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
+- [Helm](https://helm.sh/) installed.
+- For external endpoints: an NGINX ingress controller, such as [NGINX-Ingress](https://github.com/kubernetes/ingress-nginx).
+
+> [!IMPORTANT]
+> [Ingress-NGINX](https://github.com/kubernetes/ingress-nginx) is deprecated since March 2026. Microsoft currently supports NGINX annotations. The solution is tested with AKS's managed NGINX ingress controller.
+
+### GPU prerequisites
+
+If you plan to run GPU workloads, also make sure:
+
+- NVIDIA GPU nodes are available in your cluster with CUDA drivers installed on the nodes.
+- The Kubernetes device plugin for NVIDIA is configured so the cluster can schedule GPU workloads.
+
+For more information, see [NVIDIA GPU Operator](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/overview.html).
+
+## Step 1: Install cert-manager and trust-manager
+
+Foundry Local on Azure Local requires cert-manager and trust-manager for automated certificate management.
+
+### Install using Extension CLI
+
+#### [Bash](#tab/install-bash)
+
+```bash
+az k8s-extension create \
+    --cluster-name <your_arc_cluster_name> \
+    --name "azure-cert-manager" \
+    --resource-group <resource_group_of_the_arc_cluster> \
+    --cluster-type connectedClusters \
+    --extension-type Microsoft.CertManagement \
+    --scope cluster \
+    --release-train stable \
+    --config config.enableGatewayAPI=true \
+    --config cert-manager.crds.keep=true \
+    --config trust-manager.defaultPackage.enabled=false \
+    --config trust-manager.secretTargets.enabled=true \
+    --config trust-manager.secretTargets.authorizedSecretsAll=true
+```
+
+#### [PowerShell](#tab/install-powershell)
+
+```powershell
+az k8s-extension create `
+    --cluster-name <your_arc_cluster_name> `
+    --name "azure-cert-manager" `
+    --resource-group <resource_group_of_the_arc_cluster> `
+    --cluster-type connectedClusters `
+    --extension-type Microsoft.CertManagement `
+    --scope cluster `
+    --release-train stable `
+    --config config.enableGatewayAPI=true `
+    --config cert-manager.crds.keep=true `
+    --config trust-manager.defaultPackage.enabled=false `
+    --config trust-manager.secretTargets.enabled=true `
+    --config trust-manager.secretTargets.authorizedSecretsAll=true
+```
+
+---
+
+## Step 2: Install the inference operator
+
+### Install using Extension CLI
+
+#### [Bash](#tab/operator-bash)
+
+```bash
+az k8s-extension create \
+    --resource-group <resource_group_of_the_arc_cluster> \
+    --cluster-name <arc_cluster_name> \
+    --name "inference-operator" \
+    --extension-type Microsoft.Foundry \
+    --scope cluster \
+    --release-namespace "foundry-local-operator" \
+    --cluster-type connectedClusters \
+    --auto-upgrade-minor-version true \
+    --release-train stable \
+    --config entraAuth.tenantId="<azure_tenant_id>" \
+    --config entraAuth.clientId="<the_client_id_of_the_app_registration>"
+```
+
+#### [PowerShell](#tab/operator-powershell)
+
+```powershell
+az k8s-extension create `
+    --resource-group <resource_group_of_the_arc_cluster> `
+    --cluster-name <arc_cluster_name> `
+    --name "inference-operator" `
+    --extension-type Microsoft.Foundry `
+    --scope cluster `
+    --release-namespace "foundry-local-operator" `
+    --cluster-type connectedClusters `
+    --auto-upgrade-minor-version true `
+    --release-train stable `
+    --config entraAuth.tenantId="<azure_tenant_id>" `
+    --config entraAuth.clientId="<the_client_id_of_the_app_registration>"
+```
+
+---
+
+## Step 3: Verify the operator
+
+#### [Bash](#tab/verify-bash)
+
+```bash
+kubectl get pods -n foundry-local-operator
+kubectl get crd | grep foundry
+```
+
+#### [PowerShell](#tab/verify-powershell)
+
+```powershell
+kubectl get pods -n foundry-local-operator
+kubectl get crd | Select-String -Pattern "foundry"
+```
+
+---
+
+Wait until all pods show a `Running` status before you proceed.
+
+## Debug commands
+
+Use the following commands to troubleshoot issues with your deployment.
+
+Check ModelDeployment status and events:
+
+```bash
+kubectl describe mdep <name>
+```
+
+Check operator logs:
+
+```bash
+kubectl logs -f deployment/inference-operator -n foundry-local-operator
+```
+
+Check pod status:
+
+```bash
+kubectl get pods -l app.kubernetes.io/managed-by=inference-operator
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+```
+
+List all resources created by a deployment:
+
+```bash
+kubectl get deploy,svc,ing -l foundry.azure.com/deployment=<name>
+```
+
+Check the catalog ConfigMap:
+
+```bash
+kubectl get configmap foundry-local-catalog -n foundry-local-operator -o yaml
+```
+
+Verify a Model CR exists:
+
+```bash
+kubectl get models
+kubectl describe model <name>
+```
+
+## Related content
+
+- [Get started with Foundry Local on Azure Local](getting-started.md)
+- [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
+- [Configure namespaces for model deployments](how-to-configure-namespaces.md)
+- [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

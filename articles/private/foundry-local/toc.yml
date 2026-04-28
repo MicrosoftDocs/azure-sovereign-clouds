@@ -7,6 +7,8 @@ items:
     items:
     - name: What is Foundry Local on Azure Local?
       href: what-is-foundry-local-on-azure-local.md
+    - name: Get started
+      href: getting-started.md
     - name: Known issues
       href: known-issues.md
   - name: Plan
@@ -33,12 +35,18 @@ items:
     items:
     - name: Deploy Foundry Local on Azure Local
       href: deploy-foundry-local-on-azure-local.md
+    - name: Deploy Foundry Local as an Arc extension
+      href: deploy-foundry-local-arc-extension.md
     - name: Package and deploy your own model
       href: how-to-deploy-custom-model.md
   - name: Configure and secure
     items:
     - name: Configure TLS and authentication
       href: how-to-configure-tls-authentication.md
+    - name: Configure Entra ID authentication
+      href: how-to-configure-authentication.md
+    - name: Configure namespaces for model deployments
+      href: how-to-configure-namespaces.md
   - name: Run inference
     items:
     - name: Run inference
