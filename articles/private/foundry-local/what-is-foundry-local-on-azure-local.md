@@ -22,6 +22,10 @@ This deployment model is designed for organizations that need local control, low
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
+## Request deployment access
+
+Foundry Local on Azure Local deployment is currently available by request during preview. To get started, submit the access request form: Request preview deployment access[https://aka.ms/FoundryLocalAzure_PreviewRequest]. After your request is reviewed, you'll receive guidance on next steps for deployment.
+
 ## Key capabilities
 
 The following capabilities highlight what you can do with Foundry Local on Azure Local.
