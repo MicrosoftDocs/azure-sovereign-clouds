@@ -351,7 +351,7 @@ For full field definitions and YAML examples, see [ModelDeployment and operator 
 
 The operator reads its configuration from a ConfigMap mounted at `/etc/inference-operator/config.yaml`.
 
-```
+```mermaid
 Helm values.yaml --> ConfigMap --> /etc/inference-operator/config.yaml --> OperatorConfig
 ```
 
