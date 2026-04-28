@@ -307,8 +307,7 @@ Key capabilities:
 - **Batch processing**: Process multiple requests with configurable batch sizes (default: 32).
 - **BYO model support**: Load custom ONNX models from ORAS-compatible registries.
 
-> [!NOTE]
-> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
+The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
 
 Ideally, have your model in ONNX format. It's framework-agnostic, and the ModelDeployment is built around ONNX Runtime.
 
