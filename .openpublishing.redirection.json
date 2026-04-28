@@ -1,4 +1,10 @@
 {
   "redirections": [
+
+      {
+        "source_path": "articles/private/overview-sovereign-private-cloud.md",
+        "redirect_url": "/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud",
+        "redirect_document_id": false
+      }
   ]
 }

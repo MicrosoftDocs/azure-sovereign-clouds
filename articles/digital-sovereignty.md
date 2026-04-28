@@ -51,7 +51,7 @@ Operational controls help organizations maintain transparency and authority over
 
 Technological independence means choosing, managing, and securing the digital infrastructure and software stack without undue reliance on foreign technologies or proprietary constraints. The following concepts contribute to technological independence:
 
-- Local infrastructure: Using disconnected or air-gapped models like [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md).
+- Local infrastructure: Using disconnected or air-gapped models like [Sovereign Private Cloud](private/overview/sovereign-private-cloud.md).
 - Open standards: Promoting interoperability and avoiding vendor lock-in.
 - National innovation: Supporting domestic tech development and reducing supply chain vulnerabilities.
 
@@ -61,7 +61,7 @@ Technological independence means choosing, managing, and securing the digital in
 
 Organizations pursuing digital sovereignty should consider:
 
-- Sovereign cloud models: [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md), [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md), and [National Partner Clouds](partner/overview-national-partner-clouds.md). Each model provides a different set of capabilities and trade-offs.
+- Sovereign cloud models: [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md), [Sovereign Private Cloud](private/overview/sovereign-private-cloud.md), and [National Partner Clouds](partner/overview-national-partner-clouds.md). Each model provides a different set of capabilities and trade-offs.
 - Azure Policy: By using [Azure Policy](/azure/governance/policy/overview), you can use existing controls or build your own to help meet your sovereignty requirements.
 - Operational Tooling: Integration with services like [Data Guardian](public/data-guardian.md) and [Customer Lockbox](/azure/security/fundamentals/customer-lockbox-overview) for session monitoring and access control.
 
