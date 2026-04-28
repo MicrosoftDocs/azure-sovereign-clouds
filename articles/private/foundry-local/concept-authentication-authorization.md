@@ -8,7 +8,7 @@ appliesto:
 ms.topic: conceptual
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/17/2026
+ms.date: 04/24/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand authentication and authorization options in Foundry Local so that I can secure inference endpoints based on my environment requirements.
 ---
@@ -74,6 +74,10 @@ All containers communicate over localhost within the pod's network namespace. Ex
 
 The nginx sidecar operates as a pure TLS termination proxy and doesn't perform any authentication. All credential validation happens in the application-layer middleware running inside the inference container, creating a single enforcement point for both API key and JWT authentication.
 
+The following diagram shows how external HTTPS traffic enters through nginx and how the inference backend, Entra Auth SDK sidecar, and msi-adapter communicate over localhost within the pod.
+
+:::image type="content" source="media/concept-authentication-authorization/inference-pod-architecture.svg" alt-text="Diagram of the Foundry Local inference pod with HTTPS traffic through nginx to the backend and localhost calls to Entra Auth SDK and msi-adapter." lightbox="media/concept-authentication-authorization/inference-pod-architecture.svg" border="false":::
+
 ## Request flow
 
 When a request arrives at an inference endpoint, it follows this path:
@@ -91,6 +95,10 @@ When a request arrives at an inference endpoint, it follows this path:
    - **JWT path**: The middleware forwards the token to the Entra Auth SDK sidecar for signature and claims validation. On success, it extracts the caller's OID and performs an Azure RBAC check. Sufficient permissions yield HTTP 200; insufficient permissions yield HTTP 403 (`insufficient_permissions`).
 
 1. **Inference** — Authenticated and authorized requests reach the inference backend, which processes the AI workload and returns the response through the same chain.
+
+The following diagram shows the end-to-end authentication request flow, including public-path bypass, API key validation, and JWT plus Azure RBAC authorization.
+
+:::image type="content" source="media/concept-authentication-authorization/authentication-request-flow.svg" alt-text="Diagram of the request flow with HTTPS ingress to nginx, middleware routing to public-path bypass, API key validation, or JWT validation and Azure RBAC before inference." lightbox="media/concept-authentication-authorization/authentication-request-flow.svg" border="false":::
 
 ## Resilience and connectivity loss
 
