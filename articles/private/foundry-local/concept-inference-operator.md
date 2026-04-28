@@ -350,12 +350,7 @@ For full field definitions and YAML examples, see [ModelDeployment and operator 
 
 The operator reads its configuration from a ConfigMap mounted at `/etc/inference-operator/config.yaml`.
 
-The following diagram shows how configuration flows from Helm values into the running operator configuration.
-
-```mermaid
-graph LR
-  A["Helm values.yaml"] --> B["ConfigMap"] --> C["/etc/inference-operator/config.yaml"] --> D["OperatorConfig"]
-```
+The operator reads configuration from a ConfigMap at /etc/inference-operator/config.yaml, which is automatically generated from your Helm values.yaml.
 
 Key configuration areas:
 
