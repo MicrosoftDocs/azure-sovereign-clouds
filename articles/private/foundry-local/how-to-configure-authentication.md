@@ -40,7 +40,7 @@ Create an application registration for Foundry Local in your Microsoft Entra ID 
 1. Go to the appropriate tenant and select **Manage** > **App registrations**.
 1. Select **New registration**.
 
-1. Enter a namefor your application, such as FoundryLocal-Production.
+1. Enter a name for your application, such as FoundryLocal-Production.
 1. For **Supported account types**, select **Accounts in this organizational directory only (Single tenant)**.
 
 1. Select **Register**.
@@ -141,7 +141,7 @@ az role assignment create \
 
 1. Select **Add role assignment**.
 
-1. Choose **Cognitive Services OpenAI User**or **Cognitive Services Contributor**.
+1. Choose **Cognitive Services OpenAI User** or **Cognitive Services Contributor**.
 1. Grant permissions to the relevant users or group.
 
 ---
