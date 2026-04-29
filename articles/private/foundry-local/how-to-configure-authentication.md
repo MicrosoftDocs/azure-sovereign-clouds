@@ -38,7 +38,7 @@ Create an application registration for Foundry Local in your Microsoft Entra ID 
 1. In the Azure portal, go to **Microsoft Entra ID**.
 1. Go to the appropriate tenant and select **Manage** > **App registrations**.
 1. Select **New registration**.
-  :::image type="content" source="media/how-to-configure-authentication/application-registration.png" alt-text="Screenshot of app registrations in Microsoft Entra ID showing the new registration button selected" lightbox="media/how-to-configure-authentication/application-registration.png":::
+  :::image type="content" source="media/how-to-configure-authentication/application-registration.png" alt-text="Screenshot of app registrations in Microsoft Entra ID showing the new registration button selected." lightbox="media/how-to-configure-authentication/application-registration.png":::
 1. Enter a name for your application, such as FoundryLocal-Production.
 1. For **Supported account types**, select **Accounts in this organizational directory only (Single tenant)**.
   :::image type="content" source="media/how-to-configure-authentication/register-application.png" alt-text="Screenshot of Azure portal Register an application page with FoundryLocal-Production entered as the app name and single tenant selected." lightbox="media/how-to-configure-authentication/register-application.png":::
