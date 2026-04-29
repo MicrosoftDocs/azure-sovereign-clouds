@@ -1,6 +1,5 @@
 ---
 title: "Deploy Foundry Local as an Azure Arc extension"
-titleSuffix: Foundry Local on Azure Local
 description: "Install cert-manager, trust-manager, and the Foundry inference operator as an Azure Arc extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -16,7 +15,7 @@ customer intent: As a platform engineer, I want to deploy Foundry Local as an Az
 
 # Deploy Foundry Local as an Azure Arc extension
 
-This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc.
+This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc.If you prefer to deploy by using Helm, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md). Use the Azure CLI to deploy Foundry Local as an extension on your Azure Arc–enabled Kubernetes cluster.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -24,6 +23,7 @@ This article shows you how to set up Foundry Local as an extension on your Azure
 
 Before you begin, make sure you have:
 
+- Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 - An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
