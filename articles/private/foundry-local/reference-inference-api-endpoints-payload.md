@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a developer, I want a reference of data-plane inference endpoint paths, payload formats, and authentication headers so that I can correctly construct and validate requests to deployed models in Foundry Local on Azure Local.
 ---
 
-# Inference API endpoints and payload reference for Foundry Local on Azure Local
+# Inference API endpoints and payload reference for Foundry Local
 
 This article is a reference for inference API endpoints, request and response payload formats, and authentication header options for models deployed on Foundry Local on Azure Local. Use this article for data-plane endpoint paths and methods, request and response payload shapes, and client request examples for chat, transcription, and predictive inference.
 

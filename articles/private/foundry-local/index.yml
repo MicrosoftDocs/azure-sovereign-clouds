@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: cwatson-cat
   ms.author: cwatson
-  ms.date: 03/25/2026
+  ms.date: 04/29/2026
   ms.service: azure
   ms.subservice: sovereign-private-clouds
 
@@ -29,8 +29,14 @@ landingContent:
         links:
           - text: Models
             url: concept-models.md
+          - text: Model catalog and sourcing
+            url: concept-model-catalog.md
+          - text: Bring your own models
+            url: concept-bring-your-own-models.md
           - text: Inference operator and model lifecycle
             url: concept-inference-operator.md
+          - text: Model caching and StoreModel lifecycle
+            url: concept-model-caching.md
           - text: Inference runtimes
             url: concept-inference-runtimes.md
           - text: Authentication and authorization
@@ -42,15 +48,23 @@ landingContent:
     linkLists:
       - linkListType: deploy
         links:
-          - text: Deploy Foundry Local on Azure Local
+          - text: Configure TLS and authentication
+            url: how-to-configure-tls-authentication.md
+          - text: Deploy Foundry Local by using Helm
             url: deploy-foundry-local-on-azure-local.md
+          - text: Deploy Foundry Local as an Azure Arc extension
+            url: deploy-foundry-local-arc-extension.md
+          - text: Deploy and run your first model
+            url: deploy-run-first-model.md
+          - text: Deploy a bring-your-own model
+            url: how-to-deploy-custom-model.md
 
-  - title: Configure and secure
+  - title: Secure
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Configure TLS and authentication
-            url: how-to-configure-tls-authentication.md
+          - text: Configure Entra ID authentication
+            url: how-to-configure-authentication.md
 
   - title: Run inference
     linkLists:
@@ -65,6 +79,8 @@ landingContent:
         links:
           - text: Model reference
             url: reference-models.md
+          - text: Inference API reference
+            url: reference-inference-api.md
           - text: Inference API endpoints and payload reference
             url: reference-inference-api-endpoints-payload.md
           - text: ModelDeployment and operator configuration reference

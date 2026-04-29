@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to understand how model caching works in Foundry Local on Azure Local so that I can troubleshoot deployment issues and manage model storage effectively.
 ---
 
-# Model caching and StoreModel lifecycle in Foundry Local on Azure Local
+# Model caching and StoreModel lifecycle in Foundry Local
 
 This article explains how the StoreModel custom resource definition (CRD) tracks model caching in the cluster's local OCI registry, how cache jobs download and store model artifacts, and how inference pods retrieve cached models.
 
@@ -62,6 +62,7 @@ For the full reconciliation flow, see [Inference operator and model lifecycle](c
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [Model catalog and sourcing](concept-model-catalog.md)
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

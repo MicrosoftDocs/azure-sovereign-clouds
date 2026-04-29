@@ -1,6 +1,5 @@
 ---
-title: "Deploy Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
+title: "Deploy Foundry Local by using Helm"
 description: "Install cert-manager, trust-manager, and the inference operator, then deploy your first AI model on an Arc-enabled Kubernetes cluster."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -9,14 +8,14 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/29/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to deploy Foundry Local on Azure Local so that I can run AI inference workloads on my on-premises Kubernetes cluster.
+customer intent: As a platform engineer, I want to deploy Foundry Local on Azure Local by using Helm so that I can run AI inference workloads on my on-premises Kubernetes cluster.
 ---
 
-# Deploy Foundry Local on Azure Local
+# Deploy Foundry Local by using Helm
 
-This article shows you how to set up Foundry Local on Azure Local. You install cert-manager, trust-manager, and the inference operator, then deploy your first AI model from the Foundry catalog.
+This article shows you how to set up Foundry Local by using Helm, a Kubernetes package manager. If you prefer to deploy Foundry Local by using Azure Arc, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Use Helm to install cert-manager, trust-manager, and the inference operator, then deploy your first AI model on an Arc-enabled Kubernetes cluster.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -24,6 +23,7 @@ This article shows you how to set up Foundry Local on Azure Local. You install c
 
 Before you begin, make sure you have:
 
+- Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/docs/intro/install/) installed.
@@ -359,6 +359,7 @@ kubectl describe model <name>
 
 ## Related content
 
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
