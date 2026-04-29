@@ -82,9 +82,7 @@ Create an app role for service principals and managed identities. User tokens ge
 
 1. In the app registration, select **Manage** > **App roles**.
 
-   :::image type="content" source="media/how-to-configure-authentication/entra-app-roles.png" alt-text="Screenshot showing the App roles page in the app registration." lightbox="media/how-to-configure-authentication/entra-app-roles.png":::
-
-1. Select **Create app role** and enter the following values:
+1. Select **Create app role**and enter the following values:
 
    | Field | Value |
    |---|---|
