@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/28/2026
+ms.date: 04/29/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure Microsoft Entra ID authentication for Foundry Local so that my team can securely access inference endpoints with identity-based access control.
 ---
@@ -38,10 +38,10 @@ Create an application registration for Foundry Local in your Microsoft Entra ID 
 1. In the Azure portal, go to **Microsoft Entra ID**.
 1. Go to the appropriate tenant and select **Manage** > **App registrations**.
 1. Select **New registration**.
-
+  :::image type="content" source="media/how-to-configure-authentication/application-registration.png" alt-text="Screenshot of app registrations in Microsoft Entra ID showing the new registration button selected." lightbox="media/how-to-configure-authentication/application-registration.png":::
 1. Enter a name for your application, such as FoundryLocal-Production.
 1. For **Supported account types**, select **Accounts in this organizational directory only (Single tenant)**.
-
+  :::image type="content" source="media/how-to-configure-authentication/register-application.png" alt-text="Screenshot of Azure portal Register an application page with FoundryLocal-Production entered as the app name and single tenant selected." lightbox="media/how-to-configure-authentication/register-application.png":::
 1. Select **Register**.
 1. After registration completes, note the **Application (client) ID** and **Directory (tenant) ID**. You need these values later.
 
@@ -80,6 +80,7 @@ Configure the application to issue v2.0 tokens. This step is **critical**. Witho
 Create an app role for service principals and managed identities. User tokens get a `scp` claim from the delegated scope (Step 2), but service principal and managed identity tokens need a `roles` claim instead. If you don't assign an app role, their tokens are rejected.
 
 1. In the app registration, select **Manage** > **App roles**.
+  :::image type="content" source="media/how-to-configure-authentication/application-roles.png" alt-text="Screenshot of App roles section in Azure app registration, showing no roles defined and the create app role option." lightbox="media/how-to-configure-authentication/application-roles.png":::
 
 1. Select **Create app role** and enter the following values:
 
@@ -90,10 +91,11 @@ Create an app role for service principals and managed identities. User tokens ge
    | Value | `FoundryInferenceAccess` |
    | Description | Access Foundry Local inference endpoints |
    | Do you want to enable this app role? | Checked |
-
+  
+   :::image type="content" source="media/how-to-configure-authentication/entra-app-role-created.png" alt-text="Screenshot showing the app role successfully created." lightbox="media/how-to-configure-authentication/entra-app-role-created.png":::
 1. Select **Apply**.
 
-   :::image type="content" source="media/how-to-configure-authentication/entra-app-role-created.png" alt-text="Screenshot showing the app role successfully created." lightbox="media/how-to-configure-authentication/entra-app-role-created.png":::
+
 
 This app role is a token format requirement. It ensures service principal tokens contain the `roles` claim needed by the authentication sidecar. Access-level permissions are controlled separately through Azure RBAC role assignments (Step 7).
 
@@ -137,9 +139,9 @@ az role assignment create \
 1. Choose your Arc connected cluster.
 1. Select **Access control (IAM)**.
 1. Select **Role Assignments**.
-
+  :::image type="content" source="media/how-to-configure-authentication/access-control-kubernetes.png" alt-text="Screenshot of Azure portal access control (IAM) for a Kubernetes Arc cluster, showing role assignments tab and add button." lightbox="media/how-to-configure-authentication/access-control-kubernetes.png":::
 1. Select **Add role assignment**.
-
+  :::image type="content" source="media/how-to-configure-authentication/add-role-assignment.png" alt-text="Screenshot of Azure portal access control (IAM) for a Kubernetes Arc cluster with add role assignment menu open." lightbox="media/how-to-configure-authentication/add-role-assignment.png":::
 1. Choose **Cognitive Services OpenAI User** or **Cognitive Services Contributor**.
 1. Grant permissions to the relevant users or group.
 
