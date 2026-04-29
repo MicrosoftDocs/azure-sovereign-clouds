@@ -1,6 +1,5 @@
 ---
 title: "Known issues for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Known issues, limitations, and workarounds for Foundry Local on Azure Local during the preview release."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -69,12 +68,13 @@ helm upgrade --install trust-manager jetstack/trust-manager \
   --set secretTargets.authorizedSecretsAll=true
 ```
 
-These flags are required for cross-namespace secret distribution to work correctly. For full installation steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+These flags are required for cross-namespace secret distribution to work correctly. For full installation steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
 
 ---
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [What is Foundry Local on Azure Local?](what-is-foundry-local-on-azure-local.md)
