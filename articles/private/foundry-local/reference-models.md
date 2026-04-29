@@ -1,6 +1,5 @@
 ---
 title: "Model reference for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Reference specifications for generative small language models in Foundry Local on Azure Local, including GPU requirements, recommended settings, and performance benchmarks."
 ms.service: azure
 ms.subservice: sovereign-private-clouds

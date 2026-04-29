@@ -1,6 +1,5 @@
 ---
 title: "What is Foundry Local on Azure Local?"
-titleSuffix: Foundry Local on Azure Local
 description: "Deploy and run AI models on Azure Local with Arc-enabled Kubernetes for secure, on-premises inference."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -98,7 +97,8 @@ Use Foundry Local on Azure Local when you need to:
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Known issues for Foundry Local on Azure Local](known-issues.md)
 - [Azure Arc-enabled Kubernetes overview](/azure/azure-arc/kubernetes/overview)
 - [Azure Local overview](/azure/azure-local/overview)

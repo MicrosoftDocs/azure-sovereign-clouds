@@ -1,6 +1,5 @@
 ---
 title: "Configure TLS and authentication for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Configure TLS encryption and API key authentication to secure model inference endpoints on Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -14,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure TLS encryption and API key authentication for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
 ---
 
-# Configure TLS and authentication for Foundry Local on Azure Local
+# Configure TLS and authentication for Foundry Local
 
 Foundry Local on Azure Local encrypts all internal service communication by using TLS. Each model service uses self-signed certificates that the cluster manages. This article explains how the TLS setup works and how to configure secure connections inside the cluster, across namespaces, and through external ingress. It also covers API key authentication, including how to retrieve, use, and rotate keys.
 
@@ -28,7 +27,7 @@ Automated certificate management requires [cert-manager](https://cert-manager.io
 - **trust-manager** distributes the root CA certificate as a trust bundle to all namespaces so other pods can trust the internal certificates.
 
 > [!IMPORTANT]
-> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. For installation steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. For installation steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
 
 ## How internal TLS works
 
@@ -233,7 +232,8 @@ After this two-step swap, you have entirely new primary and secondary keys with 
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

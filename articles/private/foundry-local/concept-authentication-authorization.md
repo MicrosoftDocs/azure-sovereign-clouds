@@ -1,19 +1,19 @@
 ---
-title: "Authentication and Authorization in Foundry Local enabled by Azure Arc"
-description: "Understand how Foundry Local secures inference endpoints by using API key authentication and Microsoft Entra ID with Azure Resource Manager role-based access control (Azure RBAC) authorization."
+title: "Authentication and Authorization in Foundry Local on Azure Local"
+description: "Understand how Foundry Local secures inference endpoints by using API key authentication and Microsoft Entra ID with Azure role-based access control (Azure RBAC) authorization."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
-- Foundry Local enabled by Azure Arc
+- Foundry Local on Azure Local
 ms.topic: conceptual
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/24/2026
+ms.date: 04/28/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand authentication and authorization options in Foundry Local so that I can secure inference endpoints based on my environment requirements.
 ---
 
-# Authentication and authorization in Foundry Local enabled by Azure Arc
+# Authentication and authorization in Foundry Local
 
 Foundry Local enabled by Azure Arc supports multiple ways to secure inference endpoints. You can use API key authentication for simple credential-based access, Microsoft Entra ID for identity-based access with Azure role-based access control, or both methods together to support mixed client scenarios.
 
@@ -132,6 +132,7 @@ The system also supports custom roles that include the required DataAction. The 
 
 ## Related content
 
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Configure TLS authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Run inference with Foundry Local on Azure Local](how-to-run-inference.md)
 - [Inference API endpoints and payload reference for Foundry Local on Azure Local](reference-inference-api-endpoints-payload.md)

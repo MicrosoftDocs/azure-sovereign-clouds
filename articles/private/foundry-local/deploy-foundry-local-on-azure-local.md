@@ -1,5 +1,5 @@
 ---
-title: "Deploy Foundry Local on Azure Local by using Helm"
+title: "Deploy Foundry Local by using Helm"
 description: "Install cert-manager, trust-manager, and the inference operator, then deploy your first AI model on an Arc-enabled Kubernetes cluster."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -13,9 +13,9 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to deploy Foundry Local on Azure Local by using Helm so that I can run AI inference workloads on my on-premises Kubernetes cluster.
 ---
 
-# Deploy Foundry Local on Azure Local by using Helm
+# Deploy Foundry Local by using Helm
 
-This article shows you how to set up Foundry Local by using Helm, a Kubernetes package manager. If you prefer to deploy Foundry Local by using Azure Arc, see [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md). Use Helm to install cert-manager, trust-manager, and the inference operator, then deploy your first AI model on an Arc-enabled Kubernetes cluster.
+This article shows you how to set up Foundry Local by using Helm, a Kubernetes package manager. If you prefer to deploy Foundry Local by using Azure Arc, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Use Helm to install cert-manager, trust-manager, and the inference operator, then deploy your first AI model on an Arc-enabled Kubernetes cluster.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -359,6 +359,7 @@ kubectl describe model <name>
 
 ## Related content
 
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)

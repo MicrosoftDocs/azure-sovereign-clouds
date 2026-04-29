@@ -4,7 +4,7 @@ description: "Install cert-manager, trust-manager, and the Foundry inference ope
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
-- Foundry Local enabled by Azure Arc
+- Foundry Local on Azure Local
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
@@ -194,6 +194,7 @@ kubectl describe model <name>
 
 ## Related content
 
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)
 - [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
