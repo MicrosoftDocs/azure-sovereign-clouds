@@ -9,7 +9,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/29/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want definitions for Foundry Local on Azure Local terminology so that I can understand the documentation and configure the platform correctly.
 ---
@@ -24,13 +24,17 @@ This article defines key terms used throughout Foundry Local on Azure Local docu
 
 ### API key
 
-A secret token used to authenticate to a model's inference endpoint. Each deployed model's endpoint is secured by an API key pair (primary and secondary). Include the API key in your request header to authenticate. The inference operator generates API keys for each deployment, stores them in Kubernetes secrets, and can rotate them. Both keys are valid simultaneously to support zero-downtime rotation.
+A credential used to authenticate requests to a deployed model endpoint. Each deployment has a primary and secondary key, so you can rotate keys without downtime.
+
+### Azure Arc extension
+
+A Kubernetes extension installed through Azure Arc that deploys and manages Foundry Local components on an Arc-connected cluster.
 
 ## B
 
 ### Bring Your Own Model (BYO)
 
-A scenario where you provide your own model - rather than using a model from the Foundry catalog - packaged as a container image stored in an OCI-compatible registry. BYO models might be proprietary or open-source models that you obtain and want to run on your own infrastructure. The platform supports BYO models so you're not limited to the curated catalog.
+A deployment pattern where you package and deploy a model from your own OCI-compatible registry instead of using a model from the Foundry catalog.
 
 ## C
 
@@ -52,9 +56,13 @@ An AI model that generates content - typically free-form text - in response to p
 
 ## I
 
+### Ingress
+
+A Kubernetes routing layer that can expose model endpoints externally, typically with TLS and host or path-based routing.
+
 ### Inference operator
 
-The management layer of Foundry Local on Azure Local. It handles requests to deploy or manage models (through YAML or REST calls) and orchestrates the necessary Kubernetes resources - Deployments, Services, Secrets, and Ingress resources. The inference operator manages model lifecycle but doesn't handle inference computations directly.
+A Kubernetes operator that reconciles Model and ModelDeployment resources and creates the Kubernetes resources needed to deploy and run inference endpoints.
 
 ## L
 
@@ -64,9 +72,13 @@ The automatic creation of a Model CR from the catalog when a ModelDeployment fir
 
 ## M
 
+### Microsoft Entra ID authentication
+
+An identity-based authentication mode where clients send a JWT issued by Microsoft Entra ID. Authorization is then evaluated by using Azure role-based access control (Azure RBAC).
+
 ### Model
 
-A Custom Resource Definition (CRD) that defines a model available for deployment. A Model resource describes where the model comes from (catalog or custom registry), its metadata, and any hardware-specific variants.
+A custom resource (CR) that defines a model available for deployment. A Model resource describes where the model comes from (catalog or custom registry), its metadata, and any hardware-specific variants.
 
 ### Model catalog
 
@@ -74,19 +86,23 @@ The set of prepackaged models from the Azure AI Foundry catalog that you can dep
 
 ### ModelDeployment
 
-A Custom Resource Definition (CRD) that creates a running inference endpoint. A ModelDeployment specifies which model to run, what hardware to use (CPU or GPU), scaling configuration, resource limits, and optional endpoint exposure through ingress. When you create a ModelDeployment, the inference operator launches the model server pod and wires up authentication and TLS.
+A custom resource (CR) that defines how a model runs, including runtime, compute, scaling, and endpoint settings. Creating a ModelDeployment results in a runnable inference endpoint.
 
 ## N
 
 ### NGINX
 
-A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container that handles TLS termination and API key authentication. NGINX proxies valid, authenticated requests to the model server container. This detail is useful to know when troubleshooting connection or authentication problems.
+A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container for TLS termination and request proxying to the model server. Authentication is enforced in the application middleware.
 
 ## O
 
 ### ONNX
 
-Open Neural Network Exchange - an open format for AI models. Foundry Local's inference servers use ONNX Runtime, so models need to be in ONNX format (or converted to it) internally. ONNX is supported by many frameworks including PyTorch and TensorFlow. If you bring a custom model, converting it to ONNX is typically the key preparation step.
+Open Neural Network Exchange (ONNX), an open model format for interoperability across machine learning frameworks and runtimes.
+
+### ONNX Runtime
+
+The runtime used to execute ONNX-based generative and predictive workloads, including CPU and GPU scenarios based on model and runtime selection.
 
 ### Open Web UI
 
@@ -100,7 +116,25 @@ OCI Registry As Storage - a protocol for storing and distributing model artifact
 
 ### Predictive model
 
-A traditional machine learning model that produces predictions or classifications from input data. The output is deterministic - a category, a score, or a numeric value - rather than free-form text. Examples include image classifiers, regression models, and anomaly detection models. Foundry Local on Azure Local runs predictive models through ONNX Runtime.
+A machine learning model that returns structured predictions, such as labels, scores, or numeric outputs, from input features. Examples include image classifiers, regression models, and anomaly detection models.
+
+## S
+
+### StoreModel
+
+An internal custom resource that the inference operator uses to track model artifact caching status in the local OCI registry.
+
+## T
+
+### trust-manager
+
+A Kubernetes trust distribution component that publishes CA bundles to namespaces so workloads can trust internal service certificates.
+
+## V
+
+### vLLM
+
+A GPU-optimized inference runtime used for high-throughput generative workloads. In Foundry Local, it supports planner-based tuning and `spec.vllm.preferences` configuration.
 
 ## Related content
 
