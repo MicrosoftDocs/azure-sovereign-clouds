@@ -33,12 +33,18 @@ items:
     items:
     - name: Deploy Foundry Local on Azure Local
       href: deploy-foundry-local-on-azure-local.md
+    - name: Deploy Foundry Local as an Arc extension
+      href: deploy-foundry-local-arc-extension.md
     - name: Package and deploy your own model
       href: how-to-deploy-custom-model.md
+    - name: Deploy and run your first model
+      href: deploy-run-first-model.md
   - name: Configure and secure
     items:
     - name: Configure TLS and authentication
       href: how-to-configure-tls-authentication.md
+    - name: Configure Entra ID authentication
+      href: how-to-configure-authentication.md
   - name: Run inference
     items:
     - name: Run inference

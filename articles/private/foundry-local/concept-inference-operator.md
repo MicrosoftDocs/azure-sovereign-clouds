@@ -307,8 +307,7 @@ Key capabilities:
 - **Batch processing**: Process multiple requests with configurable batch sizes (default: 32).
 - **BYO model support**: Load custom ONNX models from ORAS-compatible registries.
 
-> [!NOTE]
-> The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
+The preview doesn't include a broad catalog of predictive models. To deploy predictive models, use BYO methods. For the full packaging and deployment procedure, see [Package and deploy a bring-your-own model on Foundry Local on Azure Local](how-to-deploy-custom-model.md).
 
 Ideally, have your model in ONNX format. It's framework-agnostic, and the ModelDeployment is built around ONNX Runtime.
 
@@ -351,9 +350,7 @@ For full field definitions and YAML examples, see [ModelDeployment and operator 
 
 The operator reads its configuration from a ConfigMap mounted at `/etc/inference-operator/config.yaml`.
 
-```
-Helm values.yaml --> ConfigMap --> /etc/inference-operator/config.yaml --> OperatorConfig
-```
+The operator reads configuration from a ConfigMap at /etc/inference-operator/config.yaml, which is automatically generated from your Helm values.yaml.
 
 Key configuration areas:
 
@@ -365,6 +362,23 @@ Key configuration areas:
 | catalog | Catalog ConfigMap name, namespace, and lazy registration toggle. |
 | storeModel | Local registry URL, cache job timeout, and poll interval. |
 | authentication | App-level authentication toggle. |
+
+### Namespace configuration for model deployments
+
+By default, the inference extension monitors only the `foundry-local-operator` namespace, along with its own release namespace. To deploy and manage models in additional namespaces, explicitly specify them by using the `watch.namespaces` configuration during extension installation or update.
+
+Example configuration:
+
+```yaml
+watch:
+  namespaces:
+    - "foundry-local-operator"
+    - "foundry-local-workloads"
+```
+
+If you create a model deployment in a namespace that isn't listed under `watch.namespaces`, the operator doesn't have the required cluster-scoped Azure role-based access permissions (Azure RBAC) for that namespace. As a result, the model deployment fails during reconciliation due to missing permissions.
+
+Plan your namespace strategy carefully before installation. Changes to this configuration require an extension update to take effect, as Azure RBAC permissions are provisioned at install or update time.
 
 For the full configuration fields and example, see [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md#inference-operator-configuration).
 
