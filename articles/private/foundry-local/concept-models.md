@@ -1,6 +1,5 @@
 ---
 title: "Generative small language models in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Learn about the generative small language models available in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -14,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand the generative small language models available in Foundry Local on Azure Local so that I can choose the right model for my workload.
 ---
 
-# Generative small language models in Foundry Local on Azure Local
+# Generative small language models in Foundry Local
 
 Foundry Local on Azure Local includes a curated catalog of generative small language models (SLMs) that you can deploy for on-premises inference. These models are optimized to run on constrained hardware while delivering strong performance on tasks like chat completion, code generation, and reasoning. Inference is performed using [vLLM](https://docs.vllm.ai), an open-source, high-throughput serving engine that efficiently manages model execution, memory, and request batching on your local hardware.
 

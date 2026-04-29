@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand how models are sourced and referenced in Foundry Local on Azure Local so that I can deploy catalog and custom models effectively.
 ---
 
-# Model catalog and sourcing in Foundry Local on Azure Local
+# Model catalog and sourcing in Foundry Local
 
 This article explains where models come from in Foundry Local on Azure Local, how the catalog-sync component populates the model catalog, and the different ways you can reference models in a ModelDeployment. It also covers image selection and how the operator maps workload type, compute, and runtime to container images.
 
@@ -246,7 +246,8 @@ When you deploy this model, choose the entry to reference based on your hardware
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [StoreModel and model caching](concept-model-caching.md)
 - [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)

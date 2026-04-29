@@ -1,6 +1,5 @@
 ---
 title: "ModelDeployment and operator configuration reference for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Reference for ModelDeployment CRD spec and status fields, and inference operator configuration settings in Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -14,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want a complete reference for ModelDeployment fields and operator configuration so that I can deploy and configure AI inference workloads precisely.
 ---
 
-# ModelDeployment and operator configuration reference for Foundry Local on Azure Local
+# ModelDeployment and operator configuration reference for Foundry Local
 
 This article is a reference for the `ModelDeployment` CRD spec and status fields, the `Model` CRD spec and status fields, and the inference operator configuration settings.
 
@@ -226,5 +225,6 @@ catalog:
 ## Related content
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)

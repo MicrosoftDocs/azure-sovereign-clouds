@@ -1,6 +1,5 @@
 ---
 title: "Inference Runtimes in Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Learn how Foundry Local chooses ONNX Runtime or vLLM for generative workloads, and when each runtime is a better fit."
 ms.service: azure
 ms.subservice: sovereign-private-clouds

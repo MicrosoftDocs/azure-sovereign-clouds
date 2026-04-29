@@ -1,11 +1,10 @@
 ---
-title: "Configure authentication for Foundry Local enabled by Azure Arc"
-titleSuffix: Foundry Local on Azure Local
+title: "Configure authentication for Foundry Local Azure Arc Extension Deployment"
 description: "Configure Microsoft Entra ID authentication for your Foundry Local enabled by Azure Arc deployment, including app registration, role creation, user assignment, and Azure RBAC."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
-- Foundry Local enabled by Azure Arc
+- Foundry Local on Azure Local
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
@@ -14,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure Microsoft Entra ID authentication for Foundry Local so that my team can securely access inference endpoints with identity-based access control.
 ---
 
-# Configure authentication for Foundry Local enabled by Azure Arc
+# Configure authentication for Foundry Local Azure Arc extension deployment
 
 Configure Microsoft Entra ID authentication for your Foundry Local enabled by Azure Arc deployment. This guide walks you through app registration, role creation, user assignment, and Azure role-based access control (Azure RBAC) configuration so your team can securely access inference endpoints.
 
@@ -207,5 +206,5 @@ az role assignment create \
 ## Related content
 
 - [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md)
-- [Deploy Foundry Local as an Arc extension](deploy-foundry-local-arc-extension.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)

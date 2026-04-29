@@ -31,18 +31,20 @@ items:
       href: concept-gpu-inference-planner.md
   - name: Deploy
     items:
-    - name: Deploy Foundry Local on Azure Local
-      href: deploy-foundry-local-on-azure-local.md
-    - name: Deploy Foundry Local as an Arc extension
-      href: deploy-foundry-local-arc-extension.md
-    - name: Package and deploy your own model
-      href: how-to-deploy-custom-model.md
-    - name: Deploy and run your first model
-      href: deploy-run-first-model.md
-  - name: Configure and secure
-    items:
     - name: Configure TLS and authentication
       href: how-to-configure-tls-authentication.md
+    - name: Choose your deployment method
+      items:
+      - name: Deploy by using Helm
+        href: deploy-foundry-local-on-azure-local.md
+      - name: Deploy as Azure Arc extension
+        href: deploy-foundry-local-arc-extension.md
+    - name: Deploy and run your first model
+      href: deploy-run-first-model.md
+    - name: Deploy a bring-your-own model
+      href: how-to-deploy-custom-model.md
+  - name: Secure
+    items:
     - name: Configure Entra ID authentication
       href: how-to-configure-authentication.md
   - name: Run inference

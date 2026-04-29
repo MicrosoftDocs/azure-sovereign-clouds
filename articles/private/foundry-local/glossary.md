@@ -1,6 +1,5 @@
 ---
 title: "Glossary for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Definitions of key terms used in Foundry Local on Azure Local documentation."
 ms.service: azure
 ms.subservice: sovereign-private-clouds

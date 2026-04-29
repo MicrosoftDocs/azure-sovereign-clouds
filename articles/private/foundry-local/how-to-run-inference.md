@@ -1,6 +1,5 @@
 ---
 title: "Run inference on Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
 description: "Retrieve API keys and send inference requests to deployed models on Foundry Local on Azure Local, including bring-your-own model scenarios."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -14,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a developer, I want to send inference requests to models deployed on Foundry Local on Azure Local so that I can integrate AI capabilities into my applications.
 ---
 
-# Run inference on Foundry Local on Azure Local
+# Run inference on Foundry Local
 
 This article shows you how to retrieve API keys and send inference requests to models deployed on Foundry Local on Azure Local. It covers catalog model deployments on CPU and GPU, and bring-your-own (BYO) model scenarios.
 
@@ -24,7 +23,7 @@ This article shows you how to retrieve API keys and send inference requests to m
 
 Before you begin, you must have the following resources:
 
-- A running model deployment. For setup steps, see [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md).
+- A running model deployment. For setup steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
 - The endpoint URL for your deployment, with or without an ingress controller.
 - kubectl installed and configured for your cluster.
 
@@ -424,7 +423,8 @@ The following example shows a successful chat completions response from a bring-
 
 ## Related content
 
-- [Deploy Foundry Local on Azure Local](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
