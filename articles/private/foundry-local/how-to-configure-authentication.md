@@ -82,7 +82,7 @@ Create an app role for service principals and managed identities. User tokens ge
 
 1. In the app registration, select **Manage** > **App roles**.
 
-1. Select **Create app role**and enter the following values:
+1. Select **Create app role** and enter the following values:
 
    | Field | Value |
    |---|---|
