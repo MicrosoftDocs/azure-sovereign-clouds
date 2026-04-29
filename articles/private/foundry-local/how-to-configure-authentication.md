@@ -40,12 +40,8 @@ Create an application registration for Foundry Local in your Microsoft Entra ID 
 1. Go to the appropriate tenant and select **Manage** > **App registrations**.
 1. Select **New registration**.
 
-   :::image type="content" source="media/how-to-configure-authentication/entra-new-registration.png" alt-text="Screenshot showing the New registration button in Microsoft Entra ID App registrations." lightbox="media/how-to-configure-authentication/entra-new-registration.png":::
-
-1. Enter a name for your application, such as FoundryLocal-Production.
+1. Enter a namefor your application, such as FoundryLocal-Production.
 1. For **Supported account types**, select **Accounts in this organizational directory only (Single tenant)**.
-
-   :::image type="content" source="media/how-to-configure-authentication/entra-supported-account-types.png" alt-text="Screenshot showing the supported account types selection during app registration." lightbox="media/how-to-configure-authentication/entra-supported-account-types.png":::
 
 1. Select **Register**.
 1. After registration completes, note the **Application (client) ID** and **Directory (tenant) ID**. You need these values later.
@@ -145,13 +141,9 @@ az role assignment create \
 1. Select **Access control (IAM)**.
 1. Select **Role Assignments**.
 
-   :::image type="content" source="media/how-to-configure-authentication/portal-role-assignments.png" alt-text="Screenshot showing the Role Assignments tab in the Azure portal." lightbox="media/how-to-configure-authentication/portal-role-assignments.png":::
-
 1. Select **Add role assignment**.
 
-   :::image type="content" source="media/how-to-configure-authentication/portal-add-role-assignment.png" alt-text="Screenshot showing the Add role assignment page in the Azure portal." lightbox="media/how-to-configure-authentication/portal-add-role-assignment.png":::
-
-1. Choose **Cognitive Services OpenAI User** or **Cognitive Services Contributor**.
+1. Choose **Cognitive Services OpenAI User**or **Cognitive Services Contributor**.
 1. Grant permissions to the relevant users or group.
 
 ---
