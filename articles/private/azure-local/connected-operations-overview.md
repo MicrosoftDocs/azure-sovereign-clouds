@@ -1,15 +1,15 @@
 ---
-title: Connected Operations for Azure Local
+title: About Connected Operations for Azure Local
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 04/29/2026
+ms.date: 04/30/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 ---
 
-# Connected operations for Azure Local
+# About connected operations for Azure Local
 
 This article provides an overview of connected operations for Azure Local.
 
@@ -21,7 +21,7 @@ Industries such as retail, healthcare, manufacturing, and financial services com
 
 ## What "connected" means in Azure Local
 
-Connected operations provide a balance between on-premises control and cloud-based operational efficiency, while allowing for temporary or intermittent loss of connectivity.
+Connected operations provide a balance between on-premises control and cloud-based operational efficiency, while allowing for intermittent loss of connectivity.
 
 In a connected Azure Local deployment, the system maintains periodic connectivity to Azure for control plane activities. The system supports intermittent disconnections up to 30 days without affecting running workloads. Azure Local is designed to tolerate short periods of disconnection, such as temporary ISP outages, while workloads continue to run on-premises.
 
@@ -37,7 +37,7 @@ In a connected deployment, you can:
 
 - Apply identity, access control, and governance by using Azure services and the Azure portal.
 
-- Monitor and manage the environment by using Azure services when connectivity is available.
+- Monitor and manage your environment by using Azure services when connectivity is available.
 
 - Drive capacity and scaling through cloud-based, policy-governed controls to ensure consistent configuration across sites.
 
@@ -45,13 +45,13 @@ In a connected deployment, you can:
 
 ## Deployment options
 
-Connected operations support Azure Local deployment options that scale from single-node systems to large, clustered environments. You can start small and grow to hundreds of nodes as capacity, performance, or availability requirements increase.
+Connected operations support Azure Local deployment options that scale from single-node systems to large, clustered environments. You can start small and grow as capacity, performance, or availability requirements increase.
 
 ### Hyperconverged deployments
 
 Hyperconverged deployments combine compute, storage, and networking on the same nodes to provide a simple, scalable architecture. They’re a good fit for general‑purpose workloads that prioritize simplicity and ease of scaling.
 
-Hyperconverged deployments:
+Key characteristics:
 
 - Support single-node and multi-node clusters, scaling up to 16 nodes on a single rack.
 
@@ -69,7 +69,7 @@ Disaggregated deployments of Azure Local separate compute and storage into dedic
 
 Disaggregated deployments use a unified Azure control plane to enable consistent cloud operations and accelerate modern workloads across cloud and edge environments.
 
-Disaggregated deployments:
+Key characteristics:
 
 - Scale compute and storage to match workload needs. Grow each independently based on application and data demand.
 
@@ -89,7 +89,7 @@ For more information, see [What are disaggregated deployments of Azure Local?](/
 
 Multi-rack deployments scale Azure Local across multiple racks to support environments that require higher capacity, performance, and tenant isolation.
 
-Multi-rack deployments:
+Key characteristics:
 
 - Support larger-scale clusters that span multiple racks within a datacenter, scaling up to 128 nodes.
 
@@ -113,7 +113,7 @@ For more information, see [What are multi-rack deployments of Azure Local?](/azu
 
 ## Workloads and services
 
-Azure Local deployments support a broad set of Azure Local infrastructure workloads and enable scenarios that benefit from centralized management. The following list identifies supported services available when Azure Local operates in a connected environment, including management capabilities, workloads, and platform services available with Azure connectivity.
+Azure Local deployments support a broad set of Azure Local infrastructure workloads and enable scenarios that benefit from centralized management. The following sections identify supported services available when Azure Local operates in a connected environment, including management capabilities, workloads, and platform services available with Azure connectivity.
 
 ### Management and security
 
@@ -121,21 +121,18 @@ Azure-based management experiences enable you to monitor, secure, govern, and op
 
 The following table provides an overview of management and security services available in connected Azure Local environments:
 
-| Area | Service | Description |
-|------|--------|-------------|
-| Monitoring | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources. |
-| Backup and recovery | Backup | Protect workloads by backing up and restoring Azure Local virtual machines using policy-based recovery. |
+| Area Type | Capability | Description |
+|--|--|--|
+| Monitoring | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of resources. |
+| Backup and recovery | Backup <br><br> Site Recovery | Backup: Protect workloads by backing up and restoring virtual machines using policy-based recovery. <br><br> Site Recovery: Replicate workloads and enable failover for disaster recovery. |
 | AI assistance | Copilot | Use AI assistance to understand, operate, and troubleshoot environments. |
-| Security | Defender | Improve security with built-in protection and threat detection across cloud and on-premises environments. |
-| Identity | Entra ID | Manage identities, authentication, and authorization with centralized access control. |
+| Security | Defender <br><br> Sentinel | Defender: Improve security with built-in protection and threat detection. <br><br> Sentinel: Collect and analyze security data to detect threats and respond to incidents. |
+| Identity | Entra ID <br><br> Managed Identities | Entra ID: Manage identities, authentication, and authorization with centralized access control. <br><br> Managed Identities: Provide applications with secure access to resources without storing credentials. |
 | Secrets management | Key Vault | Store and manage secrets, keys, and certificates securely. |
 | Networking | Logical Network | Define and manage logical network configurations for traffic flow and isolation. |
-| Identity | Managed Identities | Provide applications with secure access to resources without storing credentials. |
 | Governance | Policy | Define and enforce governance rules for consistent and compliant deployments. |
-| Tooling | Portal and CLI | Manage resources using graphical or command-line tools. |
-| Security | Sentinel | Collect and analyze security data to detect threats and respond to incidents. |
-| Backup and recovery | Site Recovery | Replicate workloads and enable failover for disaster recovery. |
 | Operations | Update Manager | Coordinate updates to keep systems secure, compliant, and up to date. |
+| Tooling | Portal and CLI | Manage resources using graphical interfaces or command-line tools. |
 
 ### Workloads and applications
 
@@ -144,15 +141,13 @@ Infrastructure and application workloads run on Azure Local, supporting virtual 
 The following table provides an overview of workloads and application services supported by Azure Local:
 
 | Category | Service | Description |
-|----------|--------|-------------|
-| Containers | Container Apps | Run containerized applications with managed scaling without managing Kubernetes infrastructure. |
+|--|--|--|
+| Containers | Container Apps <br><br> Kubernetes | Container Apps: Run containerized applications with managed scaling without managing Kubernetes infrastructure. <br><br> Kubernetes: Orchestrate and manage containerized workloads. |
 | Storage | External SAN | Use SAN to provide shared storage and scale compute and storage independently. |
 | Edge | IoT Operations | Collect and process data from connected devices for edge scenarios. |
-| Containers | Kubernetes | Orchestrate and manage containerized workloads. |
 | Applications | Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server locally. |
 | Migration | Migrate | Discover, assess, and prepare workloads for migration to Azure. |
-| Virtualization | Virtual Desktop | Provide secure access to virtual desktops and applications. |
-| Virtualization | Virtual Machines | Run Windows and Linux virtual machines for enterprise workloads. |
+| Virtualization | Virtual Desktop <br><br> Virtual Machines | Virtual Desktop: Provide secure access to virtual desktops and applications. <br><br> Virtual Machines: Run Windows and Linux virtual machines for enterprise workloads. |
 
 ### Data and AI
 
@@ -161,24 +156,17 @@ Data services and AI capabilities enable analytics, search, and AI‑powered app
 The following table provides an overview of data and AI services available for Azure Local:
 
 | Category | Service | Description |
-|----------|--------|-------------|
-| AI services | AI Content Safety | Detect and filter harmful or inappropriate content. |
-| AI services | AI Document Intelligence | Extract text and structured data from documents. |
-| AI services | AI Language | Analyze text for summarization, classification, and sentiment. |
+|--|--|--|
+| AI services | AI Content Safety <br><br> AI Document Intelligence <br><br> AI Language  <br><br> AI Speech <br><br>  AI Translator <br><br>  AI Video Indexer <br><br>  Vision Container Read OCR | AI Content Safety: Detect and filter harmful or inappropriate content.  <br><br> AI Document Intelligence: Extract text and structured data from documents.  <br><br>  AI Language: Analyze text for summarization, classification, and sentiment. <br><br> AI Speech: Enable speech-to-text and text-to-speech capabilities. <br><br> AI Translator: Translate text and documents across languages. <br><br> AI Video Indexer: Analyze video to extract speech, topics, and visual insights. <br><br> Vision Container Read OCR: Extract printed and handwritten text from images and documents. |
 | Search | AI Local Search | Index and retrieve data across local and connected sources. |
-| AI services | AI Speech | Enable speech-to-text and text-to-speech capabilities. |
-| AI services | AI Translator | Translate text and documents across languages. |
-| AI services | AI Video Indexer | Analyze video to extract speech, topics, and visual insights. |
 | Analytics | Decision Anomaly Detector | Detect anomalies in time series data. |
 | AI patterns | Edge RAG | Ground AI outputs using local enterprise data. |
-| AI platform | Foundry Local on Azure Local | Build and run AI models locally with Azure AI tools. |
-| AI platform | Machine Learning | Train, deploy, and manage machine learning models. |
+| AI platform | Foundry Local on Azure Local <br><br> Machine Learning | Foundry Local on Azure Local: Build and run AI models locally with Azure AI tools. <br><br> Machine Learning: Train, deploy, and manage machine learning models. |
 | Data | SQL | Store and manage relational data. |
-| AI services | Vision Container Read OCR | Extract printed and handwritten text from images and documents. |
 
 ## Related content
 
 - Learn more about [What is Azure Local?](/azure/azure-local/overview)
-- Review [Azure Local FAQs](/azure/azure-local/faq).
+- Review the [Azure Local FAQs](/azure/azure-local/faq).
 - Explore [Disconnected operations for Azure Local](/azure/azure-local/manage/disconnected-operations-overview).
 <!--- **GitHub Enterprise Local:** enable modern DevSecOps and keep code, identity, and operations fully on-premises with GitHub Enterprise Local on Azure Local-->
