@@ -75,7 +75,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Model reference
+          - text: vLLM model reference
             url: reference-models.md
           - text: Inference API reference
             url: reference-inference-api.md

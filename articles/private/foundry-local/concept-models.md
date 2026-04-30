@@ -43,10 +43,10 @@ The Foundry Local catalog includes generative models from different providers. A
 | [Mistral-7B-Instruct-v0.2](reference-models.md#mistral-7b-instruct-v02) | Mistral AI | 29,328 | Ampere (CC 8.0)+ | 15.64 GB |
 | [gpt-oss-20b](reference-models.md#gpt-oss-20b) | OpenAI | 96,784 | Blackwell (CC 10.0)+ | 14.793 GB |
 
-For GPU-specific settings and performance benchmarks, see [Model reference](reference-models.md).
+For GPU-specific settings and performance benchmarks, see [vLLM model reference](reference-models.md).
 
 ## Next steps
 
-- [Model reference](reference-models.md) — GPU requirements, recommended settings, and performance benchmarks for each model.
+- [vLLM model reference](reference-models.md) — GPU requirements, recommended settings, and performance benchmarks for each model.
 - [Inference operator and model lifecycle](concept-inference-operator.md) — Understand how models are deployed and managed on your cluster.
 - [Run inference](how-to-run-inference.md) — Send requests to a deployed model endpoint.

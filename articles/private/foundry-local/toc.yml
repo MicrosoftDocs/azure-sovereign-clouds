@@ -49,7 +49,7 @@ items:
       href: how-to-run-inference.md
   - name: Reference
     items:
-    - name: Model reference
+    - name: vLLM model reference
       href: reference-models.md
     - name: Inference API reference
       href: reference-inference-api.md
