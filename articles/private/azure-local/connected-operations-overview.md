@@ -31,7 +31,7 @@ In a connected deployment, you can:
 
 - Manage Azure Local through the Azure portal as a single control plane for deployment and operations.
 
-- Deploy clusters, add nodes, and scale resources using Azure portal workflows.
+- Deploy clusters, add nodes, and scale resources by using Azure portal workflows.
 
 - Initiate and coordinate cluster lifecycle actions from the Azure portal, with Azure services validating and orchestrating changes.
 
