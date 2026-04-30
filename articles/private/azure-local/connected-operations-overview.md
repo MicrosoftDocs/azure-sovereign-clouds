@@ -123,7 +123,7 @@ The following table provides an overview of management and security services ava
 
 | Service | Description |
 |--|--|
-| Azure Monitor | Collect and analyze metrics to monitor the health, performance and availability of on-premises resources with integrated alerts and insights. |
+| Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources with integrated alerts and insights. |
 | Backup | Protect on-premises workloads by backing up and restoring Azure Local virtual machines using centrally managed, policy-based recovery. |
 | Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
 | Defender | Improve security across your cloud and on‑premises environments with built‑in protection and threat detection. |
