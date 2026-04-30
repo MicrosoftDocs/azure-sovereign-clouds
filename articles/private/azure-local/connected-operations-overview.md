@@ -37,7 +37,7 @@ In a connected deployment, you can:
 
 - Apply identity, access control, and governance by using Azure services and the Azure portal.
 
-- Monitor and manage the environment using Azure services when connectivity is available.
+- Monitor and manage the environment by using Azure services when connectivity is available.
 
 - Drive capacity and scaling through cloud-based, policy-governed controls to ensure consistent configuration across sites.
 
