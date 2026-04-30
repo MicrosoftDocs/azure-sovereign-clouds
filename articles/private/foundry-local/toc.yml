@@ -33,12 +33,8 @@ items:
     items:
     - name: Configure TLS and authentication
       href: how-to-configure-tls-authentication.md
-    - name: Choose your deployment method
-      items:
-      - name: Deploy by using Helm
-        href: deploy-foundry-local-on-azure-local.md
-      - name: Deploy as Azure Arc extension
-        href: deploy-foundry-local-arc-extension.md
+    - name: Deploy as Azure Arc extension
+      href: deploy-foundry-local-arc-extension.md
     - name: Deploy and run your first model
       href: deploy-run-first-model.md
     - name: Deploy a bring-your-own model

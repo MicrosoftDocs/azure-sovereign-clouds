@@ -27,7 +27,7 @@ Automated certificate management requires [cert-manager](https://cert-manager.io
 - **trust-manager** distributes the root CA certificate as a trust bundle to all namespaces so other pods can trust the internal certificates.
 
 > [!IMPORTANT]
-> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. For installation steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. Helm is a supported deployment option, and installation instructions are provided during preview access onboarding.
 
 ## How internal TLS works
 
@@ -232,7 +232,6 @@ After this two-step swap, you have entirely new primary and secondary keys with 
 
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)

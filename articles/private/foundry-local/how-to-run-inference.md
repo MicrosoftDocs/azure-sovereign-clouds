@@ -23,7 +23,7 @@ This article shows you how to retrieve API keys and send inference requests to m
 
 Before you begin, you must have the following resources:
 
-- A running model deployment. For setup steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+- A running model deployment. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 - The endpoint URL for your deployment, with or without an ingress controller.
 - kubectl installed and configured for your cluster.
 
@@ -423,7 +423,6 @@ The following example shows a successful chat completions response from a bring-
 
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)

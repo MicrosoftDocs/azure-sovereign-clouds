@@ -1,6 +1,6 @@
 ---
-title: "Model reference for Foundry Local on Azure Local"
-description: "Reference specifications for generative small language models in Foundry Local on Azure Local, including GPU requirements, recommended settings, and performance benchmarks."
+title: "vLLM Runtime Model Reference for Foundry Local on Azure Local"
+description: "Reference specifications for models using the vLLM runtime in Foundry Local on Azure Local, including GPU requirements, recommended settings, and performance benchmarks."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -8,85 +8,21 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/17/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 ---
 
-# Model reference for Foundry Local on Azure Local
+# vLLM runtime model reference for Foundry Local 
 
-This article provides GPU requirements, recommended settings, and expected performance benchmarks for each model in the Foundry Local catalog.
+This article provides GPU requirements, recommended settings, and expected performance benchmarks for models that use the vLLM runtime in Foundry Local.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
-For a list of available models and guidance on choosing one, see [Generative small language models in Foundry Local on Azure Local](concept-models.md).
+For a list of available models and guidance on choosing one, see [Generative small language models in Foundry Local on Azure Local](concept-models.md). For information about how the vLLM runtime compares to ONNX Runtime and how Foundry Local selects a runtime, see [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md).
 
 ## Microsoft
 
-### Phi-3-mini-128k-instruct
-
-Natively-accelerated GPU generation (**recommended**): `Ampere (SM 8.0)` or higher
-
-Natively-supported GPU generation: `Ampere (SM 8.0)` or higher
-
-Minimal supported GPU generation: `Volta (SM 7.0)`
-
-**NVIDIA A10 Tensor Core GPU (Ampere architecture, SM 8.0)**
-
-The following table shows the recommended settings and expected running times for this GPU type:
-
-| Setting | Value |
-|---|---|
-| Recommended GPU utilization | 0.85 |
-| Max model context length | 29,472 |
-| Required memory | 8.428 GB |
-
-**Expected running times**
-
-The following table provides performance metrics for standard chat completion usages:
-
-| Maximal concurrency | Mean TTFT (ms)** | P99 TTFT (ms)** | Output throughput (tokens/s) |
-|---|---|---|---|
-| 1 requests | 40.94 | 84.03 | 55.73 |
-| 2 requests | 57.77 | 100.44 | 107.26 |
-| 4 requests | 61.32 | 102.76 | 198.64 |
-| 8 requests | 71.74 | 114.45 | 335.93 |
-
-\* For standard chat completion usages
-
-\*\* Mean metrics stand for the average performance, p99 metrics stand for the worst-performant percentile
-
-### Phi-3-mini-4k-instruct
-
-Natively-accelerated GPU generation (**recommended**): `Ampere (SM 8.0)` or higher
-
-Natively-supported GPU generation: `Ampere (SM 8.0)` or higher
-
-Minimal supported GPU generation: `Volta (SM 7.0)`
-
-**NVIDIA A10 Tensor Core GPU (Ampere architecture, SM 8.0)**
-
-The following table shows the recommended settings and expected running times for this GPU type:
-
-| Setting | Value |
-|---|---|
-| Recommended GPU utilization | 0.85 |
-| Max model context length | 4,096 |
-| Required memory | 8.443 GB |
-
-**Expected running times**
-
-The following table provides performance metrics for standard chat completion usages:
-
-| Maximal concurrency | Mean TTFT (ms)** | P99 TTFT (ms)** | Output throughput (tokens/s) |
-|---|---|---|---|
-| 1 requests | 40.64 | 82.49 | 56.15 |
-| 2 requests | 57.25 | 99.81 | 108.77 |
-| 4 requests | 59.62 | 102.23 | 207.15 |
-| 8 requests | 68.0 | 113.66 | 373.05 |
-
-\* For standard chat completion usages
-
-\*\* Mean metrics stand for the average performance, p99 metrics stand for the worst-performant percentile
+The following models are published by Microsoft and available in the Foundry Local catalog for use with the vLLM runtime.
 
 ### Phi-3.5-mini-instruct
 
@@ -189,6 +125,8 @@ The following table provides performance metrics for standard chat completion us
 
 ## Mistral AI
 
+The following models are published by Mistral AI and available in the Foundry Local catalog for use with the vLLM runtime.
+
 ### Mistral-7B-Instruct-v0.2
 
 Natively-accelerated GPU generation (**recommended**): `Ampere (SM 8.0)` or higher
@@ -224,6 +162,8 @@ The following table provides performance metrics for standard chat completion us
 
 ## OpenAI
 
+The following models are published by OpenAI and available in the Foundry Local catalog for use with the vLLM runtime.
+
 ### gpt-oss-20b
 
 Natively-accelerated GPU generation (**recommended**): `Blackwell (SM 10.0)` or higher
@@ -256,3 +196,8 @@ The following table provides performance metrics for standard chat completion us
 \* For standard chat completion usages
 
 \*\* Mean metrics stand for the average performance, p99 metrics stand for the worst-performant percentile
+
+## Related content
+
+- [GPU inference planner in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
+- [Run inference in Foundry Local on Azure Local](how-to-run-inference.md)

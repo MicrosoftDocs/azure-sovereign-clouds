@@ -50,8 +50,6 @@ landingContent:
         links:
           - text: Configure TLS and authentication
             url: how-to-configure-tls-authentication.md
-          - text: Deploy Foundry Local by using Helm
-            url: deploy-foundry-local-on-azure-local.md
           - text: Deploy Foundry Local as an Azure Arc extension
             url: deploy-foundry-local-arc-extension.md
           - text: Deploy and run your first model

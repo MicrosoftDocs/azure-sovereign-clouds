@@ -246,7 +246,6 @@ When you deploy this model, choose the entry to reference based on your hardware
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [StoreModel and model caching](concept-model-caching.md)
 - [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

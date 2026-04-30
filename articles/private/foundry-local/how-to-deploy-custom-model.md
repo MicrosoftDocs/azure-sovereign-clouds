@@ -25,7 +25,7 @@ Use this article when your model isn't available in the Foundry catalog and you 
 
 Before you begin, make sure that you have:
 
-- A running Foundry Local on Azure Local environment. For setup steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+- A running Foundry Local on Azure Local environment. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 - `kubectl` installed and configured for your cluster.
 - Access to an OCI-compatible registry, such as Azure Container Registry.
 - ORAS installed. For installation steps, see [ORAS](https://oras.land/).
