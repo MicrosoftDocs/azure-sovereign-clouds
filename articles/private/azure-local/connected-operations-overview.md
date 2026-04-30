@@ -174,7 +174,7 @@ The following table provides an overview of data and AI services available for A
 | Foundry Local on Azure Local | Build, deploy, and run AI models and workloads locally using a consistent Azure AI development experience. |
 | Machine Learning | Train, deploy, and manage machine learning models to support predictive and analytical workloads on Azure Local. |
 | SQL | Store, query, and manage relational data for applications and services running on Azure Local. |
-| Vision Container Read OCR | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF and TIFF file formats. |
+| Vision Container Read OCR | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 
 ## Related content
 
