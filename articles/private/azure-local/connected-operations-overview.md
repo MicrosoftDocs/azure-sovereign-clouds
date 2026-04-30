@@ -128,7 +128,7 @@ The following table provides an overview of management and security services ava
 | Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
 | Defender | Improve security across your cloud and on-premises environments with built-in protection and threat detection. |
 | Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
-| Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
+| Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Logical Network | Define and manage logical network configurations to control traffic flow, isolation, and connectivity across the environment. |
 | Managed Identities | Provide applications and services with managed identities so they can securely access resources without storing credentials in code. |
 | Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
