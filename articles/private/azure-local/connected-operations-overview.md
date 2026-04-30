@@ -123,15 +123,15 @@ The following table provides an overview of management and security services ava
 
 | Area Type | Capability | Description |
 |--|--|--|
-| Monitoring | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of resources. |
-| Backup and recovery | Backup <br><br> Site Recovery | Backup: Protect workloads by backing up and restoring virtual machines using policy-based recovery. <br><br> Site Recovery: Replicate workloads and enable failover for disaster recovery. |
 | AI assistance | Copilot | Use AI assistance to understand, operate, and troubleshoot environments. |
-| Security | Defender <br><br> Sentinel | Defender: Improve security with built-in protection and threat detection. <br><br> Sentinel: Collect and analyze security data to detect threats and respond to incidents. |
+| Backup and recovery | Backup <br><br> Site Recovery | Backup: Protect workloads by backing up and restoring virtual machines using policy-based recovery. <br><br> Site Recovery: Replicate workloads and enable failover for disaster recovery. |
+| Governance | Policy | Define and enforce governance rules for consistent and compliant deployments. |
 | Identity | Entra ID <br><br> Managed Identities | Entra ID: Manage identities, authentication, and authorization with centralized access control. <br><br> Managed Identities: Provide applications with secure access to resources without storing credentials. |
+| Monitoring | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of resources. |
+| Operations | Update Manager | Coordinate updates to keep systems secure, compliant, and up to date. |
 | Secrets management | Key Vault | Store and manage secrets, keys, and certificates securely. |
 | Networking | Logical Network | Define and manage logical network configurations for traffic flow and isolation. |
-| Governance | Policy | Define and enforce governance rules for consistent and compliant deployments. |
-| Operations | Update Manager | Coordinate updates to keep systems secure, compliant, and up to date. |
+| Security | Defender <br><br> Sentinel | Defender: Improve security with built-in protection and threat detection. <br><br> Sentinel: Collect and analyze security data to detect threats and respond to incidents. |
 | Tooling | Portal and CLI | Manage resources using graphical interfaces or command-line tools. |
 
 ### Workloads and applications
@@ -142,11 +142,11 @@ The following table provides an overview of workloads and application services s
 
 | Category | Service | Description |
 |--|--|--|
-| Containers | Container Apps <br><br> Kubernetes | Container Apps: Run containerized applications with managed scaling without managing Kubernetes infrastructure. <br><br> Kubernetes: Orchestrate and manage containerized workloads. |
-| Storage | External SAN | Use SAN to provide shared storage and scale compute and storage independently. |
-| Edge | IoT Operations | Collect and process data from connected devices for edge scenarios. |
 | Applications | Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server locally. |
+| Containers | Container Apps <br><br> Kubernetes | Container Apps: Run containerized applications with managed scaling without managing Kubernetes infrastructure. <br><br> Kubernetes: Orchestrate and manage containerized workloads. |
+| Edge | IoT Operations | Collect and process data from connected devices for edge scenarios. |
 | Migration | Migrate | Discover, assess, and prepare workloads for migration to Azure. |
+| Storage | External SAN | Use SAN to provide shared storage and scale compute and storage independently. |
 | Virtualization | Virtual Desktop <br><br> Virtual Machines | Virtual Desktop: Provide secure access to virtual desktops and applications. <br><br> Virtual Machines: Run Windows and Linux virtual machines for enterprise workloads. |
 
 ### Data and AI
@@ -158,11 +158,11 @@ The following table provides an overview of data and AI services available for A
 | Category | Service | Description |
 |--|--|--|
 | AI services | AI Content Safety <br><br> AI Document Intelligence <br><br> AI Language  <br><br> AI Speech <br><br>  AI Translator <br><br>  AI Video Indexer <br><br>  Vision Container Read OCR | AI Content Safety: Detect and filter harmful or inappropriate content.  <br><br> AI Document Intelligence: Extract text and structured data from documents.  <br><br>  AI Language: Analyze text for summarization, classification, and sentiment. <br><br> AI Speech: Enable speech-to-text and text-to-speech capabilities. <br><br> AI Translator: Translate text and documents across languages. <br><br> AI Video Indexer: Analyze video to extract speech, topics, and visual insights. <br><br> Vision Container Read OCR: Extract printed and handwritten text from images and documents. |
-| Search | AI Local Search | Index and retrieve data across local and connected sources. |
 | Analytics | Decision Anomaly Detector | Detect anomalies in time series data. |
 | AI patterns | Edge RAG | Ground AI outputs using local enterprise data. |
 | AI platform | Foundry Local on Azure Local <br><br> Machine Learning | Foundry Local on Azure Local: Build and run AI models locally with Azure AI tools. <br><br> Machine Learning: Train, deploy, and manage machine learning models. |
 | Data | SQL | Store and manage relational data. |
+| Search | AI Local Search | Index and retrieve data across local and connected sources. |
 
 ## Related content
 
