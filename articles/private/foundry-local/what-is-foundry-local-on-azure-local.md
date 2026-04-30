@@ -10,6 +10,7 @@ ms.author: cwatson
 author: cwatson-cat
 ms.date: 04/30/2026
 ai-usage: ai-assisted
+ms.custom: references_regions
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
 ---
 
