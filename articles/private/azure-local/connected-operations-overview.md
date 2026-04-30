@@ -121,18 +121,21 @@ Azure-based management experiences enable you to monitor, secure, govern, and op
 
 The following table provides an overview of management and security services available in connected Azure Local environments:
 
-| Area Type | Capability | Description |
-|--|--|--|
-| AI assistance | Copilot | Use AI assistance to understand, operate, and troubleshoot environments. |
-| Backup and recovery | Backup <br><br> Site Recovery | Backup: Protect workloads by backing up and restoring virtual machines using policy-based recovery. <br><br> Site Recovery: Replicate workloads and enable failover for disaster recovery. |
-| Governance | Policy | Define and enforce governance rules for consistent and compliant deployments. |
-| Identity | Entra ID <br><br> Managed Identities | Entra ID: Manage identities, authentication, and authorization with centralized access control. <br><br> Managed Identities: Provide applications with secure access to resources without storing credentials. |
-| Monitoring | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of resources. |
-| Operations | Update Manager | Coordinate updates to keep systems secure, compliant, and up to date. |
-| Secrets management | Key Vault | Store and manage secrets, keys, and certificates securely. |
-| Networking | Logical Network | Define and manage logical network configurations for traffic flow and isolation. |
-| Security | Defender <br><br> Sentinel | Defender: Improve security with built-in protection and threat detection. <br><br> Sentinel: Collect and analyze security data to detect threats and respond to incidents. |
-| Tooling | Portal and CLI | Manage resources using graphical interfaces or command-line tools. |
+| Service | Description |
+|--|--|
+| Azure Monitor | Collect and analyze metrics to monitor the health, performance and availability of on-premises resources with integrated alerts and insights. |
+| Backup | Protect on-premises workloads by backing up and restoring Azure Local virtual machines using centrally managed, policy-based recovery. |
+| Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
+| Defender | Improve security across your cloud and on‑premises environments with built‑in protection and threat detection. |
+| Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
+| Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
+| Logical Network | Define and manage logical network configurations to control traffic flow, isolation, and connectivity across the environment. |
+| Managed Identities | Provide applications and services with managed identities so they can securely access resources without storing credentials in code. |
+| Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
+| Portal CLI | Manage and operate resources using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
+| Sentinel | Collect and analyze security data from across your environment to detect threats, investigate incidents, and respond quickly. |
+| Site Recovery | Protect workloads by replicating them and enabling failovers between sites to support disaster recovery and business continuity. |
+| Update Manager | Coordinate and manage updates for infrastructure and workloads to help keep systems secure, compliant, and up to date. |
 
 ### Workloads and applications
 
@@ -140,14 +143,16 @@ Infrastructure and application workloads run on Azure Local, supporting virtual 
 
 The following table provides an overview of workloads and application services supported by Azure Local:
 
-| Category | Service | Description |
-|--|--|--|
-| Applications | Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server locally. |
-| Containers | Container Apps <br><br> Kubernetes | Container Apps: Run containerized applications with managed scaling without managing Kubernetes infrastructure. <br><br> Kubernetes: Orchestrate and manage containerized workloads. |
-| Edge | IoT Operations | Collect and process data from connected devices for edge scenarios. |
-| Migration | Migrate | Discover, assess, and prepare workloads for migration to Azure. |
-| Storage | External SAN | Use SAN to provide shared storage and scale compute and storage independently. |
-| Virtualization | Virtual Desktop <br><br> Virtual Machines | Virtual Desktop: Provide secure access to virtual desktops and applications. <br><br> Virtual Machines: Run Windows and Linux virtual machines for enterprise workloads. |
+| Service | Description |
+|--|--|
+| Container Apps | Run containerized applications with managed scaling and lifecycle, without needing to manage underlying Kubernetes infrastructure. |
+| External SAN | Use external storage area networks (SANs) to provide shared storage and independently scale compute and storage resources. |
+| IoT Operations | Collect, process, and manage data from connected devices locally, supporting industrial, edge, and sovereign IoT scenarios. |
+| Kubernetes | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
+| Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
+| Migrate | Discover, assess, and prepare your servers, applications, and data for Azure with built-in guidance and insights. |
+| Virtual Desktop | Provide users with secure access to virtual desktops and applications hosted on local infrastructure. |
+| Virtual Machines | Run Windows and Linux VMs for enterprise applications, shared services, and infrastructure workloads. |
 
 ### Data and AI
 
@@ -155,14 +160,21 @@ Data services and AI capabilities enable analytics, search, and AI‑powered app
 
 The following table provides an overview of data and AI services available for Azure Local:
 
-| Category | Service | Description |
-|--|--|--|
-| AI services | AI Content Safety <br><br> AI Document Intelligence <br><br> AI Language  <br><br> AI Speech <br><br>  AI Translator <br><br>  AI Video Indexer <br><br>  Vision Container Read OCR | AI Content Safety: Detect and filter harmful or inappropriate content.  <br><br> AI Document Intelligence: Extract text and structured data from documents.  <br><br>  AI Language: Analyze text for summarization, classification, and sentiment. <br><br> AI Speech: Enable speech-to-text and text-to-speech capabilities. <br><br> AI Translator: Translate text and documents across languages. <br><br> AI Video Indexer: Analyze video to extract speech, topics, and visual insights. <br><br> Vision Container Read OCR: Extract printed and handwritten text from images and documents. |
-| Analytics | Decision Anomaly Detector | Detect anomalies in time series data. |
-| AI patterns | Edge RAG | Ground AI outputs using local enterprise data. |
-| AI platform | Foundry Local on Azure Local <br><br> Machine Learning | Foundry Local on Azure Local: Build and run AI models locally with Azure AI tools. <br><br> Machine Learning: Train, deploy, and manage machine learning models. |
-| Data | SQL | Store and manage relational data. |
-| Search | AI Local Search | Index and retrieve data across local and connected sources. |
+| Service | Description |
+|--|--|
+| AI Content Safety | Detect and filter harmful or inappropriate text and images to help ensure safe and responsible AI usage in connected environments. |
+| AI Document Intelligence | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
+| AI Language | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
+| AI Local Search | Index and retrieve information from local and connected data sources to enable fast, relevant search experiences. |
+| AI Speech | Convert speech to text and text to speech to enable voice‑based interaction and transcription for applications and workflows. |
+| AI Translator | Translate text and documents across languages to support multilingual applications and global operations. |
+| AI Video Indexer | Analyze both recorded and live video streams to extract insights such as speech, topics, and visual elements for search and discovery. |
+| Decision Anomaly Detector | Monitor and detect abnormalities in your time series data with machine learning. |
+| Edge RAG | Ground generative AI responses using local and connected enterprise data to deliver relevant, context‑aware outputs. |
+| Foundry Local on Azure Local | Build, deploy, and run AI models and workloads locally using a consistent Azure AI development experience. |
+| Machine Learning | Train, deploy, and manage machine learning models to support predictive and analytical workloads on Azure Local. |
+| SQL | Store, query, and manage relational data for applications and services running on Azure Local. |
+| Vision Container Read OCR | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF and TIFF file formats. |
 
 ## Related content
 
