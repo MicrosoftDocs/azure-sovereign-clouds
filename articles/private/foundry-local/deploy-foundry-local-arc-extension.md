@@ -128,6 +128,15 @@ az k8s-extension create `
 
 ---
 
+### Additional installation parameters
+
+The following optional parameters can be configured during inference operator installation:
+
+| Parameter | Description |
+|-----------|-------------|
+| `entraAuth.enabled` | Boolean. When enabled, the Entra Auth SDK sidecar and msi-adapter sidecar are injected into inference pods for JWT validation and ARM RBAC authorization. When disabled, `entraAuth.tenantId` and `entraAuth.clientId` parameters are optional. Default: `true`. For more information, see [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md). |
+| `watch.namespaces` | Array of strings. Configure this parameter if you want the operator to manage resources across multiple namespaces. By default, the operator manages the `foundry-local-operator` namespace where models and inference workloads are deployed. Pass in the installation command as: `--config watch.namespaces[0]="NS1" --config watch.namespaces[1]="NS2"`. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments). |
+
 ## Step 3: Verify the operator
 
 Verify that the inference operator extension is installed and that all pods are running. Use the following commands to check the operator status:
@@ -149,6 +158,12 @@ kubectl get crd | Select-String -Pattern "foundry"
 ---
 
 Wait until all pods show a `Running` status before you proceed.
+
+The following screenshots show an example of the expected output:
+
+:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-pods.png" alt-text="Screenshot of terminal output from kubectl get pods command showing five pods in the foundry-local-operator namespace with Running or Completed status.":::
+
+:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-crds.png" alt-text="Screenshot of terminal output from kubectl get crd command showing four Foundry Local custom resource definitions registered in the cluster.":::
 
 ## Troubleshoot your deployment
 
