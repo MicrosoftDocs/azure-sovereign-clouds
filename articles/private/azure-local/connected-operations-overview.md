@@ -21,7 +21,7 @@ Industries such as retail, healthcare, manufacturing, and financial services com
 
 ## What "connected" means in Azure Local
 
-Connected operations provide a balance between on‑premises control and cloud‑based operational efficiency, while allowing for temporary or intermittent loss of connectivity.
+Connected operations provide a balance between on-premises control and cloud-based operational efficiency, while allowing for temporary or intermittent loss of connectivity.
 
 In a connected Azure Local deployment, the system maintains periodic connectivity to Azure for control plane activities. The system supports intermittent disconnections up to 30 days without affecting running workloads. Azure Local is designed to tolerate short periods of disconnection, such as temporary ISP outages, while workloads continue to run on‑premises.
 
