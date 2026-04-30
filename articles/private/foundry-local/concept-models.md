@@ -33,7 +33,7 @@ SLMs trade some breadth of general knowledge for efficiency, but advances in tra
 
 ## Choose a model
 
-The Foundry Local catalog includes generative models from different providers. All models support the chat completion task and use OpenAI-compatible REST API patterns. The **CC** (Compute Capability) value in the table refers to the NVIDIA GPU compute capability version.
+The Foundry Local catalog includes generative models from different providers. All models support the chat completion task and use OpenAI-compatible REST API patterns. The **CC** value in the table refers to the NVIDIA GPU compute capability version.
 
 | Model | Publisher | Max context length | Recommended minimal GPU generation | Required GPU memory |
 |---|---|---|---|---|

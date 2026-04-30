@@ -79,24 +79,24 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 
 Foundry Local is available as an Azure Arc extension in the following regions:
 
-- australiaeast
-- canadacentral
-- centralindia
-- centralus
-- centraluseuap
-- eastus
-- eastus2
-- eastus2euap
-- japaneast
-- koreacentral
-- northeurope
-- southcentralus
-- southeastasia
-- uksouth
-- westeurope
-- westus
-- westus2
-- westus3
+- Australia East
+- Canada Central
+- Central India
+- Central US
+- Central US EUAP
+- East US
+- East US 2
+- East US 2 EUAP
+- Japan East
+- Korea Central
+- North Europe
+- South Central US
+- Southeast Asia
+- UK South
+- West Europe
+- West US
+- West US 2
+- West US 3
 
 ## Supported workloads
 
