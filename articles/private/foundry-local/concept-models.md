@@ -33,17 +33,17 @@ SLMs trade some breadth of general knowledge for efficiency, but advances in tra
 
 ## Choose a model
 
-The Foundry Local catalog includes generative models from different providers. All models support the chat completion task and use OpenAI-compatible REST API patterns.
+The Foundry Local catalog includes generative models from different providers. All models support the chat completion task and use OpenAI-compatible REST API patterns. The **CC** (Compute Capability) value in the table refers to the NVIDIA GPU compute capability version.
 
-| Model | Publisher | Max context length | Recommended GPU | Required memory |
+| Model | Publisher | Max context length | Recommended minimal GPU generation | Required GPU memory |
 |---|---|---|---|---|
-| [Phi-3-mini-128k-instruct](reference-models.md#phi-3-mini-128k-instruct) | Microsoft | 29,472 | Ampere (SM 8.0)+ | 8.428 GB |
-| [Phi-3-mini-4k-instruct](reference-models.md#phi-3-mini-4k-instruct) | Microsoft | 4,096 | Ampere (SM 8.0)+ | 8.443 GB |
-| [Phi-3.5-mini-instruct](reference-models.md#phi-35-mini-instruct) | Microsoft | 29,472 | Ampere (SM 8.0)+ | 8.428 GB |
-| [Phi-4-mini-instruct](reference-models.md#phi-4-mini-instruct) | Microsoft | 93,520 | Ampere (SM 8.0)+ | 7.806 GB |
-| [Phi-4-mini-reasoning](reference-models.md#phi-4-mini-reasoning) | Microsoft | 93,520 | Ampere (SM 8.0)+ | 7.806 GB |
-| [Mistral-7B-Instruct-v0.2](reference-models.md#mistral-7b-instruct-v02) | Mistral AI | 29,328 | Ampere (SM 8.0)+ | 15.64 GB |
-| [gpt-oss-20b](reference-models.md#gpt-oss-20b) | OpenAI | 96,784 | Blackwell (SM 10.0)+ | 14.793 GB |
+| [Phi-3-mini-128k-instruct](reference-models.md#phi-3-mini-128k-instruct) | Microsoft | 29,472 | Ampere (CC 8.0)+ | 8.428 GB |
+| [Phi-3-mini-4k-instruct](reference-models.md#phi-3-mini-4k-instruct) | Microsoft | 4,096 | Ampere (CC 8.0)+ | 8.443 GB |
+| [Phi-3.5-mini-instruct](reference-models.md#phi-35-mini-instruct) | Microsoft | 29,472 | Ampere (CC 8.0)+ | 8.428 GB |
+| [Phi-4-mini-instruct](reference-models.md#phi-4-mini-instruct) | Microsoft | 93,520 | Ampere (CC 8.0)+ | 7.806 GB |
+| [Phi-4-mini-reasoning](reference-models.md#phi-4-mini-reasoning) | Microsoft | 93,520 | Ampere (CC 8.0)+ | 7.806 GB |
+| [Mistral-7B-Instruct-v0.2](reference-models.md#mistral-7b-instruct-v02) | Mistral AI | 29,328 | Ampere (CC 8.0)+ | 15.64 GB |
+| [gpt-oss-20b](reference-models.md#gpt-oss-20b) | OpenAI | 96,784 | Blackwell (CC 10.0)+ | 14.793 GB |
 
 For GPU-specific settings and performance benchmarks, see [Model reference](reference-models.md).
 
