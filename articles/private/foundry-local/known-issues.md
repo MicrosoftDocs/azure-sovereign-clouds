@@ -31,11 +31,6 @@ This article describes known limitations and workarounds for Foundry Local on Az
 kubectl delete secret <deployment-name>-api-keys -n foundry-local-operator
 ```
 
-> [!IMPORTANT]
-> Deleting the secret replaces both the primary and secondary keys at once. All clients using either key lose access until you update them with the new keys. For a zero-downtime rotation approach, see [Rotate API keys](how-to-configure-tls-authentication.md#rotate-api-keys).
-
----
-
 ### Secrets and certificates aren't synced to other namespaces
 
 **Problem:** API key secrets and TLS certificates aren't automatically distributed to namespaces outside of `foundry-local-operator`.
@@ -68,13 +63,12 @@ helm upgrade --install trust-manager jetstack/trust-manager \
   --set secretTargets.authorizedSecretsAll=true
 ```
 
-These flags are required for cross-namespace secret distribution to work correctly. For full installation steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+These flags are required for cross-namespace secret distribution to work correctly. Helm is a supported deployment option, and installation instructions are provided during preview access onboarding.
 
 ---
 
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [What is Foundry Local on Azure Local?](what-is-foundry-local-on-azure-local.md)

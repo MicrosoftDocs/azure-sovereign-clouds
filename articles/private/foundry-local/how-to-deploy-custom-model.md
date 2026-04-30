@@ -8,12 +8,12 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/21/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to package and deploy a bring-your-own model on Foundry Local on Azure Local so that I can run a custom model from my own registry.
 ---
 
-# Deploy a bring-your-own model on Foundry Local
+# Package and deploy a bring-your-own model on Foundry Local
 
 This article shows you how to package a bring-your-own (BYO) model, push it to an OCI-compatible registry, and deploy it on Foundry Local on Azure Local.
 
@@ -25,7 +25,7 @@ Use this article when your model isn't available in the Foundry catalog and you 
 
 Before you begin, make sure that you have:
 
-- A running Foundry Local on Azure Local environment. For setup steps, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+- A running Foundry Local on Azure Local environment. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 - `kubectl` installed and configured for your cluster.
 - Access to an OCI-compatible registry, such as Azure Container Registry.
 - ORAS installed. For installation steps, see [ORAS](https://oras.land/).

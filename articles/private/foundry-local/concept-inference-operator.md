@@ -265,7 +265,7 @@ Generative AI models produce new content like text in response to prompts. Found
 
 ### Use models from the Azure AI Foundry catalog
 
-Pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in [Model catalog](#model-catalog). Alternatively, deploy them directly from a `ModelDeployment`. For the full deployment procedure, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md).
+Pull and deploy models directly from the Azure AI Foundry catalog through the inference operator as described in [Model catalog](#model-catalog). Alternatively, deploy them directly from a `ModelDeployment`.
 
 ### Load custom models (BYO)
 
@@ -388,7 +388,6 @@ For the full configuration fields and example, see [ModelDeployment and operator
 - [StoreModel and model caching in Foundry Local on Azure Local](concept-model-caching.md)
 - [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
 - [Automatic GPU inference tuning in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

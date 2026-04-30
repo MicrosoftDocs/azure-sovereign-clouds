@@ -8,14 +8,14 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to deploy Foundry Local as an Azure Arc extension so that I can run AI inference workloads on my Azure Arc–enabled Kubernetes cluster.
 ---
 
 # Deploy Foundry Local as an Azure Arc extension
 
-This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc. If you prefer to deploy by using Helm, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md). Use the Azure CLI to deploy Foundry Local as an extension on your Azure Arc–enabled Kubernetes cluster.
+This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc. Use the Azure CLI to deploy Foundry Local as an extension on your Azure Arc-enabled Kubernetes cluster. Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -25,6 +25,7 @@ Before you begin, make sure you have:
 
 - Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
+- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](what-is-foundry-local-on-azure-local.md#supported-regions).
 - An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.
@@ -127,6 +128,15 @@ az k8s-extension create `
 
 ---
 
+### Additional installation parameters
+
+You can configure the following optional parameters during inference operator installation:
+
+| Parameter | Description |
+|-----------|-------------|
+| `entraAuth.enabled` | Boolean. When enabled, the Entra Auth SDK sidecar and msi-adapter sidecar are injected into inference pods for JWT validation and ARM RBAC authorization. When disabled, `entraAuth.tenantId` and `entraAuth.clientId` parameters are optional. Default: `true`. For more information, see [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md). |
+| `watch.namespaces` | Array of strings. Configure this parameter if you want the operator to manage resources across multiple namespaces. By default, the operator manages the `foundry-local-operator` namespace where models and inference workloads are deployed. Pass the installation command as: `--config watch.namespaces[0]="NS1" --config watch.namespaces[1]="NS2"`. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments). |
+
 ## Step 3: Verify the operator
 
 Verify that the inference operator extension is installed and that all pods are running. Use the following commands to check the operator status:
@@ -148,6 +158,12 @@ kubectl get crd | Select-String -Pattern "foundry"
 ---
 
 Wait until all pods show a `Running` status before you proceed.
+
+The following screenshots show an example of the expected output:
+
+:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-pods.png" alt-text="Screenshot of terminal output from kubectl get pods command showing five pods in the foundry-local-operator namespace with Running or Completed status.":::
+
+:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-custom-resource-definitions.png" alt-text="Screenshot of terminal output from kubectl get crd command showing four Foundry Local custom resource definitions registered in the cluster.":::
 
 ## Troubleshoot your deployment
 
@@ -192,9 +208,12 @@ kubectl get models
 kubectl describe model <name>
 ```
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Run your first model](deploy-run-first-model.md)
+
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
-- [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)
-- [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
+- [Package and deploy a bring-your-own model on Foundry Local](how-to-deploy-custom-model.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

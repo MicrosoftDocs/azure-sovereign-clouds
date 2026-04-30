@@ -1,6 +1,6 @@
 ---
 title: "Deploy and run your first model on Foundry Local on Azure Local"
-description: "Deploy Foundry Local, list the model catalog, create your first model deployment, and send inference requests by using kubectl or the REST API."
+description: "List the model catalog, create your first model deployment, and send inference requests by using kubectl or the REST API in an existing Foundry Local environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -8,14 +8,14 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer or developer, I want to deploy and run my first model on Foundry Local on Azure Local so that I can validate AI inference on my on-premises cluster.
+customer intent: As a platform engineer or developer, I want to deploy and run my first model in an existing Foundry Local environment on Azure Local so that I can validate AI inference on my on-premises cluster.
 ---
 
 # Deploy and run your first model on Foundry Local
 
-This article walks you through deploying Foundry Local, browsing the model catalog, creating your first model deployment, and sending inference requests.
+This article shows you how to use an existing Foundry Local environment to browse the model catalog, create your first model deployment, and send inference requests.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -27,7 +27,7 @@ Before you begin, make sure you have:
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc, or a direct Kubernetes deployment.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
-- Foundry Local deployed to your Kubernetes cluster. Choose one of the two supported installation methods, Helm or as an Azure Arc extension. For more information, see [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md) or [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md).
+- Foundry Local deployed to your Kubernetes cluster. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 
 If you want to deploy models in namespaces other than the default, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
 
@@ -208,7 +208,7 @@ curl -k -X POST https://localhost:5000/v1/chat/completions \
 
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
-- [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
+- [Package and deploy a bring-your-own model on Foundry Local](how-to-deploy-custom-model.md)
+

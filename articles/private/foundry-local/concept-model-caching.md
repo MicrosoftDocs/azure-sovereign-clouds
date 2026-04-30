@@ -62,7 +62,6 @@ For the full reconciliation flow, see [Inference operator and model lifecycle](c
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [Model catalog and sourcing](concept-model-catalog.md)
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

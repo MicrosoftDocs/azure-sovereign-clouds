@@ -8,14 +8,15 @@ appliesto:
 ms.topic: conceptual
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand authentication and authorization options in Foundry Local so that I can secure inference endpoints based on my environment requirements.
 ---
 
 # Authentication and authorization in Foundry Local
 
-Foundry Local enabled by Azure Arc supports multiple ways to secure inference endpoints. You can use API key authentication for simple credential-based access, Microsoft Entra ID for identity-based access with Azure role-based access control, or both methods together to support mixed client scenarios.
+Foundry Local enabled by Azure Arc supports two ways to authenticate requests to your inference endpoints: API key authentication and
+Microsoft Entra ID authentication. You can enable either method independently, or enable both.
 
 This article explains how each offering works, when to use each one, and how the platform processes requests across validation, authorization, and fallback behavior during connectivity interruptions.
 

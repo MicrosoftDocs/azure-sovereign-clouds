@@ -8,8 +8,9 @@ appliesto:
 ms.topic: overview
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/20/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
+ms.custom: references_regions
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
 ---
 
@@ -23,7 +24,7 @@ This deployment model is designed for organizations that need local control, low
 
 ## Request deployment access
 
-Foundry Local on Azure Local deployment is currently available by request during preview. To get started, submit the access request form: Request preview deployment access[https://aka.ms/FoundryLocalAzure_PreviewRequest]. After your request is reviewed, you'll receive guidance on next steps for deployment.
+Foundry Local on Azure Local deployment is currently available by request during preview. To get started, submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you'll receive guidance on next steps for deployment.
 
 ## Key capabilities
 
@@ -75,7 +76,28 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 - Kubernetes operational access and cluster-level permissions for installing the Azure Arc extension and managing custom resources.
 - Network and security posture for ingress, certificate management, and API key handling.
 
-For implementation details, see the get-started guide in Related content.
+## Supported regions
+
+Foundry Local is available as an Azure Arc extension in the following regions:
+
+- Australia East
+- Canada Central
+- Central India
+- Central US
+- Central US EUAP
+- East US
+- East US 2
+- East US 2 EUAP
+- Japan East
+- Korea Central
+- North Europe
+- South Central US
+- Southeast Asia
+- UK South
+- West Europe
+- West US
+- West US 2
+- West US 3
 
 ## Supported workloads
 
@@ -97,7 +119,6 @@ Use Foundry Local on Azure Local when you need to:
 
 ## Related content
 
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Known issues for Foundry Local on Azure Local](known-issues.md)
 - [Azure Arc-enabled Kubernetes overview](/azure/azure-arc/kubernetes/overview)

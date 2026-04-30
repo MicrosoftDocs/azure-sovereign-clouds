@@ -225,6 +225,5 @@ catalog:
 ## Related content
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
-- [Deploy Foundry Local by using Helm](deploy-foundry-local-on-azure-local.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
