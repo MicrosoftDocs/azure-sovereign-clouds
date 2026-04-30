@@ -29,20 +29,20 @@ items:
       href: concept-authentication-authorization.md
     - name: Automatic GPU inference tuning
       href: concept-gpu-inference-planner.md
-  - name: Deploy
+  - name: Deploy platform
     items:
-    - name: Configure TLS and authentication
+    - name: Configure TLS
       href: how-to-configure-tls-authentication.md
+    - name: Configure Entra ID authentication
+      href: how-to-configure-authentication.md
     - name: Deploy as Azure Arc extension
       href: deploy-foundry-local-arc-extension.md
-    - name: Deploy and run your first model
+  - name: Run models
+    items:
+    - name: Run your first model
       href: deploy-run-first-model.md
     - name: Deploy a bring-your-own model
       href: how-to-deploy-custom-model.md
-  - name: Secure
-    items:
-    - name: Configure Entra ID authentication
-      href: how-to-configure-authentication.md
   - name: Run inference
     items:
     - name: Run inference

@@ -8,7 +8,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/21/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want a reference of data-plane inference endpoint paths, payload formats, and authentication headers so that I can correctly construct and validate requests to deployed models in Foundry Local on Azure Local.
 ---
@@ -47,8 +47,6 @@ All endpoints require authentication. The platform supports two methods: API key
 | Entra ID JWT (enterprise) | `Authorization: Bearer <jwt-token>` |
 
 The platform supports the `Authorization: Bearer` and `api-key` header formats. The application-layer authentication middleware validates the key against the deployment's primary and secondary keys and rejects invalid keys with 401 Unauthorized.
-
-For information about retrieving and rotating API keys, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
 
 To use Microsoft Entra ID authentication, acquire a JWT and send it in the `Authorization: Bearer` header.
 
@@ -191,7 +189,7 @@ Invoke-RestMethod -Uri https://<URL>/v1/predict -Method Post `
 ## Related content
 
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
-- [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
+- [Configure TLS for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
 

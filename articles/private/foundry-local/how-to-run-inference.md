@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/20/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a developer, I want to send inference requests to models deployed on Foundry Local on Azure Local so that I can integrate AI capabilities into my applications.
 ---
@@ -424,7 +424,7 @@ The following example shows a successful chat completions response from a bring-
 ## Related content
 
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
-- [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
+- [Configure TLS for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [OpenAI Chat Completions API reference](https://developers.openai.com/api/reference/chat-completions/overview)

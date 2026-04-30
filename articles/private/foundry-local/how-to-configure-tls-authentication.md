@@ -1,6 +1,6 @@
 ---
-title: "Configure TLS and authentication for Foundry Local on Azure Local"
-description: "Configure TLS encryption and API key authentication to secure model inference endpoints on Foundry Local on Azure Local."
+title: "Configure TLS for Foundry Local on Azure Local"
+description: "Configure TLS encryption to secure communication between model inference endpoints on Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -8,14 +8,14 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 03/25/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to configure TLS encryption and API key authentication for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
+customer intent: As a platform engineer, I want to configure TLS encryption for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
 ---
 
-# Configure TLS and authentication for Foundry Local
+# Configure TLS for Foundry Local
 
-Foundry Local on Azure Local encrypts all internal service communication by using TLS. Each model service uses self-signed certificates that the cluster manages. This article explains how the TLS setup works and how to configure secure connections inside the cluster, across namespaces, and through external ingress. It also covers API key authentication, including how to retrieve, use, and rotate keys.
+Foundry Local on Azure Local encrypts all internal service communication by using TLS. Each model service uses self-signed certificates that the cluster manages. This article explains how the TLS setup works and how to configure secure connections inside the cluster, across namespaces, and through external ingress.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
@@ -168,71 +168,10 @@ spec:
       secretName: my-custom-tls
 ```
 
-## Authentication
 
-Foundry Local on Azure Local secures all inference endpoints with API key authentication enabled by default. When you deploy a model, the inference operator automatically generates a primary and secondary API key pair, stores them in a Kubernetes secret named `<deployment-name>-api-keys`, and requires a valid key on every request. A request without a valid key is rejected with `401 Unauthorized`.
-
-The dual-key design means both keys are valid simultaneously, so you can rotate one key while clients continue using the other - with no interruption in service.
-
-### Retrieve API keys
-
-To get the primary API key for a deployment named `my-deployment`:
-
-```bash
-kubectl get secret my-deployment-api-keys -n my-deployment-ns \
-  -o jsonpath='{.data.primary-key}' | base64 --decode
-```
-
-To get the secondary key, use `secondary-key` in the JSON path. Keep these values safe - they're the credentials required to call the model's REST API.
-
-The ModelDeployment owns the secret, so it's deleted automatically if you remove the deployment.
-
-### Use API keys in requests
-
-Include the API key in your HTTP request by using any of these header formats:
-
-- **Authorization header** (Bearer token):
-  ```
-  Authorization: Bearer $API_KEY
-  ```
-- **X-API-Key header**:
-  ```
-  X-API-KEY: $API_KEY
-  ```
-- **api-key header** (OpenAI-compatible):
-  ```
-  api-key: $API_KEY
-  ```
-
-All inference endpoints - for both generative and predictive models - require an API key. This requirement applies to `/v1/chat/completions` (generative) and `/v1/predict` (predictive) endpoints. If the key matches either the primary or secondary key for the target deployment, the request succeeds. Otherwise, the NGINX auth proxy rejects the request before it reaches the model.
-
-### Rotate API keys
-
-To rotate a key without downtime, use a two-step swap:
-
-1. Choose which key to rotate (primary or secondary).
-1. Update the Kubernetes secret with a new value for that key:
-
-   ```bash
-   kubectl patch secret my-deployment-api-keys -n my-deployment-ns --type='json' \
-     -p='[
-       {"op": "replace", "path": "/data/primary-key", "value": "$NEW_PRIMARY_KEY"},
-       {"op": "replace", "path": "/data/primary-rotated-at", "value": "$CURRENT_TIMESTAMP"}
-     ]'
-   ```
-
-1. The deployment now has one old key (secondary) and one new key (primary). Clients can continue using the unchanged secondary key during this transition.
-1. Update your clients to use the new primary key.
-1. Rotate the secondary key by using the same command.
-
-After this two-step swap, you have entirely new primary and secondary keys with no interruption in service.
-
-> [!NOTE]
-> In the preview, manage key rotation manually as described in this article. When you update the API keys secret, the NGINX sidecar picks up the change within a few seconds and you can use the new key immediately. A dedicated rotation command might be available in a future release.
 
 ## Related content
 
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
-- [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

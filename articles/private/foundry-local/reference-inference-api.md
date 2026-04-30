@@ -8,7 +8,7 @@ appliesto:
 ms.topic: reference
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/21/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want a reference of Foundry inference API surfaces, operations, and response patterns so that I can correctly discover, call, and troubleshoot APIs in Foundry Local on Azure Local.
 ---
@@ -431,8 +431,6 @@ The application layer enforces authentication, and the nginx sidecar provides TL
 
 For detailed architecture, validation flow, and authorization behavior, see [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md).
 
-For setup and operational steps, see [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md).
-
 ## Common patterns
 
 Use these patterns for consistent pagination, error handling, and API discovery.
@@ -540,5 +538,5 @@ Use these endpoints to inspect API schemas and test endpoints interactively.
 
 - [Inference API endpoints and payload reference for Foundry Local on Azure Local](reference-inference-api-endpoints-payload.md)
 - [Authentication and authorization in Foundry Local enabled by Azure Arc](concept-authentication-authorization.md)
-- [Configure TLS and authentication for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
+- [Configure TLS for Foundry Local on Azure Local](how-to-configure-tls-authentication.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

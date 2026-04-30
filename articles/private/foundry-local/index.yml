@@ -48,11 +48,11 @@ landingContent:
     linkLists:
       - linkListType: deploy
         links:
-          - text: Configure TLS and authentication
+          - text: Configure TLS 
             url: how-to-configure-tls-authentication.md
           - text: Deploy Foundry Local as an Azure Arc extension
             url: deploy-foundry-local-arc-extension.md
-          - text: Deploy and run your first model
+          - text: Run your first model
             url: deploy-run-first-model.md
           - text: Deploy a bring-your-own model
             url: how-to-deploy-custom-model.md

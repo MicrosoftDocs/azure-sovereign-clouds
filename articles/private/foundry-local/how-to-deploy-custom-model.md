@@ -8,12 +8,12 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/21/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to package and deploy a bring-your-own model on Foundry Local on Azure Local so that I can run a custom model from my own registry.
 ---
 
-# Deploy a bring-your-own model on Foundry Local
+# Package and deploy a bring-your-own model on Foundry Local
 
 This article shows you how to package a bring-your-own (BYO) model, push it to an OCI-compatible registry, and deploy it on Foundry Local on Azure Local.
 

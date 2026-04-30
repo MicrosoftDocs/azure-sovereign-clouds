@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to deploy Foundry Local as an Azure Arc extension so that I can run AI inference workloads on my Azure Arc–enabled Kubernetes cluster.
 ---
@@ -25,6 +25,7 @@ Before you begin, make sure you have:
 
 - Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
+- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](what-is-foundry-local-on-azure-local.md#supported-regions).
 - An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.
@@ -192,8 +193,12 @@ kubectl get models
 kubectl describe model <name>
 ```
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Run your first model](deploy-run-first-model.md)
+
 ## Related content
 
-- [Deploy and run your first model on Foundry Local on Azure Local](deploy-run-first-model.md)
-- [Configure authentication for Foundry Local enabled by Arc](how-to-configure-authentication.md)
+- [Package and deploy a bring-your-own model on Foundry Local](how-to-deploy-custom-model.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

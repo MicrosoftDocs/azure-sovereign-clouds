@@ -31,11 +31,6 @@ This article describes known limitations and workarounds for Foundry Local on Az
 kubectl delete secret <deployment-name>-api-keys -n foundry-local-operator
 ```
 
-> [!IMPORTANT]
-> Deleting the secret replaces both the primary and secondary keys at once. All clients using either key lose access until you update them with the new keys. For a zero-downtime rotation approach, see [Rotate API keys](how-to-configure-tls-authentication.md#rotate-api-keys).
-
----
-
 ### Secrets and certificates aren't synced to other namespaces
 
 **Problem:** API key secrets and TLS certificates aren't automatically distributed to namespaces outside of `foundry-local-operator`.

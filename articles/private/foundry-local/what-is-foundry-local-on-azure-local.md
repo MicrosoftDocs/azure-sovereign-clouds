@@ -75,7 +75,28 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 - Kubernetes operational access and cluster-level permissions for installing the Azure Arc extension and managing custom resources.
 - Network and security posture for ingress, certificate management, and API key handling.
 
-For implementation details, see the get-started guide in Related content.
+## Supported regions
+
+Foundry Local is available as an Azure Arc extension in the following regions:
+
+- australiaeast
+- canadacentral
+- centralindia
+- centralus
+- centraluseuap
+- eastus
+- eastus2
+- eastus2euap
+- japaneast
+- koreacentral
+- northeurope
+- southcentralus
+- southeastasia
+- uksouth
+- westeurope
+- westus
+- westus2
+- westus3
 
 ## Supported workloads
 
