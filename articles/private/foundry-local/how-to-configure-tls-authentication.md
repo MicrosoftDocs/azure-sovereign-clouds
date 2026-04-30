@@ -102,7 +102,7 @@ This creation adds a `foundry-local-ca-bundle` ConfigMap in every namespace cont
 
 To call a Foundry service from another namespace, use its internal DNS name, for example `https://inference-service.foundry-local.svc.cluster.local`. Configure your HTTP client to trust the CA by appending `ca-bundle.crt` to your system trust store or setting it explicitly on the client.
 
-When your application makes an HTTPS request, the Foundry service's NGINX sidecar presents a certificate signed by the internal CA. Because your client trusts that CA through the bundle, the TLS handshake succeeds. API key authentication for inference requests is covered in the [Authentication](#authentication) section.
+When your application makes an HTTPS request, the Foundry service's NGINX sidecar presents a certificate signed by the internal CA. Because your client trusts that CA through the bundle, the TLS handshake succeeds. API key authentication for inference requests is covered in [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 
 ## Configure external access through ingress
 

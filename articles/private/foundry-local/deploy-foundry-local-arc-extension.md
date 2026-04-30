@@ -163,7 +163,7 @@ The following screenshots show an example of the expected output:
 
 :::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-pods.png" alt-text="Screenshot of terminal output from kubectl get pods command showing five pods in the foundry-local-operator namespace with Running or Completed status.":::
 
-:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-crds.png" alt-text="Screenshot of terminal output from kubectl get crd command showing four Foundry Local custom resource definitions registered in the cluster.":::
+:::image type="content" source="media/deploy-foundry-local-arc-extension/verify-operator-custom-resource-definitions.png" alt-text="Screenshot of terminal output from kubectl get crd command showing four Foundry Local custom resource definitions registered in the cluster.":::
 
 ## Troubleshoot your deployment
 

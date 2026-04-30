@@ -37,8 +37,6 @@ The Foundry Local catalog includes generative models from different providers. A
 
 | Model | Publisher | Max context length | Recommended minimal GPU generation | Required GPU memory |
 |---|---|---|---|---|
-| [Phi-3-mini-128k-instruct](reference-models.md#phi-3-mini-128k-instruct) | Microsoft | 29,472 | Ampere (CC 8.0)+ | 8.428 GB |
-| [Phi-3-mini-4k-instruct](reference-models.md#phi-3-mini-4k-instruct) | Microsoft | 4,096 | Ampere (CC 8.0)+ | 8.443 GB |
 | [Phi-3.5-mini-instruct](reference-models.md#phi-35-mini-instruct) | Microsoft | 29,472 | Ampere (CC 8.0)+ | 8.428 GB |
 | [Phi-4-mini-instruct](reference-models.md#phi-4-mini-instruct) | Microsoft | 93,520 | Ampere (CC 8.0)+ | 7.806 GB |
 | [Phi-4-mini-reasoning](reference-models.md#phi-4-mini-reasoning) | Microsoft | 93,520 | Ampere (CC 8.0)+ | 7.806 GB |
