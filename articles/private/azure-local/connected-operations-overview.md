@@ -35,7 +35,7 @@ In a connected deployment, you can:
 
 - Initiate and coordinate cluster lifecycle actions from the Azure portal, with Azure services validating and orchestrating changes.
 
-- Apply identity, access control, and governance using Azure services and the Azure portal.
+- Apply identity, access control, and governance by using Azure services and the Azure portal.
 
 - Monitor and manage the environment using Azure services when connectivity is available.
 
