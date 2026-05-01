@@ -128,7 +128,7 @@ The following table provides an overview of management and security services ava
 | Backup | Protect on-premises workloads by backing up and restoring Azure Local virtual machines using centrally managed, policy-based recovery. |
 | Defender | Improve security across your cloud and on‑premises environments with built‑in protection and threat detection. |
 | Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
-| Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
+| Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Logical Network | Define and manage logical network configurations to control traffic flow, isolation, and connectivity across the environment. |
 | Managed Identities | Provide applications and services with managed identities so they can securely access resources without storing credentials in code. |
 | Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
@@ -174,7 +174,7 @@ The following table provides an overview of data and AI services available for A
 | Foundry Local on Azure Local | Build, deploy, and run AI models and workloads locally using a consistent Azure AI development experience. |
 | Machine Learning | Train, deploy, and manage machine learning models to support predictive and analytical workloads on Azure Local. |
 | SQL | Store, query, and manage relational data for applications and services running on Azure Local. |
-| Vision Container Read OCR | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF and TIFF file formats. |
+| Vision Container Read OCR | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 
 ## Related content
 
