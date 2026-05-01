@@ -2,7 +2,7 @@
 title: "Data controls"
 description: "Understand the concept of data controls in the context of cloud services and data management."
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
+ms.subservice: sovereign-public-clouds
 ms.topic: overview
 ms.date: 10/06/2025
 ms.author: robess
@@ -59,7 +59,7 @@ Data residency primarily focuses on where your data physically resides. Practica
 |------------------------------|---------------------------|
 | Latency and performance  | Data residency decisions can impact the speed and performance of data access. Placing data closer to end users reduces latency and improves the overall user experience.                                |
 | Compliance requirements  | Choose data residency options that align with local and industry-specific compliance requirements. This choice ensures that data is stored in a manner consistent with applicable regulations. |
-| Legal jurisdiction       | Data residency revolves around the choice of data center or cloud region where data is stored. While data is typically subject to the laws of its physical location, some countries/regions assert legal authority over data held by domestic cloud providers, regardless of physical location. |
+| Legal jurisdiction       | Data residency revolves around the choice of data center or cloud region where data is stored. While data is typically subject to the laws of its physical location, some countries or regions assert legal authority over data held by domestic cloud providers, regardless of physical location. |
 | Data availability and redundancy | Data residency considerations influence redundancy and disaster recovery strategies. Organizations and cloud providers might replicate data to multiple regions to ensure high availability and resilience. |
 
 By using Azure, Microsoft 365, and Dynamics 365, you can choose where your data is stored to meet data residency requirements. By using strategically aligned data center regions within the same geography through [Azure region pairs](/azure/reliability/regions-paired), you can enhance geo-redundancy, ensure prioritized recovery, and benefit from staggered platform updates, all while maintaining compliance and improving data resilience.

@@ -3,11 +3,11 @@ title: "National Partner Clouds"
 subtitle: Sovereignty through local ownership
 description: Understand National Partner Clouds at a high level and learn how they meet sovereignty requirements.
 author: kevinrabun
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 10/30/2025
 ms.author: kerabun
 ms.reviewer: syalandur
+ms.subservice: national-partner-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority

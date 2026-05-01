@@ -2,7 +2,7 @@
 title: "Key management controls"
 description: Learn about key management controls in sovereign cloud.
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
+ms.subservice: sovereign-public-clouds
 ms.topic: overview
 ms.date: 11/13/2025
 ms.author: robess

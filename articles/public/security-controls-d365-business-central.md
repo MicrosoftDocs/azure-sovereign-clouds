@@ -2,11 +2,11 @@
 title: Security controls in Dynamics 365 Business Central
 description: Learn more about the security controls in Dynamics 365 Business Central
 author: jobulsin
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 07/30/2025
 ms.author: jobulsin
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
     - microsoftcloud-seo-priority
