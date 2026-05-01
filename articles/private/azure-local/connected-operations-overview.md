@@ -126,7 +126,7 @@ The following table provides an overview of management and security services ava
 | Azure Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
 | Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources with integrated alerts and insights. |
 | Backup | Protect on-premises workloads by backing up and restoring Azure Local virtual machines using centrally managed, policy-based recovery. |
-| Defender | Improve security across your cloud and on‑premises environments with built‑in protection and threat detection. |
+| Defender | Improve security across your cloud and on-premises environments with built-in protection and threat detection. |
 | Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
 | Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Logical Network | Define and manage logical network configurations to control traffic flow, isolation, and connectivity across the environment. |
