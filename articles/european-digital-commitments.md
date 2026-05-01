@@ -2,7 +2,7 @@
 title: "What are the European digital commitments?"
 description: "Understand the European digital commitments and their significance in cloud sovereignty."
 author: ronmiab
-ms.service: microsoft-cloud-sovereignty
+ms.subservice: sovereign-public-clouds
 ms.topic: overview
 ms.date: 10/13/2025
 ms.author: robess
@@ -72,5 +72,5 @@ The commitments reinforce existing privacy options and documentation, such as th
 * [Operational controls](operational-controls.md)
 * [Technological controls](technological-independence.md)
 * [Sovereign Public Cloud](public/overview-sovereign-public-cloud.md)
-* [Sovereign Private Cloud](private/overview-sovereign-private-cloud.md)
+* [Sovereign Private Cloud](./private/overview/sovereign-private-cloud.md)
 * [National Partner Clouds](partner/overview-national-partner-clouds.md)

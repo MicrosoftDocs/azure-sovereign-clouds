@@ -2,11 +2,11 @@
 title: Access controls for Dynamics 365 Business Central
 description: Access controls for Dynamics 365 Business Central 
 author: jobulsin
-ms.service: microsoft-cloud-sovereignty
 ms.topic: overview
 ms.date: 07/29/2025
 ms.author: jobulsin
 ms.reviewer: lsuresh
+ms.subservice: sovereign-public-clouds
 ms.collection: 
     - microsoftcloud-sovereignty
 ---
