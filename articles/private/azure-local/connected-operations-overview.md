@@ -15,15 +15,15 @@ This article provides an overview of connected operations for Azure Local.
 
 Connected operations enable you to run Azure Local with periodic connectivity to Azure while keeping workloads and data on-premises. This deployment model is designed for organizations that want a broad set of Azure Local capabilities on their private cloud, while using Azure-based management and operational services.
 
-By using connected operations, systems connect to Azure periodically to support services such as monitoring, governance, and lifecycle management, while maintaining local control over infrastructure and data.
+By using connected operations, systems rely on periodic connectivity to Azure to deliver services such as monitoring, governance, and lifecycle management, while maintaining local control over infrastructure and data.
 
-Industries such as retail, healthcare, manufacturing, and financial services commonly use connected operations, where centralized visibility and compliance are important alongside on-premises data residency.
+Industries such as retail, healthcare, manufacturing, and financial services commonly use connected operations, where centralized visibility and compliance are important, alongside on-premises data residency.
 
 ## What "connected" means in Azure Local
 
 Connected operations provide a balance between on-premises control and cloud-based operational efficiency, while allowing for intermittent loss of connectivity.
 
-In a connected Azure Local deployment, the system maintains periodic connectivity to Azure for control plane activities. The system supports intermittent disconnections up to 30 days without affecting running workloads. Azure Local is designed to tolerate short periods of disconnection, such as temporary ISP outages, while workloads continue to run on-premises.
+In a connected Azure Local deployment, the system maintains periodic connectivity to Azure for control plane activities. The system supports intermittent disconnections up to 30 days without impacting running workloads. Azure Local is designed to tolerate short periods of disconnection, such as temporary ISP outages, while workloads continue to run on-premises.
 
 In a connected deployment, you can:
 
@@ -49,7 +49,7 @@ Connected operations support Azure Local deployment options that scale from sing
 
 ### Hyperconverged deployments
 
-Hyperconverged deployments combine compute, storage, and networking on the same nodes to provide a simple, scalable architecture. They’re a good fit for general‑purpose workloads that prioritize simplicity and ease of scaling.
+Hyperconverged deployments combine compute, storage, and networking on the same physical hardware to provide a simple, scalable architecture. They’re a good fit for general‑purpose workloads that operationalize simplicity and ease of scaling.
 
 Key characteristics:
 
@@ -57,7 +57,7 @@ Key characteristics:
 
 - Use local storage on each node, with optional support for storage area network (SAN) integration in supported configurations.
 
-- Typically use high-speed Ethernet networking, with options for converged or dedicated networks for storage, management, and virtual machine (VM) traffic.
+- Support high-speed Ethernet networking, with options to configure converged or dedicated networks for storage, management, and virtual machine (VM) traffic.
 
 - Support adding GPU-enabled nodes for AI, graphics, and compute-intensive workloads.
 
@@ -87,7 +87,7 @@ For more information, see [What are disaggregated deployments of Azure Local?](/
 
 ### Multi-rack deployments
 
-Multi-rack deployments scale Azure Local across multiple racks to support environments that require higher capacity, performance, and tenant isolation.
+Multi-rack deployments scale Azure Local across multiple racks to support larger environments that require higher capacity, performance, and tenant isolation.
 
 Key characteristics:
 
@@ -123,9 +123,9 @@ The following table provides an overview of management and security services ava
 
 | Service | Description |
 |--|--|
+| Azure Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
 | Azure Monitor | Collect and analyze metrics to monitor the health, performance and availability of on-premises resources with integrated alerts and insights. |
 | Backup | Protect on-premises workloads by backing up and restoring Azure Local virtual machines using centrally managed, policy-based recovery. |
-| Copilot | Use AI assistance to understand, operate, and troubleshoot Azure Local environments through natural language insights and guidance. |
 | Defender | Improve security across your cloud and on‑premises environments with built‑in protection and threat detection. |
 | Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
 | Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
@@ -146,11 +146,11 @@ The following table provides an overview of workloads and application services s
 | Service | Description |
 |--|--|
 | Container Apps | Run containerized applications with managed scaling and lifecycle, without needing to manage underlying Kubernetes infrastructure. |
-| External SAN | Use external storage area networks (SANs) to provide shared storage and independently scale compute and storage resources. |
+| External SAN | Use external SANs to provide shared storage and independently scale compute and storage resources. |
 | IoT Operations | Collect, process, and manage data from connected devices locally, supporting industrial, edge, and sovereign IoT scenarios. |
 | Kubernetes | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
-| Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
 | Migrate | Discover, assess, and prepare your servers, applications, and data for Azure with built-in guidance and insights. |
+| Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
 | Virtual Desktop | Provide users with secure access to virtual desktops and applications hosted on local infrastructure. |
 | Virtual Machines | Run Windows and Linux VMs for enterprise applications, shared services, and infrastructure workloads. |
 
