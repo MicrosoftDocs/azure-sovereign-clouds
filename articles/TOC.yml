@@ -100,7 +100,7 @@
           items:
             - name: Azure Local overview
               href: private/azure-local/azure-local-overview.md
-            - name: Connected operations
+            - name: Connected operations overview
               href: private/azure-local/connected-operations-overview.md
         - name: Microsoft 365 Local
           items:
