@@ -3,7 +3,7 @@ title: Connected Operations Overview
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 04/30/2026
+ms.date: 05/05/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -123,7 +123,7 @@ The following table highlights some of the management and security services avai
 
 | Service | Description |
 |--|--|
-| Azure Monitor | Collect and analyze metrics to monitor the health, performance and availability of on-premises resources with integrated alerts and insights. |
+| Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources with integrated alerts and insights. |
 | Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
 | Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Update Manager | Coordinate and manage updates for infrastructure and workloads to help keep systems secure, compliant, and up to date. |
