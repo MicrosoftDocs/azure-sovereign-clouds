@@ -28,19 +28,12 @@ In a connected Azure Local deployment, the system maintains periodic connectivit
 In a connected deployment, you can:
 
 - Run hardware on-premises while keeping workloads and data local.
-
 - Manage Azure Local through the Azure portal as a single control plane for deployment and operations.
-
 - Deploy clusters, add nodes, and scale resources by using Azure portal workflows.
-
 - Initiate and coordinate cluster lifecycle actions from the Azure portal, with Azure services validating and orchestrating changes.
-
 - Apply identity, access control, and governance by using Azure services and the Azure portal.
-
 - Monitor and manage your environment by using Azure services when connectivity is available.
-
 - Drive capacity and scaling through cloud-based, policy-governed controls to ensure consistent configuration across sites.
-
 - Update the platform through Azure using Microsoft-validated platform software and supported Original Equipment Manufacturer (OEM) components.
 
 ## Deployment options
@@ -54,11 +47,8 @@ Hyperconverged deployments combine compute, storage, and networking on the same 
 Key characteristics:
 
 - Support single-node and multi-node clusters, scaling up to 16 nodes on a single rack.
-
 - Use local storage on each node, with optional support for storage area network (SAN) integration in supported configurations.
-
 - Support high-speed Ethernet networking, with options to configure converged or dedicated networks for storage, management, and virtual machine (VM) traffic.
-
 - Support adding GPU-enabled nodes for AI, graphics, and compute-intensive workloads.
 
 For more information, see [What are hyperconverged deployments of Azure Local?](/azure/azure-local/overview/hyperconverged-overview)
@@ -72,15 +62,10 @@ Disaggregated deployments use a unified Azure control plane to enable consistent
 Key characteristics:
 
 - Scale compute and storage to match workload needs. Grow each independently based on application and data demand.
-
 - Use local storage on compute nodes with integration to SAN systems. Support both simple and high-capacity deployments.
-
 - Optimize performance by isolating storage on dedicated infrastructure. Improve consistency for performance-sensitive workloads.
-
 - Support data-intensive and modern workloads, including AI and analytics, with flexible, high-capacity storage architectures.
-
 - Integrate validated partner hardware and existing storage environments, extending current investments.
-
 - Provide unified management through the Azure control plane, using consistent tools, governance, and automation.
 
 For more information, see [What are disaggregated deployments of Azure Local?](/azure/azure-local/overview/disaggregated-overview)
@@ -92,21 +77,13 @@ Multi-rack deployments scale Azure Local across multiple racks to support larger
 Key characteristics:
 
 - Support larger-scale clusters that span multiple racks within a datacenter, scaling up to 128 nodes.
-
 - Increase scale and resiliency through rack-aware designs and fault domain isolation.
-
 - Use SAN-based storage, where an external SAN provides storage and enables independent scaling of compute and storage.
-
 - Separate management, storage, and workload traffic by using dedicated or logically isolated networks.
-
 - Support GPU-enabled nodes for AI, graphics, and other accelerated workloads.
-
 - Enable scale-out, rack-aware networking designs, including:
-
   - Dedicated storage networks for SAN or disaggregated storage configurations.
-
   - High-speed east-west fabrics optimized for traffic between racks.
-
   - Dedicated or logically isolated networks for management, storage, and workload traffic.
   
 For more information, see [What are multi-rack deployments of Azure Local?](/azure/azure-local/multi-rack/multi-rack-overview)
