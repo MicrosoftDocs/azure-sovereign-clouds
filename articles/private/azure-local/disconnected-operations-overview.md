@@ -19,7 +19,7 @@ Azure Local provides a consistent platform experience for compute, storage, netw
 
 ## What does "disconnected" mean?
 
-Disconnected operations are commonly used where data sovereignty or regulatory constraints prevent cloud connectivity.
+Use disconnected operations when data sovereignty or regulatory constraints prevent cloud connectivity.
 
 In a disconnected Azure Local deployment:
 
