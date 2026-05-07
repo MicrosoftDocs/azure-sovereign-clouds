@@ -27,7 +27,7 @@ In a disconnected Azure Local deployment:
 - Identity, monitoring, and access control are managed locally.
 - The control plane operates locally.
 
-Disconnected operations are commonly used in environments where data sovereignty or regulatory requirements restrict cloud connectivity.
+Use disconnected operations in environments where data sovereignty or regulatory requirements restrict cloud connectivity.
 
 ## Supported deployment
 
