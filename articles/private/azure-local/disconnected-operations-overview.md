@@ -58,7 +58,7 @@ To use disconnected operations, you must meet the following requirements:
 
 Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table:
 
-| Category | Workload and Services | Description |
+| Category | Workloads and Services | Description |
 |--|--|--|
 | Core Infrastructure | Virtual Machines | Windows and Linux workloads |
 | Core Infrastructure | AKS on Azure Local | Kubernetes for containerized apps |
