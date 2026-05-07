@@ -19,15 +19,15 @@ Azure Local provides a consistent platform experience for compute, storage, netw
 
 ## What does "disconnected" mean?
 
-Use disconnected operations when data sovereignty or regulatory constraints prevent cloud connectivity.
-
 In a disconnected Azure Local deployment:
 
-- Connectivity to Azure or the internet isn't required for ongoing operations.
+- No ongoing connectivity to Azure or the internet is required.
 - Core infrastructure and workloads run fully on-premises.
-- You perform updates and servicing offline or through staged workflows.
-- You manage identity, monitoring, and access control locally.
+- Updates and servicing are performed offline or through staged workflows.
+- Identity, monitoring, and access control are managed locally.
 - The control plane operates locally.
+
+Disconnected operations are commonly used in environments where data sovereignty or regulatory requirements restrict cloud connectivity.
 
 ## Supported deployment
 
@@ -77,4 +77,4 @@ Disconnected environments support a subset of Azure Local workloads and services
 ## Related content
 
 - [Disconnected operations for Azure Local](/azure/azure-local/manage/disconnected-operations-overview)
-- Blog post on [Azure Local with Disconnected Operations](https://techcommunity.microsoft.com/blog/azurearcblog/cloud-infrastructure-for-disconnected-environments-enabled-by-azure-arc/4413561).
+- Read the [Azure Local with Disconnected Operations](https://techcommunity.microsoft.com/blog/azurearcblog/cloud-infrastructure-for-disconnected-environments-enabled-by-azure-arc/4413561) blog post.
