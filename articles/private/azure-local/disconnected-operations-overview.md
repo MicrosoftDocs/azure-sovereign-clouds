@@ -58,7 +58,7 @@ To use disconnected operations, you must meet the following requirements:
 
 ## Workloads and services
 
-A subset of Azure Local workloads and services is supported in disconnected environments.
+Disconnected environments support a subset of Azure Local workloads and services.
 
 ### Core infrastructure workloads
 
