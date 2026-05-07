@@ -35,17 +35,15 @@ Disconnected operations support hyperconverged Azure Local deployments that run 
 
 ### Hyperconverged deployments
 
-Key characteristics:
+Hyperconverged deployments in disconnected operations have the following characteristics:
 
-- **Node scale:** Supports single-node to multi-node clusters.
-- **Compute and storage:** Run on the same nodes using local disks.
-- **Storage options:** Use direct-attached local storage.
-- **Networking:** Designed for single-site topologies using self-contained, high-speed Ethernet without scale-out fabrics.
-- **Accelerators:** Supports GPU-enabled nodes for AI and compute-intensive workloads.
+- **Flexible node scale:** Supports single-node to multi-node clusters.
+- **Integrated compute and storage:** Compute and storage run on the same nodes by using local disks.
+- **Direct-attached storage options:** Uses locally attached storage.
+- **Single-site networking:** Designed for single-site topologies by using self-contained, high-speed Ethernet without scale-out fabrics.
+- **GPU support:** Supports GPU-enabled nodes for AI and compute-intensive workloads.
 
 ## Requirements for disconnected operations
-
-Use disconnected operations if your organization must operate without cloud connectivity.
 
 To use disconnected operations, you must meet the following requirements:
 
@@ -58,32 +56,23 @@ To use disconnected operations, you must meet the following requirements:
 
 ## Workloads and services
 
-Disconnected environments support a subset of Azure Local workloads and services.
+Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table:
 
-### Core infrastructure workloads
-
-- **Virtual Machines:** Windows and Linux workloads
-- **AKS on Azure Local:** Kubernetes for containerized apps
-
-### Management and security
-
-- **Key Vault:** Secrets and key management
-- **Policy:** Governance enforcement
-- **Portal / CLI:** Resource management tools
-- **Resource Manager:** Declarative deployment and RBAC
-
-### Workloads and applications
-
-- **Container Registry:** Local container image storage
-- **Kubernetes:** Container orchestration
-- **Microsoft 365 Local:** Exchange, SharePoint, Skype for Business
-
-### Data and AI
-
-- **AI Document Intelligence:** Extract structured data from documents
-- **AI Language:** Text analysis and NLP scenarios
-- **AI Translator:** Translation across languages
-- **Vision Container:** OCR for images and documents
+| Category | Workload and Services | Description |
+|--|--|--|
+| Core Infrastructure | Virtual Machines | Windows and Linux workloads |
+| Core Infrastructure | AKS on Azure Local | Kubernetes for containerized apps |
+| Data and AI | AI Document Intelligence | Extract structured data from documents |
+| Data and AI | AI Language | Text analysis and NLP scenarios |
+| Data and AI | AI Translator | Translation across languages |
+| Data and AI | Vision Container | OCR for images and documents |
+| Management and Security | Key Vault | Secrets and key management |
+| Management and Security | Policy | Governance enforcement |
+| Management and Security | Portal / CLI | Resource management tools |
+| Management and Security | Resource Manager | Declarative deployment and RBAC |
+| Workloads and Applications | Container Registry | Local container image storage |
+| Workloads and Applications | Kubernetes | Container orchestration |
+| Workloads and Applications | Microsoft 365 Local | Exchange, SharePoint, Skype for Business |
 
 ## Related content
 
