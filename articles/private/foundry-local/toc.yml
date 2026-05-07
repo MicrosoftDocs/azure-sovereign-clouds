@@ -1,5 +1,5 @@
 items:
-- name: Foundry Local for Azure Sovereign Private Clouds
+- name: Foundry Local for Microsoft Sovereign Private Clouds
   href: index.yml
   items:
   - name: Overview
