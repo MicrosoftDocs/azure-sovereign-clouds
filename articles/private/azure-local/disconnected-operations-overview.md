@@ -45,7 +45,7 @@ Key characteristics:
 
 ## Requirements for disconnected operations
 
-Disconnected operations are intended for organizations that must operate without cloud connectivity.
+Use disconnected operations if your organization must operate without cloud connectivity.
 
 To use disconnected operations, you must meet the following requirements:
 
