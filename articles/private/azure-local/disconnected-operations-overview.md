@@ -31,7 +31,7 @@ In a disconnected Azure Local deployment:
 
 ## Supported deployment
 
-Disconnected operations support hyperconverged Azure Local deployments that run entirely on-premises. Each deployment is associated with a single site, for example, a datacenter. You can share a control plane across multiple sites, however, you must provide private network connectivity between those sites.
+Disconnected operations support hyperconverged Azure Local deployments that run entirely on-premises. Each deployment is associated with a single site, such as a datacenter. You can share a control plane across multiple sites, but you must provide private network connectivity between those sites.
 
 ### Hyperconverged deployments
 
