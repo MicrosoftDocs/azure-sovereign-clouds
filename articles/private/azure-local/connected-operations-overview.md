@@ -3,7 +3,7 @@ title: Connected Operations Overview
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/05/2026
+ms.date: 05/06/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -76,7 +76,7 @@ Multi-rack deployments scale Azure Local across multiple racks to support larger
 
 Key characteristics:
 
-- Support larger-scale clusters that span multiple racks within a datacenter, scaling up to 128 nodes.
+- Support larger-scale clusters that span multiple racks within a datacenter, scaling up to 128 nodes each.
 - Increase scale and resiliency through rack-aware designs and fault domain isolation.
 - Use SAN-based storage, where an external SAN provides storage and enables independent scaling of compute and storage.
 - Separate management, storage, and workload traffic by using dedicated or logically isolated networks.
