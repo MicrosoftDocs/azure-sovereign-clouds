@@ -52,7 +52,7 @@ To use disconnected operations, you must meet the following requirements:
 - **Agreement.** Have an eligible Microsoft agreement, such as Microsoft Customer Agreement for Enterprises (MCAE).
 - **Business or regulatory need.** Provide a documented requirement to operate without Azure connectivity.
 - **Operational readiness.** Have the staff, processes, and partner support required to deploy and operate the environment.
-- **Workload and capacity planning.** Define workloads and complete sizing before deployment
+- **Workload and capacity planning.** Define workloads and complete sizing before deployment.
 - **Hardware.** USe supported Azure Local hardware.
 - **Infrastructure.** Deploy a dedicated management cluster to host Azure Local infrastructure components.
 
