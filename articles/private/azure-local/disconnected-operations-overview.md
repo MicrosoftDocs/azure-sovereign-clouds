@@ -23,7 +23,7 @@ Use disconnected operations when data sovereignty or regulatory constraints prev
 
 In a disconnected Azure Local deployment:
 
-- Connectivity to Azure or the internet isn’t required for ongoing operations.
+- Connectivity to Azure or the internet isn't required for ongoing operations.
 - Core infrastructure and workloads run fully on-premises.
 - Updates and servicing are performed offline or via staged workflows.
 - Identity, monitoring, and access control are managed locally.
