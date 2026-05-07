@@ -3,7 +3,7 @@ title: Connected Operations Overview
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/06/2026
+ms.date: 05/07/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -40,7 +40,7 @@ In a connected deployment, you can:
 
 Connected operations support Azure Local deployment options that scale from single-node systems to large, clustered environments, from one node to hundreds of nodes. You can start small and grow as capacity, performance, or availability requirements increase.
 
-**Hyperconverged deployments**
+### Hyperconverged deployments
 
 Hyperconverged deployments combine compute, storage, and networking on the same physical hardware to provide a simple, scalable architecture. They’re a good fit for general‑purpose workloads that operationalize simplicity and ease of scaling.
 
@@ -53,7 +53,7 @@ Key characteristics:
 
 For more information, see [What are hyperconverged deployments of Azure Local?](/azure/azure-local/overview/hyperconverged-overview)
 
-**Disaggregated deployments**
+### Disaggregated deployments
 
 Disaggregated deployments of Azure Local separate compute and storage into dedicated resources. This separation enables flexible scaling and performance optimization across diverse infrastructures. These deployments support configurations ranging from a single node to up to 64 nodes with SAN-based storage.
 
@@ -70,7 +70,7 @@ Key characteristics:
 
 For more information, see [What are disaggregated deployments of Azure Local?](/azure/azure-local/overview/disaggregated-overview)
 
-**Multi-rack deployments**
+### Multi-rack deployments
 
 Multi-rack deployments scale Azure Local across multiple racks to support larger environments that require higher capacity, performance, and tenant isolation.
 
@@ -92,7 +92,7 @@ For more information, see [What are multi-rack deployments of Azure Local?](/azu
 
 Azure Local deployments support a broad set of Azure Local infrastructure workloads and enable scenarios that benefit from centralized management. The following sections identify some supported services available when Azure Local operates in a connected environment, including management capabilities, workloads, and platform services available with Azure connectivity.
 
-**Management and security**
+### Management and security
 
 Azure-based management experiences enable you to monitor, secure, govern, and operate Azure Local environments.
 
@@ -105,7 +105,7 @@ The following table highlights some of the management and security services avai
 | Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Update Manager | Coordinate and manage updates for infrastructure and workloads to help keep systems secure, compliant, and up to date. |
 
-**Workloads and applications**
+### Workloads and applications
 
 Infrastructure and application workloads run on Azure Local, supporting virtual machines, containers, productivity services, and edge scenarios.
 
@@ -118,7 +118,7 @@ The following table provides an overview of some of the workloads and applicatio
 | Virtual Desktop | Provide users with secure access to virtual desktops and applications hosted on local infrastructure. |
 | Virtual Machines | Run Windows and Linux VMs for enterprise applications, shared services, and infrastructure workloads. |
 
-**Data and AI**
+### Data and AI
 
 Data services and AI capabilities enable analytics, search, and AI‑powered applications using local and connected data.
 
