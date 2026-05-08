@@ -37,13 +37,13 @@ Disconnected operations support hyperconverged Azure Local deployments designed 
 
 Combine compute, storage, and networking on the same nodes, providing a compact and efficient platform for disconnected environments.
 
-- **Node scale:** Single node systems through multi node clusters (within supported limits for disconnected operations).
+- **Node scale:** Single node systems through multi-node clusters (within supported limits for disconnected operations).
 - **Compute and storage:** Compute, storage, and networking run on the same physical nodes, using local disks for storage.
 - **Storage options:** Use local, direct attached storage to ensure full operation without external dependencies.
 - **Networking considerations:**
     - Designed for single site networking topologies.
     - Use local, high speed Ethernet for management, storage, and workload traffic.
-    - Networking is typically self contained, without multi rack or scale out fabrics.
+    - Networking is typically self contained, without multi-rack or scale-out fabrics.
 - **Accelerators:**
     - Support for GPU enabled nodes in supported configurations to run AI, graphics, and compute intensive workloads locally.
 
