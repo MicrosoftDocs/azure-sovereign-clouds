@@ -64,7 +64,7 @@ This summary is intended to help you assess fit at a glance. For complete, eligi
 
 Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table. These capabilities are designed to run fully on-premises while maintaining consistency with Azure architecture and tooling.
 
-| Category | Workload and Services | Description |
+| Category | Workloads and Services | Description |
 |--|--|--|
 | Core Infrastructure | Azure Local virtual machines (VMs)  | Run Windows and Linux VMs for line‑of‑business applications, infrastructure services, and legacy workloads. |
 | Core Infrastructure | AKS on Azure Local (where applicable) | Run containerized applications locally using Kubernetes, with configurations tailored for disconnected environments. |
