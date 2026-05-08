@@ -24,7 +24,7 @@ In a disconnected Azure Local deployment:
 - The system doesn't require ongoing connectivity to Azure or the internet.
 - Core infrastructure and workloads continue running entirely on‑premises.
 - You perform updates, servicing, and onboarding by using offline or staged workflows.
-- Identity, monitoring, and access control are handled locally, by using supported on‑premises integrations.
+- You handle identity, monitoring, and access control locally by using supported on‑premises integrations.
 - The control plane runs locally and is operated and governed on-premises.
 
 Use disconnected operations in environments where data sovereignty or regulatory requirements restrict cloud connectivity.
