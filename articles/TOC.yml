@@ -106,6 +106,8 @@
               href: private/m365-local/microsoft-365-local-overview.md
         - name: AI suite
           items:
+            - name: AI workloads on Azure Local
+              href: /azure/azure-local/concepts/ai-workloads-overview?context=/azure/azure-sovereign-clouds/context/context
             - name: Foundry Local preview
               href: private/foundry-local/what-is-foundry-local-on-azure-local.md?context=/azure/azure-sovereign-clouds/context/context
             - name: Edge RAG enabled by Azure Arc preview
