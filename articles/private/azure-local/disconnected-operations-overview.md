@@ -77,7 +77,7 @@ Disconnected environments support a subset of Azure Local workloads and services
 | Management and Security | Portal CLI | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | Management and Security | Resource Manager | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources by using declarative templates, policies, and role-based access control. |
 | Workloads and Applications | Container Registry | Store and manage container images locally for disconnected Kubernetes and application workflows.  |
-| Workloads and Applications | Kubernetes | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
+| Workloads and Applications | Kubernetes | Orchestrate and manage containerized workloads by using Kubernetes, providing consistent deployment and scaling across environments. |
 | Workloads and Applications | Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
 
 ## Related content
