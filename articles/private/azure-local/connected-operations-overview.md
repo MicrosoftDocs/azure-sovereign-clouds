@@ -3,7 +3,7 @@ title: Connected Operations Overview
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/07/2026
+ms.date: 05/08/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -38,7 +38,7 @@ In a connected deployment, you can:
 
 ## Deployment options
 
-Connected operations support Azure Local deployment options that scale from single-node systems to large, clustered environments, from one node to hundreds of nodes. You can start small and grow as capacity, performance, or availability requirements increase.
+Connected operations support Azure Local deployment options that scale from single-node systems to large, clustered environments, from one node to thousands of nodes. You can start small and grow as capacity, performance, or availability requirements increase.
 
 ### Hyperconverged deployments
 
