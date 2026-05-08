@@ -72,7 +72,7 @@ Disconnected environments support a subset of Azure Local workloads and services
 | Data and AI | AI Language | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
 | Data and AI | AI Translator | Translate text and documents across languages to support multilingual applications and global operation. |
 | Data and AI | Vision Container | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
-| Management and Security | Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
+| Management and Security | Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | Management and Security | Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
 | Management and Security | Portal CLI | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | Management and Security | Resource Manager | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources using declarative templates, policies, and role-based access control. |
