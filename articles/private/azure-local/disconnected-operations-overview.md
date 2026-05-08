@@ -74,7 +74,7 @@ Disconnected environments support a subset of Azure Local workloads and services
 | Data and AI | Vision Container | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 | Management and Security | Key Vault | Securely store and manage secrets, keys and certificates used by applications and services. |
 | Management and Security | Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
-| Management and Security | Portal CLI | Manage and operate resources using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
+| Management and Security | Portal CLI | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | Management and Security | Resource Manager | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources using declarative templates, policies, and role-based access control. |
 | Workloads and Applications | Container Registry | Store and manage container images locally for disconnected Kubernetes and application workflows.  |
 | Workloads and Applications | Kubernetes | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
