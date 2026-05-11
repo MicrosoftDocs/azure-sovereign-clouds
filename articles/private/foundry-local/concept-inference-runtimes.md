@@ -101,12 +101,6 @@ For non-generative workloads such as classification, object detection, and regre
 
 For more information, see [Predictive models](concept-inference-operator.md#predictive-models) in [Inference operator and model lifecycle](concept-inference-operator.md).
 
-## Running Foundry Local on multiple nodes
-
-Foundry Local enabled by Azure Arc supports deployment on multinode Kubernetes clusters. This architecture extends AI inference beyond single-node setups and supports production-scale deployments. As an Azure Arc extension, Foundry Local installs on Azure Arc-enabled Kubernetes clusters and uses a Kubernetes-native operator to manage model lifecycle operations across nodes, including model caching, deployment, and serving. You can deploy multiple AI models at the same time, and each model workload is scheduled to a node that meets its CPU, memory, and GPU requirements. The operator uses standard Kubernetes scheduling controls, including resource requests and limits, node selectors, and affinity rules. This approach supports heterogeneous clusters where some nodes are CPU-only and others are GPU-capable.
-
-The platform supports both generative AI and predictive inference under one operational model. For GPU-based models, the system validates GPU resource limits and schedules workloads to GPU-capable nodes. CPU-based models are scheduled to nodes with sufficient CPU and memory capacity. This cluster-aware scheduling model lets organizations scale inference capacity by adding nodes to the cluster.
-
 ## Related content
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
