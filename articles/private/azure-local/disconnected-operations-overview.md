@@ -101,9 +101,9 @@ Data services and AI capabilities that enable analytics, search, and AI-powered 
 | Services | Description |
 |--|--|
 | [Azure Document Intelligence](/azure/ai-services/document-intelligence) | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
-| [Azure Language](/ai-services/language-service/overview) | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
-| [Azure Translator](/ai-services/translator/) | Translate text and documents across languages to support multilingual applications and global operation. |
-| [Azure Vision](/ai-services/computer-vision/) | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
+| [Azure Language](/azure/ai-services/language-service/overview) | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
+| [Azure Translator](/azure/ai-services/translator/) | Translate text and documents across languages to support multilingual applications and global operation. |
+| [Azure Vision](/azure/ai-services/computer-vision/) | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 
 ## Related content
 
