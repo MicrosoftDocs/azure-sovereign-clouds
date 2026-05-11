@@ -54,15 +54,15 @@ Disconnected operations are intended for organizations with a validated requirem
 - An eligible Microsoft agreement, such as a Microsoft Customer Agreement for Enterprises (MCA E).
 - A documented business or regulatory requirement to operate without Azure connectivity (for example, sovereign, classified, or highly regulated environments).
 - Operational readiness, including staff, processes, and partner support to deploy and run a disconnected environment.
-- Pre planned workloads and capacity, with sizing completed before procurement.
+- Preplanned workloads and capacity, with sizing completed before procurement.
 - Supported, customer owned Azure Local hardware designed for disconnected operations.
 - A dedicated management cluster to host required Azure Local infrastructure components.
 
-This summary is intended to help you assess fit at a glance. For complete, eligibility requirements and onboarding details, see [Eligibility criteria for disconnected operations](/azure/azure-local/manage/disconnected-operations-overview#eligibility-criteria).
+This summary helps you assess fit at a glance. For complete, eligibility requirements and onboarding details, see [Eligibility criteria for disconnected operations](/azure/azure-local/manage/disconnected-operations-overview#eligibility-criteria).
 
 ## Workloads and services
 
-Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table. These capabilities are designed to run fully on-premises while maintaining consistency with Azure architecture and tooling.
+Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table. These capabilities run fully on-premises while maintaining consistency with Azure architecture and tooling.
 
 | Category | Workloads and Services | Description |
 |--|--|--|
