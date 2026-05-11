@@ -15,7 +15,7 @@ This article provides an overview of disconnected operations for Azure Local.
 
 Disconnected operations enable you to run Azure Local in environments without a connection to the Azure public cloud. This deployment model supports sovereign, classified, regulated, and edge scenarios where connectivity to Azure is restricted or unavailable.
 
-Azure Local provides a consistent platform experience for compute, storage, networking, and lifecycle management, all running entirely on-premises. Disconnected operations give you full operational control by moving the control plane into your environment, where your organization operates it. It provides a subset of cloud capabilities and enables a consistent cloud operating model that spans both connected and fully disconnected environments.
+Azure Local provides a consistent platform experience across compute, storage, networking, and lifecycle management, while running entirely on-premises. Disconnected operations give you full operational control by moving the control plane into your environment, where your organization operates it. It provides a subset of cloud capabilities and enables a consistent cloud operating model that spans both connected and fully disconnected environments.
 
 ## What does "disconnected" mean?
 
@@ -62,25 +62,49 @@ This summary helps you assess fit at a glance. For complete, eligibility require
 
 ## Workloads and services
 
-Disconnected environments support a subset of Azure Local workloads and services, as summarized in the following table. These capabilities run fully on-premises while maintaining consistency with Azure architecture and tooling.
+Disconnected environments support a subset of Azure Local workloads and services. These capabilities run fully on-premises while maintaining consistency with Azure architecture and tooling. The following sections outline key workloads and services available for disconnected operations.
 
-| Category | Workloads and Services | Description |
-|--|--|--|
-| Core Infrastructure | Azure Local virtual machines (VMs)  | Run Windows and Linux VMs for line‑of‑business applications, infrastructure services, and legacy workloads. |
-| Core Infrastructure | AKS on Azure Local (where applicable) | Run containerized applications locally using Kubernetes, with configurations tailored for disconnected environments. |
-| Data and AI | AI Document Intelligence | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
-| Data and AI | AI Language | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
-| Data and AI | AI Translator | Translate text and documents across languages to support multilingual applications and global operation. |
-| Data and AI | Vision Container | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
-| Management and Security | Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
-| Management and Security | Policy | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
-| Management and Security | Portal CLI | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
-| Management and Security | Resource Manager | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources by using declarative templates, policies, and role-based access control. |
-| Workloads and Applications | Container Registry | Store and manage container images locally for disconnected Kubernetes and application workflows.  |
-| Workloads and Applications | Kubernetes | Orchestrate and manage containerized workloads by using Kubernetes, providing consistent deployment and scaling across environments. |
-| Workloads and Applications | Microsoft 365 Local | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
+### Core infrastructure workloads
+
+Infrastructure workloads that provide the compute and container platforms required to run applications locally in disconnected environments:
+
+| Workloads | Description |
+|--|--|
+| [Azure Local virtual machines (VMs)](/azure/azure-local/manage/azure-arc-vm-management-overview) | Run Windows and Linux VMs for line‑of‑business applications, infrastructure services, and legacy workloads. |
+| [AKS on Azure Local](/azure/aks/aksarc/aks-whats-new-local) (where applicable) | Run containerized applications locally using Kubernetes, with configurations tailored for disconnected environments. |
+
+### Management and security
+
+Services that help you monitor, secure, govern, and operate Azure Local environments using Azure-based management experiences:
+
+| Services | Description |
+|--|--|
+| [Azure Key Vault](/azure/key-vault/general/basic-concepts) | Securely store and manage secrets, keys, and certificates used by applications and services. |
+| [Azure Policy](/azure/governance/policy/overview) | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
+| [Azure portal](/azure/azure-portal/azure-portal-overview) | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
+| [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources by using declarative templates, policies, and role-based access control. |
+
+### Workloads and applications
+
+Infrastructure and application workloads that run on Azure Local, supporting virtual machines, containers, productivity services, and edge scenarios:
+
+| Services | Description |
+|--|--|
+| [Azure Container Registry](/azure/container-registry/container-registry-intro) | Store and manage container images locally for disconnected Kubernetes and application workflows.  |
+| [Kubernetes](/azure/aks/what-is-aks) | Orchestrate and manage containerized workloads by using Kubernetes, providing consistent deployment and scaling across environments. |
+| [Microsoft 365 Local](../m365-local/microsoft-365-local-overview.md) | Run Exchange Server, SharePoint Server, and Skype for Business Server on Azure Local infrastructure. |
+
+### Data and AI
+
+Data services and AI capabilities that enable analytics, search, and AI-powered applications using local and connected data:
+
+| Services | Description |
+|--|--|
+| [Azure Document Intelligence](/azure/ai-services/document-intelligence) | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
+| [Azure Language](/ai-services/language-service/overview) | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
+| [Azure Translator](/ai-services/translator/) | Translate text and documents across languages to support multilingual applications and global operation. |
+| [Azure Vision](/ai-services/computer-vision/) | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 
 ## Related content
 
-- [Disconnected operations for Azure Local](/azure/azure-local/manage/disconnected-operations-overview)
-- Read the [Azure Local with Disconnected Operations](https://techcommunity.microsoft.com/blog/azurearcblog/cloud-infrastructure-for-disconnected-environments-enabled-by-azure-arc/4413561) blog post.
+- For detailed deployment, hardware, and operational guidance, see [Disconnected operations for Azure Local](/azure/azure-local/manage/disconnected-operations-overview).
