@@ -111,4 +111,5 @@ The platform supports both generative AI and predictive inference under one oper
 
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [Automatic GPU inference tuning in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
+- [Foundry Local multi-node Kubernetes deployment](concept-multi-node-deployment.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)

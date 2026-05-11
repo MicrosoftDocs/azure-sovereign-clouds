@@ -29,6 +29,8 @@ items:
       href: concept-authentication-authorization.md
     - name: Automatic GPU inference tuning
       href: concept-gpu-inference-planner.md
+    - name: Multi-node deployment
+      href: concept-multi-node-deployment.md
   - name: Deploy platform
     items:
     - name: Configure TLS
