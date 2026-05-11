@@ -100,6 +100,8 @@
           items:
             - name: Azure Local overview
               href: private/azure-local/azure-local-overview.md
+            - name: Connected operations overview
+              href: private/azure-local/connected-operations-overview.md
             - name: Disconnected operations overview
               href: private/azure-local/disconnected-operations-overview.md
         - name: Microsoft 365 Local
@@ -108,6 +110,8 @@
               href: private/m365-local/microsoft-365-local-overview.md
         - name: AI suite
           items:
+            - name: AI workloads on Azure Local
+              href: /azure/azure-local/concepts/ai-workloads-overview?context=/azure/azure-sovereign-clouds/context/context
             - name: Foundry Local preview
               href: private/foundry-local/what-is-foundry-local-on-azure-local.md?context=/azure/azure-sovereign-clouds/context/context
             - name: Edge RAG enabled by Azure Arc preview
