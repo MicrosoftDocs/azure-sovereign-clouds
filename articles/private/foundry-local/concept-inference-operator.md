@@ -387,6 +387,7 @@ For the full configuration fields and example, see [ModelDeployment and operator
 - [Model catalog and sourcing in Foundry Local on Azure Local](concept-model-catalog.md)
 - [StoreModel and model caching in Foundry Local on Azure Local](concept-model-caching.md)
 - [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md)
+- [Foundry Local multi-node Kubernetes deployment](concept-multi-node-deployment.md)
 - [Automatic GPU inference tuning in Foundry Local on Azure Local](concept-gpu-inference-planner.md)
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
