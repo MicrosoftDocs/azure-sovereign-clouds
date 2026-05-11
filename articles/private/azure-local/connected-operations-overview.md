@@ -3,7 +3,7 @@ title: Connected Operations Overview
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/08/2026
+ms.date: 05/11/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -100,10 +100,10 @@ The following table highlights some of the management and security services avai
 
 | Service | Description |
 |--|--|
-| Azure Monitor | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources with integrated alerts and insights. |
-| Entra ID | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
-| Key Vault | Securely store and manage secrets, keys, and certificates used by applications and services. |
-| Update Manager | Coordinate and manage updates for infrastructure and workloads to help keep systems secure, compliant, and up to date. |
+| [Azure Monitor](/azure/azure-monitor/fundamentals/overview) | Collect and analyze metrics to monitor the health, performance, and availability of on-premises resources with integrated alerts and insights. |
+| [Entra ID](/entra/fundamentals/what-is-entra) | Secure access to Azure Local by managing identities, authentication, and authorization with centralized identity and access control. |
+| [Key Vault](/azure/key-vault/general/basic-concepts) | Securely store and manage secrets, keys, and certificates used by applications and services. |
+| [Update Manager](/azure/update-manager/overview) | Coordinate and manage updates for infrastructure and workloads to help keep systems secure, compliant, and up to date. |
 
 ### Workloads and applications
 
@@ -113,10 +113,10 @@ The following table provides an overview of some of the workloads and applicatio
 
 | Service | Description |
 |--|--|
-| IoT Operations | Collect, process, and manage data from connected devices locally, supporting industrial, edge, and sovereign IoT scenarios. |
-| Kubernetes | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
-| Virtual Desktop | Provide users with secure access to virtual desktops and applications hosted on local infrastructure. |
-| Virtual Machines | Run Windows and Linux VMs for enterprise applications, shared services, and infrastructure workloads. |
+| [IoT Operations](/azure/iot-operations/overview-iot-operations) | Collect, process, and manage data from connected devices locally, supporting industrial, edge, and sovereign IoT scenarios. |
+| [Kubernetes](/azure/aks/what-is-aks) | Orchestrate and manage containerized workloads using Kubernetes, providing consistent deployment and scaling across environments. |
+| [Virtual Desktop](/azure/virtual-desktop/overview) | Provide users with secure access to virtual desktops and applications hosted on local infrastructure. |
+| [Virtual Machines](/azure/virtual-machines/overview) | Run Windows and Linux VMs for enterprise applications, shared services, and infrastructure workloads. |
 
 ### Data and AI
 
@@ -126,10 +126,10 @@ The following table provides an overview of some of the data and AI services ava
 
 | Service | Description |
 |--|--|
-| Edge RAG | Ground generative AI responses using local and connected enterprise data to deliver relevant, context‑aware outputs. |
-| Foundry Local on Azure Local | Build, deploy, and run AI models and workloads locally using a consistent Azure AI development experience. |
-| Machine Learning | Train, deploy, and manage machine learning models to support predictive and analytical workloads on Azure Local. |
-| SQL | Store, query, and manage relational data for applications and services running on Azure Local. |
+| [Edge RAG](/azure/azure-arc/edge-rag/overview) | Ground generative AI responses using local and connected enterprise data to deliver relevant, context‑aware outputs. |
+| [Foundry Local on Azure Local](../foundry-local/what-is-foundry-local-on-azure-local.md) | Build, deploy, and run AI models and workloads locally using a consistent Azure AI development experience. |
+| [Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | Train, deploy, and manage machine learning models to support predictive and analytical workloads on Azure Local. |
+| [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) | Store, query, and manage relational data for applications and services running on Azure Local. |
 
 ## Related content
 
