@@ -5,7 +5,7 @@ ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
 - Foundry Local on Azure Local
-ms.topic: conceptual
+ms.topic: article
 ms.author: cwatson
 author: cwatson-cat
 ms.date: 04/30/2026
