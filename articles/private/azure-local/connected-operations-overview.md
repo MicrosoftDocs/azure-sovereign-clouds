@@ -133,7 +133,7 @@ The following table provides an overview of some of the data and AI services ava
 
 ## Related content
 
-- Learn more about [What is Azure Local?](/azure/azure-local/overview)
+- Learn more about Azure Local by exploring the full, linked documentation set: [Azure Local dcoumentation](/azure/azure-local).
 - Review the [Azure Local FAQs](/azure/azure-local/faq).
 - Explore [Disconnected operations for Azure Local](/azure/azure-local/manage/disconnected-operations-overview).
 <!--- **GitHub Enterprise Local:** enable modern DevSecOps and keep code, identity, and operations fully on-premises with GitHub Enterprise Local on Azure Local-->
