@@ -365,7 +365,7 @@ Key configuration areas:
 
 ### Namespace configuration for model deployments
 
-By default, the inference extension monitors only the `foundry-local-operator` namespace, along with its own release namespace. To deploy and manage models in additional namespaces, make sure you first create those namespaces in your cluster by running: 
+By default, the inference extension monitors only the `foundry-local-operator` namespace, along with its own release namespace. To deploy and manage models in additional namespaces, first create those namespaces in your cluster by running the following command: 
 
 ```
 kubectl create ns <namespace_name>
