@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/29/2026
+ms.date: 05/12/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure Microsoft Entra ID authentication for Foundry Local so that my team can securely access inference endpoints with identity-based access control.
 ---
@@ -84,8 +84,6 @@ Authorize the Azure CLI as a client application so your team can acquire tokens 
 1. Check the scope you created in Step 2.
 1. Select **Add application**.
 
-## Grant access to users and applications
-
 After completing the app registration and installing the Foundry Local enabled by Arc cluster, configure Azure RBAC to control who can access Foundry Local endpoints.
 
 ## Step 5: Assign Azure RBAC roles to users
@@ -142,7 +140,7 @@ az role assignment create \
 
 This step uses a different identity for each cluster: the Arc-connected cluster's own service principal. Run this command once per cluster.
 
-## (Optional) Grant access to managed identities and service principals
+## (Optional) Step 7: Grant access to managed identities and service principals
 
 If managed identities or service principals call the API, two additional steps are required. Human users authenticate via delegated scope (Step 2) and don't need these steps.
 
