@@ -371,7 +371,7 @@ By default, the inference extension monitors only the `foundry-local-operator` n
 kubectl create ns <namespace_name>
 ```
 
-And then explicitly specify them by using the `watch.namespaces` configuration during extension installation or update.
+Then explicitly specify them by using the `watch.namespaces` configuration during extension installation or update.
 
 Example configuration:
 
