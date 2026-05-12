@@ -3,7 +3,7 @@ title: Disconnected Operations Overview
 description: Learn about disconnected operations for Azure Local, a deployment model that enables running fully on-premises without a connection to Azure, while maintaining a consistent Azure Local platform experience.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/06/2026
+ms.date: 05/12/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -79,9 +79,9 @@ Services that help you monitor, secure, govern, and operate Azure Local environm
 
 | Services | Description |
 |--|--|
-| [Azure CLI](/cli/azure/what-is-azure-cli) | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | [Azure Key Vault](/azure/key-vault/general/basic-concepts) | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | [Azure Policy](/azure/governance/policy/overview) | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
+| [Azure portal](/azure/azure-portal/azure-portal-overview) | Manage and monitor Azure resources through a unified, web-based graphical interface. |
 | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources by using declarative templates, policies, and role-based access control. |
 
 ### Workloads and applications
