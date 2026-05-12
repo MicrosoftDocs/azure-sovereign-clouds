@@ -3,7 +3,7 @@ title: Disconnected Operations Overview
 description: Learn about disconnected operations for Azure Local, a deployment model that enables running fully on-premises without a connection to Azure, while maintaining a consistent Azure Local platform experience.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/12/2026
+ms.date: 05/11/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
