@@ -71,7 +71,7 @@ Infrastructure workloads that provide the compute and container platforms requir
 | Workloads | Description |
 |--|--|
 | [Azure Local virtual machines (VMs)](/azure/azure-local/manage/azure-arc-vm-management-overview) | Run Windows and Linux VMs for line‑of‑business applications, infrastructure services, and legacy workloads. |
-| [AKS on Azure Local](/azure/aks/aksarc/aks-whats-new-local) (where applicable) | Run containerized applications locally using Kubernetes, with configurations tailored for disconnected environments. |
+| [AKS on Azure Local](/azure/aks/aksarc/aks-overview) (where applicable) | Run containerized applications locally using Kubernetes, with configurations tailored for disconnected environments. |
 
 ### Management and security
 
@@ -79,9 +79,9 @@ Services that help you monitor, secure, govern, and operate Azure Local environm
 
 | Services | Description |
 |--|--|
+| [Azure CLI](/cli/azure/what-is-azure-cli) | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | [Azure Key Vault](/azure/key-vault/general/basic-concepts) | Securely store and manage secrets, keys, and certificates used by applications and services. |
 | [Azure Policy](/azure/governance/policy/overview) | Define and enforce governance rules to help ensure resources are deployed and operated in a consistent and compliant manner. |
-| [Azure portal](/azure/azure-portal/azure-portal-overview) | Manage and operate resources by using a graphical portal or command-line tools, supporting both interactive and automated workflows. |
 | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Provide a consistent control plane for deploying, managing, and organizing Azure Local resources by using declarative templates, policies, and role-based access control. |
 
 ### Workloads and applications
@@ -100,10 +100,10 @@ Data services and AI capabilities that enable analytics, search, and AI-powered 
 
 | Services | Description |
 |--|--|
-| [Azure Document Intelligence](/azure/ai-services/document-intelligence) | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
+| [Azure Document Intelligence](/azure/ai-services/document-intelligence/overview) | Extract text, structure, and key information from documents to automate processing and analysis of unstructured content. |
 | [Azure Language](/azure/ai-services/language-service/overview) | Analyze and process text to enable scenarios such as summarization, classification, sentiment analysis, and question answering. |
-| [Azure Translator](/azure/ai-services/translator/) | Translate text and documents across languages to support multilingual applications and global operation. |
-| [Azure Vision](/azure/ai-services/computer-vision/) | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
+| [Azure Translator](/azure/ai-services/translator/overview) | Translate text and documents across languages to support multilingual applications and global operation. |
+| [Azure Vision](/azure/ai-services/computer-vision/overview) | Extract printed and handwritten text from images and documents with support for JPEG, PNG, BMP, PDF, and TIFF file formats. |
 
 ## Related content
 
