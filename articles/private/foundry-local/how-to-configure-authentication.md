@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/29/2026
+ms.date: 05/12/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure Microsoft Entra ID authentication for Foundry Local so that my team can securely access inference endpoints with identity-based access control.
 ---
@@ -29,7 +29,6 @@ Before you begin, make sure you have:
 - An Azure Arc-connected Kubernetes cluster with the Foundry Local extension installed. See [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md).
 - Microsoft Entra ID permissions:
   - Permissions to create a Microsoft Entra app registration.
-  - Ability to add app roles to the application.
 
 ## Step 1: Register an application in Microsoft Entra ID
 
@@ -75,31 +74,7 @@ Configure the application to issue v2.0 tokens. This step is **critical**. Witho
 1. Find the `"accessTokenAcceptedVersion"` property and change its value from `null` to `2`.
 1. Select **Save**.
 
-## Step 4: Create an app role
-
-Create an app role for service principals and managed identities. User tokens get a `scp` claim from the delegated scope (Step 2), but service principal and managed identity tokens need a `roles` claim instead. If you don't assign an app role, their tokens are rejected.
-
-1. In the app registration, select **Manage** > **App roles**.
-  :::image type="content" source="media/how-to-configure-authentication/application-roles.png" alt-text="Screenshot of App roles section in Azure app registration, showing no roles defined and the create app role option." lightbox="media/how-to-configure-authentication/application-roles.png":::
-
-1. Select **Create app role** and enter the following values:
-
-   | Field | Value |
-   |---|---|
-   | Display name | `FoundryInferenceAccess` |
-   | Allowed member types | Applications |
-   | Value | `FoundryInferenceAccess` |
-   | Description | Access Foundry Local inference endpoints |
-   | Do you want to enable this app role? | Checked |
-  
-   :::image type="content" source="media/how-to-configure-authentication/entra-app-role-created.png" alt-text="Screenshot showing the app role successfully created." lightbox="media/how-to-configure-authentication/entra-app-role-created.png":::
-1. Select **Apply**.
-
-
-
-This app role is a token format requirement. It ensures service principal tokens contain the `roles` claim needed by the authentication sidecar. Access-level permissions are controlled separately through Azure RBAC role assignments (Step 7).
-
-## Step 5: Authorize Azure CLI
+## Step 4: Authorize Azure CLI
 
 Authorize the Azure CLI as a client application so your team can acquire tokens by using `az account get-access-token`.
 
@@ -109,11 +84,9 @@ Authorize the Azure CLI as a client application so your team can acquire tokens 
 1. Check the scope you created in Step 2.
 1. Select **Add application**.
 
-## Grant access to users and applications
-
 After completing the app registration and installing the Foundry Local enabled by Arc cluster, configure Azure RBAC to control who can access Foundry Local endpoints.
 
-## Step 6: Assign Azure RBAC roles to users
+## Step 5: Assign Azure RBAC roles to users
 
 Assign an Azure RBAC role to each user or group that needs to access Foundry Local endpoints. The role determines the level of access:
 
@@ -147,7 +120,7 @@ az role assignment create \
 
 ---
 
-## Step 7: Grant the cluster's Arc identity permission to read role assignments
+## Step 6: Grant the cluster's Arc identity permission to read role assignments
 
 The cluster's managed identity must be able to query Azure RBAC to verify caller permissions. Without this assignment, all authenticated requests fail with `500 rbac_check_unavailable`.
 
@@ -167,36 +140,13 @@ az role assignment create \
 
 This step uses a different identity for each cluster: the Arc-connected cluster's own service principal. Run this command once per cluster.
 
-## (Optional) Grant access to managed identities and service principals
+## (Optional) Step 7: Grant access to managed identities and service principals
 
 If managed identities or service principals call the API, two additional steps are required. Human users authenticate via delegated scope (Step 2) and don't need these steps.
 
-### Assign the app role to the managed identity
-
-Service principal and managed identity tokens require a `roles` claim (unlike user tokens which get `scp`). Assign the app role created in Step 4:
-
-```bash
-# Get the service principal object ID for your managed identity
-SP_OBJECT_ID=$(az ad sp show --id <MSI_CLIENT_ID> --query id -o tsv)
-
-# Get the service principal object ID for your app registration
-APP_SP_OBJECT_ID=$(az ad sp show --id <YOUR_APP_CLIENT_ID> --query id -o tsv)
-
-# Assign the app role
-az rest --method POST \
-  --uri "https://graph.microsoft.com/v1.0/servicePrincipals/${SP_OBJECT_ID}/appRoleAssignments" \
-  --body "{
-    \"principalId\": \"${SP_OBJECT_ID}\",
-    \"resourceId\": \"${APP_SP_OBJECT_ID}\",
-    \"appRoleId\": \"<APP_ROLE_ID>\"
-  }"
-```
-
-To find the app role ID, go to **App registrations** > your app > **App roles** and note the ID of the FoundryInferenceAccess role.
-
 ### Assign Azure RBAC role to the managed identity
 
-Same as Step 6, but use the managed identity's object ID as the assignee:
+Same as Step 5, but use the managed identity's object ID as the assignee:
 
 ```bash
 az role assignment create \
