@@ -3,10 +3,10 @@
   items:
     - name: Overview
       items:
-        - name: Overview of digital sovereignty
-          href: digital-sovereignty.md
         - name: What is Microsoft Sovereign Cloud?
           href: microsoft-sovereign-cloud.md
+        - name: Overview of digital sovereignty
+          href: digital-sovereignty.md
         - name: What are the European digital commitments?
           href: european-digital-commitments.md
     - name: Concepts, controls, and considerations
