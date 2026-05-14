@@ -3,7 +3,7 @@ title: Disconnected Operations Overview
 description: Learn about disconnected operations for Azure Local, a deployment model that enables running fully on-premises without a connection to Azure, while maintaining a consistent Azure Local platform experience.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/11/2026
+ms.date: 05/14/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -15,7 +15,7 @@ This article provides an overview of disconnected operations for Azure Local.
 
 Disconnected operations enable you to run Azure Local in environments without a connection to the Azure public cloud. This deployment model supports sovereign, classified, regulated, and edge scenarios where connectivity to Azure is restricted or unavailable.
 
-Azure Local provides a consistent platform experience across compute, storage, networking, and lifecycle management, while running entirely on-premises. Disconnected operations give you full operational control by moving the control plane into your environment, where your organization operates it. It provides a subset of cloud capabilities and enables a consistent cloud operating model that spans both connected and fully disconnected environments.
+Azure Local provides a consistent platform experience across compute, storage, networking, and lifecycle management while running entirely on-premises. Disconnected operations give you full operational control by moving the control plane into your environment, where your organization operates it. It provides a subset of cloud capabilities and enables a consistent cloud operating model that spans both connected and fully disconnected environments.
 
 ## What does "disconnected" mean?
 
@@ -31,7 +31,7 @@ Use disconnected operations in environments where data sovereignty or regulatory
 
 ## Supported deployment
 
-Disconnected operations support hyperconverged Azure Local deployments designed to run fully on-premises without reliance on Azure or internet connectivity. Each Azure Local deployment is tied to a single site, like a datacenter. You can deploy each Azure Local instance with additional resiliency or availability within the datacenter, for example by using rack aware clusters. You can share the disconnected operations control plane across sites, providing a flexible solution for a multi-site private cloud and ensuring a high level of isolation. When you share a disconnected operations control plane across multiple sites, you're responsible for providing any required private network connectivity between sites. Cross‑site connectivity is customer‑designed and depends on individual network and security requirements.
+Disconnected operations support hyperconverged Azure Local deployments designed to run fully on-premises without relying on Azure or internet connectivity. Each Azure Local deployment is tied to a single site, such as a datacenter. You can deploy each Azure Local instance with additional resiliency or availability within the datacenter, for example by using rack aware clusters. You can share the disconnected operations control plane across sites, providing a flexible solution for a multi-site private cloud while ensuring a high level of isolation. When you share a disconnected operations control plane across multiple sites, you're responsible for providing any required private network connectivity between sites. Cross‑site connectivity is customer designed and depends on individual network and security requirements.
 
 ### Hyperconverged deployments
 
@@ -51,14 +51,14 @@ Combine compute, storage, and networking on the same nodes, providing a compact 
 
 Disconnected operations are intended for organizations with a validated requirement to operate Azure Local without connectivity to the public cloud. At a high level, eligibility includes:
 
-- An eligible Microsoft agreement, such as a Microsoft Customer Agreement for Enterprises (MCA E).
+- An eligible Microsoft agreement, such as a Microsoft Customer Agreement for Enterprises (MCA-E).
 - A documented business or regulatory requirement to operate without Azure connectivity (for example, sovereign, classified, or highly regulated environments).
 - Operational readiness, including staff, processes, and partner support to deploy and run a disconnected environment.
 - Preplanned workloads and capacity, with sizing completed before procurement.
 - Supported, customer owned Azure Local hardware designed for disconnected operations.
 - A dedicated management cluster to host required Azure Local infrastructure components.
 
-This summary helps you assess fit at a glance. For complete, eligibility requirements and onboarding details, see [Eligibility criteria for disconnected operations](/azure/azure-local/manage/disconnected-operations-overview#eligibility-criteria).
+This summary helps you assess fit at a glance. For complete eligibility requirements and onboarding details, see [Eligibility criteria for disconnected operations](/azure/azure-local/manage/disconnected-operations-overview#eligibility-criteria).
 
 ## Workloads and services
 
