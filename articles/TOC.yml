@@ -102,6 +102,8 @@
               href: private/azure-local/azure-local-overview.md
             - name: Connected operations overview
               href: private/azure-local/connected-operations-overview.md
+            - name: Disconnected operations overview
+              href: private/azure-local/disconnected-operations-overview.md
         - name: Microsoft 365 Local
           items:
             - name: Microsoft 365 Local overview
