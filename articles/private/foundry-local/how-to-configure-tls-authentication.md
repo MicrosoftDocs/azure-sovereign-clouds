@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/30/2026
+ms.date: 05/12/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to configure TLS encryption for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
 ---
@@ -21,13 +21,18 @@ Foundry Local on Azure Local encrypts all internal service communication by usin
 
 ## Prerequisites
 
-Automated certificate management requires [cert-manager](https://cert-manager.io/) and [Trust Manager](https://cert-manager.io/docs/trust/trust-manager/) installed on your cluster:
+Automated certificate management requires cert-manager and trust-manager installed on your cluster:
 
 - **cert-manager** issues a self-signed root CA and per-service certificates.
 - **trust-manager** distributes the root CA certificate as a trust bundle to all namespaces so other pods can trust the internal certificates.
 
+How you install these components depends on your deployment method:
+
+- **Arc extension (recommended):** Install cert-manager for Arc-enabled Kubernetes (CME) by using `az k8s-extension create` with the `Microsoft.CertManagement` extension type. CME installs both cert-manager and trust-manager as a managed Arc extension. For installation steps, see [Install cert-manager and trust-manager](deploy-foundry-local-arc-extension.md#step-1-install-cert-manager-and-trust-manager).
+- **Helm-based deployment:** The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Manually install the open-source [cert-manager](https://cert-manager.io/) and [trust-manager](https://cert-manager.io/docs/trust/trust-manager/) components before you deploy Foundry Local on Azure Local. Helm installation instructions are provided during preview access onboarding.
+
 > [!IMPORTANT]
-> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. Helm is a supported deployment option, and installation instructions are provided during preview access onboarding.
+> For Arc-enabled Kubernetes clusters, use cert-manager for Arc-enabled Kubernetes (CME) as the supported installation path. Generic open-source cert-manager is only required when you deploy Foundry Local by using Helm without the Arc extension.
 
 ## How internal TLS works
 
