@@ -9,6 +9,10 @@ items:
       href: what-is-foundry-local-on-azure-local.md
     - name: Known issues
       href: known-issues.md
+  - name: Quickstart
+    items:
+    - name: Deploy your first model and run inference
+      href: deploy-run-first-model.md
   - name: Deploy platform
     items:
     - name: Authentication and authorization
@@ -21,8 +25,6 @@ items:
       href: deploy-foundry-local-arc-extension.md
   - name: Deploy models
     items:
-    - name: Deploy your first model and run inference
-      href: deploy-run-first-model.md
     - name: Deploy a bring-your-own model
       href: how-to-deploy-custom-model.md
   - name: Run inference
