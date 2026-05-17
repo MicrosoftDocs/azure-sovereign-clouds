@@ -93,7 +93,7 @@ Because each tenant runs on dedicated hardware, you can right‑size per tenant:
 
 This scenario runs connected to Azure, since the shared control plane, centralized operations, and Azure Arc–based management depend on cloud connectivity from the hosting provider's operations environment. Disconnected support is coming soon. 
 
-** What this translates to **
+**What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
