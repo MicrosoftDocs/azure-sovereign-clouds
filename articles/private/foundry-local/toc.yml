@@ -21,7 +21,7 @@ items:
       href: deploy-foundry-local-arc-extension.md
   - name: Deploy models
     items:
-    - name: Run your first model
+    - name: Deploy and run your first model
       href: deploy-run-first-model.md
     - name: Deploy a bring-your-own model
       href: how-to-deploy-custom-model.md
