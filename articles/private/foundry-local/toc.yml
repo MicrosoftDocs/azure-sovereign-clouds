@@ -9,7 +9,23 @@ items:
       href: what-is-foundry-local-on-azure-local.md
     - name: Known issues
       href: known-issues.md
-  - name: Plan
+  - name: Deploy platform
+    items:
+    - name: Authentication and authorization
+      href: concept-authentication-authorization.md
+    - name: Configure TLS
+      href: how-to-configure-tls-authentication.md
+    - name: Configure Entra ID authentication
+      href: how-to-configure-authentication.md
+    - name: Deploy as Azure Arc extension
+      href: deploy-foundry-local-arc-extension.md
+  - name: Deploy models
+    items:
+    - name: Run your first model
+      href: deploy-run-first-model.md
+    - name: Deploy a bring-your-own model
+      href: how-to-deploy-custom-model.md
+  - name: Run inference
     items:
     - name: Models
       items:
@@ -25,26 +41,8 @@ items:
         href: concept-model-caching.md
     - name: Inference runtimes
       href: concept-inference-runtimes.md
-    - name: Authentication and authorization
-      href: concept-authentication-authorization.md
     - name: Automatic GPU inference tuning
       href: concept-gpu-inference-planner.md
-  - name: Deploy platform
-    items:
-    - name: Configure TLS
-      href: how-to-configure-tls-authentication.md
-    - name: Configure Entra ID authentication
-      href: how-to-configure-authentication.md
-    - name: Deploy as Azure Arc extension
-      href: deploy-foundry-local-arc-extension.md
-  - name: Run models
-    items:
-    - name: Run your first model
-      href: deploy-run-first-model.md
-    - name: Deploy a bring-your-own model
-      href: how-to-deploy-custom-model.md
-  - name: Run inference
-    items:
     - name: Run inference
       href: how-to-run-inference.md
   - name: Reference
