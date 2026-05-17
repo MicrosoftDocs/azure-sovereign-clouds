@@ -1,5 +1,5 @@
 ---
-title: "Deploy and run your first model on Foundry Local on Azure Local"
+title: "Deploy your first model and run inference on Foundry Local on Azure Local"
 description: "List the model catalog, create your first model deployment, and send inference requests by using kubectl or the REST API in an existing Foundry Local environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to deploy and run my first model in an existing Foundry Local environment on Azure Local so that I can validate AI inference on my on-premises cluster.
 ---
 
-# Deploy and run your first model on Foundry Local
+# Deploy your first model and run inference on Foundry Local
 
 This article shows you how to use an existing Foundry Local environment to browse the model catalog, create your first model deployment, and send inference requests.
 
