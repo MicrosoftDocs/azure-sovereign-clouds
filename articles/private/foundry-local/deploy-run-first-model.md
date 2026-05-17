@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Deploy your first model and run inference on Foundry Local on Azure Local"
+title: "Quickstart: Deploy Your First Model and Run Inference on Foundry Local on Azure Local"
 description: "List the model catalog, create your first model deployment, and send inference requests by using kubectl or the REST API in an existing Foundry Local environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -8,7 +8,7 @@ appliesto:
 ms.topic: quickstart
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/30/2026
+ms.date: 05/17/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to deploy and run my first model in an existing Foundry Local environment on Azure Local so that I can validate AI inference on my on-premises cluster.
 ---
@@ -23,10 +23,10 @@ This article shows you how to use an existing Foundry Local environment to brows
 
 Before you begin, make sure you have:
 
+- Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
 - An active Azure subscription. If you don't have one, [create one](https://azure.microsoft.com/free/) before you begin.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc, or a direct Kubernetes deployment.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
-- Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
 - Foundry Local deployed to your Kubernetes cluster. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 - Authentication configured for your Foundry Local deployment. For setup steps, see [Configure Entra ID authentication](how-to-configure-authentication.md) or use API key authentication as described in [Authentication and authorization](concept-authentication-authorization.md).
 - (Optional) A namespace strategy if you plan to deploy models outside the default `foundry-local-operator` namespace. Namespace configuration must be set during installation. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
