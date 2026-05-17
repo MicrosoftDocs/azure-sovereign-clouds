@@ -15,7 +15,7 @@ ms.collection:
 
 This article describes common ways organizations use Microsoft Sovereign Private Cloud and the product configurations to build each solution. Each scenario includes a reference architecture diagram as a starting point for your design. 
 
-If you're new to Sovereign Private Cloud, start with [What is Sovereign Private Cloud?](./private/overview/sovereign-private-cloud.md) and [Azure Local overview](./private/azure-local/azure-local-overview.md) before reading this article. 
+If you're new to Sovereign Private Cloud, start with [What is Sovereign Private Cloud?](./private/overview/sovereign-private-cloud) and [Azure Local overview](./private/azure-local/azure-local-overview) before reading this article. 
 
 ## Who this article is for
 
@@ -45,7 +45,7 @@ Use the following table to quickly map your requirements to a scenario. Each row
 ### Foundational scenarios
 
 | Scenario | Connectivity Model | Deployment type | Key services |
-| == | == | == | == |
+|---|---|---|---|
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a sovereign private cloud for your VMs and container apps | Connected | Hyperconverged / Disaggregated / Multi-rack | Your VMs and container apps |
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a disconnected sovereign private cloud, with no connection to the public cloud, for your VMs and container apps | Disconnected | Hyperconverged / Disaggregated | Your VMs and container apps |
 | [Support multiple tenants](#scenario-2-support-multiple-tenants) | Connected | Hyperconverged / Disaggregated / Multi-rack | Multi-tenancy |
@@ -54,7 +54,7 @@ Use the following table to quickly map your requirements to a scenario. Each row
 ### Workload focused scenarios
 
 | Scenario | Connectivity Model | Deployment type | Key services |
-| == | == | == | == |
+|---|---|---|---|
 | [Run sovereign AI workloads on-premises](#scenario-4-run-sovereign-ai-workloads-on-premises) | Connected or Disconnected | Hyperconverged / Disaggregated / Multi-rack | Foundry Local, Edge RAG, Azure AI Video Indexer, AKS on Azure Local, GPU-enabled hardware |
 | [Host productivity and collaboration tools locally](#scenario-5-host-productivity-and-collaboration-locally-with-microsoft-365-local) | Connected or Disconnected | Small / Medium / Large Scale | Microsoft 365 Local |
 | [Deliver secure virtual desktops and apps to a sovereign workforce](#scenario-6-deliver-secure-virtual-desktops-and-apps-to-a-sovereign-workforce) | Connected | Hyperconverged / Disaggregated | Azure Virtual Desktop |
@@ -72,8 +72,8 @@ The platform scales with you. You could start with a **single-node cluster** at 
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md), [disaggregated](/azure/azure-local/overview/disaggregated-overview.md), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview.md) | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview.md), [AKS on Azure Local](/azure/aks/aksarc/aks-overview.md), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management.md) |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) or [disconnected](./private/azure-local/disconnected-operations-overview) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management) |
 
 ### Connected diagram
 
@@ -96,8 +96,8 @@ This scenario runs connected to Azure, since the shared control plane, centraliz
 ** What this translates to **
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md), [disaggregated](/azure/azure-local/overview/disaggregated-overview.md), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview.md) - sized per tenant | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview.md), [AKS on Azure Local](/azure/aks/aksarc/aks-overview.md), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management.md), RBAC, [centralized monitoring](/azure/azure-local/concepts/monitoring-overview.md) and [updates](/azure/azure-local/update/about-updates-23h2.md) via a shared Azure control plane |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) - sized per tenant | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management), RBAC, [centralized monitoring](/azure/azure-local/concepts/monitoring-overview) and [updates](/azure/azure-local/update/about-updates-23h2) via a shared Azure control plane |
 
 ## Scenario 3: Stay resilient: high availability and site to cloud disaster recovery 
 
@@ -122,8 +122,8 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) (**Note:** Azure Site Recovery only runs connected) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md) (**Note:** Rack aware cluster only works on hyperconverged), [disaggregated](/azure/azure-local/overview/disaggregated-overview.md), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview.md) | [Azure Local HA](/azure/azure-local/manage/disaster-recovery-overview.md) (failover clustering, Storage Spaces Direct, or SAN), [Rack Aware Clustering](/azure/azure-local/concepts/rack-aware-cluster-overview.md), [Azure Site Recovery on Azure Local](/azure/azure-local/manage/azure-site-recovery.md) |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) or [disconnected](./private/azure-local/disconnected-operations-overview) (**Note:** Azure Site Recovery only runs connected) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview) (**Note:** Rack aware cluster only works on hyperconverged), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local HA](/azure/azure-local/manage/disaster-recovery-overview) (failover clustering, Storage Spaces Direct, or SAN), [Rack Aware Clustering](/azure/azure-local/concepts/rack-aware-cluster-overview), [Azure Site Recovery on Azure Local](/azure/azure-local/manage/azure-site-recovery) |
 
 ## Scenario 4: Run sovereign AI workloads on-premises 
 
@@ -148,8 +148,8 @@ The same scenario works connected to Azure for ongoing model and update manageme
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md), [disaggregated](/azure/azure-local/overview/disaggregated-overview.md), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview.md) | [Foundry Local](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Edge RAG](/azure/azure-arc/edge-rag/overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Azure AI Video Indexer](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [GPU-enabled hardware](/azure/azure-local/manage/gpu-preparation) |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) or [disconnected](./private/azure-local/disconnected-operations-overview) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Foundry Local](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Edge RAG](/azure/azure-arc/edge-rag/overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Azure AI Video Indexer](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [GPU-enabled hardware](/azure/azure-local/manage/gpu-preparation) |
 
 ### Run AI workloads, connected control plane 
 
@@ -170,8 +170,8 @@ Various configurations and hardware specifications are available to support diff
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) | Small, Medium, or Large Scale | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) or [disconnected](./private/azure-local/disconnected-operations-overview) | Small, Medium, or Large Scale | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) |
 
 ## Scenario 6: Deliver secure virtual desktops and apps to a sovereign workforce 
 
@@ -186,8 +186,8 @@ AVD on Azure Local pairs naturally with the rest of your Sovereign Private Cloud
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md), [disaggregated](/azure/azure-local/overview/disaggregated-overview.md) | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) | [Azure Virtual Desktop on Azure Local](/azure/virtual-desktop/azure-local-overview.md), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview.md), [AKS on Azure Local](/azure/aks/aksarc/aks-overview.md), optional Microsoft 365 Local for in-session productivity |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview) | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) | [Azure Virtual Desktop on Azure Local](/azure/virtual-desktop/azure-local-overview), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), optional Microsoft 365 Local for in-session productivity |
 
 ## Scenario x: Keep developer tools and source code on-premises with GitHub Enterprise Local 
 
@@ -202,8 +202,8 @@ This scenario applies when intellectual property, classified code, or regulated 
 **What this translates to**
 
 | Connectivity model | Deployment type |  Key services  |
-| == | == | == |
-| [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview.md) (multi-node) | [Github Enterprise Local](https://learn.github.com/learning-pathways/github-enterprise) (**Note:** GitHub Enterprise Local on Azure Local is currently in private preview), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview.md), [AKS on Azure Local](/azure/aks/aksarc/aks-overview.md) for runners/build agents |
+|---|---|---|
+| [Connected](./private/azure-local/connected-operations-overview) or [disconnected](./private/azure-local/disconnected-operations-overview) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview) (multi-node) | [Github Enterprise Local](https://learn.github.com/learning-pathways/github-enterprise) (**Note:** GitHub Enterprise Local on Azure Local is currently in private preview), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview) for runners/build agents |
 
 ## Scenario x: Confidential Compute and GPU
 
