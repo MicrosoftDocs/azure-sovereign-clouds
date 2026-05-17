@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: cwatson-cat
   ms.author: cwatson
-  ms.date: 05/07/2026
+  ms.date: 05/17/2026
   ms.service: azure
   ms.subservice: sovereign-private-clouds
 
@@ -48,7 +48,7 @@ landingContent:
     linkLists:
       - linkListType: quickstart
         links:
-          - text: "Quickstart: Deploy your first model and run inference"
+          - text: "Deploy your first model and run inference"
             url: deploy-run-first-model.md
       - linkListType: deploy
         links:
