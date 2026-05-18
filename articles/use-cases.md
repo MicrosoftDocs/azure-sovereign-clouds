@@ -128,6 +128,8 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 |---|---|---|
 | [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) (**Note:** Azure Site Recovery only runs connected) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview) (**Note:** Rack aware cluster only works on hyperconverged), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local HA](/azure/azure-local/manage/disaster-recovery-overview) (failover clustering, Storage Spaces Direct, or SAN), [Rack Aware Clustering](/azure/azure-local/concepts/rack-aware-cluster-overview), [Azure Site Recovery on Azure Local](/azure/azure-local/manage/azure-site-recovery) |
 
+**Note:** This diagram only shows the rack-aware cluster scenario. For other capabilities, see the articles in the previous table.
+
 :::image type="content" source="media/azure-local-use-cases/scenario-3.png" alt-text="Stay resilient with rack-aware clusters" lightbox="media/azure-local-use-cases/scenario-3.png":::
 
 ## Scenario 4: Run sovereign AI workloads on-premises 
