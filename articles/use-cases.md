@@ -45,7 +45,7 @@ Use the following table to quickly map your requirements to a scenario. Each row
 ### Foundational scenarios
 
 | Scenario | Connectivity Model | Deployment type | Key services |
-|---|---|---|---|
+|---|---|---|
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a sovereign private cloud for your VMs and container apps | Connected | Hyperconverged / Disaggregated / Multi-rack | Your VMs and container apps |
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a disconnected sovereign private cloud, with no connection to the public cloud, for your VMs and container apps | Disconnected | Hyperconverged / Disaggregated | Your VMs and container apps |
 | [Support multiple tenants](#scenario-2-support-multiple-tenants) | Connected | Hyperconverged / Disaggregated / Multi-rack | Multi-tenancy |
@@ -54,7 +54,7 @@ Use the following table to quickly map your requirements to a scenario. Each row
 ### Workload focused scenarios
 
 | Scenario | Connectivity Model | Deployment type | Key services |
-|---|---|---|---|
+|---|---|---|
 | [Run sovereign AI workloads on-premises](#scenario-4-run-sovereign-ai-workloads-on-premises) | Connected or Disconnected | Hyperconverged / Disaggregated / Multi-rack | Foundry Local, Edge RAG, Azure AI Video Indexer, AKS on Azure Local, GPU-enabled hardware |
 | [Host productivity and collaboration tools locally](#scenario-5-host-productivity-and-collaboration-locally-with-microsoft-365-local) | Connected or Disconnected | Small / Medium / Large Scale | Microsoft 365 Local |
 | [Deliver secure virtual desktops and apps to a sovereign workforce](#scenario-6-deliver-secure-virtual-desktops-and-apps-to-a-sovereign-workforce) | Connected | Hyperconverged / Disaggregated | Azure Virtual Desktop |
