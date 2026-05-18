@@ -58,15 +58,17 @@ Use the following table to quickly map your requirements to a scenario. Each row
 
 ## Scenario 1: Run a sovereign private cloud for your VMs and container apps
 
-**Who this is for:** Architects and IT decision-makers evaluating Sovereign Private Cloud for the first time, or any team whose immediate need is "give me a sovereign place to run my VMs and Kubernetes apps." 
+### Who this is for
 
-**What you can do**
+Architects and IT decision-makers evaluating Sovereign Private Cloud for the first time, or any team whose immediate need is "give me a sovereign place to run my VMs and Kubernetes apps." 
+
+### What you can do
 
 Sovereign Private Cloud, powered by Azure Local, gives you a cloud-consistent platform for VM and container workloads inside your own datacenter, branch, or edge site with full control over where your data lives and who can access it. Bring your own hardware from a validated catalog, deploy Azure Local, and run general-purpose Windows or Linux VMs and AKS clusters using the same Azure Resource Manager experience as the public cloud. You can run **connected** to Azure for unified management, monitoring, and updates through Azure Arc, or **fully disconnected** when continuous public-cloud connectivity isn't possible or permitted. 
 
 The platform scales with you. You could start with a **single-node cluster** at a small branch or edge site, grow to a **multi-node hyperconverged cluster** in a regional datacenter, and extend to **multi-rack deployments** of up to 128 nodes each. 
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
@@ -82,9 +84,11 @@ The platform scales with you. You could start with a **single-node cluster** at 
 
 ## Scenario 2: Support multiple tenants 
 
-**Who this is for:** Sovereign hosting providers, national IT agencies operating centralized platforms for multiple ministries or agencies, managed-service providers serving regulated customers, and large enterprises running a shared internal platform for multiple business units.  
+### Who this is for
 
-**What you can do**
+Sovereign hosting providers, national IT agencies operating centralized platforms for multiple ministries or agencies, managed-service providers serving regulated customers, and large enterprises running a shared internal platform for multiple business units.  
+
+### What you can do
 
 Sovereign Private Cloud lets you run a multi-tenant platform on Azure Local where multiple organizations, agencies, or business units share a common operations model while running on physically isolated hardware. Each tenant gets its own dedicated Azure Local cluster with dedicated compute and optionally shared storage and networking between tenants.  
 
@@ -94,7 +98,7 @@ Because each tenant runs on dedicated hardware, you can right‑size per tenant:
 
 This scenario runs connected to Azure, since the shared control plane, centralized operations, and Azure Arc–based management depend on cloud connectivity from the hosting provider's operations environment. Disconnected support is coming soon. 
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
@@ -104,9 +108,11 @@ This scenario runs connected to Azure, since the shared control plane, centraliz
 
 ## Scenario 3: Stay resilient: high availability and site to cloud disaster recovery 
 
-**Who this is for:** Infrastructure architects, BC/DR planners, risk and compliance officers, and IT decision‑makers responsible for keeping mission‑critical sovereign workloads. 
+### Who this is for
 
-**What you can do**
+Infrastructure architects, BC/DR planners, risk and compliance officers, and IT decision‑makers responsible for keeping mission‑critical sovereign workloads. 
+
+### What you can do
 
 Sovereign Private Cloud is resilient by design, with two clearly defined protection scenarios. Within a fault domain, Azure Local provides native capabilities that keep workloads running through component, node, and rack failures. Across regions, Azure Site Recovery extends this protection by replicating workloads to an Azure cloud region, enabling recovery from workload-level failures. Together, these layers provide a flexible resilience strategy that you can apply per workload tier. 
 
@@ -122,7 +128,7 @@ Rack-aware clustering allows nodes to be distributed across two physical racks l
 
 Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on Azure Local replicates VM workloads from your sovereign environment to an Azure cloud region, providing protection against site-level outages such as fire, flood, or extended power loss. In the event of a disruption, you can fail over workloads to Azure and operate them there until the primary site is restored, after which you can fail back to Azure Local. This approach suits scenarios where primary operations remain sovereign and on-premises, while disaster recovery is implemented in a designated Azure region. 
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
@@ -134,9 +140,11 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 
 ## Scenario 4: Run sovereign AI workloads on-premises 
 
-**Who this is for:** Architects, data and AI leads, and decision-makers in regulated industries who want to deploy generative or analytical AI without sending sensitive data to the public cloud.  
+### Who this is for
 
-**What you can do**
+Architects, data and AI leads, and decision-makers in regulated industries who want to deploy generative or analytical AI without sending sensitive data to the public cloud.  
+
+### What you can do
 
 Sovereign Private Cloud lets you build, deploy, and run AI models and AI‑powered applications inside your own controlled environment, while still benefiting from Microsoft's AI ecosystem. By using Foundry Local on Azure Local, you can host models locally for inference, run agentic and RAG patterns against private data, and process video and unstructured content by using services like Azure AI Video Indexer. All this happens without data, prompts, or model weights leaving your sovereign boundary. 
 
@@ -152,7 +160,7 @@ Agentic patterns with bring‑your‑own MCP. Beyond inference, Foundry Local su
 
 The same scenario works connected to Azure for ongoing model and update management, or fully disconnected where AI must run with no public‑cloud reachability. Because AI workloads are GPU‑bound and often storage‑intensive, Azure Local supports 50+ GPU‑capable validated platforms with NVIDIA GPUs. 
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
@@ -166,11 +174,13 @@ The same scenario works connected to Azure for ongoing model and update manageme
 
 :::image type="content" source="media/azure-local-use-cases/scenario-4-disconnected.png" alt-text="Run AI workloads on-premises, disconnected control plane" lightbox="media/azure-local-use-cases/scenario-4-disconnected.png":::
 
-### Scenario 5: Host productivity and collaboration locally with Microsoft 365 Local 
+## Scenario 5: Host productivity and collaboration locally with Microsoft 365 Local 
 
-**Who this is for:** IT decision-makers, productivity and collaboration leads, and compliance officers in regulated industries, government, or sovereign-data environments who need to keep email, documents, and collaboration data inside their own boundary, including in disconnected locations.  
+### Who this is for
 
-**What you can do**
+IT decision-makers, productivity and collaboration leads, and compliance officers in regulated industries, government, or sovereign-data environments who need to keep email, documents, and collaboration data inside their own boundary, including in disconnected locations.  
+
+### What you can do
 
 Sovereign Private Cloud lets you run Microsoft 365 Local: productivity and collaboration server workloads such as Exchange Server and SharePoint Server on Azure Local, entirely within your own datacenter or sovereign facility. Your users get the familiar Microsoft productivity experience for email, content management, and communications, while your organization keeps full control over where messages and documents live, who can access them, and how the systems are operated.  
 
@@ -178,7 +188,7 @@ This scenario is designed for organizations that have to comply with national da
 
 Various configurations and hardware specifications are available to support different scales and requirements, including small-scale, mid-scale, and large scale deployments. The overall architecture of Microsoft 365 Local is tailored to each customer’s needs. Customers should work with their authorized Microsoft partner to appropriately size and design their deployment. 
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
@@ -188,15 +198,17 @@ Various configurations and hardware specifications are available to support diff
 
 ## Scenario 6: Deliver secure virtual desktops and apps to a sovereign workforce 
 
-**Who this is for:** End-user computing leads, workplace and IT decision-makers, and security and compliance teams in regulated industries, government, defense, and any organization where a workforce needs access to Windows desktops and apps but the data behind those sessions can't leave a sovereign boundary.  
+### Who this is for
 
-**What you can do**
+End-user computing leads, workplace and IT decision-makers, and security and compliance teams in regulated industries, government, defense, and any organization where a workforce needs access to Windows desktops and apps but the data behind those sessions can't leave a sovereign boundary.  
+
+### What you can do
 
 Sovereign Private Cloud lets you run Azure Virtual Desktop (AVD) on Azure Local, delivering full Windows desktops and remote apps to your users from infrastructure you own and operate. User session data, profiles, and the apps themselves stay inside your sovereign environment. Only the encrypted display, keyboard, and mouse traffic reaches the endpoint device. Use this pattern when you need to give a distributed workforce (for example, caseworkers, clinicians, classified-program staff, contact-center agents, contractors) access to sensitive systems and data without putting that data on the endpoint or in the public cloud.   
 
 AVD on Azure Local pairs naturally with the rest of your Sovereign Private Cloud workloads. A common pattern is AVD session hosts running alongside Microsoft 365 Local (so users can access sovereign Exchange and SharePoint from their virtual desktop) and alongside line-of-business VMs and AKS apps (so users can reach internal applications), all on the same hyperconverged cluster or a dedicated AVD cluster when you need to isolate the end user computing (EUC) tier.  
 
-**What this translates to**
+### What this translates to
 
 | Connectivity model | Deployment type |  Key services  |
 |---|---|---|
