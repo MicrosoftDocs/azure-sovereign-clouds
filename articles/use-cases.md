@@ -4,7 +4,7 @@ description: "Understand Sovereign Private Cloud use cases and configurations."
 author: ronmiab
 ms.subservice: sovereign-public-clouds
 ms.topic: overview
-ms.date: 05/17/2026
+ms.date: 05/18/2026
 ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
@@ -110,11 +110,13 @@ This scenario runs connected to Azure, since the shared control plane, centraliz
 
 Sovereign Private Cloud is resilient by design, with two clearly defined protection scenarios. Within a fault domain, Azure Local provides native capabilities that keep workloads running through component, node, and rack failures. Across regions, Azure Site Recovery extends this protection by replicating workloads to an Azure cloud region, enabling recovery from workload-level failures. Together, these layers provide a flexible resilience strategy that you can apply per workload tier. 
 
-High availability within a fault domain: every multi-node Azure Local cluster includes native HA capabilities.  
+High availability within a fault domain: every multi-node Azure Local cluster includes native HA capabilities.
 
-- Storage high availability: Storage Spaces Direct (S2D) keeps data online by using two-way or three-way mirroring, so drive or server failures don't take storage offline. In SAN-backed deployments, storage remains available independently of any single compute server, with the SAN array providing native redundancy across controllers, disks, and fabric paths. 
-- Compute high availability: Failover clustering detects node failures within the fault domain and automatically restarts VMs on surviving servers, ensuring no data loss and minimal downtime. 
-- Operational high availability: VM live migration enables running workloads to move between servers during planned maintenance, so you can update and patch without workload downtime. 
+- Storage high availability: Storage Spaces Direct (S2D) keeps data online by using two-way or three-way mirroring, so drive or server failures don't take storage offline. In SAN-backed deployments, storage remains available independently of any single compute server, with the SAN array providing native redundancy across controllers, disks, and fabric paths.
+
+- Compute high availability: Failover clustering detects node failures within the fault domain and automatically restarts VMs on surviving servers, ensuring no data loss and minimal downtime.
+
+- Operational high availability: VM live migration enables running workloads to move between servers during planned maintenance, so you can update and patch without workload downtime.
 
 Rack-aware clustering allows nodes to be distributed across two physical racks located in separate rooms or buildings, connected by high-bandwidth, low-latency networking. This design enhances availability and resiliency by ensuring that if one rack experiences a failure, the other rack continues to maintain data integrity and accessibility. Use this pattern when you need to protect against rack-level failure domains. 
 
