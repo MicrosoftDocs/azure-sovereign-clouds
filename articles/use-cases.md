@@ -112,9 +112,9 @@ Sovereign Private Cloud is resilient by design, with two clearly defined protect
 
 High availability within a fault domain: every multi-node Azure Local cluster includes native HA capabilities.  
 
-    - Storage high availability: Storage Spaces Direct (S2D) keeps data online by using two-way or three-way mirroring, so drive or server failures don't take storage offline. In SAN-backed deployments, storage remains available independently of any single compute server, with the SAN array providing native redundancy across controllers, disks, and fabric paths. 
-    - Compute high availability: Failover clustering detects node failures within the fault domain and automatically restarts VMs on surviving servers, ensuring no data loss and minimal downtime. 
-    - Operational high availability: VM live migration enables running workloads to move between servers during planned maintenance, so you can update and patch without workload downtime. 
+- Storage high availability: Storage Spaces Direct (S2D) keeps data online by using two-way or three-way mirroring, so drive or server failures don't take storage offline. In SAN-backed deployments, storage remains available independently of any single compute server, with the SAN array providing native redundancy across controllers, disks, and fabric paths. 
+- Compute high availability: Failover clustering detects node failures within the fault domain and automatically restarts VMs on surviving servers, ensuring no data loss and minimal downtime. 
+- Operational high availability: VM live migration enables running workloads to move between servers during planned maintenance, so you can update and patch without workload downtime. 
 
 Rack-aware clustering allows nodes to be distributed across two physical racks located in separate rooms or buildings, connected by high-bandwidth, low-latency networking. This design enhances availability and resiliency by ensuring that if one rack experiences a failure, the other rack continues to maintain data integrity and accessibility. Use this pattern when you need to protect against rack-level failure domains. 
 
