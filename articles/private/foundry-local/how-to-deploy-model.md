@@ -23,13 +23,10 @@ This article shows you how to list available models from the Foundry Local catal
 
 Before you begin, make sure you have:
 
-- Preview deployment access. Foundry Local on Azure Local is currently available by request during preview. Submit the access request form: [Request preview deployment access](https://aka.ms/FoundryLocalAzure_PreviewRequest). After your request is reviewed, you receive guidance on next steps for deployment.
+- A running Foundry Local on Azure Local environment. 
 - An active Azure subscription. If you don't have one, [create one](https://azure.microsoft.com/free/) before you begin.
-- A Kubernetes cluster (version 1.29 or later) connected to Azure Arc, or a direct Kubernetes deployment.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
-- Foundry Local deployed to your Kubernetes cluster. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
-- Authentication configured for your Foundry Local deployment. For setup steps, see [Configure Entra ID authentication](how-to-configure-authentication.md) or use API key authentication as described in [Authentication and authorization](concept-authentication-authorization.md).
-- (Optional) A namespace strategy if you plan to deploy models outside the default `foundry-local-operator` namespace. Namespace configuration must be set during installation. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments).
+- Authentication configured. See [Configure authentication for Foundry Local Azure Arc Extension Deployment](https://review.learn.microsoft.com/en-us/azure/azure-sovereign-clouds/private/foundry-local/how-to-configure-authentication?branch=main&tabs=rbac-cli).
 
 ## List available models
 
@@ -170,4 +167,4 @@ curl -k -s https://localhost:8080/api/v1/namespaces/foundry-local-operator/deplo
 
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
 - [Package and deploy a bring-your-own model on Foundry Local](how-to-deploy-custom-model.md)
-- - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
