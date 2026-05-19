@@ -30,7 +30,7 @@ You don't need deep familiarity with Sovereign Private Cloud to read this articl
 
 ## What's in scope (and what's not) 
 
-Sovereign Private Cloud is built on Azure Local and can include Microsoft 365 Local, Foundry Local, Azure Virtual Desktop on Azure Local, your own VM and container-based applications, and more. The scenarios in this article highlight common combinations of these capabilities. They don't represent the full set of features available in the platform.  
+Sovereign Private Cloud is built on Azure Local and can include Microsoft 365 Local, Foundry Local, Azure Virtual Desktop on Azure Local, your own VM and container-based applications, and more. The scenarios in this article highlight common combinations of these capabilities. They don't represent the full set of features available in the platform.
 
 > [!NOTE]
 > These scenarios aren't mutually exclusive. Most real-world deployments combine several. For example, a single environment might run productivity ([Scenario 5](#scenario-5-host-productivity-and-collaboration-locally-with-microsoft-365-local)), AI ([Scenario 4](#scenario-4-run-sovereign-ai-workloads-on-premises)), and multi-tenant hosting ([Scenario 2](#scenario-2-support-multiple-tenants)) on the same infrastructure. Use them as building blocks to design what you need. 
@@ -46,7 +46,7 @@ Use the following table to quickly map your requirements to a scenario. Each row
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a sovereign private cloud for your VMs and container apps | Connected | Hyperconverged / Disaggregated / Multi-rack | Your VMs and container apps |
 | [Baseline case](#scenario-1-run-a-sovereign-private-cloud-for-your-vms-and-container-apps): Run a disconnected sovereign private cloud, with no connection to the public cloud, for your VMs and container apps | Disconnected | Hyperconverged / Disaggregated | Your VMs and container apps |
 | [Support multiple tenants](#scenario-2-support-multiple-tenants) | Connected | Hyperconverged / Disaggregated / Multi-rack | Multi-tenancy |
-| [Stay resilient: Maintain high availability and extend resilience with site to cloud recovery](#scenario-3-stay-resilient-high-availability-and-site-to-cloud-disaster-recovery) | Connected / Disconnected | Hyperconverged / Disaggregated / Multi-rack | High availability, rack aware clustering, Azure Site Recovery |
+| [Stay resilient: Maintain high availability and extend resilience with site to cloud recovery](#scenario-3-stay-resilient-high-availability-and-site-to-cloud-disaster-recovery) | Connected / Disconnected | Hyperconverged / Disaggregated / Multi-rack | High availability, rack-aware clustering, Azure Site Recovery |
 
 ### Workload focused scenarios
 
@@ -70,7 +70,9 @@ The platform scales with you. You could start with a **single-node cluster** at 
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
+
+| Connectivity model | Deployment type | Key services |
 |---|---|---|
 | [Connected](../azure-local/connected-operations-overview.md) or [disconnected](../azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management) |
 
@@ -86,21 +88,23 @@ The platform scales with you. You could start with a **single-node cluster** at 
 
 ### Who this is for
 
-Sovereign hosting providers, national IT agencies operating centralized platforms for multiple ministries or agencies, managed-service providers serving regulated customers, and large enterprises running a shared internal platform for multiple business units.  
+Sovereign hosting providers, national IT agencies operating centralized platforms for multiple ministries or agencies, managed-service providers serving regulated customers, and large enterprises running a shared internal platform for multiple business units.
 
 ### What you can do
 
-Sovereign Private Cloud lets you run a multi-tenant platform on Azure Local where multiple organizations, agencies, or business units share a common operations model while running on physically isolated hardware. Each tenant gets its own dedicated Azure Local cluster with dedicated compute and optionally shared storage and networking between tenants.  
+Sovereign Private Cloud lets you run a multi-tenant platform on Azure Local where multiple organizations, agencies, or business units share a common operations model while running on physically isolated hardware. Each tenant gets its own dedicated Azure Local cluster with dedicated compute and optionally shared storage and networking between tenants.
 
 Think of a national government IT agency that provides cloud‑like infrastructure services to five different ministries. Each ministry runs on its own dedicated Azure Local cluster, sized to its workload, governed by its own RBAC policies and access controls, while a single platform team operates all of them through a shared Azure control plane. This architecture gives every tenant the strongest possible isolation boundary (separate hardware) while still letting the hosting provider manage the estate centrally and consistently. It dramatically lowers operational cost and complexity compared to standing up a fully separate sovereign environment per tenant. 
 
-Because each tenant runs on dedicated hardware, you can right‑size per tenant: a small ministry might run on a single‑node or small hyperconverged cluster, while a larger one runs on a multi-rack deployment. The shared Azure control plane provides centralized monitoring, updates, and lifecycle management across all tenant clusters, while per‑tenant dashboards, RBAC, and policies give each tenant visibility and control over their own workloads.  
+Because each tenant runs on dedicated hardware, you can right‑size per tenant: a small ministry might run on a single‑node or small hyperconverged cluster, while a larger one runs on a multi-rack deployment. The shared Azure control plane provides centralized monitoring, updates, and lifecycle management across all tenant clusters, while per‑tenant dashboards, RBAC, and policies give each tenant visibility and control over their own workloads.
 
 This scenario runs connected to Azure, since the shared control plane, centralized operations, and Azure Arc–based management depend on cloud connectivity from the hosting provider's operations environment. Disconnected support is coming soon. 
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
+
+| Connectivity model | Deployment type | Key services |
 |---|---|---|
 | [Connected](../azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) - sized per tenant | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management), RBAC, [centralized monitoring](/azure/azure-local/concepts/monitoring-overview) and [updates](/azure/azure-local/update/about-updates-23h2) via a shared Azure control plane |
 
@@ -130,11 +134,17 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
-|---|---|---|
-| [Connected](../azure-local/connected-operations-overview.md) or [disconnected](../azure-local/disconnected-operations-overview.md) (**Note:** Azure Site Recovery only runs connected) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview) (**Note:** Rack aware cluster only works on hyperconverged), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local HA](/azure/azure-local/manage/disaster-recovery-overview) (failover clustering, Storage Spaces Direct, or SAN), [Rack Aware Clustering](/azure/azure-local/concepts/rack-aware-cluster-overview), [Azure Site Recovery on Azure Local](/azure/azure-local/manage/azure-site-recovery) |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
 
-**Note:** This diagram only shows the rack-aware cluster scenario. For other capabilities, see the articles in the previous table.
+| Connectivity model | Deployment type | Key services |
+|---|---|---|
+| [Connected](../azure-local/connected-operations-overview.md) or [disconnected](../azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Azure Local HA](/azure/azure-local/manage/disaster-recovery-overview) (failover clustering, Storage Spaces Direct, or SAN), [Rack-Aware Clustering](/azure/azure-local/concepts/rack-aware-cluster-overview), [Azure Site Recovery on Azure Local](/azure/azure-local/manage/azure-site-recovery) |
+
+> [!NOTE]
+> - Azure Site Recovery only runs connected.
+> - Rack-aware cluster only works on hyperconverged.
+
+The following diagram only shows the rack-aware cluster scenario. For other capabilities, see the articles in the previous table.
 
 :::image type="content" source="media/scenario-3.png" alt-text="Diagram of rack-aware clusters" lightbox="media/scenario-3.png":::
 
@@ -142,7 +152,7 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 
 ### Who this is for
 
-Architects, data and AI leads, and decision-makers in regulated industries who want to deploy generative or analytical AI without sending sensitive data to the public cloud.  
+Architects, data and AI leads, and decision-makers in regulated industries who want to deploy generative or analytical AI without sending sensitive data to the public cloud.
 
 ### What you can do
 
@@ -156,13 +166,15 @@ Flexible model choice: Foundry Local supports a full spectrum of model options, 
 
 - Bring your own models (BYO) - onboard any model containerized with ONNX or vLLM, including Hugging Face models, fine‑tuned variants, internal LLMs, and traditional ML/predictive models, all on the same unified local inferencing layer. 
 
-Agentic patterns with bring‑your‑own MCP. Beyond inference, Foundry Local supports end‑to‑end agentic RAG: semantic and hybrid retrieval, multi‑step reasoning, and tool‑driven actions, grounded in customer‑owned content. Connect agents to enterprise systems through Model Context Protocol (MCP): use built‑in connectors in Microsoft 365 Local agentic RAG to chat and get references from Microsoft 365 Local Sharepoint documents as well as emails and meetings from local Exchange Server. Or bring your own MCP servers to reach line‑of‑business systems, internal APIs, and other data sources while keeping every retrieval, prompt, and tool invocation inside your sovereign boundary. 
+Agentic patterns with bring‑your‑own MCP. Beyond inference, Foundry Local supports end‑to‑end agentic RAG: semantic and hybrid retrieval, multi‑step reasoning, and tool‑driven actions, grounded in customer‑owned content. Connect agents to enterprise systems through Model Context Protocol (MCP): use built‑in connectors in Microsoft 365 Local agentic RAG to chat and get references from Microsoft 365 Local SharePoint documents as well as emails and meetings from local Exchange Server. Or bring your own MCP servers to reach line‑of‑business systems, internal APIs, and other data sources while keeping every retrieval, prompt, and tool invocation inside your sovereign boundary. 
 
 The same scenario works connected to Azure for ongoing model and update management, or fully disconnected where AI must run with no public‑cloud reachability. Because AI workloads are GPU‑bound and often storage‑intensive, Azure Local supports 50+ GPU‑capable validated platforms with NVIDIA GPUs. 
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
+
+| Connectivity model | Deployment type | Key services |
 |---|---|---|
 | [Connected](../azure-local/connected-operations-overview.md) or [disconnected](../azure-local/disconnected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) | [Foundry Local](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Edge RAG](/azure/azure-arc/edge-rag/overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [Azure AI Video Indexer](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview?context=%2Fazure%2Fazure-sovereign-clouds%2Fcontext%2Fcontext), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [GPU-enabled hardware](/azure/azure-local/manage/gpu-preparation) |
 
@@ -178,19 +190,21 @@ The same scenario works connected to Azure for ongoing model and update manageme
 
 ### Who this is for
 
-IT decision-makers, productivity and collaboration leads, and compliance officers in regulated industries, government, or sovereign-data environments who need to keep email, documents, and collaboration data inside their own boundary, including in disconnected locations.  
+IT decision-makers, productivity and collaboration leads, and compliance officers in regulated industries, government, or sovereign-data environments who need to keep email, documents, and collaboration data inside their own boundary, including in disconnected locations.
 
 ### What you can do
 
-Sovereign Private Cloud lets you run Microsoft 365 Local: productivity and collaboration server workloads such as Exchange Server and SharePoint Server on Azure Local, entirely within your own datacenter or sovereign facility. Your users get the familiar Microsoft productivity experience for email, content management, and communications, while your organization keeps full control over where messages and documents live, who can access them, and how the systems are operated.  
+Sovereign Private Cloud lets you run Microsoft 365 Local: productivity and collaboration server workloads such as Exchange Server and SharePoint Server on Azure Local, entirely within your own datacenter or sovereign facility. Your users get the familiar Microsoft productivity experience for email, content management, and communications, while your organization keeps full control over where messages and documents live, who can access them, and how the systems are operated.
 
-This scenario is designed for organizations that have to comply with national data residency rules, sector-specific regulations, or internal policies that prohibit storing collaboration data in the public cloud. Microsoft 365 Local can run connected to Azure for unified management and updates, or fully disconnected for environments where continuous public-cloud reachability isn't permitted.  
+This scenario is designed for organizations that have to comply with national data residency rules, sector-specific regulations, or internal policies that prohibit storing collaboration data in the public cloud. Microsoft 365 Local can run connected to Azure for unified management and updates, or fully disconnected for environments where continuous public-cloud reachability isn't permitted.
 
 Various configurations and hardware specifications are available to support different scales and requirements, including small-scale, mid-scale, and large scale deployments. The overall architecture of Microsoft 365 Local is tailored to each customer’s needs. Customers should work with their authorized Microsoft partner to appropriately size and design their deployment. 
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
+
+| Connectivity model | Deployment type | Key services |
 |---|---|---|
 | [Connected](../azure-local/connected-operations-overview.md) or [disconnected](../azure-local/disconnected-operations-overview.md) | Small, Medium, or Large Scale | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) |
 
@@ -200,17 +214,19 @@ Various configurations and hardware specifications are available to support diff
 
 ### Who this is for
 
-End-user computing leads, workplace and IT decision-makers, and security and compliance teams in regulated industries, government, defense, and any organization where a workforce needs access to Windows desktops and apps but the data behind those sessions can't leave a sovereign boundary.  
+End-user computing leads, workplace and IT decision-makers, and security and compliance teams in regulated industries, government, defense, and any organization where a workforce needs access to Windows desktops and apps but the data behind those sessions can't leave a sovereign boundary.
 
 ### What you can do
 
-Sovereign Private Cloud lets you run Azure Virtual Desktop (AVD) on Azure Local, delivering full Windows desktops and remote apps to your users from infrastructure you own and operate. User session data, profiles, and the apps themselves stay inside your sovereign environment. Only the encrypted display, keyboard, and mouse traffic reaches the endpoint device. Use this pattern when you need to give a distributed workforce (for example, caseworkers, clinicians, classified-program staff, contact-center agents, contractors) access to sensitive systems and data without putting that data on the endpoint or in the public cloud.   
+Sovereign Private Cloud lets you run Azure Virtual Desktop (AVD) on Azure Local, delivering full Windows desktops and remote apps to your users from infrastructure you own and operate. User session data, profiles, and the apps themselves stay inside your sovereign environment. Only the encrypted display, keyboard, and mouse traffic reaches the endpoint device. Use this pattern when you need to give a distributed workforce (for example, caseworkers, clinicians, classified-program staff, contact-center agents, contractors) access to sensitive systems and data without putting that data on the endpoint or in the public cloud. 
 
-AVD on Azure Local pairs naturally with the rest of your Sovereign Private Cloud workloads. A common pattern is AVD session hosts running alongside Microsoft 365 Local (so users can access sovereign Exchange and SharePoint from their virtual desktop) and alongside line-of-business VMs and AKS apps (so users can reach internal applications), all on the same hyperconverged cluster or a dedicated AVD cluster when you need to isolate the end user computing (EUC) tier.  
+AVD on Azure Local pairs naturally with the rest of your Sovereign Private Cloud workloads. A common pattern is AVD session hosts running alongside Microsoft 365 Local (so users can access sovereign Exchange and SharePoint from their virtual desktop) and alongside line-of-business VMs and AKS apps (so users can reach internal applications), all on the same hyperconverged cluster or a dedicated AVD cluster when you need to isolate the end user computing (EUC) tier.
 
 ### What this translates to
 
-| Connectivity model | Deployment type |  Key services  |
+The following table shows the connectivity models, deployment types, and key services for this scenario.
+
+| Connectivity model | Deployment type | Key services |
 |---|---|---|
 | [Connected](../azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview) | [Azure Virtual Desktop on Azure Local](/azure/virtual-desktop/azure-local-overview), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), optional Microsoft 365 Local for in-session productivity |
 
