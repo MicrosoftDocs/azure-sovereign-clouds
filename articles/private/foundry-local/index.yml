@@ -56,6 +56,8 @@ landingContent:
             url: how-to-configure-tls-authentication.md
           - text: Deploy Foundry Local as an Azure Arc extension
             url: deploy-foundry-local-arc-extension.md
+          - text: Deploy a catalog model
+            url: how-to-deploy-model.md
           - text: Deploy a bring-your-own model
             url: how-to-deploy-custom-model.md
 
