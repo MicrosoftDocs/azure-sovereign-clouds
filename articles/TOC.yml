@@ -8,7 +8,7 @@
         - name: Overview of digital sovereignty
           href: digital-sovereignty.md
         - name: Sovereign Private Cloud Use Cases and Configurations
-          href: private/use-cases.md
+          href: private/use-cases/use-cases.md
         - name: What are the European digital commitments?
           href: european-digital-commitments.md
     - name: Concepts, controls, and considerations
