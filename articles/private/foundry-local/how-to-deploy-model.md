@@ -26,7 +26,7 @@ Before you begin, make sure you have:
 - A running Foundry Local on Azure Local environment. 
 - An active Azure subscription. If you don't have one, [create one](https://azure.microsoft.com/free/) before you begin.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
-- Authentication configured. See [Configure authentication for Foundry Local Azure Arc Extension Deployment](https://review.learn.microsoft.com/en-us/azure/azure-sovereign-clouds/private/foundry-local/how-to-configure-authentication?branch=main&tabs=rbac-cli).
+- Authentication configured. See [Configure authentication for Foundry Local Azure Arc Extension Deployment](/azure/azure-sovereign-clouds/private/foundry-local/how-to-configure-authentication).
 
 ## List available models
 
