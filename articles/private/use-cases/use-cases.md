@@ -4,7 +4,7 @@ description: "Understand Sovereign Private Cloud use cases and configurations."
 author: ronmiab
 ms.subservice: sovereign-public-clouds
 ms.topic: overview
-ms.date: 05/18/2026
+ms.date: 05/19/2026
 ms.author: robess
 ms.collection: 
     - microsoftcloud-sovereignty
@@ -76,11 +76,11 @@ The platform scales with you. You could start with a **single-node cluster** at 
 
 ### Connected diagram
 
-:::image type="content" source="media/azure-local-use-cases/scenario-1-connected-diagram.png" alt-text="Baseline connected hyperconverged, disaggregated, and multi-rack deployments" lightbox="media/azure-local-use-cases/scenario-1-connected-diagram.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-1-connected-diagram.png" alt-text="Diagram of baseline connected hyperconverged, disaggregated, and multi-rack deployments" lightbox="media/azure-local-use-cases/scenario-1-connected-diagram.png":::
 
 ### Disconnected diagram
 
-:::image type="content" source="media/azure-local-use-cases/scenario-1-disconnected-diagram.png" alt-text="Baseline disconnected hyperconverged and disaggregated deployment" lightbox="media/azure-local-use-cases/scenario-1-disconnected-diagram.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-1-disconnected-diagram.png" alt-text="Diagram of baseline disconnected hyperconverged and disaggregated deployment" lightbox="media/azure-local-use-cases/scenario-1-disconnected-diagram.png":::
 
 ## Scenario 2: Support multiple tenants 
 
@@ -104,7 +104,7 @@ This scenario runs connected to Azure, since the shared control plane, centraliz
 |---|---|---|
 | [Connected](./private/azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview), or [multi-rack](/azure/azure-local/multi-rack/multi-rack-overview) - sized per tenant | [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), [Azure Arc-based management](/azure/azure-local/manage/arc-extension-management), RBAC, [centralized monitoring](/azure/azure-local/concepts/monitoring-overview) and [updates](/azure/azure-local/update/about-updates-23h2) via a shared Azure control plane |
 
-:::image type="content" source="media/azure-local-use-cases/scenario-2.png" alt-text="Host multiple tenants on physically isolated hardware with connected control plane" lightbox="media/azure-local-use-cases/scenario-2.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-2.png" alt-text="Diagram of hosting multiple tenants on physically isolated hardware with connected control plane" lightbox="media/azure-local-use-cases/scenario-2.png":::
 
 ## Scenario 3: Stay resilient: high availability and site to cloud disaster recovery 
 
@@ -136,7 +136,7 @@ Site-to-cloud disaster recovery with Azure Site Recovery: Azure Site Recovery on
 
 **Note:** This diagram only shows the rack-aware cluster scenario. For other capabilities, see the articles in the previous table.
 
-:::image type="content" source="media/azure-local-use-cases/scenario-3.png" alt-text="Stay resilient with rack-aware clusters" lightbox="media/azure-local-use-cases/scenario-3.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-3.png" alt-text="Diagram of rack-aware clusters" lightbox="media/azure-local-use-cases/scenario-3.png":::
 
 ## Scenario 4: Run sovereign AI workloads on-premises 
 
@@ -168,11 +168,11 @@ The same scenario works connected to Azure for ongoing model and update manageme
 
 ### Run AI workloads, connected control plane 
 
-:::image type="content" source="media/azure-local-use-cases/scenario-4-connected.png" alt-text="Run AI workloads on-premises, connected control plane" lightbox="media/azure-local-use-cases/scenario-4-connected.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-4-connected.png" alt-text="Diagram of AI workloads on-premises with connected control plane" lightbox="media/azure-local-use-cases/scenario-4-connected.png":::
 
 ### Run AI workloads, disconnected control plane
 
-:::image type="content" source="media/azure-local-use-cases/scenario-4-disconnected.png" alt-text="Run AI workloads on-premises, disconnected control plane" lightbox="media/azure-local-use-cases/scenario-4-disconnected.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-4-disconnected.png" alt-text="Diagram of AI workloads on-premises with disconnected control plane" lightbox="media/azure-local-use-cases/scenario-4-disconnected.png":::
 
 ## Scenario 5: Host productivity and collaboration locally with Microsoft 365 Local 
 
@@ -194,7 +194,7 @@ Various configurations and hardware specifications are available to support diff
 |---|---|---|
 | [Connected](./private/azure-local/connected-operations-overview.md) or [disconnected](./private/azure-local/disconnected-operations-overview.md) | Small, Medium, or Large Scale | [Microsoft 365 Local](/azure/azure-sovereign-clouds/private/m365-local/microsoft-365-local-overview) (Exchange Server, SharePoint Server) |
 
-:::image type="content" source="media/azure-local-use-cases/scenario-5.png" alt-text="Run small productivity suite locally, disconnected control plane" lightbox="media/azure-local-use-cases/scenario-5.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-5.png" alt-text="Diagram of running small productivity suite locally with disconnected control plane" lightbox="media/azure-local-use-cases/scenario-5.png":::
 
 ## Scenario 6: Deliver secure virtual desktops and apps to a sovereign workforce 
 
@@ -214,4 +214,4 @@ AVD on Azure Local pairs naturally with the rest of your Sovereign Private Cloud
 |---|---|---|
 | [Connected](./private/azure-local/connected-operations-overview.md) | [Hyperconverged](/azure/azure-local/overview/hyperconverged-overview), [disaggregated](/azure/azure-local/overview/disaggregated-overview) | [Azure Virtual Desktop on Azure Local](/azure/virtual-desktop/azure-local-overview), [Azure Local VMs](/azure/azure-local/manage/azure-arc-vm-management-overview), [AKS on Azure Local](/azure/aks/aksarc/aks-overview), optional Microsoft 365 Local for in-session productivity |
 
-:::image type="content" source="media/azure-local-use-cases/scenario-6.png" alt-text="Azure Virtual Desktop" lightbox="media/azure-local-use-cases/scenario-6.png":::
+:::image type="content" source="media/azure-local-use-cases/scenario-6.png" alt-text="Diagram of Azure Virtual Desktop" lightbox="media/azure-local-use-cases/scenario-6.png":::
