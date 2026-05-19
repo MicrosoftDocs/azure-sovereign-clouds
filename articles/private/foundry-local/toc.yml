@@ -25,6 +25,8 @@ items:
       href: deploy-foundry-local-arc-extension.md
   - name: Deploy models
     items:
+    - name: Deploy a catalog model
+      href: how-to-deploy-model.md
     - name: Deploy a bring-your-own model
       href: how-to-deploy-custom-model.md
   - name: Run inference
