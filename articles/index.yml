@@ -62,11 +62,5 @@ additionalContent:
 
     - title: AI suite on Sovereign Private Cloud
       links:
-      - url: /azure/azure-local/concepts/ai-workloads-overview
+      - url: private/azure-local/ai-workloads-overview.md
         text: AI workloads on Azure Local
-      - url: private/foundry-local/what-is-foundry-local-on-azure-local.md
-        text: Foundry Local preview
-      - url: /azure/azure-arc/edge-rag/overview
-        text: Edge RAG enabled by Azure Arc preview
-      - url: /azure/azure-video-indexer/azure-video-indexer-enabled-by-arc-overview
-        text: Azure AI Video Indexer enabled by Arc
