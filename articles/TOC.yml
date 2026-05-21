@@ -3,10 +3,10 @@
   items:
     - name: Overview
       items:
-        - name: Overview of digital sovereignty
-          href: digital-sovereignty.md
         - name: What is Microsoft Sovereign Cloud?
           href: microsoft-sovereign-cloud.md
+        - name: Overview of digital sovereignty
+          href: digital-sovereignty.md
         - name: What are the European digital commitments?
           href: european-digital-commitments.md
     - name: Concepts, controls, and considerations
@@ -96,12 +96,16 @@
       items:
         - name: Overview
           href: private/overview/sovereign-private-cloud.md
+        - name: Sovereign Private Cloud Use Cases and Configurations
+          href: private/use-cases/use-cases.md
         - name: Azure Local
           items:
             - name: Azure Local overview
               href: private/azure-local/azure-local-overview.md
             - name: Connected operations overview
               href: private/azure-local/connected-operations-overview.md
+            - name: Disconnected operations overview
+              href: private/azure-local/disconnected-operations-overview.md
         - name: Microsoft 365 Local
           items:
             - name: Microsoft 365 Local overview

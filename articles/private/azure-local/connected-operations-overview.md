@@ -1,9 +1,9 @@
 ---
-title: Connected Operations Overview
+title: Connected Operations for Azure Local
 description: Learn about connected operations for Azure Local, a deployment model that enables periodic connectivity to Azure while keeping workloads and data on‑premises, using Azure-based management, governance, and lifecycle services.
 author: ronmiab
 ms.topic: overview
-ms.date: 05/11/2026
+ms.date: 05/14/2026
 ms.author: robess
 ms.service: azure
 ms.subservice: sovereign-private-clouds

@@ -25,7 +25,7 @@ Use this article when your model isn't available in the Foundry catalog and you 
 
 Before you begin, make sure that you have:
 
-- A running Foundry Local on Azure Local environment. For deployment steps, see [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md). Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
+- A running Foundry Local on Azure Local environment. 
 - `kubectl` installed and configured for your cluster.
 - Access to an OCI-compatible registry, such as Azure Container Registry.
 - ORAS installed. For installation steps, see [ORAS](https://oras.land/).
@@ -118,6 +118,15 @@ Use this option when you want to define the model source directly in the `ModelD
        preferences:
          gpu_memory_utilization: 0.92
          max_model_len: 8192
+     resources:
+       requests:
+         cpu: "2"
+         memory: "8Gi"
+       limits:
+         cpu: "4"
+         memory: "16Gi"
+         gpu: 1
+
    ```
 
 1. Apply the manifest.
@@ -141,7 +150,6 @@ Use this option when you want to reuse the same model definition across multiple
    spec:
      displayName: "My Custom Model"
      source:
-       type: custom
        custom:
          registry: myregistry.azurecr.io
          repository: models/my-model
@@ -184,6 +192,15 @@ Use this option when you want to reuse the same model definition across multiple
      runtime: vllm
      model:
        ref: my-custom-model
+   resources:
+    requests:
+      cpu: "2"
+      memory: "8Gi"
+    limits:
+      cpu: "4"
+      memory: "16Gi"
+      gpu: 1
+
    ```
 
 1. Apply the deployment manifest.

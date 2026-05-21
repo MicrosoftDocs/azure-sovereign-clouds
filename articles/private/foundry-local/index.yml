@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: cwatson-cat
   ms.author: cwatson
-  ms.date: 05/07/2026
+  ms.date: 05/17/2026
   ms.service: azure
   ms.subservice: sovereign-private-clouds
 
@@ -46,14 +46,18 @@ landingContent:
 
   - title: Get started
     linkLists:
+      - linkListType: quickstart
+        links:
+          - text: "Deploy your first model and run inference"
+            url: deploy-run-first-model.md
       - linkListType: deploy
         links:
           - text: Configure TLS 
             url: how-to-configure-tls-authentication.md
           - text: Deploy Foundry Local as an Azure Arc extension
             url: deploy-foundry-local-arc-extension.md
-          - text: Run your first model
-            url: deploy-run-first-model.md
+          - text: Deploy a catalog model
+            url: how-to-deploy-model.md
           - text: Deploy a bring-your-own model
             url: how-to-deploy-custom-model.md
 

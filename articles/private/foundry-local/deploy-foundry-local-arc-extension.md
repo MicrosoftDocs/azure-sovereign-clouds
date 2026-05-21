@@ -211,7 +211,7 @@ kubectl describe model <name>
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Run your first model](deploy-run-first-model.md)
+> [Deploy your first model and run inference](deploy-run-first-model.md)
 
 ## Related content
 

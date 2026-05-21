@@ -58,7 +58,7 @@ Microsoft Sovereign Cloud uses hardware-based confidential computing, customer-m
 |-----------|---------|
 |[Sovereign Landing Zone (SLZ)](public/overview-sovereign-landing-zone.md) | Preconfigured Azure environment with policy-as-code templates to enforce compliance and security baselines.|
 |Azure Local | Brings core Azure services (compute, storage, networking) to customer premises, supporting disconnected and hybrid scenarios. | 
-|Microsoft 365 Local | Runs Exchange, SharePoint, and Teams in a sovereign environment, built on Azure Stack HCI. | 
+|Microsoft 365 Local | Runs Exchange, SharePoint, and Teams in a sovereign environment, built on Azure Local. | 
 |[Confidential Computing](public/confidential-computing.md) | Protects data in use with Trusted Execution Environments (TEEs). |
 
 ## Customer value
