@@ -40,6 +40,8 @@ additionalContent:
         text: Azure Local Overview and Key Benefits
       - url: private/m365-local/microsoft-365-local-overview.md
         text: What is Microsoft 365 Local on Azure Local Infrastructure?
+      - url: private/azure-local/ai-workloads-overview.md
+        text: AI workloads on Azure Local
 
     - title: Sovereign Public Cloud 
       links:
@@ -60,13 +62,3 @@ additionalContent:
       - url: partner/overview-national-partner-clouds.md
         text: Learn about National Partner Clouds
 
-    - title: AI suite on Sovereign Private Cloud
-      links:
-      - url: /azure/azure-local/concepts/ai-workloads-overview
-        text: AI workloads on Azure Local
-      - url: private/foundry-local/what-is-foundry-local-on-azure-local.md
-        text: Foundry Local preview
-      - url: /azure/azure-arc/edge-rag/overview
-        text: Edge RAG enabled by Azure Arc preview
-      - url: /azure/azure-video-indexer/azure-video-indexer-enabled-by-arc-overview
-        text: Azure AI Video Indexer enabled by Arc
