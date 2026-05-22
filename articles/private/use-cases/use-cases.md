@@ -168,7 +168,7 @@ Flexible model choice: Foundry Local supports a full spectrum of model options, 
 
 Agentic patterns with bring‑your‑own MCP. Beyond inference, Foundry Local supports end‑to‑end agentic RAG: semantic and hybrid retrieval, multi‑step reasoning, and tool‑driven actions, grounded in customer‑owned content. Connect agents to enterprise systems through Model Context Protocol (MCP): use built‑in connectors in Microsoft 365 Local agentic RAG to chat and get references from Microsoft 365 Local SharePoint documents as well as emails and meetings from local Exchange Server. Or bring your own MCP servers to reach line‑of‑business systems, internal APIs, and other data sources while keeping every retrieval, prompt, and tool invocation inside your sovereign boundary.
 
-The same scenario works connected to Azure for ongoing model and update management, or fully disconnected where AI must run with no public‑cloud reachability. Because AI workloads are GPU‑bound and often storage‑intensive, Azure Local supports 50+ GPU‑capable validated platforms with NVIDIA GPUs.
+The same scenario works connected to Azure for ongoing model and update management, or fully disconnected where AI must run with no public‑cloud reachability. Because AI workloads are GPU‑bound and often storage‑intensive, Azure Local supports more than 50 GPU‑capable validated platforms with NVIDIA GPUs.
 
 ### What this translates to
 
