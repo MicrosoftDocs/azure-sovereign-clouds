@@ -80,7 +80,9 @@ $response.models | Format-Table alias, source, framework, @{L='compute';E={$_.su
 
 ## Deploy a model
 
-Choose the model you want from the catalog and create a deployment. Adjust CPU, memory, and GPU resource values based on your model size, quantization level, and expected concurrency. For CPU-only deployments, set `compute` to `cpu`, `runtime` to `onnx-genai`, and remove the `gpu` limit.
+Choose the model you want from the catalog and create a deployment. 
+A model is defined by its alias, runtime and compute. Please note, some models can be ran both via onnx runtime and vLLM, and therefore its important to define the right runtime and compute, not only the alias.
+Adjust CPU, memory, and GPU resource values based on your model size, quantization level, and expected concurrency. For CPU-only deployments, set `compute` to `cpu`, `runtime` to `onnx-genai`, and remove the `gpu` limit.
 
 ### [kubectl](#tab/kubectl)
 
