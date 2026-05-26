@@ -150,7 +150,7 @@ GHES provides guidance on VM sizing based on your use cases and requirements, su
 
 - Artifact storage requirements 
 
-[Minimum recommended requirements](https://docs.github.com/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements)  
+For more information, see the [Minimum recommended requirements](https://docs.github.com/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements).
 
 GitHub Enterprise Local might be supported on both Integrated Systems and Premier Solutions if there's sufficient capacity to run the GHES VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog).
 
