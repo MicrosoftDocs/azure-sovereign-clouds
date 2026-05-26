@@ -128,11 +128,11 @@ Together, these capabilities provide a **consistent, flexible AI developer exper
 
 GitHub Enterprise Local aligns with Azure Local security capabilities, including:
 
-- Network isolation and firewall policies you define.
+- Network isolation and firewall policies that you define.
 
 - FIPS‑validated cryptography through the underlying Azure Local platform.
 
-- Identity, access, and auditing you control.
+- Identity, access, and auditing that you control.
 
 This model helps you meet stringent compliance frameworks while maintaining modern DevOps practices.
 
