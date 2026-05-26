@@ -18,14 +18,9 @@ highlightedContent:
 
   items:
     # Card
-    - title: What is digital sovereignty?
-      itemType: concept
-      url: digital-sovereignty.md 
-    # Card
-    - title: What are the European digital commitments?
-      itemType: concept
-      url: european-digital-commitments.md
-
+    - title: What is Microsoft Sovereign Cloud?
+      itemType: overview
+      url: microsoft-sovereign-cloud.md
 
 additionalContent:
   sections:
