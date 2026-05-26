@@ -150,7 +150,7 @@ GHES provides guidance on VM sizing based on customer use cases and requirements
 
 - Artifact storage requirements 
 
-[Minimum recommended requirements](https://docs.github.com/en/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements)  
+[Minimum recommended requirements](https://docs.github.com/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements)  
 
 GitHub Enterprise Local might be supported on both Integrated Systems and Premier Solutions if there's sufficient capacity to run the GHES VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog).
 
@@ -182,7 +182,7 @@ A typical deployment flow includes:
 
 To run **GitHub Enterprise Local**, you must purchase a **GitHub Enterprise license**. The license follows a **seat**‑**based billing model**. Charges are calculated monthly based on the number of **active users consuming licenses**. The model uses a **unique**‑**user model** where each user consumes a single seat regardless of how many environments they access. [\[Billing for GitHub Enterprise\]](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises), [\[GitHub Enterprise pricing\]](https://azure.microsoft.com/pricing/details/githubenterprise/)
 
-In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. Customers are billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. [\[Azure Local billing and payment\]](/azure/azure-local/concepts/billing), [\[Azure Local pricing\]](https://azure.microsoft.com/en-us/pricing/details/azure-local/)
+In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. Customers are billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. [\[Azure Local billing and payment\]](/azure/azure-local/concepts/billing), [\[Azure Local pricing\]](https://azure.microsoft.com/pricing/details/azure-local/)
 
 As a result, the **total cost of ownership** is made up of two clearly separated components: **GitHub's user‑based application licensing** and **Azure Local's core‑based infrastructure charges**. This separation provides transparency between software licensing costs and underlying platform consumption.
 
