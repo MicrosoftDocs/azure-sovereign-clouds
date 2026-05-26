@@ -52,17 +52,17 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 ### Core GitHub platform
 
-- Private repositories and organizations.
+- Private repositories and organizations
 
-- Pull requests, code reviews, and branch protection.
+- Pull requests, code reviews, and branch protection
 
-- Issues, wikis, and project collaboration.
+- Issues, wikis, and project collaboration
 
 ### CI/CD and artifacts
 
-- GitHub Actions with self‑hosted runners for fully offline pipelines.
+- GitHub Actions with self‑hosted runners for fully offline pipelines
 
-- GitHub Packages supporting npm, NuGet, Maven, and container images.
+- GitHub Packages supporting npm, NuGet, Maven, and container images
 
 ### Actions storage and feature limitations
 
@@ -70,11 +70,11 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 ### Security and compliance
 
-- GitHub Advanced Security features, including code scanning, secret scanning, and dependency alerts.
+- GitHub Advanced Security features, including code scanning, secret scanning, and dependency alerts
 
-- Full audit logging and compliance reporting.
+- Full audit logging and compliance reporting
 
-- Integration with enterprise identity providers, such as SAML and Microsoft Entra ID.
+- Integration with enterprise identity providers, such as SAML and Microsoft Entra ID
 
 The GHES virtual appliance delivers these capabilities entirely on your infrastructure.
 
@@ -98,7 +98,7 @@ Deploy GitHub Enterprise Local by using the following model:
 
     - Azure Local manages VM availability and infrastructure updates
 
-    - GitHub administrators manage application configuration, upgrades, user access, and ongoing maintenance (including keeping GitHub Enterprise Server updated to the latest supported version) via the GHES admin console
+    - GitHub administrators manage application configuration, upgrades, user access, and ongoing maintenance (including keeping GitHub Enterprise Server updated to the latest supported version) via the GHES admin console.
 
 [High availability and replica‑based failover](https://docs.github.com/enterprise-server@3.20/admin/backing-up-and-restoring-your-instance/backup-service-for-github-enterprise-server/about-the-backup-service-for-github-enterprise-server#about-the-github-enterprise-server-backup-service) configurations can be implemented based on your requirements.
 
@@ -128,7 +128,7 @@ Together, these capabilities provide a **consistent, flexible AI developer exper
 
 GitHub Enterprise Local aligns with Azure Local security capabilities, including:
 
-- Network isolation and firewall policies that you define.
+- Network isolation and firewall policies that you define
 
 - FIPS‑validated cryptography through the underlying Azure Local platform.
 
