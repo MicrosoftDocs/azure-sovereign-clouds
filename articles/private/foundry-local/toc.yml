@@ -7,6 +7,8 @@ items:
     items:
     - name: What is Foundry Local on Azure Local?
       href: what-is-foundry-local-on-azure-local.md
+    - name: Multi-node deployment support
+      href: concept-multi-node-deployment.md
     - name: Known issues
       href: known-issues.md
   - name: Quickstart
