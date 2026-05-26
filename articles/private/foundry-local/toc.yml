@@ -1,5 +1,5 @@
 items:
-- name: Foundry Local for Azure Sovereign Private Clouds
+- name: Foundry Local for Microsoft Sovereign Private Clouds
   href: index.yml
   items:
   - name: Overview
@@ -9,20 +9,52 @@ items:
       href: what-is-foundry-local-on-azure-local.md
     - name: Known issues
       href: known-issues.md
-  - name: Concepts
+  - name: Quickstart
     items:
-    - name: Inference operator and model lifecycle
-      href: concept-inference-operator.md
-  - name: Configure
+    - name: Deploy your first model and run inference
+      href: deploy-run-first-model.md
+  - name: Deploy platform
     items:
-    - name: Configure TLS and authentication
+    - name: Authentication and authorization
+      href: concept-authentication-authorization.md
+    - name: Configure TLS
       href: how-to-configure-tls-authentication.md
+    - name: Configure Entra ID authentication
+      href: how-to-configure-authentication.md
+    - name: Deploy as Azure Arc extension
+      href: deploy-foundry-local-arc-extension.md
+  - name: Deploy models
+    items:
+    - name: Deploy a catalog model
+      href: how-to-deploy-model.md
+    - name: Deploy a bring-your-own model
+      href: how-to-deploy-custom-model.md
   - name: Run inference
     items:
+    - name: Models
+      items:
+      - name: Small language models
+        href: concept-models.md
+      - name: Model catalog and sourcing
+        href: concept-model-catalog.md
+      - name: Bring your own models
+        href: concept-bring-your-own-models.md
+      - name: Inference operator and model lifecycle
+        href: concept-inference-operator.md
+      - name: Model caching and StoreModel lifecycle
+        href: concept-model-caching.md
+    - name: Inference runtimes
+      href: concept-inference-runtimes.md
+    - name: Automatic GPU inference tuning
+      href: concept-gpu-inference-planner.md
     - name: Run inference
       href: how-to-run-inference.md
   - name: Reference
     items:
+    - name: vLLM model reference
+      href: reference-models.md
+    - name: Inference API reference
+      href: reference-inference-api.md
     - name: Inference API endpoints and payload reference
       href: reference-inference-api-endpoints-payload.md
     - name: ModelDeployment and operator configuration reference

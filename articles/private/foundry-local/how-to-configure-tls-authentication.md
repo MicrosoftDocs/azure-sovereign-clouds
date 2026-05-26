@@ -1,7 +1,6 @@
 ---
-title: "Configure TLS and authentication for Foundry Local on Azure Local"
-titleSuffix: Foundry Local on Azure Local
-description: "Configure TLS encryption and API key authentication to secure model inference endpoints on Foundry Local on Azure Local."
+title: "Configure TLS for Foundry Local on Azure Local"
+description: "Configure TLS encryption to secure communication between model inference endpoints on Foundry Local on Azure Local."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -9,28 +8,31 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/14/2026
+ms.date: 05/12/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to configure TLS encryption and API key authentication for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
+customer intent: As a platform engineer, I want to configure TLS encryption for Foundry Local on Azure Local so that I can secure AI inference endpoints in my environment.
 ---
 
-# Configure TLS and authentication for Foundry Local on Azure Local
+# Configure TLS for Foundry Local
 
-Foundry Local on Azure Local encrypts all internal service communication by using TLS. Each model service uses self-signed certificates that the cluster manages. This article explains how the TLS setup works and how to configure secure connections inside the cluster, across namespaces, and through external ingress. It also covers API key authentication, including how to retrieve, use, and rotate keys.
+Foundry Local on Azure Local encrypts all internal service communication by using TLS. Each model service uses self-signed certificates that the cluster manages. This article explains how the TLS setup works and how to configure secure connections inside the cluster, across namespaces, and through external ingress.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
 ## Prerequisites
 
-Before you begin, request preview deployment access: [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access).
-
-Automated certificate management requires [cert-manager](https://cert-manager.io/) and [Trust Manager](https://cert-manager.io/docs/trust/trust-manager/) installed on your cluster:
+Automated certificate management requires cert-manager and trust-manager installed on your cluster:
 
 - **cert-manager** issues a self-signed root CA and per-service certificates.
 - **trust-manager** distributes the root CA certificate as a trust bundle to all namespaces so other pods can trust the internal certificates.
 
+How you install these components depends on your deployment method:
+
+- **Arc extension (recommended):** Install cert-manager for Arc-enabled Kubernetes (CME) by using `az k8s-extension create` with the `Microsoft.CertManagement` extension type. CME installs both cert-manager and trust-manager as a managed Arc extension. For installation steps, see [Install cert-manager and trust-manager](deploy-foundry-local-arc-extension.md#step-1-install-cert-manager-and-trust-manager).
+- **Helm-based deployment:** The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Manually install the open-source [cert-manager](https://cert-manager.io/) and [trust-manager](https://cert-manager.io/docs/trust/trust-manager/) components before you deploy Foundry Local on Azure Local. Helm installation instructions are provided during preview access onboarding.
+
 > [!IMPORTANT]
-> The Foundry Local Helm chart doesn't automatically install cert-manager and trust-manager. Install both components before you deploy Foundry Local on Azure Local. 
+> For Arc-enabled Kubernetes clusters, use cert-manager for Arc-enabled Kubernetes (CME) as the supported installation path. Generic open-source cert-manager is only required when you deploy Foundry Local by using Helm without the Arc extension.
 
 ## How internal TLS works
 
@@ -105,7 +107,7 @@ This creation adds a `foundry-local-ca-bundle` ConfigMap in every namespace cont
 
 To call a Foundry service from another namespace, use its internal DNS name, for example `https://inference-service.foundry-local.svc.cluster.local`. Configure your HTTP client to trust the CA by appending `ca-bundle.crt` to your system trust store or setting it explicitly on the client.
 
-When your application makes an HTTPS request, the Foundry service's NGINX sidecar presents a certificate signed by the internal CA. Because your client trusts that CA through the bundle, the TLS handshake succeeds. API key authentication for inference requests is covered in the [Authentication](#authentication) section.
+When your application makes an HTTPS request, the Foundry service's NGINX sidecar presents a certificate signed by the internal CA. Because your client trusts that CA through the bundle, the TLS handshake succeeds. API key authentication for inference requests is covered in [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 
 ## Configure external access through ingress
 
@@ -171,71 +173,10 @@ spec:
       secretName: my-custom-tls
 ```
 
-## Authentication
 
-Foundry Local on Azure Local secures all inference endpoints with API key authentication enabled by default. When you deploy a model, the inference operator automatically generates a primary and secondary API key pair, stores them in a Kubernetes secret named `<deployment-name>-api-keys`, and requires a valid key on every request. A request without a valid key is rejected with `401 Unauthorized`.
-
-The dual-key design means both keys are valid simultaneously, so you can rotate one key while clients continue using the other - with no interruption in service.
-
-### Retrieve API keys
-
-To get the primary API key for a deployment named `my-deployment`:
-
-```bash
-kubectl get secret my-deployment-api-keys -n my-deployment-ns \
-  -o jsonpath='{.data.primary-key}' | base64 --decode
-```
-
-To get the secondary key, use `secondary-key` in the JSON path. Keep these values safe - they're the credentials required to call the model's REST API.
-
-The ModelDeployment owns the secret, so it's deleted automatically if you remove the deployment.
-
-### Use API keys in requests
-
-Include the API key in your HTTP request by using any of these header formats:
-
-- **Authorization header** (Bearer token):
-  ```
-  Authorization: Bearer $API_KEY
-  ```
-- **X-API-Key header**:
-  ```
-  X-API-KEY: $API_KEY
-  ```
-- **api-key header** (OpenAI-compatible):
-  ```
-  api-key: $API_KEY
-  ```
-
-All inference endpoints - for both generative and predictive models - require an API key. This requirement applies to `/v1/chat/completions` (generative) and `/v1/predict` (predictive) endpoints. If the key matches either the primary or secondary key for the target deployment, the request succeeds. Otherwise, the NGINX auth proxy rejects the request before it reaches the model.
-
-### Rotate API keys
-
-To rotate a key without downtime, use a two-step swap:
-
-1. Choose which key to rotate (primary or secondary).
-1. Update the Kubernetes secret with a new value for that key:
-
-   ```bash
-   kubectl patch secret my-deployment-api-keys -n my-deployment-ns --type='json' \
-     -p='[
-       {"op": "replace", "path": "/data/primary-key", "value": "$NEW_PRIMARY_KEY"},
-       {"op": "replace", "path": "/data/primary-rotated-at", "value": "$CURRENT_TIMESTAMP"}
-     ]'
-   ```
-
-1. The deployment now has one old key (secondary) and one new key (primary). Clients can continue using the unchanged secondary key during this transition.
-1. Update your clients to use the new primary key.
-1. Rotate the secondary key by using the same command.
-
-After this two-step swap, you have entirely new primary and secondary keys with no interruption in service.
-
-> [!NOTE]
-> In the preview, manage key rotation manually as described in this article. When you update the API keys secret, the NGINX sidecar picks up the change within a few seconds and you can use the new key immediately. A dedicated rotation command might be available in a future release.
 
 ## Related content
 
+- [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
 - [Run inference on Foundry Local on Azure Local](how-to-run-inference.md)
-- [Inference API endpoints and payload reference](reference-inference-api-endpoints-payload.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
-- [Request deployment access](what-is-foundry-local-on-azure-local.md#request-deployment-access)
