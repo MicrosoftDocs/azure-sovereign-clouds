@@ -52,17 +52,17 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 ### Core GitHub platform
 
-- Private repositories and organizations
+- Private repositories and organizations.
 
-- Pull requests, code reviews, and branch protection
+- Pull requests, code reviews, and branch protection.
 
-- Issues, wikis, and project collaboration
+- Issues, wikis, and project collaboration.
 
 ### CI/CD and artifacts
 
-- GitHub Actions with self‑hosted runners for fully offline pipelines
+- GitHub Actions with self‑hosted runners for fully offline pipelines.
 
-- GitHub Packages supporting npm, NuGet, Maven, and container images
+- GitHub Packages supporting npm, NuGet, Maven, and container images.
 
 ### Actions storage and feature limitations
 
@@ -70,11 +70,11 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 ### Security and compliance
 
-- GitHub Advanced Security features, including code scanning, secret scanning, and dependency alerts
+- GitHub Advanced Security features, including code scanning, secret scanning, and dependency alerts.
 
-- Full audit logging and compliance reporting
+- Full audit logging and compliance reporting.
 
-- Integration with enterprise identity providers, such as SAML and Microsoft Entra ID
+- Integration with enterprise identity providers, such as SAML and Microsoft Entra ID.
 
 The GHES virtual appliance delivers these capabilities entirely on your infrastructure.
 
@@ -128,13 +128,13 @@ Together, these capabilities provide a **consistent, flexible AI developer exper
 
 GitHub Enterprise Local aligns with Azure Local security capabilities, including:
 
-- Network isolation and customer‑defined firewall policies
+- Network isolation and firewall policies you define.
 
-- FIPS‑validated cryptography through the underlying Azure Local platform
+- FIPS‑validated cryptography through the underlying Azure Local platform.
 
-- Customer‑controlled identity, access, and auditing
+- Identity, access, and auditing you control.
 
-This model lets you to meet stringent compliance frameworks while maintaining modern DevOps practices.
+This model helps you meet stringent compliance frameworks while maintaining modern DevOps practices.
 
 ## GitHub Enterprise Local hardware requirements
 
@@ -180,9 +180,9 @@ A typical deployment flow includes:
 
 ## Billing overview
 
-To run **GitHub Enterprise Local**, you must purchase a **GitHub Enterprise license**. The license follows a **seat**‑**based billing model**. Charges are calculated monthly based on the number of **active users consuming licenses**. The model uses a **unique**‑**user model** where each user consumes a single seat regardless of how many environments they access. [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises), [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/)
+To run **GitHub Enterprise Local**, you must purchase a **GitHub Enterprise license**. The license follows a **seat**‑**based billing model**. Charges are calculated monthly based on the number of **active users consuming licenses**. The model uses a **unique**‑**user model** where each user consumes a single seat regardless of how many environments they access. For more information, see [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises) and [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/).
 
-In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. You're billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. [Azure Local billing and payment](/azure/azure-local/concepts/billing), [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/)
+In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. You're billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. For more information, see [Azure Local billing and payment](/azure/azure-local/concepts/billing) and [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).
 
 As a result, the **total cost of ownership** is made up of two clearly separated components: **GitHub's user‑based application licensing** and **Azure Local's core‑based infrastructure charges**. This separation provides transparency between software licensing costs and underlying platform consumption.
 
@@ -190,6 +190,6 @@ As a result, the **total cost of ownership** is made up of two clearly separated
 
 - Plan hardware and [capacity requirements](https://docs.github.com/en/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements) for GitHub Enterprise Server.
 
-- Review [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
+- Review the [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 
 - Prepare for [public preview](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw9dxZ_D1b1FnjqEPJdlIB5UQTUxRUhUWExXNFQzNFRRSUJDVDFTSkFINC4u&origin=lprLink&route=shorturl) onboarding.
