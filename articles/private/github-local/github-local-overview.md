@@ -12,15 +12,15 @@ ms.subservice: sovereign-private-clouds
 
 # What is GitHub Enterprise Local? (preview)
 
-GitHub Enterprise Local enables organizations to run GitHub Enterprise Server (GHES) as a fully self-hosted DevOps platform on Azure Local infrastructure. This solution is designed for customers that require data sovereignty, disconnected or air‑gapped operations, and full control over source code, CI/CD pipelines, and developer workflows.
+GitHub Enterprise Local enables organizations to run GitHub Enterprise Server (GHES) as a fully self-hosted DevOps platform on Azure Local infrastructure. This solution is designed for organizations that require data sovereignty, disconnected or air‑gapped operations, and full control over source code, CI/CD pipelines, and developer workflows.
 
 GitHub Enterprise Local is deployed as a prebuilt virtual appliance on Azure Local and operates entirely within customer‑owned infrastructure. All repositories, metadata, artifacts, and execution remain on‑premises while preserving a GitHub‑consistent developer experience.
 
 ## Overview
 
-GitHub Enterprise Local brings GitHub's enterprise developer platform into sovereign private cloud environments using Azure Local. It is intended for regulated industries such as government, defense, finance, healthcare, and critical infrastructure where public cloud usage is restricted or prohibited.
+GitHub Enterprise Local brings GitHub's enterprise developer platform into sovereign private cloud environments using Azure Local. It's intended for regulated industries such as government, defense, finance, healthcare, and critical infrastructure where public cloud usage is restricted or prohibited.
 
-The solution leverages Azure Local for infrastructure lifecycle management while [GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@3.20/get-started/onboarding/getting-started-with-github-enterprise-server) (GHES) delivers:
+The solution leverages Azure Local for infrastructure lifecycle management while [GitHub Enterprise Server](https://docs.github.com/enterprise-server@3.20/get-started/onboarding/getting-started-with-github-enterprise-server) (GHES) delivers:
 
 - Source code management
 
@@ -40,7 +40,7 @@ GitHub Enterprise Server runs without internet connectivity by default, enabling
 
 Organizations choose GitHub Enterprise Local for the following reasons:
 
-- **Data sovereignty and compliance**: All code and artifacts stay on customer‑controlled infrastructure, supporting strict regulatory and jurisdictional requirements.
+- **Data sovereignty and compliance**: All code and artifacts stay on your infrastructure, supporting strict regulatory and jurisdictional requirements.
 
 - **Disconnected operations**: Supports air‑gapped or intermittently connected environments without dependency on GitHub.com.
 
@@ -76,7 +76,7 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 - Integration with enterprise identity providers, such as SAML and Microsoft Entra ID
 
-The GHES virtual appliance delivers these capabilities entirely on customer infrastructure.
+The GHES virtual appliance delivers these capabilities entirely on your infrastructure.
 
 ## Architecture and deployment model
 
@@ -100,15 +100,15 @@ Deploy GitHub Enterprise Local by using the following model:
 
     - GitHub administrators manage application configuration, upgrades, user access, and ongoing maintenance (including keeping GitHub Enterprise Server updated to the latest supported version) via the GHES admin console
 
-[High availability and replica‑based failover](https://docs.github.com/en/enterprise-server@3.20/admin/backing-up-and-restoring-your-instance/backup-service-for-github-enterprise-server/about-the-backup-service-for-github-enterprise-server#about-the-github-enterprise-server-backup-service) configurations can be implemented based on customer requirements.
+[High availability and replica‑based failover](https://docs.github.com/enterprise-server@3.20/admin/backing-up-and-restoring-your-instance/backup-service-for-github-enterprise-server/about-the-backup-service-for-github-enterprise-server#about-the-github-enterprise-server-backup-service) configurations can be implemented based on your requirements.
 
 ## Disconnected and hybrid deployment scenarios
 
-Azure Local supports both connected and fully disconnected deployment modes. In a connected deployment, Azure Local integrates with Azure services to enable centralized monitoring, updates, and policy management. In disconnected environments, the Azure control plane and management services run locally within the customer environment. Organizations can operate in fully isolated or air-gapped scenarios while maintaining local management capabilities.
+Azure Local supports both connected and fully disconnected deployment modes. In a connected deployment, Azure Local integrates with Azure services to enable centralized monitoring, updates, and policy management. In disconnected environments, the Azure control plane and management services run locally within your environment. Organizations can operate in fully isolated or air-gapped scenarios while maintaining local management capabilities.
 
-GitHub Enterprise Local operates independently of Azure Local's connectivity state. Organizations can deploy GitHub Enterprise Local in either connected or disconnected environments, and the connectivity mode of GitHub Enterprise Local doesn't need to match the Azure Local configuration. In connected deployments, GitHub Enterprise Local can integrate with external services such as object storage like Azure Blob Storage to support capabilities like GitHub Actions artifacts and package storage. In disconnected deployments, GitHub Enterprise Local runs entirely within customer-controlled infrastructure, with all functionalities operating locally and without external service dependencies.
+GitHub Enterprise Local operates independently of Azure Local's connectivity state. Organizations can deploy GitHub Enterprise Local in either connected or disconnected environments, and the connectivity mode of GitHub Enterprise Local doesn't need to match the Azure Local configuration. In connected deployments, GitHub Enterprise Local can integrate with external services such as object storage like Azure Blob Storage to support capabilities like GitHub Actions artifacts and package storage. In disconnected deployments, GitHub Enterprise Local runs entirely within your infrastructure, with all functionalities operating locally and without external service dependencies.
 
-Together, this model allows customers to adopt a connectivity posture that fits their requirements ranging from fully disconnected, to fully connected, to hybrid combinations without compromising sovereignty, control, or developer experience.
+Together, this model allows you to adopt a connectivity posture that fits your requirements ranging from fully disconnected, to fully connected, to hybrid combinations without compromising sovereignty, control, or developer experience.
 
 ## AI-assisted developer experience
 
@@ -116,7 +116,7 @@ After deployment, **GitHub Enterprise Local** extends the developer experience w
 
 - **Connected environments** leverage cloud-hosted AI (for example, GitHub Copilot and GitHub CLI) to enable code completion, chat, explanation, and workflow automation. This approach accelerates development while preserving existing IDE, repository, and CI/CD workflows.
 
-- **Disconnected (air**‑**gapped) environments** maintain a similar experience by using **GitHub CLI–style workflows paired with local inference endpoints** (for example, Foundry Local). This approach ensures prompts, code context, and inference stay within customer-controlled boundaries.
+- **Disconnected (air**‑**gapped) environments** maintain a similar experience by using **GitHub CLI–style workflows paired with local inference endpoints** (for example, Foundry Local). This approach ensures prompts, code context, and inference stay within your controlled boundaries.
 
 - **Foundry Local** enables local model hosting on Azure Local, supporting chat, code assistance, scripting, and agentic workflows. This approach allows teams to preserve AI productivity while meeting sovereignty, compliance, and operational control requirements.
 
@@ -134,13 +134,13 @@ GitHub Enterprise Local aligns with Azure Local security capabilities, including
 
 - Customer‑controlled identity, access, and auditing
 
-This model enables customers to meet stringent compliance frameworks while maintaining modern DevOps practices.
+This model lets you to meet stringent compliance frameworks while maintaining modern DevOps practices.
 
 ## GitHub Enterprise Local hardware requirements
 
 Azure Local supports running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available. Plan compute, memory, storage, and network resources accordingly. 
 
-GHES provides guidance on VM sizing based on customer use cases and requirements, such as: 
+GHES provides guidance on VM sizing based on your use cases and requirements, such as: 
 
 - Number of developers 
 
@@ -156,11 +156,11 @@ GitHub Enterprise Local might be supported on both Integrated Systems and Premie
 
 ## Get started with GitHub Enterprise Local
 
-GitHub Enterprise Local is now in public preview. For information about it, contact your Microsoft account team or visit [GitHub Enterprise Local Preview Sign-Up](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2Fr%2Fimi6M5uXaX%3Forigin%3DlprLink&data=05%7C02%7Csushil.jarwal%40microsoft.com%7C53815cfc7e3f41aaefc708de7ed73ffb%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639087660165168475%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ZXEhb%2Bzb96VyxqzyBlgZiCiTLJQO2JqE5856eUoKUvU%3D&reserved=0). This survey helps Microsoft identify interested organizations and assess their readiness and requirements for GitHub Enterprise Local. Microsoft reviews submissions on a rolling basis, with evaluations conducted every two weeks. Selected participants are contacted for onboarding into the public preview. Feedback collected during this process helps shape future product direction.
+GitHub Enterprise Local is now in public preview. For information about it, contact your Microsoft account team or visit [GitHub Enterprise Local Preview Sign-Up](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw9dxZ_D1b1FnjqEPJdlIB5UQTUxRUhUWExXNFQzNFRRSUJDVDFTSkFINC4u&origin=lprLink&route=shorturl). This survey helps Microsoft identify interested organizations and assess their readiness and requirements for GitHub Enterprise Local. Microsoft reviews submissions on a rolling basis, with evaluations conducted every two weeks. Selected participants are contacted for onboarding into the public preview. Feedback collected during this process helps shape future product direction.
 
 ## Deployment overview
 
-GitHub Enterprise Local supports both **single**‑**node** and **multi-node** Azure Local deployment options to match customer needs. Single node Azure Local runs GHES as a standalone VM, ideal for preview, proof of concept, and low‑risk scenarios focused on simplicity and cost efficiency. For production-oriented deployments, the same single GHES VM can run on a **multi-node Azure Local cluster**, where Azure Local provides VM‑level high availability and failover, while GHES itself remains a single, non‑clustered instance.
+GitHub Enterprise Local supports both **single**‑**node** and **multi-node** Azure Local deployment options to match your needs. Single node Azure Local runs GHES as a standalone VM, ideal for preview, proof of concept, and low‑risk scenarios focused on simplicity and cost efficiency. For production-oriented deployments, the same single GHES VM can run on a **multi-node Azure Local cluster**, where Azure Local provides VM‑level high availability and failover, while GHES itself remains a single, non‑clustered instance.
 
 A typical deployment flow includes:
 
@@ -180,9 +180,9 @@ A typical deployment flow includes:
 
 ## Billing overview
 
-To run **GitHub Enterprise Local**, you must purchase a **GitHub Enterprise license**. The license follows a **seat**‑**based billing model**. Charges are calculated monthly based on the number of **active users consuming licenses**. The model uses a **unique**‑**user model** where each user consumes a single seat regardless of how many environments they access. [\[Billing for GitHub Enterprise\]](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises), [\[GitHub Enterprise pricing\]](https://azure.microsoft.com/pricing/details/githubenterprise/)
+To run **GitHub Enterprise Local**, you must purchase a **GitHub Enterprise license**. The license follows a **seat**‑**based billing model**. Charges are calculated monthly based on the number of **active users consuming licenses**. The model uses a **unique**‑**user model** where each user consumes a single seat regardless of how many environments they access. [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises), [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/)
 
-In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. Customers are billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. [\[Azure Local billing and payment\]](/azure/azure-local/concepts/billing), [\[Azure Local pricing\]](https://azure.microsoft.com/pricing/details/azure-local/)
+In contrast, **Azure Local** uses an **infrastructure‑based billing model** rather than a user‑based one. You're billed **per physical CPU core per month** for the Azure Local host, independent of the number of developers or applications running on top of the platform. [Azure Local billing and payment](/azure/azure-local/concepts/billing), [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/)
 
 As a result, the **total cost of ownership** is made up of two clearly separated components: **GitHub's user‑based application licensing** and **Azure Local's core‑based infrastructure charges**. This separation provides transparency between software licensing costs and underlying platform consumption.
 
@@ -192,4 +192,4 @@ As a result, the **total cost of ownership** is made up of two clearly separated
 
 - Review [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 
-- Prepare for [public preview](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2Fr%2Fimi6M5uXaX%3Forigin%3DlprLink&data=05%7C02%7Csushil.jarwal%40microsoft.com%7C53815cfc7e3f41aaefc708de7ed73ffb%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639087660165168475%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ZXEhb%2Bzb96VyxqzyBlgZiCiTLJQO2JqE5856eUoKUvU%3D&reserved=0) onboarding.
+- Prepare for [public preview](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw9dxZ_D1b1FnjqEPJdlIB5UQTUxRUhUWExXNFQzNFRRSUJDVDFTSkFINC4u&origin=lprLink&route=shorturl) onboarding.
