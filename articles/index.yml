@@ -30,13 +30,13 @@ additionalContent:
     - title: Sovereign Private Cloud
       links:
       - url: private/overview/sovereign-private-cloud.md
-        text: Learn about Sovereign Private Cloud
+        text: What is Sovereign Private Cloud?
       - url: private/azure-local/azure-local-overview.md
-        text: Learn about Azure Local and key benefits
+        text: Azure Local Overview and Key Benefits
       - url: private/m365-local/microsoft-365-local-overview.md
-        text: Learn about Microsoft 365 Local on Azure Local infrastructure
+        text: What is Microsoft 365 Local on Azure Local Infrastructure?
       - url: private/azure-local/ai-workloads-overview.md
-        text: Learn about AI workloads on Azure Local
+        text: AI workloads on Azure Local
 
     - title: Sovereign Public Cloud 
       links:
