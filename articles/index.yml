@@ -11,21 +11,16 @@ metadata:
   author: cwatson-cat
   ms.service: azure
   ms.author: cwatson
-  ms.date: 04/01/2026
+  ms.date: 05/26/2026
 
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
   items:
     # Card
-    - title: What is digital sovereignty?
-      itemType: concept
-      url: digital-sovereignty.md 
-    # Card
-    - title: What are the European digital commitments?
-      itemType: concept
-      url: european-digital-commitments.md
-
+    - title: What is Microsoft Sovereign Cloud?
+      itemType: overview
+      url: microsoft-sovereign-cloud.md
 
 additionalContent:
   sections:
