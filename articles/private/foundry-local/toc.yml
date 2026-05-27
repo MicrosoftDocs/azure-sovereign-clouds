@@ -51,6 +51,12 @@ items:
       href: concept-gpu-inference-planner.md
     - name: Run inference
       href: how-to-run-inference.md
+  - name: Disconnected operations
+    items:
+    - name: Overview
+      href: disconnected-operations-overview.md
+    - name: Troubleshoot
+      href: disconnected-operations-troubleshoot.md
   - name: Reference
     items:
     - name: vLLM model reference
