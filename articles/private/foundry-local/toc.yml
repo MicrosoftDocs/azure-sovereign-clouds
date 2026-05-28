@@ -68,7 +68,7 @@ items:
       - name: Deploy your first model
         href: disconnected-operations-deploy-first-model.md
       - name: Expand model catalog
-        href: disconnected-operations-expand-model-catalog.md
+        href: disconnected-operations-expand-catalog.md
     - name: Troubleshoot
       href: disconnected-operations-troubleshoot.md
   - name: Reference
