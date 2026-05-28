@@ -55,6 +55,20 @@ items:
     items:
     - name: Overview
       href: disconnected-operations-overview.md
+    - name: Deploy Platform
+      items: 
+      - name: Plan deployment
+        href: disconnected-operations-plan.md
+      - name: Deploy Foundry Local as an Azure Arc extension
+        href: disconnected-operations-deploy-platform.md
+      - name: Authentication and authorization in disconnected environments
+        href: disconnected-operations-authentication-authorization.md 
+    - name: Deploy Models
+      items: 
+      - name: Deploy your first model
+        href: disconnected-operations-deploy-first-model.md
+      - name: Expand model catalog
+        href: disconnected-operations-expand-model-catalog.md
     - name: Troubleshoot
       href: disconnected-operations-troubleshoot.md
   - name: Reference
