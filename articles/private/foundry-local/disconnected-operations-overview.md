@@ -45,7 +45,7 @@ Authorization uses standard Azure RBAC roles on the Foundry extension resource:
 * `Reader` is for read-only operations, such as listing and getting model catalog entries.
 * `Contributor` is required for control plane write operations (for example `POST`, `PUT`, `PATCH`, `DELETE` for models and deployments) and for data plane inference operations such as `predict` and `chat/completions`.
 
-This differs from connected deployments, which typically use roles such as Cognitive Services OpenAI User to grant access to inference endpoints.
+This authorization model differs from connected deployments, which typically use roles such as Cognitive Services OpenAI User to grant access to inference endpoints.
 
 The following diagram shows how these components work together in a disconnected environment.
 
