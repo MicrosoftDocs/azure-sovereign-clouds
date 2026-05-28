@@ -66,7 +66,7 @@ $result = Start-AldoExpansionPackInstallation `
 
 When installation finishes:
 
-* Container images are imported into the edgeartifacts registry.
+* The process imports container images into the `edgeartifacts` registry.
 * Model artifacts are published to the registry.
 * The Foundry Local Azure Arc extension becomes available for installation.
 
