@@ -84,7 +84,7 @@ To expose Foundry Local services outside the Kubernetes cluster, deploy an ingre
 
 Foundry Local automatically creates ingress resources and applies the required NGINX annotations to enable secure communication. However, Foundry Local doesn't install an ingress controller as part of the extension deployment. You must deploy and manage the ingress controller separately.
 
-The required container images and Helm charts are included in the `edgeartifacts` container registry.
+The `edgeartifacts` container registry includes the required container images and Helm charts.
 
 [!NOTE]
 The current release uses NGINX Ingress Controller for ingress management. NGINX support is planned to be deprecated in a future release and replaced with an alternative ingress solution. Review future release notes for updated guidance and migration instructions.
