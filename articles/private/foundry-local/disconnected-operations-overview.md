@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand disconnected operations in Foundry Local on Azure Local so that I can run and manage AI inference workloads disconnected on-premises.
 ---
 
-# Foundry Local Enabled by Azure Arc in disconnected environments overview
+# Foundry Local enabled by Azure Arc in disconnected environments overview
 
 Microsoft Foundry Local can be deployed on Azure Local in disconnected environments with a deployment model that is largely consistent with connected scenarios. However, several key differences apply when internet connectivity isn't available.
 
