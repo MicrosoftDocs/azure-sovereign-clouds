@@ -15,9 +15,9 @@ customer intent: As a platform engineer, I want to find and fix issues with my F
 
 # Troubleshoot Foundry Local Azure Arc extension deployment in disconnected environments
 
-## Expansion pack installation times out or stays in non-installed state
+## Expansion pack installation times out or stays in noninstalled state
 
-If expansion pack installation does not complete, remove the failed pack and reinstall.
+If expansion pack installation doesn't complete, remove the failed pack and reinstall it.
 
 ```ps1
 Get-ApplianceExpansionPackDetails
@@ -29,7 +29,7 @@ $expansionPackId = Start-AldoExpansionPackUpload -ExpansionPackPath "<PATH_TO_EX
 $result = Start-AldoExpansionPackInstallation -ExpansionPackId $expansionPackId -Wait
 ```
 
-## Foundry extension installation does not complete
+## Foundry extension installation doesn't complete
 
 Validate that prerequisites are installed and healthy, especially NGINX ingress (if used), cert-manager, and trust-manager.
 
@@ -40,7 +40,7 @@ kubectl get pods -n ingress-nginx
 kubectl get pods -n foundry-local-operator
 ```
 
-If cert-manager, trust-manager, or ingress-nginx releases are not `deployed` or their pods are not `Running`, fix those first and retry extension installation.
+If cert-manager, trust-manager, or ingress-nginx releases aren't `deployed` or their pods aren't `Running`, fix those issues first and retry extension installation.
 
 ## Collect logs for Microsoft support
 
@@ -54,15 +54,15 @@ This command collects diagnostic logs for support.
 
 ## Extension install fails with OOM or atomic rollback
 
-If installation fails and you are using default AKS Arc worker size (`Standard_A4_v2`), recreate the cluster with at least `Standard_D4s_v3` (recommended `Standard_D8s_v3`).
+If installation fails and you're using default AKS Arc worker size (`Standard_A4_v2`), recreate the cluster with at least `Standard_D4s_v3` (recommended `Standard_D8s_v3`).
 
 ```ps1
 kubectl describe nodes | Select-String "Allocatable:" -Context 0,5
 ```
 
-## Models do not appear after sync
+## Models don't appear after sync
 
-Check that the model expansion pack is installed and then re-run sync.
+Check that the model expansion pack is installed, and then run sync again.
 
 ```ps1
 Get-ApplianceExpansionPackDetails
@@ -78,9 +78,9 @@ Invoke-RestMethod `
   -Method GET
 ```
 
-## 401 or 403 when calling APIs
+## 401 or 403 errors when calling APIs
 
-Confirm token audience and RBAC role assignment on the Foundry extension scope.
+Confirm the token audience and RBAC role assignment on the Foundry extension scope.
 
 ```ps1
 az account get-access-token --resource "$appId" --query accessToken -o tsv

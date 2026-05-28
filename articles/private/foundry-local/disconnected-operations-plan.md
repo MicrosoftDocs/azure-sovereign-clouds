@@ -29,18 +29,18 @@ Before you begin, ensure the following components are available:
     | Worker node count | 1 | 2+ (HA or GPU pool separation) |
     | Logical network | Reachable from edgeartifacts ACR | - |
 
-    The `az aksarc create` default `Standard_A4_v2` (8 GiB) is not supported and can fail due to model-cache OOM followed by extension `--atomic` rollback.
+    The `az aksarc create` default `Standard_A4_v2` (8 GiB) isn't supported and can fail due to model-cache OOM followed by extension `--atomic` rollback.
 
 * (Optional) GPU node pool (required only for GPU model variants such as `*-cuda-gpu` and `vLLM`):
-    * NVIDIA DDA-passthrough SKU: `Standard_NC*_A2`, `Standard_NC*_L4_*`, `Standard_NC*_L40_*`, `Standard_NC*_L40S_*`, `Standard_NC*_RTX6000Pro_*`, or Tesla T4 `Standard_NK*`. AMD GPUs are not supported.
+    * NVIDIA DDA-passthrough SKU: `Standard_NC*_A2`, `Standard_NC*_L4_*`, `Standard_NC*_L40_*`, `Standard_NC*_L40S_*`, `Standard_NC*_RTX6000Pro_*`, or Tesla T4 `Standard_NK*`. AMD GPUs aren't supported.
     * NVIDIA mitigation INF is installed on the physical Azure Local node.
-    * `nvidia/k8s-device-plugin:v0.11.0` should be mirrored into `edgeartifacts` container registry at the path expected by the auto-deployed DaemonSet, because `microsoft.gpu.gpuoperator` is not registered in Autonomous.
+    * `nvidia/k8s-device-plugin:v0.11.0` should be mirrored into `edgeartifacts` container registry at the path expected by the auto-deployed DaemonSet, because `microsoft.gpu.gpuoperator` isn't registered in Autonomous.
 
 ## Download the Foundry Local Expansion Pack
 
 Download the Foundry Local extension expansion pack from the Azure Local Disconnected Resource Provider in a connected environment.
 
-**Package Naming Convention**
+**Package naming convention**
 
 `azurelocal.pxp.microsoft.foundrylocal.k8sextension.<BUILD_VERSION>.zip`
 
@@ -51,7 +51,7 @@ Example:
 ## Import Expansion Pack into the Disconnected Environment
 
 1. Transfer the expansion pack to the disconnected Azure Local environment.
-2. Run the following commands on the `Azure Local Disconnected Operations` machine to install the expansion pack.
+1. Run the following commands on the `Azure Local Disconnected Operations` machine to install the expansion pack.
 
 ```ps1
 Import-Module "<PATH_TO_ALDO_MODULES>\Azure.Local.ExpansionPack.psm1"
@@ -64,7 +64,7 @@ $result = Start-AldoExpansionPackInstallation `
     -Wait
 ```
 
-When installation completes:
+When installation finishes:
 
 * Container images are imported into the edgeartifacts registry.
 * Model artifacts are published to the registry.

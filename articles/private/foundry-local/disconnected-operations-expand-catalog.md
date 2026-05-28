@@ -13,11 +13,11 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to expand the model catalog for my Foundry Local disconnected environment.
 ---
 
-# Expand Model Catalog in Disconnected Mode
+# Expand model catalog in disconnected mode
 
-To make additional models available in a disconnected environment, you must download and install the corresponding model expansion packs into the Azure Local disconnected deployment.
+To make additional models available in a disconnected environment, download and install the corresponding model expansion packs into the Azure Local disconnected deployment.
 
-Each model is distributed as a separate expansion pack. After installation, the model artifacts are imported into the edgeartifacts container registry.
+Each model is distributed as a separate expansion pack. After installation, the model artifacts are imported into the `edgeartifacts` container registry.
 
 After each model expansion pack installation, verify the pack state on the `Azure Local Disconnected Operations` machine:
 
@@ -25,7 +25,7 @@ After each model expansion pack installation, verify the pack state on the `Azur
 Get-ApplianceExpansionPackDetails
 ```
 
-Confirm the newly installed model pack is in `Installed` state before running model sync.
+- Confirm the newly installed model pack is in the `Installed` state before running model sync.
 
 Once the expansion packs have been installed successfully, trigger a model synchronization operation to refresh the model catalog and make the newly installed models available for use.
 
@@ -40,7 +40,7 @@ Invoke-RestMethod `
   -Method POST
 ```
 
-After the synchronization completes, the newly installed models will appear in the model catalog and can be enabled for deployment and inference workloads.
+After the synchronization completes, the newly installed models appear in the model catalog and you can enable them for deployment and inference workloads.
 Verify model sync completed and the model is visible in the catalog:
 
 ```ps1
@@ -50,7 +50,7 @@ Invoke-RestMethod `
   -Method GET
 ```
 
-**Package Naming Convention**
+**Package naming convention**
 
 `azurelocal.pxp.foundrylocal.<MODEL_NAME>.model.<PUBLISH_VERSION>.zip`
 

@@ -19,7 +19,7 @@ customer intent: As a platform engineer, I want to deploy Foundry Local as an Az
 
 Before you begin, complete the steps in [Plan to deploy Foundry Local expansion pack in disconnected environments](disconnected-operations-plan.md) to fulfill prerequisites and download the Foundry Local expansion pack.
 
-## Install Required Kubernetes Prerequisites (Cert-Manager and Trust-Manager)
+## Install required Kubernetes prerequisites (Cert-Manager and Trust-Manager)
 
 The Foundry Local expansion pack includes Helm charts and container images for `cert-manager` and `trust-manager`.
 You can install those charts directly from `edgeartifacts` Container Registry.
@@ -64,7 +64,7 @@ helm upgrade --install trust-manager `
   --wait
 ```
 
-### Verify Installation
+### Verify installation
 
 ```ps1
 helm list -n cert-manager
@@ -111,7 +111,7 @@ helm upgrade --install ingress-nginx `
   --wait
 ```
 
-### Verify Installation
+### Verify installation
 
 ```ps1
 helm list -n ingress-nginx
@@ -147,7 +147,7 @@ az k8s-extension create `
   --config entraAuth.clientId=$ENTRA_APP_ID
 ```
 
-### Verify Installation
+### Verify installation
 
 ```ps1
 az k8s-extension show `
