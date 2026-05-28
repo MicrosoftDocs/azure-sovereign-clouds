@@ -47,6 +47,3 @@ Authorization uses standard Azure RBAC roles on the Foundry extension resource:
 
 This authorization model differs from connected deployments, which typically use roles such as Cognitive Services OpenAI User to grant access to inference endpoints.
 
-The following diagram shows how these components work together in a disconnected environment.
-
-:::image type="content" source="media/disconnected-operations-overview/disconnected-architecture.png" alt-text="Diagram of Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources in a disconnected environment, and app calls to secured inference endpoints.":::
