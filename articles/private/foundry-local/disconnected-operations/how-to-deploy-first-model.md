@@ -15,7 +15,7 @@ customer intent: As a platform engineer or developer, I want to deploy and run m
 
 # Deploy your first model in a disconnected environment
 
-After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU is already available as part of the base pack. This article shows you how to deploy your first model from the Foundry Local catalog to your Kubernetes cluster.
+After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU is available as part of the base pack. This article shows you how to create your first deployment from the catalog..
 
 ## Prerequisites
 
@@ -93,6 +93,5 @@ Expected result:
 ## Related content
 
 * [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)
-* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)
 * [Configure authentication and authorization for Foundry Local on Azure Local in disconnected environments](how-to-authenticate.md)
 * [Expand model catalog for Foundry Local on Azure Local in disconnected environments](how-to-expand-catalog.md)
