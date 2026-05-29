@@ -21,7 +21,7 @@ GitHub Enterprise Local is in public preview. To express interest, contact your 
 Microsoft reviews survey submissions on a rolling basis, with evaluations conducted every two weeks. Approved organizations are contacted with onboarding details.
 
 > [!IMPORTANT]
-> The deployment PowerShell script is provided only to approved public preview participants after they submit the onboarding survey and are selected for preview onboarding.
+> Microsoft provides the deployment PowerShell script only to approved public preview participants after they submit the onboarding survey and are selected for preview onboarding.
 
 Azure Local supports running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available. Plan compute, memory, storage, and network resources accordingly.
 
@@ -41,11 +41,11 @@ GitHub Enterprise Local might be supported on both Integrated Systems and Premie
 
 ## Deploy GitHub Enterprise Local
 
-GitHub Enterprise Local supports both single-node and multi-node Azure Local deployment options. Single-node Azure Local runs GHES as a standalone VM for preview and proof-of-concept scenarios. For production-oriented deployments, the same single GHES VM can run on a multi-node Azure Local cluster, where Azure Local provides VM-level high availability and failover, while GHES itself remains a single, non-clustered instance.
+GitHub Enterprise Local supports both single-node and multi-node Azure Local deployment options. Single-node Azure Local runs GHES as a standalone VM for preview and proof-of-concept scenarios. For production-oriented deployments, the same single GHES VM runs on a multi-node Azure Local cluster. Azure Local provides VM-level high availability and failover, while GHES itself remains a single, non-clustered instance.
 
 A typical deployment includes the following steps:
 
-1. **Prepare Azure Local infrastructure**. Ensure you have an Azure Local environment set up with sufficient capacity to run the GHES VM image.
+1. **Prepare Azure Local infrastructure**. Ensure you set up an Azure Local environment with sufficient capacity to run the GHES VM image.
 
 1. **Download the GitHub Enterprise Local VM image**. Place the image in a location that an Azure Local node can see and access. To reduce deployment time, download the image directly to the target location specified during deployment, because the deployment process copies the image into Azure Local storage.
 
