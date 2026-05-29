@@ -17,7 +17,7 @@ customer intent: As a platform engineer, I want to deploy Foundry Local as an Az
 
 ## Prerequisites
 
-Before you begin, complete the steps in [Plan to deploy Foundry Local expansion pack in disconnected environments](disconnected-operations-plan.md) to fulfill prerequisites and download the Foundry Local expansion pack.
+Before you begin, complete the steps in [Plan to deploy Foundry Local expansion pack in disconnected environments](how-to-plan.md) to fulfill prerequisites and download the Foundry Local expansion pack.
 
 ## Install required Kubernetes prerequisites (Cert-Manager and Trust-Manager)
 
