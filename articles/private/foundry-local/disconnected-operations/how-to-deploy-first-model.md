@@ -5,7 +5,7 @@ ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
 - Foundry Local on Azure Local
-ms.topic: quickstart
+ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
 ms.date: 05/27/2026
@@ -15,13 +15,11 @@ customer intent: As a platform engineer or developer, I want to deploy and run m
 
 # Deploy your first model in a disconnected environment
 
-After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU is already available as part of the base pack.
-
-Use the following steps to create your first deployment from the catalog.
+After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU is already available as part of the base pack. This article shows you how to deploy your first model from the Foundry Local catalog to your Kubernetes cluster.
 
 ## Prerequisites
 
-Make sure you've followed the steps in [Plan to deploy Foundry Local on Azure Local in disconnected environments](how-to-plan.md) and [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md) to set up your environment and deploy the Foundry Local extension.
+Make sure you followed the steps in [Plan to deploy Foundry Local on Azure Local in disconnected environments](how-to-plan.md) and [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md) to set up your environment and deploy the Foundry Local extension.
 
 ## Generate access token and request headers
 
