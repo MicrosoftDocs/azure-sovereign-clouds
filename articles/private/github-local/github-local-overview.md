@@ -140,23 +140,7 @@ GitHub Enterprise Local aligns with Azure Local security capabilities, including
 
 This model helps you meet stringent compliance frameworks while maintaining modern DevOps practices.
 
-## GitHub Enterprise Local hardware requirements
-
-Azure Local supports running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available. Plan compute, memory, storage, and network resources accordingly. 
-
-GHES provides VM sizing guidance based on your use cases and requirements, such as: 
-
-- Number of developers 
-
-- Repository size and growth 
-
-- CI/CD pipeline frequency 
-
-- Artifact storage requirements 
-
-For more information, see the [Minimum recommended requirements](https://docs.github.com/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements).
-
-GitHub Enterprise Local might be supported on both Integrated Systems and Premier Solutions if there's sufficient capacity to run the GHES VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog).
+For hardware and sizing guidance, see [GitHub Enterprise Local hardware requirements](github-local-get-started.md#hardware-requirements).
 
 ## Billing overview
 
@@ -173,8 +157,6 @@ As a result, the total cost of ownership is made up of two clearly separated com
 - Review [Azure Local overview](../azure-local/azure-local-overview.md).
 
 - Compare [connected](../azure-local/connected-operations-overview.md) and [disconnected](../azure-local/disconnected-operations-overview.md) operations for deployment planning.
-
-- Plan hardware and [capacity requirements](https://docs.github.com/en/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements) for GitHub Enterprise Server.
 
 - Review the [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 

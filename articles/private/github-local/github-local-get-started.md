@@ -14,9 +14,7 @@ ms.subservice: sovereign-private-clouds
 
 This article explains how to onboard to the public preview and deploy GitHub Enterprise Local on Azure Local.
 
-[!INCLUDE [sovereign-private-clouds-preview.md](../includes/sovereign-private-clouds-preview.md)]
-
-## Public preview onboarding
+## Prerequisites
 
 GitHub Enterprise Local is in public preview. To express interest, contact your Microsoft account team or submit the [GitHub Enterprise Local Preview Sign-Up](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw9dxZ_D1b1FnjqEPJdlIB5UQTUxRUhUWExXNFQzNFRRSUJDVDFTSkFINC4u&origin=lprLink&route=shorturl).
 
@@ -25,7 +23,23 @@ Microsoft reviews survey submissions on a rolling basis, with evaluations conduc
 > [!IMPORTANT]
 > The deployment PowerShell script is provided only to approved public preview participants after they submit the onboarding survey and are selected for preview onboarding.
 
-## Deployment overview
+Azure Local supports running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available. Plan compute, memory, storage, and network resources accordingly.
+
+GHES provides VM sizing guidance based on your use cases and requirements, such as:
+
+- Number of developers
+
+- Repository size and growth
+
+- CI/CD pipeline frequency
+
+- Artifact storage requirements
+
+For more information, see the [Minimum recommended requirements](https://docs.github.com/enterprise-server@3.15/admin/monitoring-and-managing-your-instance/updating-the-virtual-machine-and-physical-resources/increasing-storage-capacity#minimum-recommended-requirements).
+
+GitHub Enterprise Local might be supported on both Integrated Systems and Premier Solutions if there's sufficient capacity to run the GHES VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog).
+
+## Deploy GitHub Enterprise Local
 
 GitHub Enterprise Local supports both single-node and multi-node Azure Local deployment options. Single-node Azure Local runs GHES as a standalone VM for preview and proof-of-concept scenarios. For production-oriented deployments, the same single GHES VM can run on a multi-node Azure Local cluster, where Azure Local provides VM-level high availability and failover, while GHES itself remains a single, non-clustered instance.
 
