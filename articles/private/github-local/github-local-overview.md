@@ -1,6 +1,6 @@
 ---
 title: What is GitHub Enterprise Local? (preview)
-description: Deploy GitHub Enterprise Local on Azure Local for regulated industries needing data sovereignty and disconnected operations. Review architecture and start planning.
+description: Learn about GitHub Enterprise Local on Azure Local for regulated industries needing data sovereignty and disconnected operations. Review architecture and start planning.
 author: ronmiab
 ms.author: robess
 ms.reviewer: sushiljarwal
@@ -34,7 +34,7 @@ The solution leverages Azure Local for infrastructure lifecycle management while
 
 - GitHub Advanced Security
 
-GitHub Enterprise Server runs without internet connectivity by default, enabling fully disconnected deployments.
+GHES runs without internet connectivity by default, enabling fully disconnected deployments.
 
 ## Why use GitHub Enterprise Local?
 
@@ -116,7 +116,7 @@ After deployment, **GitHub Enterprise Local** extends the developer experience w
 
 - **Connected environments** leverage cloud-hosted AI (for example, GitHub Copilot and GitHub CLI) to enable code completion, chat, explanation, and workflow automation. This approach accelerates development while preserving existing IDE, repository, and CI/CD workflows.
 
-- **Disconnected (air**‑**gapped) environments** maintain a similar experience by using **GitHub CLI–style workflows paired with local inference endpoints** (for example, Foundry Local). This approach ensures prompts, code context, and inference stay within your controlled boundaries.
+- **Disconnected (air‑gapped) environments** maintain a similar experience by using GitHub CLI–style workflows paired with local inference endpoints (for example, Foundry Local). This approach ensures prompts, code context, and inference stay within your controlled boundaries.
 
 - **Foundry Local** enables local model hosting on Azure Local, supporting chat, code assistance, scripting, and agentic workflows. This approach allows teams to preserve AI productivity while meeting sovereignty, compliance, and operational control requirements.
 
@@ -128,7 +128,7 @@ Together, these capabilities provide a **consistent, flexible AI developer exper
 
 GitHub Enterprise Local aligns with Azure Local security capabilities, including:
 
-- Network isolation and firewall policies that you define
+- Network isolation and firewall policies that you define.
 
 - FIPS‑validated cryptography through the underlying Azure Local platform.
 
@@ -140,7 +140,7 @@ This model helps you meet stringent compliance frameworks while maintaining mode
 
 Azure Local supports running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available. Plan compute, memory, storage, and network resources accordingly. 
 
-GHES provides guidance on VM sizing based on your use cases and requirements, such as: 
+GHES provides VM sizing guidance based on your use cases and requirements, such as: 
 
 - Number of developers 
 
