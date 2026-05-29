@@ -1,5 +1,5 @@
 ---
-title: "Plan to deploy Foundry Local as an Azure Arc extension in a disconnected environment"
+title: "Plan to deploy Foundry Local on Azure Local in a disconnected environment"
 description: "Fulfill prerequisites and download the Foundry Local extension expansion pack to prepare for deployment in a disconnected environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -10,10 +10,12 @@ ms.author: cwatson
 author: cwatson-cat
 ms.date: 05/28/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to fulfill the prerequisites and download the required package to deploy Foundry Local as an Azure Arc extension in my disconnected environment.
+customer intent: As a platform engineer, I want to fulfill the prerequisites and download and import the required expansion pack to deploy Foundry Local as an Azure Arc extension in my disconnected environment.
 ---
 
-# Plan to deploy Foundry Local expansion pack in disconnected environments
+# Plan to deploy Foundry Local on Azure Local in disconnected environments
+
+This article outlines the prerequisites and steps to download the Foundry Local extension expansion pack in preparation for deployment in a disconnected environment.
 
 ## Prerequisites
 
@@ -77,3 +79,12 @@ Run the following command on the `Azure Local Disconnected Operations` machine a
 ```ps1
 Get-ApplianceExpansionPackDetails
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](deploy-platform.md)
+
+## Related content
+
+* [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)

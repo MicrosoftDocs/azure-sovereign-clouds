@@ -1,6 +1,6 @@
 ---
 title: "Expand Model Catalog for Foundry Local on Azure Local Deployment in Disconnected Mode"
-description: "Expand the Model Catalog for your Foundry Local enabled by Azure Arc deployment in a disconnected environment."
+description: "Expand the Model Catalog for your Foundry Local on Azure Local deployment in a disconnected environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -58,3 +58,6 @@ Example:
 
 `azurelocal.pxp.foundrylocal.phi-3.5-mini.gpu.model.1.2605.12.zip`
 
+## Related content
+
+- [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)

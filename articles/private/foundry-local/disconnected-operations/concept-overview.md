@@ -1,5 +1,5 @@
 ---
-title: "Foundry Local Enabled by Azure Arc in Disconnected Environments Overview"
+title: "Foundry Local on Azure Local in Disconnected Environments Overview"
 description: "Deploy and run AI models on Azure Local with Arc-enabled Kubernetes for secure inference in disconnected environments."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand disconnected operations in Foundry Local on Azure Local so that I can run and manage AI inference workloads disconnected on-premises.
 ---
 
-# Foundry Local enabled by Azure Arc in disconnected environments overview
+# Foundry Local on Azure Local in disconnected environments overview
 
 Microsoft Foundry Local can be deployed on Azure Local in disconnected environments with a deployment model that is largely consistent with connected scenarios. However, several key differences apply when internet connectivity isn't available.
 
@@ -47,3 +47,14 @@ Authorization uses standard Azure RBAC roles on the Foundry extension resource:
 
 This authorization model differs from connected deployments, which typically use roles such as Cognitive Services OpenAI User to grant access to inference endpoints.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Plan to deploy Foundry Local on Azure Local in disconnected environments](how-to-plan.md)
+
+## Related content
+
+* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)
+* [Deploy your first model in a disconnected environment](how-to-deploy-first-model.md)
+* [Configure authentication and authorization for Foundry Local on Azure Local in disconnected environments](how-to-authenticate.md)
+* [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)

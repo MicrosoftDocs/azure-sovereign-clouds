@@ -112,3 +112,8 @@ az role assignment create `
   --role Contributor `
   --scope $extensionScope
 ```
+
+## Related content
+
+* [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)
+* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)

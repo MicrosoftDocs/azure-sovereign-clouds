@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot for Foundry Local Azure Arc Extension Deployment in Disconnected Environments"
-description: "Troubleshoot problems with your Foundry Local enabled by Azure Arc deployment in a disconnected environment, including expansion pack installation, extension installation, model syncing, authentication and authorization, and GPU deployments."
+title: "Troubleshoot Foundry Local on Azure Local in Disconnected Environments"
+description: "Troubleshoot problems with your Foundry Local on Azure Local deployment in a disconnected environment, including expansion pack installation, extension installation, model syncing, authentication and authorization, and GPU deployments."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -13,7 +13,9 @@ ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to find and fix issues with my Foundry Local deployment in a disconnected environment.
 ---
 
-# Troubleshoot Foundry Local Azure Arc extension deployment in disconnected environments
+# Troubleshoot Foundry Local on Azure Local in disconnected environments
+
+This article provides troubleshooting steps for common issues that may arise when deploying and running Foundry Local on Azure Local in a disconnected environment. Use the following guidance to identify and resolve problems related to expansion pack installation, extension installation, model syncing, authentication and authorization,  GPU deployments, and API requests.
 
 ## Expansion pack installation times out or stays in noninstalled state
 

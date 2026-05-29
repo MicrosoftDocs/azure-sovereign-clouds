@@ -19,6 +19,10 @@ After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU 
 
 Use the following steps to create your first deployment from the catalog.
 
+## Prerequisites
+
+Make sure you've followed the steps in [Plan to deploy Foundry Local on Azure Local in disconnected environments](how-to-plan.md) and [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md) to set up your environment and deploy the Foundry Local extension.
+
 ## Generate access token and request headers
 
 ```ps1
@@ -87,3 +91,10 @@ Expected result:
 
 * Deployment exists and returns successfully from the GET request.
 * Deployment status moves to ready state after model cache and pod startup complete.
+
+## Related content
+
+* [Troubleshoot Foundry Local on Azure Local in disconnected environments](how-to-troubleshoot.md)
+* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)
+* [Configure authentication and authorization for Foundry Local on Azure Local in disconnected environments](how-to-authenticate.md)
+* [Expand model catalog for Foundry Local on Azure Local in disconnected environments](how-to-expand-catalog.md)
