@@ -140,7 +140,7 @@ GitHub Enterprise Local aligns with Azure Local security capabilities, including
 
 This model helps you meet stringent compliance frameworks while maintaining modern DevOps practices.
 
-For hardware and sizing guidance, see [GitHub Enterprise Local hardware requirements](github-local-get-started.md#hardware-requirements).
+For hardware and sizing guidance, see [GitHub Enterprise Local prerequisites](github-local-get-started.md#prerequisites).
 
 ## Billing overview
 
