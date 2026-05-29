@@ -113,7 +113,9 @@
         - name: GitHub Enterprise Local
           items:
             - name: GitHub Enterprise Local overview
-              href: private/github-local/github-local-overview.md      
+              href: private/github-local/github-local-overview.md
+            - name: Get started with GitHub Enterprise Local
+              href: private/github-local/github-local-get-started.md
         - name: AI suite
           items:
             - name: AI workloads on Azure Local
