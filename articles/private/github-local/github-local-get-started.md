@@ -14,6 +14,8 @@ ms.subservice: sovereign-private-clouds
 
 This article explains how to onboard to the public preview and deploy GitHub Enterprise Local on Azure Local.
 
+[!INCLUDE [sovereign-private-clouds-preview.md](../includes/sovereign-private-clouds-preview.md)]
+
 ## Prerequisites
 
 GitHub Enterprise Local is in public preview. To express interest, contact your Microsoft account team or submit the [GitHub Enterprise Local Preview Sign-Up](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw9dxZ_D1b1FnjqEPJdlIB5UQTUxRUhUWExXNFQzNFRRSUJDVDFTSkFINC4u&origin=lprLink&route=shorturl).
