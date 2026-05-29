@@ -27,7 +27,7 @@ Get-ApplianceExpansionPackDetails
 
 - Confirm the newly installed model pack is in the `Installed` state before running model sync.
 
-After the expansion packs have been installed successfully, trigger a model synchronization operation to refresh the model catalog and make the newly installed models available for use.
+After the expansion packs are installed successfully, trigger a model synchronization operation to refresh the model catalog and make the newly installed models available for use.
 
 Use the following PowerShell command to initiate the synchronization:
 

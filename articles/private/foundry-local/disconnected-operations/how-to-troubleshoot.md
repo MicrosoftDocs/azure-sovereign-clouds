@@ -15,7 +15,7 @@ customer intent: As a platform engineer, I want to find and fix issues with my F
 
 # Troubleshoot Foundry Local on Azure Local in disconnected environments
 
-This article provides troubleshooting steps for common issues that might arise when deploying and running Foundry Local on Azure Local in a disconnected environment. Use the following guidance to identify and resolve problems related to expansion pack installation, extension installation, model syncing, authentication and authorization,  GPU deployments, and API requests.
+This article provides troubleshooting steps for common issues that might arise when deploying and running Foundry Local on Azure Local in a disconnected environment. Use the following guidance to identify and resolve problems related to expansion pack installation, extension installation, model syncing, authentication and authorization, GPU deployments, and API requests.
 
 ## Expansion pack installation times out or stays in noninstalled state
 
