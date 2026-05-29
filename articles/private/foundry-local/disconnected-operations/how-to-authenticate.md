@@ -17,7 +17,6 @@ customer intent: As a platform engineer or developer, I want to understand authe
 
 To secure inference endpoints by using role-based access control (RBAC), configure an application registration and assign the required Azure RBAC roles.
 
-[!NOTE]
 In disconnected environments, authentication integrates with the Active Directory infrastructure configured in Azure Local rather than with the public Microsoft Entra ID endpoint.
 
 ## Configure RBAC authentication
@@ -26,7 +25,9 @@ The following script creates an application registration and service principal, 
 
 You might need to work with your Azure Local Disconnected administrator to complete these steps.
 
-```ps1
+Replace placeholder values and then run the following command.
+
+```powershell
 # Step 1: Create an application registration
 $DisplayName = "FoundryOnArc-Disconnected"
 $subscriptionId = "<SUBSCRIPTION_ID>"
@@ -85,7 +86,9 @@ az role assignment create `
 
 Grant users access to manage models and invoke inference endpoints by assigning the appropriate role on the Foundry extension resource.
 
-```ps1
+Replace placeholder values and then run the following command.
+
+```powershell
 $subscriptionId = az account show --query id -o tsv
 $resourceGroup = "<RESOURCE_GROUP>"
 $clusterName = "<CLUSTER_NAME>"
@@ -104,7 +107,7 @@ az role assignment create `
 
 If a managed identity requires access to the Foundry Local extension, assign the appropriate Azure RBAC role to that identity.
 
-```ps1
+```powershell
 $extensionScope = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Kubernetes/connectedClusters/$clusterName/providers/Microsoft.KubernetesConfiguration/extensions/$extensionName"
 
 az role assignment create `

@@ -21,7 +21,7 @@ Each model is distributed as a separate expansion pack. After installation, the 
 
 After each model expansion pack installation, verify the pack state on the `Azure Local Disconnected Operations` machine:
 
-```ps1
+```powershell
 Get-ApplianceExpansionPackDetails
 ```
 
@@ -29,9 +29,9 @@ Get-ApplianceExpansionPackDetails
 
 After the expansion packs are installed successfully, trigger a model synchronization operation to refresh the model catalog and make the newly installed models available for use.
 
-Use the following PowerShell command to initiate the synchronization:
+Use the following PowerShell command to initiate the synchronization. Replace `<FOUNDRY_API_BASE_PATH>` with the appropriate value for your environment.
 
-```ps1
+```powershell
 $baseUrl = "https://<FOUNDRY_API_BASE_PATH>"
 
 Invoke-RestMethod `
@@ -43,7 +43,7 @@ Invoke-RestMethod `
 After the synchronization completes, the newly installed models appear in the model catalog and you can enable them for deployment and inference workloads.
 Verify model sync completed and the model is visible in the catalog:
 
-```ps1
+```powershell
 Invoke-RestMethod `
   -Uri "$baseUrl/api/v1/models" `
   -Headers $headers `

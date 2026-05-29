@@ -21,7 +21,9 @@ This article provides troubleshooting steps for common issues that might arise w
 
 If expansion pack installation doesn't complete, remove the failed pack and reinstall it.
 
-```ps1
+Replace `<EXPANSION_PACK_ID>` and `<PATH_TO_EXPANSION_PACK>` with the appropriate values for your environment before you run the following commands.
+
+```powershell
 Get-ApplianceExpansionPackDetails
 
 Remove-AldoExpansionPack -ExpansionPackId <EXPANSION_PACK_ID>
@@ -35,7 +37,7 @@ $result = Start-AldoExpansionPackInstallation -ExpansionPackId $expansionPackId 
 
 Validate that prerequisites are installed and healthy, especially NGINX ingress (if used), cert-manager, and trust-manager.
 
-```ps1
+```powershell
 helm list -A
 kubectl get pods -n cert-manager
 kubectl get pods -n ingress-nginx
@@ -46,19 +48,17 @@ If cert-manager, trust-manager, or ingress-nginx releases aren't `deployed` or t
 
 ## Collect logs for Microsoft support
 
-Run:
+To collect diagnostic logs for Microsoft support, run the following command on your local machine. This command collects logs from the Foundry extension and related components.
 
-```ps1
+```powershell
 az k8s-extension troubleshoot --name foundry --namespace-list "foundry-local-operator"
 ```
-
-This command collects diagnostic logs for support.
 
 ## Extension install fails with OOM or atomic rollback
 
 If installation fails and you're using default AKS Arc worker size (`Standard_A4_v2`), recreate the cluster with at least `Standard_D4s_v3` (recommended `Standard_D8s_v3`).
 
-```ps1
+```powershell
 kubectl describe nodes | Select-String "Allocatable:" -Context 0,5
 ```
 
@@ -66,7 +66,7 @@ kubectl describe nodes | Select-String "Allocatable:" -Context 0,5
 
 Check that the model expansion pack is installed, and then run sync again.
 
-```ps1
+```powershell
 Get-ApplianceExpansionPackDetails
 
 Invoke-RestMethod `
@@ -84,7 +84,9 @@ Invoke-RestMethod `
 
 Confirm the token audience and RBAC role assignment on the Foundry extension scope.
 
-```ps1
+Replace placeholder values and run the following commands.
+
+```powershell
 az account get-access-token --resource "$appId" --query accessToken -o tsv
 
 az role assignment list `
@@ -99,7 +101,7 @@ Use `Reader` for read-only calls. Use `Contributor` for control plane write oper
 
 If GPU workloads stay `Pending` with `Insufficient nvidia.com/gpu`, verify the device-plugin image is mirrored and running.
 
-```ps1
+```powershell
 kubectl get pods -n kube-system -l name=nvidia-device-plugin-ds -o wide
 kubectl get nodes -o custom-columns="NAME:.metadata.name,GPU-CAP:.status.capacity.nvidia\.com/gpu"
 ```

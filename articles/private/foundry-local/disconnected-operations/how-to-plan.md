@@ -55,16 +55,18 @@ Example:
 1. Transfer the expansion pack to the disconnected Azure Local environment.
 1. Run the following commands on the `Azure Local Disconnected Operations` machine to install the expansion pack.
 
-```ps1
-Import-Module "<PATH_TO_ALDO_MODULES>\Azure.Local.ExpansionPack.psm1"
+    Replace `<PATH_TO_EXPANSION_PACK>` with the local path to the expansion pack zip file and `<PATH_TO_ALDO_MODULES>` before you run the command.
 
-$expansionPackId = Start-AldoExpansionPackUpload `
-    -ExpansionPackPath "<PATH_TO_EXPANSION_PACK>"
-
-$result = Start-AldoExpansionPackInstallation `
-    -ExpansionPackId $expansionPackId `
-    -Wait
-```
+    ```powershell
+    Import-Module "<PATH_TO_ALDO_MODULES>\Azure.Local.ExpansionPack.psm1"
+    
+    $expansionPackId = Start-AldoExpansionPackUpload `
+        -ExpansionPackPath "<PATH_TO_EXPANSION_PACK>"
+    
+    $result = Start-AldoExpansionPackInstallation `
+        -ExpansionPackId $expansionPackId `
+        -Wait
+    ```
 
 When installation finishes:
 
@@ -76,7 +78,7 @@ When installation finishes:
 
 Run the following command on the `Azure Local Disconnected Operations` machine and confirm your expansion pack is in `Installed` state.
 
-```ps1
+```powershell
 Get-ApplianceExpansionPackDetails
 ```
 

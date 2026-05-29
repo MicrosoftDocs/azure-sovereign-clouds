@@ -26,7 +26,7 @@ Before you begin, complete the steps in [Plan to deploy Foundry Local expansion 
 The Foundry Local expansion pack includes Helm charts and container images for `cert-manager` and `trust-manager`.
 You can install those charts directly from `edgeartifacts` Container Registry.
 
-```ps1
+```powershell
 # Define the edgeartifacts container registry endpoint.
 # All Helm charts and container images are pulled from this local registry.
 $edgeartifactsAcrPath = "edgeartifacts.edgeacr.autonomous.cloud.private"
@@ -68,7 +68,7 @@ helm upgrade --install trust-manager `
 
 ### Verify installation
 
-```ps1
+```powershell
 helm list -n cert-manager
 kubectl get pods -n cert-manager
 kubectl get crd certificates.cert-manager.io
@@ -88,12 +88,11 @@ Foundry Local automatically creates ingress resources and applies the required N
 
 The `edgeartifacts` container registry includes the required container images and Helm charts.
 
-[!NOTE]
 The current release uses NGINX Ingress Controller for ingress management. NGINX support is planned to be deprecated in a future release and replaced with an alternative ingress solution. Review future release notes for updated guidance and migration instructions.
 
 The following script installs NGINX Ingress Controller from the local `edgeartifacts` container registry.
 
-```ps1
+```powershell
 # Define the edgeartifacts container registry endpoint.
 $edgeartifactsAcrPath = "edgeartifacts.edgeacr.autonomous.cloud.private"
 
@@ -115,7 +114,7 @@ helm upgrade --install ingress-nginx `
 
 ### Verify installation
 
-```ps1
+```powershell
 helm list -n ingress-nginx
 kubectl get pods -n ingress-nginx
 kubectl get svc -n ingress-nginx
@@ -129,9 +128,9 @@ Expected result:
 
 ## Install the Foundry Local Azure Arc Extension
 
-Install the Foundry Local extension on your Arc-enabled Kubernetes cluster.
+Install the Foundry Local extension on your Arc-enabled Kubernetes cluster. Replace placeholder values and then run the following command.
 
-```ps1
+```powershell
 $CLUSTER_NAME = "aldo-cluster"
 $RESOURCE_GROUP = "developer"
 
@@ -151,7 +150,7 @@ az k8s-extension create `
 
 ### Verify installation
 
-```ps1
+```powershell
 az k8s-extension show `
   --name foundry `
   --cluster-name $CLUSTER_NAME `

@@ -15,7 +15,7 @@ customer intent: As a platform engineer or developer, I want to deploy and run m
 
 # Deploy your first model in a disconnected environment
 
-After the Foundry Local extension expansion pack is installed, `phi-4-mini` CPU is available as part of the base pack. This article shows you how to create your first deployment from the catalog..
+After you install the Foundry Local extension expansion pack, the `phi-4-mini` CPU is available as part of the base pack. This article shows you how to create your first deployment from the catalog.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Make sure you followed the steps in [Plan to deploy Foundry Local on Azure Local
 
 ## Generate access token and request headers
 
-```ps1
+```powershell
 $DisplayName = "FoundryOnArc-Disconnected"
 $app = az ad app list --display-name $DisplayName --query "[0]" -o json | ConvertFrom-Json
 $appId = $app.AppId
@@ -40,7 +40,7 @@ $baseUrl = "https://<FOUNDRY_API_BASE_PATH>/inference-api"
 
 ## Create your first deployment (phi-4-mini CPU)
 
-```ps1
+```powershell
 $namespace = "foundry-local-operator"
 $deploymentName = "phi4-cpu-demo"
 
@@ -78,7 +78,7 @@ Invoke-RestMethod `
 
 ## Verify deployment
 
-```ps1
+```powershell
 Invoke-RestMethod `
   -Uri "$baseUrl/api/v1/namespaces/$namespace/deployments/$deploymentName" `
   -Headers $headers `
