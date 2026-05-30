@@ -50,8 +50,6 @@ Use Foundry Local when you need low-latency AI inference on local infrastructure
 For more information, see:
 
 - [What is Foundry Local on Azure Local?](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local)
-- [Deploy Foundry Local as an Azure Arc extension](/azure/azure-sovereign-clouds/private/foundry-local/deploy-foundry-local-arc-extension)
-- [Multi-node Kubernetes deployment](/azure/azure-sovereign-clouds/private/foundry-local/concept-multi-node-deployment)
 - [Disconnected environments overview](/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/concept-overview)
 
 ## Search and reason over on-premises documents with AI agents
@@ -93,7 +91,6 @@ Use Agentic Retrieval in Foundry Local when you need to search, summarize, and r
 For more information, see:
 
 - [What is Agents and Tools with Foundry Local?](/azure/azure-arc/agents-tools-foundry-local/overview)
-- [What you need for Agentic Retrieval in Foundry Local](/azure/azure-arc/agents-tools-foundry-local/requirements)
 
 ## Analyze live video at the edge
 
@@ -121,7 +118,6 @@ Use Azure AI Video Indexer enabled by Azure Arc when you need to analyze live vi
 For more information, see:
 
 - [Azure AI Video Indexer enabled by Azure Arc overview](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview)
-- [Quickstart: Deploy Azure AI Video Indexer enabled by Azure Arc](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-quickstart)
 
 ## Operate AI in disconnected and sovereign environments
 
