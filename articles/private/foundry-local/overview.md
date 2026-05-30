@@ -49,11 +49,13 @@ Foundry Local on Azure Local runs on an Arc-enabled Kubernetes cluster and is de
 - The platform can synchronize model catalog metadata into the cluster for discoverability and version consistency.
 - Inference traffic is exposed through internal services or ingress, protected with API key, Entra ID token validation, and authentication and TLS.
 
-The following diagram shows how these components work together. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
+The following diagram shows how these components work together in connected environments. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
 
 :::image type="content" source="media/overview/connected-architecture.svg" alt-text="Diagram of Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/overview/connected-architecture.svg" border="false":::
 
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).
+
+For information about the differences with disconnected operations, see [Foundry Local on Azure Local in disconnected environments overview](disconnected-operations/concept-overview.md).
 
 ## How it works
 
@@ -66,6 +68,8 @@ Foundry Local on Azure Local is installed as an Azure Arc extension and includes
 - **Entra ID authentication**: Validates Azure Active Directory JSON web tokens through the Microsoft identity sidecar engine for identity-based access control, as an alternative to API keys.
 - **TLS and ingress**: Secures traffic in transit and enables controlled external access through ingress.
 
+For disconnected operations, see [Foundry Local on Azure Local in disconnected environments overview](disconnected-operations/concept-overview.md) for the components and behavior that differ from connected deployments.
+
 Work with Foundry Local enabled by Azure Arc through REST APIs or directly through Kubernetes resources. For more information, see [Inference API endpoints and payload](reference-inference-api-endpoints-payload.md).
 
 ## Prerequisites scope
@@ -77,6 +81,8 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 - Appropriate compute profile (CPU-only or GPU-enabled nodes) and validated drivers and plugins for GPU scenarios.
 - Kubernetes operational access and cluster-level permissions for installing the Azure Arc extension and managing custom resources.
 - Network and security posture for ingress, certificate management, and API key handling.
+
+For disconnected environments, use the dedicated prerequisites and setup instructions in [Plan to deploy Foundry Local on Azure Local in disconnected environments](disconnected-operations/how-to-plan.md) and [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](disconnected-operations/deploy-platform.md).
 
 ## Supported regions
 

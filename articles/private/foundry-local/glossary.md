@@ -101,11 +101,11 @@ A custom resource (CR) that defines a model available for deployment. A Model re
 
 ### Model catalog
 
-The set of prepackaged models from the Azure AI Foundry catalog that you can deploy through Foundry Local. In your cluster, the catalog is represented as a ConfigMap (`foundry-local-catalog`) that the catalog-sync component keeps up to date with metadata from the Foundry catalog API.
+The set of prepackaged models from the Azure AI Foundry catalog that you can deploy through Foundry Local. In your cluster, the catalog appears as a ConfigMap (`foundry-local-catalog`). The catalog-sync component keeps this ConfigMap up to date with metadata from the Foundry catalog API.
 
 ### ModelDeployment
 
-A custom resource (CR) that defines how a model runs, including runtime, compute, scaling, and endpoint settings. Creating a ModelDeployment results in a runnable inference endpoint.
+A custom resource (CR) that defines how a model runs, including runtime, compute, scaling, and endpoint settings. When you create a ModelDeployment, you create a runnable inference endpoint.
 
 ### Multi-node deployment
 
@@ -115,7 +115,7 @@ A Foundry Local deployment pattern that runs across multiple Kubernetes nodes to
 
 ### NGINX
 
-A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container for TLS termination and request proxying to the model server. Authentication is enforced in the application middleware.
+A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container for TLS termination and request proxying to the model server. The application middleware enforces authentication.
 
 ## O
 
@@ -129,15 +129,15 @@ The runtime used to execute ONNX-based generative and predictive workloads, incl
 
 ### ONNX-GenAI
 
-The default Foundry Local runtime option for generative and predictive ONNX workloads, selectable as `onnx-genai` in ModelDeployment runtime settings.
+The default Foundry Local runtime option for generative and predictive ONNX workloads. Select this option as `onnx-genai` in ModelDeployment runtime settings.
 
 ### Open Web UI
 
-A web-based user interface accessible from a browser that lets you select a deployed model and interact with it. It's not enabled by default and is primarily intended for convenience during development - not as an end-user production application.
+A web-based user interface accessible from a browser that you use to select a deployed model and interact with it. It's not enabled by default and is primarily intended for convenience during development - not as an end-user production application.
 
 ### ORAS
 
-OCI Registry As Storage - a protocol for storing and distributing model artifacts in OCI-compatible container registries (such as Azure Container Registry, GitHub Container Registry, or Docker Hub). Foundry Local uses ORAS for BYO predictive model scenarios.
+OCI Registry As Storage - a protocol for storing and distributing model artifacts in OCI-compatible container registries, such as Azure Container Registry, GitHub Container Registry, or Docker Hub. Foundry Local uses ORAS for BYO predictive model scenarios.
 
 ## P
 
