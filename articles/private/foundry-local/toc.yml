@@ -6,11 +6,13 @@ items:
     expanded: true
     items:
     - name: What is Foundry Local on Azure Local?
-      href: what-is-foundry-local-on-azure-local.md
+      href: overview.md
     - name: Multi-node deployment support
       href: concept-multi-node-deployment.md
     - name: Known issues
       href: known-issues.md
+    - name: What's new
+      href: whats-new.md
   - name: Quickstart
     items:
     - name: Deploy your first model and run inference

@@ -5,6 +5,11 @@
         "source_path": "articles/private/overview-sovereign-private-cloud.md",
         "redirect_url": "/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "articles/private/foundry-local/what-is-foundry-local-on-azure-local.md",
+        "redirect_url": "/azure/azure-sovereign-clouds/private/foundry-local/overview",
+        "redirect_document_id": true
       }
   ]
 }
