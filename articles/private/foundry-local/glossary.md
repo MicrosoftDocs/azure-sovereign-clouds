@@ -137,6 +137,6 @@ A GPU-optimized inference runtime used for high-throughput generative workloads.
 
 ## Related content
 
-- [What is Foundry Local on Azure Local?](what-is-foundry-local-on-azure-local.md)
+- [What is Foundry Local on Azure Local?](overview.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)

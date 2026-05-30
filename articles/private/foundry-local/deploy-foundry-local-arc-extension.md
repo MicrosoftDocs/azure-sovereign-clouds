@@ -25,7 +25,7 @@ Before you begin, make sure you have:
 
 - Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
-- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](what-is-foundry-local-on-azure-local.md#supported-regions).
+- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](overview.md#supported-regions).
 - An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.

@@ -6,7 +6,7 @@ items:
     expanded: true
     items:
     - name: What is Foundry Local on Azure Local?
-      href: what-is-foundry-local-on-azure-local.md
+      href: overview.md
     - name: Known issues
       href: known-issues.md
   - name: Quickstart
