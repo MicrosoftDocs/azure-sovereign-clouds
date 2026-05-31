@@ -19,7 +19,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Foundry Local on Azure Local?
-            url: what-is-foundry-local-on-azure-local.md
+            url: overview.md
           - text: Known issues
             url: known-issues.md
 
