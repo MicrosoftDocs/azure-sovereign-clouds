@@ -1,5 +1,5 @@
 ---
-title: "Plan to deploy Foundry Local on Azure Local in a disconnected environment"
+title: "Prepare to Deploy Foundry Local on Azure Local in a Disconnected Environment"
 description: "Fulfill prerequisites and download the Foundry Local extension expansion pack to prepare for deployment in a disconnected environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -8,12 +8,12 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/28/2026
+ms.date: 05/31/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to fulfill the prerequisites and download and import the required expansion pack to deploy Foundry Local as an Azure Arc extension in my disconnected environment.
 ---
 
-# Plan to deploy Foundry Local on Azure Local in disconnected environments
+# Prepare to deploy Foundry Local on Azure Local in disconnected environments
 
 This article outlines the prerequisites and steps to download the Foundry Local extension expansion pack in preparation for deployment in a disconnected environment.
 
@@ -51,6 +51,8 @@ Example:
 `azurelocal.pxp.microsoft.foundrylocal.k8sextension.0.260520.7.zip`
 
 ## Import Expansion Pack into the Disconnected Environment
+
+Transfer the expansion pack to your disconnected environment, then run the upload and installation commands on the Azure Local Disconnected Operations machine to make the package available for deployment.
 
 1. Transfer the expansion pack to the disconnected Azure Local environment.
 1. Run the following commands on the `Azure Local Disconnected Operations` machine to install the expansion pack.
