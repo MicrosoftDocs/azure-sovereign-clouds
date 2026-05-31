@@ -34,11 +34,11 @@ Install each model expansion pack on the `Azure Local Disconnected Operations` m
 1. Transfer each model expansion pack zip file to the disconnected Azure Local environment.
 1. Validate each package name before installation to confirm the expected model and publish version.
 
-  `azurelocal.pxp.foundrylocal.<MODEL_NAME>.model.<PUBLISH_VERSION>.zip`
-
-  Example:
-
-  `azurelocal.pxp.foundrylocal.phi-3.5-mini.gpu.model.1.2605.12.zip`
+   `azurelocal.pxp.foundrylocal.<MODEL_NAME>.model.<PUBLISH_VERSION>.zip`
+ 
+   Example:
+ 
+   `azurelocal.pxp.foundrylocal.phi-3.5-mini.gpu.model.1.2605.12.zip`
 
 1. Replace `<PATH_TO_MODEL_EXPANSION_PACK_ZIP>` and `<PATH_TO_ALDO_MODULES>` in the following script, and then run the commands.
 
