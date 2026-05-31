@@ -61,7 +61,7 @@ items:
         href: disconnected-operations/how-to-prepare.md
       - name: Deploy Foundry Local as an Azure Arc extension
         href: disconnected-operations/deploy-platform.md
-      - name: Authentication and authorization
+      - name: Configure authentication and authorization
         href: disconnected-operations/how-to-authenticate.md 
     - name: Deploy Models
       items: 
