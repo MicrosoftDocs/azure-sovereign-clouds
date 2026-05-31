@@ -1,5 +1,5 @@
 ---
-title: "Deploy Foundry Local as an Azure Arc extension in a disconnected environment"
+title: "Deploy Foundry Local as an Azure Arc extension in a Disconnected Environment"
 description: "Install cert-manager, trust-manager, and the Foundry inference operator as an Azure Arc extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc in a disconnected environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/28/2026
+ms.date: 05/31/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to deploy Foundry Local as an Azure Arc extension so that I can run AI inference workloads on my Azure Arc–enabled Kubernetes cluster in a disconnected environment.
 ---
@@ -19,7 +19,7 @@ This article shows you how to set up Foundry Local as an extension on your Azure
 
 ## Prerequisites
 
-Before you begin, complete the steps in [Plan to deploy Foundry Local expansion pack in disconnected environments](how-to-plan.md) to fulfill prerequisites and download the Foundry Local expansion pack.
+Before you begin, complete the steps in [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md) to fulfill prerequisites and download the Foundry Local expansion pack.
 
 ## Install required Kubernetes prerequisites (Cert-Manager and Trust-Manager)
 
@@ -68,6 +68,8 @@ helm upgrade --install trust-manager `
 
 ### Verify installation
 
+Run the following commands to confirm the installation completed successfully and the required resources are healthy.
+
 ```powershell
 helm list -n cert-manager
 kubectl get pods -n cert-manager
@@ -114,6 +116,8 @@ helm upgrade --install ingress-nginx `
 
 ### Verify installation
 
+Run the following commands to confirm the installation completed successfully and the required resources are healthy.
+
 ```powershell
 helm list -n ingress-nginx
 kubectl get pods -n ingress-nginx
@@ -149,6 +153,8 @@ az k8s-extension create `
 ```
 
 ### Verify installation
+
+Run the following commands to confirm the installation completed successfully and the required resources are healthy.
 
 ```powershell
 az k8s-extension show `

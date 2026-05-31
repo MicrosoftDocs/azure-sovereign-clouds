@@ -1,5 +1,5 @@
 ---
-title: "Authentication and Authorization in Foundry Local on Azure Local in disconnected environments"
+title: "Authentication and Authorization in Foundry Local on Azure Local in Disconnected Environments"
 description: "Understand how Foundry Local secures inference endpoints in disconnected environmentsby using API key authentication and Active Directory (AD) infrastructure with Azure role-based access control (Azure RBAC) authorization."
 ms.service: azure
 ms.subservice: sovereign-private-clouds

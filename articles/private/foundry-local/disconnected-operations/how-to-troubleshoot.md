@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/27/2026
+ms.date: 05/31/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer, I want to find and fix issues with my Foundry Local deployment in a disconnected environment.
 ---
@@ -107,3 +107,9 @@ kubectl get nodes -o custom-columns="NAME:.metadata.name,GPU-CAP:.status.capacit
 ```
 
 In disconnected Autonomous environments, ensure `nvidia/k8s-device-plugin:v0.11.0` exists in edgeartifacts at the path expected by the auto-deployed DaemonSet.
+
+## Related content
+
+* [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md)
+* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)
+* [Configure authentication and authorization for Foundry Local on Azure Local in disconnected environments](how-to-authenticate.md)
