@@ -1,5 +1,5 @@
 ---
-title: "Deploy Your First Model and Run Inference on Foundry Local on Azure Local in a disconnected environment"
+title: "Deploy Your First Model and Run Inference on Foundry Local on Azure Local in a Disconnected Environment"
 description: "Create your first model deployment and send inference requests by using the REST API in an existing Foundry Local environment."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
@@ -8,7 +8,7 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/27/2026
+ms.date: 05/31/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to deploy and run my first model in an existing disconnected Foundry Local environment on Azure Local so that I can validate AI inference on my on-premises cluster.
 ---
@@ -19,9 +19,11 @@ After you install the Foundry Local extension expansion pack, the `phi-4-mini` C
 
 ## Prerequisites
 
-Make sure you followed the steps in [Plan to deploy Foundry Local on Azure Local in disconnected environments](how-to-plan.md) and [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md) to set up your environment and deploy the Foundry Local extension.
+Make sure you followed the steps in [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md) and [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md) to set up your environment and deploy the Foundry Local extension.
 
 ## Generate access token and request headers
+
+Run these commands to generate an access token and create the request headers that authenticate REST API calls to Foundry Local.
 
 ```powershell
 $DisplayName = "FoundryOnArc-Disconnected"
@@ -39,6 +41,8 @@ $baseUrl = "https://<FOUNDRY_API_BASE_PATH>/inference-api"
 ```
 
 ## Create your first deployment (phi-4-mini CPU)
+
+Run this request to create a phi-4-mini CPU deployment from the model catalog in your Foundry Local environment.
 
 ```powershell
 $namespace = "foundry-local-operator"
@@ -77,6 +81,8 @@ Invoke-RestMethod `
 ```
 
 ## Verify deployment
+
+Run the following command to confirm the deployment exists and check whether it's moving to a ready state.
 
 ```powershell
 Invoke-RestMethod `

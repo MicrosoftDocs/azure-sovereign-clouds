@@ -41,6 +41,26 @@ A deployment pattern where you package and deploy a model from your own OCI-comp
 
 The set of prepackaged models provided by the Foundry catalog that you can deploy through Foundry Local. These models are containerized and stored in a registry. For metadata and availability in your cluster, see [model catalog](#model-catalog).
 
+### Catalog-sync
+
+A Foundry Local component that regularly pulls model metadata from the Foundry catalog API and writes it to the `foundry-local-catalog` ConfigMap in the cluster.
+
+### Custom Resource Definition (CRD)
+
+A Kubernetes API extension that defines a custom resource type. Foundry Local uses CRDs such as Model, ModelDeployment, and StoreModel to represent model lifecycle and serving state.
+
+## D
+
+### Disconnected environment
+
+A deployment environment without internet connectivity, where Foundry Local runs by using locally imported extensions, registries, certificates, and supporting components.
+
+## E
+
+### Expansion pack
+
+A package of required container images, Helm charts, and artifacts used to install or operate Foundry Local in disconnected environments.
+
 ## F
 
 ### Foundry Local
@@ -81,17 +101,21 @@ A custom resource (CR) that defines a model available for deployment. A Model re
 
 ### Model catalog
 
-The set of prepackaged models from the Azure AI Foundry catalog that you can deploy through Foundry Local. In your cluster, the catalog is represented as a ConfigMap (`foundry-local-catalog`) that the catalog-sync component keeps up to date with metadata from the Foundry catalog API.
+The set of prepackaged models from the Azure AI Foundry catalog that you can deploy through Foundry Local. In your cluster, the catalog appears as a ConfigMap (`foundry-local-catalog`). The catalog-sync component keeps this ConfigMap up to date with metadata from the Foundry catalog API.
 
 ### ModelDeployment
 
-A custom resource (CR) that defines how a model runs, including runtime, compute, scaling, and endpoint settings. Creating a ModelDeployment results in a runnable inference endpoint.
+A custom resource (CR) that defines how a model runs, including runtime, compute, scaling, and endpoint settings. When you create a ModelDeployment, you create a runnable inference endpoint.
+
+### Multi-node deployment
+
+A Foundry Local deployment pattern that runs across multiple Kubernetes nodes to scale concurrent inference and place CPU and GPU workloads appropriately.
 
 ## N
 
 ### NGINX
 
-A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container for TLS termination and request proxying to the model server. Authentication is enforced in the application middleware.
+A high-performance web server and reverse proxy. In Foundry Local deployments, each ModelDeployment pod includes an NGINX sidecar container for TLS termination and request proxying to the model server. The application middleware enforces authentication.
 
 ## O
 
@@ -103,15 +127,23 @@ Open Neural Network Exchange (ONNX), an open model format for interoperability a
 
 The runtime used to execute ONNX-based generative and predictive workloads, including CPU and GPU scenarios based on model and runtime selection.
 
+### ONNX-GenAI
+
+The default Foundry Local runtime option for generative and predictive ONNX workloads. Select this option as `onnx-genai` in ModelDeployment runtime settings.
+
 ### Open Web UI
 
-A web-based user interface accessible from a browser that lets you select a deployed model and interact with it. It's not enabled by default and is primarily intended for convenience during development - not as an end-user production application.
+A web-based user interface accessible from a browser that you use to select a deployed model and interact with it. It's not enabled by default and is primarily intended for convenience during development - not as an end-user production application.
 
 ### ORAS
 
-OCI Registry As Storage - a protocol for storing and distributing model artifacts in OCI-compatible container registries (such as Azure Container Registry, GitHub Container Registry, or Docker Hub). Foundry Local uses ORAS for BYO predictive model scenarios.
+OCI Registry As Storage - a protocol for storing and distributing model artifacts in OCI-compatible container registries, such as Azure Container Registry, GitHub Container Registry, or Docker Hub. Foundry Local uses ORAS for BYO predictive model scenarios.
 
 ## P
+
+### PagedAttention
+
+A vLLM memory-management technique that improves GPU utilization and throughput for concurrent generative inference.
 
 ### Predictive model
 
@@ -135,8 +167,12 @@ A Kubernetes trust distribution component that publishes CA bundles to namespace
 
 A GPU-optimized inference runtime used for high-throughput generative workloads. In Foundry Local, it supports planner-based tuning and `spec.vllm.preferences` configuration.
 
+### vLLM planner
+
+An automatic tuning component that calculates memory-safe vLLM serving parameters based on model and GPU characteristics, with optional overrides through `spec.vllm.preferences`.
+
 ## Related content
 
-- [What is Foundry Local on Azure Local?](what-is-foundry-local-on-azure-local.md)
+- [What is Foundry Local on Azure Local?](overview.md)
 - [Inference operator and model lifecycle](concept-inference-operator.md)
 - [ModelDeployment and operator configuration reference](reference-model-deployment-operator.md)
