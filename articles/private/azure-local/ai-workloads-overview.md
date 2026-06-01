@@ -90,7 +90,7 @@ Use Agentic Retrieval in Foundry Local when you need to search, summarize, and r
 
 For more information, see:
 
-- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/edge-rag/overview)
 
 ## Analyze live video at the edge
 
@@ -160,5 +160,5 @@ Use the following table to match each AI scenario to the best-fit workload on Az
 
 - [Azure Arc-enabled Kubernetes overview](/azure/azure-arc/kubernetes/overview)
 - [What is Foundry Local on Azure Local?](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local)
-- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/agents-tools-foundry-local/overview)
+- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/edge-rag/overview)
 - [What is Azure AI Video Indexer enabled by Azure Arc?](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview)
