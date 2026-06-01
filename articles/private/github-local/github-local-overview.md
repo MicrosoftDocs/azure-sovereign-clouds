@@ -5,7 +5,7 @@ author: ronmiab
 ms.author: robess
 ms.reviewer: sushiljarwal
 ms.date: 05/26/2026
-ms.topic: concept-article
+ms.topic: overview
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 ---
@@ -156,7 +156,7 @@ As a result, the total cost of ownership has three clearly separated components:
 
 For more information: 
 - [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises) 
-- [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/).
+- [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/)
 - [Azure Local billing and payment](/azure/azure-local/concepts/billing)
 - [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/)
 - [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans)
