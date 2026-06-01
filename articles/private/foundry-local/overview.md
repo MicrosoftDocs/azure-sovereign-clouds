@@ -49,7 +49,9 @@ Foundry Local on Azure Local runs on an Arc-enabled Kubernetes cluster and is de
 - The platform can synchronize model catalog metadata into the cluster for discoverability and version consistency.
 - Inference traffic is exposed through internal services or ingress, protected with API key, Entra ID token validation, and authentication and TLS.
 
-The following diagram shows how these components work together in connected environments. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
+The following diagram shows how these components work together. An Arc-enabled Kubernetes cluster runs the Foundry Local extension and inference operator, which manage model and model deployment resources. Applications call secured inference endpoints through ingress by using API keys or Entra ID tokens.
+
+<!-- Art Library Source# ConceptualArt-0-000-211 -->
 
 :::image type="content" source="media/overview/connected-architecture.svg" alt-text="Diagram of Foundry Local on Azure Local architecture with Arc-managed extension, inference operator and model resources, and app calls to secured inference endpoints." lightbox="media/overview/connected-architecture.svg" border="false":::
 
