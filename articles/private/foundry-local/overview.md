@@ -8,7 +8,7 @@ appliesto:
 ms.topic: overview
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/30/2026
+ms.date: 05/30/2026
 ai-usage: ai-assisted
 ms.custom: references_regions
 customer intent: As a platform engineer or developer, I want to understand Foundry Local on Azure Local so that I can run and manage AI inference workloads on-premises.
@@ -34,6 +34,8 @@ The following capabilities highlight what you can do with Foundry Local on Azure
 - Deploy and manage models through custom resources instead of manual service wiring.
 - Use OpenAI-compatible REST patterns for application integration.
 - Support CPU and GPU-backed deployments based on workload and hardware profile.
+- Scale inference across multi-node Kubernetes clusters for concurrent usage and high-parameter model support.
+- Operate in disconnected environments where internet connectivity isn't available, with a deployment model consistent with connected scenarios.
 - Secure endpoint access using API keys, Microsoft Entra ID authentication, and TLS-enabled ingress patterns.
 - Sync model catalog metadata so teams can discover and deploy supported models consistently.
 
@@ -55,6 +57,8 @@ The following diagram shows how these components work together. An Arc-enabled K
 
 For Azure platform context, see [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and [What is Azure Local?](/azure/azure-local/overview).
 
+For information about the differences with disconnected operations, see [Foundry Local on Azure Local in disconnected environments overview](disconnected-operations/concept-overview.md).
+
 ## How it works
 
 Foundry Local on Azure Local is installed as an Azure Arc extension and includes these core components:
@@ -65,6 +69,8 @@ Foundry Local on Azure Local is installed as an Azure Arc extension and includes
 - **API key authentication**: Protects inference endpoints by requiring bearer-token style API keys for requests.
 - **Entra ID authentication**: Validates Azure Active Directory JSON web tokens through the Microsoft identity sidecar engine for identity-based access control, as an alternative to API keys.
 - **TLS and ingress**: Secures traffic in transit and enables controlled external access through ingress.
+
+For disconnected operations, see [Foundry Local on Azure Local in disconnected environments overview](disconnected-operations/concept-overview.md) for the components and behavior that differ from connected deployments.
 
 Work with Foundry Local enabled by Azure Arc through REST APIs or directly through Kubernetes resources. For more information, see [Inference API endpoints and payload](reference-inference-api-endpoints-payload.md).
 
@@ -77,6 +83,8 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 - Appropriate compute profile (CPU-only or GPU-enabled nodes) and validated drivers and plugins for GPU scenarios.
 - Kubernetes operational access and cluster-level permissions for installing the Azure Arc extension and managing custom resources.
 - Network and security posture for ingress, certificate management, and API key handling.
+
+For disconnected environments, use the dedicated prerequisites and setup instructions in [Plan to deploy Foundry Local on Azure Local in disconnected environments](disconnected-operations/how-to-prepare.md) and [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](disconnected-operations/deploy-platform.md).
 
 ## Supported regions
 
@@ -118,10 +126,14 @@ Use Foundry Local on Azure Local when you need to:
 - Reduce round-trip latency by serving models near applications and data sources.
 - Standardize AI serving with Kubernetes-native operations in existing platform workflows.
 - Use Azure-connected management patterns while running inference on local infrastructure.
+- Scale AI inference across multiple nodes in a Kubernetes cluster for concurrent access and larger models.
+- Run AI inference in disconnected or air-gapped environments without internet connectivity.
 
 ## Related content
 
 - [Deploy Foundry Local as an Azure Arc extension](deploy-foundry-local-arc-extension.md)
+- [Multi-node Kubernetes deployment](concept-multi-node-deployment.md)
+- [Disconnected environments overview](disconnected-operations/concept-overview.md)
 - [Known issues for Foundry Local on Azure Local](known-issues.md)
 - [Azure Arc-enabled Kubernetes overview](/azure/azure-arc/kubernetes/overview)
 - [Azure Local overview](/azure/azure-local/overview)
