@@ -15,9 +15,9 @@ customer intent: As a platform engineer, I want to expand the model catalog for 
 
 # Expand model catalog in disconnected mode
 
-To make additional models available in a disconnected environment, transfer and install the corresponding model expansion packs into the Azure Local disconnected deployment. Each model is distributed as a separate expansion pack.
+To make more models available in a disconnected environment, transfer and install the corresponding model expansion packs into the Azure Local disconnected deployment. Each model is distributed as a separate expansion pack.
 
-This article covers model expansion packs. For the Foundry Local extension expansion pack, use [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md).
+This article covers model expansion packs. For the Foundry Local extension expansion pack, see [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md).
 
 ## Prerequisites
 
