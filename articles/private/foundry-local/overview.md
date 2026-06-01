@@ -84,7 +84,7 @@ To use Foundry Local on Azure Local, plan for these prerequisites at a high leve
 - Kubernetes operational access and cluster-level permissions for installing the Azure Arc extension and managing custom resources.
 - Network and security posture for ingress, certificate management, and API key handling.
 
-For disconnected environments, use the dedicated prerequisites and setup instructions in [Plan to deploy Foundry Local on Azure Local in disconnected environments](disconnected-operations/how-to-plan.md) and [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](disconnected-operations/deploy-platform.md).
+For disconnected environments, use the dedicated prerequisites and setup instructions in [Plan to deploy Foundry Local on Azure Local in disconnected environments](disconnected-operations/how-to-prepare.md) and [Deploy Foundry Local as an Azure Arc extension in a disconnected environment](disconnected-operations/deploy-platform.md).
 
 ## Supported regions
 
