@@ -54,6 +54,8 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 
 ## GitHub Enterprise Local capabilities
 
+The GHES virtual appliance delivers these capabilities entirely on your infrastructure.
+
 ### Core GitHub platform
 
 - Private repositories and organizations
@@ -79,8 +81,6 @@ Organizations choose GitHub Enterprise Local for the following reasons:
 - Full audit logging and compliance reporting
 
 - Integration with enterprise identity providers, such as SAML and Microsoft Entra ID
-
-The GHES virtual appliance delivers these capabilities entirely on your infrastructure.
 
 ## Architecture and deployment model
 
@@ -110,9 +110,9 @@ You can configure [High availability and replica‑based failover](https://docs.
 
 Azure Local supports both [connected](../azure-local/connected-operations-overview.md) and fully [disconnected](../azure-local/disconnected-operations-overview.md) deployment modes. In a connected deployment, Azure Local integrates with Azure services to enable centralized monitoring, updates, and policy management. In disconnected environments, the Azure control plane and management services run locally within your environment. Organizations can operate in fully isolated or air-gapped scenarios while maintaining local management capabilities.
 
-GitHub Enterprise Local operates independently of Azure Local's connectivity state. Organizations can deploy GitHub Enterprise Local in either connected or disconnected environments, and the connectivity mode of GitHub Enterprise Local doesn't need to match the Azure Local configuration. In connected deployments, GitHub Enterprise Local can integrate with external services such as object storage like Azure Blob Storage to support capabilities like GitHub Actions artifacts and package storage. In disconnected deployments, GitHub Enterprise Local runs entirely within your infrastructure, with all functionalities operating locally and without external service dependencies.
+GitHub Enterprise Local operates independently of Azure Local's connectivity state. Organizations can deploy GitHub Enterprise Local in either connected or disconnected environments, and the connectivity mode of GitHub Enterprise Local doesn't need to match the Azure Local configuration. In connected deployments, GitHub Enterprise Local can integrate with external services such as object storage (for example, Azure Blob Storage) to support capabilities like GitHub Actions artifacts and package storage. In disconnected deployments, GitHub Enterprise Local runs entirely within your infrastructure, with all functionalities operating locally and without external service dependencies.
 
-Together, this model allows you to adopt a connectivity posture that fits your requirements ranging from fully disconnected, to fully connected, to hybrid combinations without compromising sovereignty, control, or developer experience.
+Together, this model allows you to adopt a connectivity posture that fits your requirements, from fully disconnected to fully connected to hybrid, without compromising sovereignty, control, or the developer experience.
 
 ## AI-assisted developer experience
 
