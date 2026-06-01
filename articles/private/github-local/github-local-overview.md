@@ -4,7 +4,7 @@ description: Learn about GitHub Enterprise Local on Azure Local for regulated in
 author: ronmiab
 ms.author: robess
 ms.reviewer: sushiljarwal
-ms.date: 05/26/2026
+ms.date: 06/02/2026
 ms.topic: overview
 ms.service: azure
 ms.subservice: sovereign-private-clouds

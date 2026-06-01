@@ -4,7 +4,7 @@ description: Learn how to onboard to the GitHub Enterprise Local public preview 
 author: ronmiab
 ms.author: robess
 ms.reviewer: sushiljarwal
-ms.date: 05/29/2026
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.service: azure
 ms.subservice: sovereign-private-clouds
