@@ -122,7 +122,7 @@ After deployment, GitHub Enterprise Local extends the developer experience with 
 
 - **Disconnected (air‑gapped) environments** maintain a similar experience by using GitHub CLI–style workflows paired with local inference endpoints (for example, Foundry Local). This approach ensures prompts, code context, and inference stay within your controlled boundaries.
 
-- **Foundry Local** enables local model hosting on Azure Local, supporting chat, code assistance, scripting, and agentic workflows. This approach allows teams to preserve AI productivity while meeting sovereignty, compliance, and operational control requirements.
+- **Foundry Local** enables local model hosting on Azure Local, supporting chat, code assistance, scripting, and agentic workflows. This approach allows teams to preserve AI productivity while meeting sovereignty, compliance, and operational control requirements. Foundry Local supports bring-your-own models (BYOM), so organizations can deploy custom or fine-tuned models on Azure Local by using local inference endpoints.
 
 :::image type="content" source="media/github-local-overview/connected-disconnected-architecture.png" alt-text="Screenshot of the connected and disconnected architecture diagram for GitHub Enterprise Local, showing both cloud-connected and air-gapped deployment models." lightbox="media/github-local-overview/connected-disconnected-architecture.png":::
 
@@ -144,11 +144,22 @@ For hardware and sizing guidance, see [GitHub Enterprise Local prerequisites](gi
 
 ## Billing overview
 
-To run GitHub Enterprise Local, you must purchase a GitHub Enterprise license. The license follows a seat‑based billing model. Charges are calculated monthly based on the number of active users consuming licenses. The model uses a unique‑user model where each user consumes a single seat regardless of how many environments they access. For more information, see [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises) and [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/).
+GitHub Enterprise Local combines user-based application licensing, Azure Local infrastructure-based billing, and separate pricing for AI services such as Copilot and Foundry.
 
-In contrast, Azure Local uses an infrastructure‑based billing model rather than a user‑based one. You're billed per physical CPU core per month for the Azure Local host, independent of the number of developers or applications running on top of the platform. For more information, see [Azure Local billing and payment](/azure/azure-local/concepts/billing) and [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).
+To run GitHub Enterprise Local, you must purchase a GitHub Enterprise license. The license follows a seat-based billing model. Charges are calculated monthly based on the number of active users consuming licenses. The model uses a unique-user model where each user consumes a single seat regardless of how many environments they access.
 
-As a result, the total cost of ownership is made up of two clearly separated components: GitHub's user‑based application licensing and Azure Local's core‑based infrastructure charges. This separation provides transparency between software licensing costs and underlying platform consumption.
+Azure Local uses an infrastructure-based billing model rather than a user-based one. You're billed per physical CPU core per month for the Azure Local host, independent of the number of developers or applications running on top of the platform.
+
+AI services, including GitHub Copilot and Foundry, are priced separately from GitHub Enterprise Local and Azure Local.
+
+As a result, the total cost of ownership has three clearly separated components: GitHub's user-based application licensing, Azure Local's core-based infrastructure charges, and optional AI service costs. This separation provides transparency between software licensing costs, platform consumption, and AI service usage.
+
+For more information: 
+- [Billing for GitHub Enterprise](https://docs.github.com/en/billing/concepts/enterprise-billing/billing-for-enterprises) 
+- [GitHub Enterprise pricing](https://azure.microsoft.com/pricing/details/githubenterprise/).
+- [Azure Local billing and payment](/azure/azure-local/concepts/billing)
+- [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/)
+- [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans)
 
 ## Next steps
 
