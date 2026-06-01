@@ -31,7 +31,7 @@ Before you begin, make sure you complete the following prerequisites:
 
 ## Install model expansion pack
 
-Install each model expansion pack on the `Azure Local Disconnected Operations` machine.
+Install each model expansion pack on the Azure Local disconnected operations machine.
 
 1. Transfer each model expansion pack zip file to the disconnected Azure Local environment.
 1. Validate each package name before installation to confirm the expected model and publish version.
