@@ -19,7 +19,7 @@ This article shows you how to set up Foundry Local as an extension on your Azure
 
 ## Prerequisites
 
-Before you begin, complete the steps in [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md) to fulfill prerequisites and download the Foundry Local expansion pack.
+Before you begin, complete the steps in [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md) to fulfill prerequisites and download and import the Foundry Local expansion pack.
 
 ## Install required Kubernetes prerequisites (Cert-Manager and Trust-Manager)
 
