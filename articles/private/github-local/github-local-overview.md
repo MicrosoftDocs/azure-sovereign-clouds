@@ -169,7 +169,7 @@ For more information:
 
 - Compare [connected](../azure-local/connected-operations-overview.md) and [disconnected](../azure-local/disconnected-operations-overview.md) operations for deployment planning.
 
-- Review [Foundry Local overview](../foundry-local/foundry-local-overview.md).
+- Review [Foundry Local overview](../foundry-local/what-is-foundry-local-on-azure-local.md).
 
 - Review the [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 
