@@ -86,4 +86,4 @@ items:
     - name: Glossary
       href: glossary.md
   - name: Foundry Local for devices
-    href: /azure/foundry-local/what-is-foundry-local
+    href: /azure/foundry-local
