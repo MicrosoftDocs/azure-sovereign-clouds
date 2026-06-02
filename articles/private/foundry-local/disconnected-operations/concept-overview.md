@@ -8,7 +8,7 @@ appliesto:
 ms.topic: concept-article
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/31/2026
+ms.date: 06/01/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand disconnected operations in Foundry Local on Azure Local so that I can run and manage AI inference workloads disconnected on-premises.
 ---
@@ -23,11 +23,9 @@ This article explains how disconnected deployments of Foundry Local on Azure Loc
 
 In disconnected environments, extension availability, certificate management, model artifact sourcing, telemetry behavior, identity, and access flows differ from connected deployments.
 
-* **Extension availability**:
-Before you can install the Foundry Local Azure Arc extension, you must import the Foundry Local expansion pack into the disconnected environment.
+* **Extension availability**: Before you can install the Foundry Local Azure Arc extension, you must download and import the Foundry Local expansion pack into the disconnected environment.
 
-* **Model catalog source**:
-Foundry Local pulls model artifacts from the local `edgeartifacts` container registry. Model expansion packs populate this registry.
+* **Model catalog source**: Foundry Local pulls model artifacts from the local `edgeartifacts` container registry. Model expansion packs populate this registry.
 
 * **Certificate management**: The `azure-cert-manager` extension isn't available in disconnected environments. Instead, you must install:
   
