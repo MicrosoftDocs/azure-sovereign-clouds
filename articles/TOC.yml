@@ -96,20 +96,26 @@
       items:
         - name: Overview
           href: private/overview/sovereign-private-cloud.md
-        - name: Sovereign Private Cloud Use Cases and Configurations
+        - name: Use Cases and configurations
           href: private/use-cases/use-cases.md
         - name: Azure Local
           items:
-            - name: Azure Local overview
+            - name: Overview
               href: private/azure-local/azure-local-overview.md
-            - name: Connected operations overview
+            - name: Connected operations
               href: private/azure-local/connected-operations-overview.md
-            - name: Disconnected operations overview
+            - name: Disconnected operations
               href: private/azure-local/disconnected-operations-overview.md
         - name: Microsoft 365 Local
           items:
-            - name: Microsoft 365 Local overview
+            - name: Overview
               href: private/m365-local/microsoft-365-local-overview.md
+        - name: GitHub Enterprise Local
+          items:
+            - name: Overview
+              href: private/github-local/github-local-overview.md
+            - name: Get started
+              href: private/github-local/github-local-get-started.md
         - name: AI suite
           items:
             - name: AI workloads on Azure Local
