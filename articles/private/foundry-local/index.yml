@@ -19,7 +19,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Foundry Local on Azure Local?
-            url: what-is-foundry-local-on-azure-local.md
+            url: overview.md
           - text: Known issues
             url: known-issues.md
 
@@ -74,6 +74,21 @@ landingContent:
         links:
           - text: Run inference
             url: how-to-run-inference.md
+
+  - title: Disconnected operations
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: disconnected-operations/concept-overview.md
+      - linkListType: how-to-guide
+        links:
+          - text: Prepare deployment
+            url: disconnected-operations/how-to-prepare.md
+          - text: Deploy Foundry Local as an Azure Arc extension
+            url: disconnected-operations/deploy-platform.md
+          - text: Deploy your first model 
+            url: disconnected-operations/how-to-deploy-first-model.md
 
   - title: Reference
     linkLists:
