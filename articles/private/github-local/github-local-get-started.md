@@ -63,6 +63,6 @@ A typical deployment includes the following steps:
 
 - For architecture and capability guidance, see [What is GitHub Enterprise Local? (preview)](github-local-overview.md).
 
-- Review [Azure Local overview](../azure-local/azure-local-overview.md).
+- Review the [Azure Local overview](../azure-local/azure-local-overview.md).
 
 - Plan connectivity using [connected operations](../azure-local/connected-operations-overview.md) or [disconnected operations](../azure-local/disconnected-operations-overview.md).

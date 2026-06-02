@@ -165,11 +165,11 @@ For more information:
 
 - For onboarding and deployment steps, see [Get started with GitHub Enterprise Local (preview)](github-local-get-started.md).
 
-- Review [Azure Local overview](../azure-local/azure-local-overview.md).
+- Review the [Azure Local overview](../azure-local/azure-local-overview.md).
 
 - Compare [connected](../azure-local/connected-operations-overview.md) and [disconnected](../azure-local/disconnected-operations-overview.md) operations for deployment planning.
 
-- Review [Foundry Local overview](../foundry-local/what-is-foundry-local-on-azure-local.md).
+- Review the [Foundry Local overview](../foundry-local/what-is-foundry-local-on-azure-local.md).
 
 - Review the [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 
