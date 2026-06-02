@@ -17,6 +17,8 @@ customer intent: As a platform engineer, I want to deploy Foundry Local as an Az
 
 This article shows you how to set up Foundry Local as an extension on your Azure Kubernetes Service (AKS) cluster enabled by Azure Arc. Use the Azure CLI to deploy Foundry Local as an extension on your Azure Arc-enabled Kubernetes cluster. Helm is also a supported deployment option, and installation instructions are provided during preview access onboarding.
 
+If you plan to use models with [Agentic Retrieval in Foundry Local](/azure/azure-arc/edge-rag/overview), Entra ID authentication must remain enabled (the default) during this extension installation.
+
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
 ## Prerequisites
@@ -25,7 +27,7 @@ Before you begin, make sure you have:
 
 - Access to Foundry Local preview: Foundry Local on Azure Local is available by request during preview. Submit an access request at [aka.ms/FoundryLocalAzure_PreviewRequest](https://aka.ms/FoundryLocalAzure_PreviewRequest). After approval, you'll receive guidance on next steps for deployment.
 - A Kubernetes cluster (version 1.29 or later) connected to Azure Arc. For more information, see [Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
-- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](what-is-foundry-local-on-azure-local.md#supported-regions).
+- Your Azure Arc-enabled Kubernetes cluster is located in a supported region. For available regions, see [Supported regions](overview.md#supported-regions).
 - An app registration for enablement of authorization and authentication. See [Configure authentication for Foundry Local enabled by Azure Arc](how-to-configure-authentication.md).
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster.
 - [Helm](https://helm.sh/) installed.
@@ -129,6 +131,8 @@ az k8s-extension create `
 ---
 
 ### Additional installation parameters
+
+Entra ID authentication is enabled by default. If you intend to use [Agentic Retrieval in Foundry Local](/azure/azure-arc/edge-rag/overview) later, keep `entraAuth.enabled` set to `true` (the default) during installation. Disabling Entra ID authentication prevents agentic retrieval from connecting to your deployed models.
 
 You can configure the following optional parameters during inference operator installation:
 
