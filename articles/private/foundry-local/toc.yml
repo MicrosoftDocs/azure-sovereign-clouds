@@ -85,3 +85,5 @@ items:
       href: reference-model-deployment-operator.md
     - name: Glossary
       href: glossary.md
+  - name: Foundry Local for devices
+    href: /azure/foundry-local/what-is-foundry-local
