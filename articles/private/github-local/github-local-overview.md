@@ -12,13 +12,13 @@ ms.subservice: sovereign-private-clouds
 
 # What is GitHub Enterprise Local? (preview)
 
-This article provides an overview of GitHub Enterprise Local, a solution that enables organizations to run GitHub Enterprise Server (GHES) on Azure Local infrastructure for regulated industries requiring data sovereignty and disconnected operations. It covers the architecture, capabilities, deployment models, and planning considerations.
+This article provides an overview of GitHub Enterprise Local, a solution that enables organizations to run GitHub Enterprise Server (GHES) on Azure Local infrastructure. It's designed for regulated industries requiring data sovereignty and disconnected operations. This article covers the architecture, capabilities, deployment models, and planning considerations.
 
 [!INCLUDE [sovereign-private-clouds-preview.md](../includes/sovereign-private-clouds-preview.md)]
 
 ## Overview
 
-GitHub Enterprise Local enables organizations to run GitHub Enterprise Server (GHES) as a fully self-hosted DevOps platform on Azure Local infrastructure. This solution is designed for organizations that require data sovereignty, disconnected or air‑gapped operations, and full control over source code, CI/CD pipelines, and developer workflows.
+GitHub Enterprise Local enables organizations to run GHES as a fully self-hosted DevOps platform on Azure Local infrastructure. This solution is designed for organizations that require data sovereignty, disconnected or air‑gapped operations, and full control over source code, CI/CD pipelines, and developer workflows.
 
 GitHub Enterprise Local is deployed as a prebuilt virtual appliance on Azure Local and operates entirely within customer‑owned infrastructure. All repositories, metadata, artifacts, and execution remain on‑premises while preserving a GitHub‑consistent developer experience.
 
@@ -168,6 +168,8 @@ For more information:
 - Review [Azure Local overview](../azure-local/azure-local-overview.md).
 
 - Compare [connected](../azure-local/connected-operations-overview.md) and [disconnected](../azure-local/disconnected-operations-overview.md) operations for deployment planning.
+
+- Review [Foundry Local overview](../foundry-local/foundry-local-overview.md).
 
 - Review the [GitHub Advanced Security](https://docs.github.com/en/enterprise-server@3.20/get-started/learning-about-github/about-github-advanced-security) and protection offering.
 

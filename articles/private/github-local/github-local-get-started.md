@@ -25,7 +25,7 @@ Microsoft reviews survey submissions on a rolling basis, with evaluations conduc
 > [!IMPORTANT]
 > Microsoft provides the deployment PowerShell script only to approved public preview participants after they submit the onboarding survey and are selected for preview onboarding.
 
-Azure Local might support running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available to run the GHES VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog). Plan compute, memory, storage, and network resources accordingly.
+Azure Local might support running GitHub Enterprise Local on both Integrated and Premier hardware solutions, provided sufficient capacity is available to run the GitHub Enterprise Server (GHES) VM. Current offerings are available at [Azure Local Solutions \| Catalog](https://azurelocalsolutions.azure.microsoft.com/#/catalog). Plan compute, memory, storage, and network resources accordingly.
 
 GHES provides VM sizing guidance based on your use cases and requirements, such as:
 
@@ -47,8 +47,9 @@ A typical deployment includes the following steps:
 
 1. **Prepare Azure Local infrastructure**. Ensure you set up an Azure Local environment with sufficient capacity to run the GHES VM image.
 
-1. **Download the GitHub Enterprise Local VM image**. Place the image in a location that an Azure Local node can see and access. 
-    1. To reduce deployment time, download the image directly to the target location specified during deployment, because the deployment process copies the image into Azure Local storage.
+1. **Download the GitHub Enterprise Local VM image**. Place the image in a location that an Azure Local node can see and access.
+    
+    To reduce deployment time, download the image directly to the target location specified during deployment, because the deployment process copies the image into Azure Local storage.
 
 1. **Deploy the GitHub Enterprise Local VM image**. Use the PowerShell script provided during public preview onboarding.
 
