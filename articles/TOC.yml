@@ -96,7 +96,7 @@
       items:
         - name: Overview
           href: private/overview/sovereign-private-cloud.md
-        - name: Use Cases and Configurations
+        - name: Use Cases and configurations
           href: private/use-cases/use-cases.md
         - name: Azure Local
           items:
