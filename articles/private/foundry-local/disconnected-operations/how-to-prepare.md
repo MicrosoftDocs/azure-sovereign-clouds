@@ -21,7 +21,7 @@ This article outlines the prerequisites and steps to download and import the Fou
 
 Before you begin, ensure the following components are available:
 
-* Azure Local Disconnected Operations is installed on-premises.
+* Azure Local Disconnected Operations is installed on-premises. The minimum supported version is `2604.3.0`.
 * An AKS Arc cluster on Azure Local, registered with Azure Arc as a `connectedClusters` resource.
 
     | Requirement | Minimum | Recommended |
