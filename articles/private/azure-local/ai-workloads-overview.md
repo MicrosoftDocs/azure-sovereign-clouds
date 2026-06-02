@@ -1,10 +1,10 @@
 ---
 title: AI Workloads on Azure Local Overview
-description: Learn how Azure Local enables AI inference, document intelligence, and video analysis on your own infrastructure with cloud-consistent management.
+description: Learn how Azure Local enables AI inference, agentic retrieval, and video analysis on your own infrastructure with cloud-consistent management.
 author: cwatson-cat
 ms.author: cwatson
 ms.topic: concept-article
-ms.date: 04/29/2026
+ms.date: 05/30/2026
 ai-usage: ai-assisted
 #CustomerIntent: As an IT admin or AI developer, I want to understand how Azure Local enables AI workloads on my own infrastructure so that I can process data locally while meeting latency, sovereignty, and compliance requirements.
 ---
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 Azure Local brings Azure AI capabilities directly to your infrastructure so you can process data locally without sending it to the cloud. This article covers the AI workloads available on Azure Local and helps you pick the right one for your needs. Each workload runs on Azure Arc-enabled Kubernetes, so you get cloud-consistent management and security while keeping data processing local.
 
 > [!IMPORTANT]
-> Some AI workloads described in this article are currently in preview, including Foundry Local on Azure Local and Edge RAG. See the linked workload documentation and the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Some AI workloads described in this article are currently in preview, including Foundry Local on Azure Local and Agentic Retrieval in Foundry Local. See the linked workload documentation and the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## Run AI model inference on your infrastructure
 
@@ -32,6 +32,8 @@ Foundry Local includes the core capabilities you need to run AI model inference 
 | **CPU and GPU inference** | Deploy models on CPU-only or GPU-enabled nodes. Use the default ONNX-GenAI engine (CPU or GPU) or the vLLM engine (GPU only) for high-throughput scenarios. |
 | **OpenAI-compatible API** | Send requests through `/v1/chat/completions` for generative tasks and `/v1/predict` for predictive tasks. |
 | **Multi-model support** | Run multiple model deployments in one cluster with declarative configuration. |
+| **Multi-node deployment** | Scale inference across multi-node Kubernetes clusters for concurrent usage and high-parameter model support. |
+| **Disconnected operations** | Operate in disconnected environments where internet connectivity isn't available, with a deployment model consistent with connected scenarios. |
 | **Bring your own model** | Deploy your own models alongside catalog models for specialized or fine-tuned inference scenarios. |
 | **Security** | Use API keys or Microsoft Entra ID authentication for access control, TLS for encryption, and ingress for controlled external access. |
 
@@ -42,44 +44,53 @@ Use Foundry Local when you need low-latency AI inference on local infrastructure
 - Run internal chat and content-generation applications while you keep sensitive data on-premises.
 - Deploy predictive models for classification, scoring, and real-time decisions on the factory floor.
 - Manage AI model serving with Kubernetes-native workflows that fit your existing platform operations.
+- Scale AI inference across multiple nodes in a Kubernetes cluster for concurrent access and larger models.
+- Run AI inference in disconnected or air-gapped environments without internet connectivity.
 
 For more information, see:
 
 - [What is Foundry Local on Azure Local?](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local)
-- [Deploy Foundry Local as an Azure Arc extension](/azure/azure-sovereign-clouds/private/foundry-local/deploy-foundry-local-arc-extension)
+- [Disconnected environments overview](/azure/azure-sovereign-clouds/private/foundry-local/disconnected-operations/concept-overview)
 
-## Search and reason over on-premises documents
+## Search and reason over on-premises documents with AI agents
 
-Edge RAG Preview, enabled by Azure Arc, runs Retrieval Augmented Generation (RAG) on your on-premises data. It combines a language model with document retrieval so you can get answers grounded in your private data.
+Agentic Retrieval in Foundry Local, currently in preview, is the Azure Arc-enabled Kubernetes extension at the core of the Agents and Tools with Foundry Local platform. It provides an agentic Retrieval-Augmented Generation (RAG) platform at the edge, combining a knowledge layer (document ingestion, embedding, vector search) with an agentic layer (AI agents, knowledge orchestration, MCP server) to deliver intelligent, multistep assistants grounded in your private on-premises data.
 
-Edge RAG includes a data ingestion pipeline, embedding and vector storage, language models (hosted or bring your own), and a local developer portal for prompt design and evaluation.
+The platform is built on three components that work together:
+
+- **Local agentic RAG** - AI agent orchestration with knowledge bases, knowledge sources, and an MCP server for multistep reasoning over your data.
+- **Local knowledge sources** - Data ingestion, embedding, and retrieval pipeline that indexes your on-premises documents into searchable collections.
+- **Local chat experience** - A built-in chat UI for interacting with agents, managing conversations, and viewing citations. No custom frontend required.
 
 ### Capabilities
 
-Edge RAG provides the core capabilities you need to build grounded AI experiences over local data.
+Agentic Retrieval in Foundry Local provides the core capabilities you need to build grounded AI experiences over local data.
 
 | Capability | Description |
 |-----------|-------------|
-| **RAG pipeline** | Ingest, chunk, embed, store, and retrieve your documents and images in a single integrated pipeline. |
-| **Local language models** | Choose hosted models or bring your own model. Supports CPU and GPU hardware. |
-| **Multiple search types** | Deep search, full text, hybrid, multimodal, and vector search. |
-| **Prompt tools** | Build, evaluate, and deploy custom chat solutions through a local developer portal. |
+| **Agentic RAG** | AI agents process user queries by reasoning over instructions, invoking tools, and generating responses grounded in on-premises data through multistep interactions. |
+| **Knowledge orchestration** | Connect agents to one or more data sources through knowledge bases and knowledge sources for comprehensive retrieval. |
+| **MCP server** | A built-in Model Context Protocol (MCP) server with search tools, plus support for connecting to external MCP servers. |
+| **Data ingestion pipeline** | Ingest, chunk, embed, store, and retrieve your documents and images in a single integrated pipeline. |
+| **Local language models** | Use a Foundry Local on Azure Local endpoint (recommended) or bring your own model with an OpenAI-compatible chat completions API. |
+| **Multiple search types** | Hybrid, vector, text, and hybrid multimodal search to match your query needs. |
+| **Local chat solution** | A built-in chat UI for interacting with agents, managing conversations, and viewing citations with streaming responses. |
 | **Azure RBAC** | Control access with Microsoft Entra integration and role-based permissions. |
 
 ### Use cases
 
-Use Edge RAG when you need to search, summarize, and reason over private content that must stay on-premises.
+Use Agentic Retrieval in Foundry Local when you need to search, summarize, and reason over private content that must stay on-premises with intelligent multistep AI agents.
 
 - Query regulatory and compliance documents by using natural language to support permitting, zoning, and environmental review workflows.
 - Run compliance checks and customer assistance workflows against financial data that must stay on-premises.
 - Build troubleshooting assistants for factory floor technicians by using local operational and maintenance data.
+- Deploy an agent that can reason across multiple clinical documents, using knowledge bases and MCP tools to correlate patient records, lab results, and treatment guidelines.
+- Connect agents to multiple external data sources via MCP servers, without ingesting all data locally.
 - Summarize and generate training materials from classified or sensitive datasets.
 
 For more information, see:
 
-- [What is Edge RAG Preview?](/azure/azure-arc/edge-rag/overview)
-- [Complete the prerequisites](/azure/azure-arc/edge-rag/complete-prerequisites)
-- [Deploy Edge RAG](/azure/azure-arc/edge-rag/deploy-overview)
+- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/edge-rag/overview)
 
 ## Analyze live video at the edge
 
@@ -107,7 +118,6 @@ Use Azure AI Video Indexer enabled by Azure Arc when you need to analyze live vi
 For more information, see:
 
 - [Azure AI Video Indexer enabled by Azure Arc overview](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview)
-- [Quickstart: Deploy Azure AI Video Indexer enabled by Azure Arc](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-quickstart)
 
 ## Operate AI in disconnected and sovereign environments
 
@@ -117,8 +127,8 @@ Before your production rollout, confirm which AI workloads support fully disconn
 
 All three AI workloads process data on-premises:
 
-- **Foundry Local** processes inference requests locally. Model artifacts are stored in your cluster.
-- **Edge RAG** runs the entire RAG pipeline, including ingestion, retrieval, and generation, within your network boundaries.
+- **Foundry Local** processes inference requests locally. Model artifacts are stored in your cluster. Supports fully disconnected operations with a deployment model consistent with connected scenarios.
+- **Agentic Retrieval in Foundry Local** runs the entire agentic RAG pipeline, including ingestion, retrieval, agent orchestration, and generation, within your network boundaries.
 - **Video Indexer** processes all video and audio locally. No media data is sent to the cloud.
 
 ## Common requirements
@@ -139,14 +149,16 @@ Use the following table to match each AI scenario to the best-fit workload on Az
 | If you need to... | Consider |
 |-------------------|----------|
 | Serve AI models for chat, generation, or prediction | Foundry Local on Azure Local (preview) |
-| Build a chat assistant over on-premises documents | Edge RAG Preview |
+| Scale AI inference across multiple nodes | Foundry Local on Azure Local (preview) |
+| Build an intelligent agent over on-premises documents with multistep reasoning | Agentic Retrieval in Foundry Local (preview) |
+| Connect AI agents to external data sources via MCP servers | Agentic Retrieval in Foundry Local (preview) |
 | Analyze video or audio content in real time or from archives | Azure AI Video Indexer enabled by Azure Arc |
 | Process sensitive data that can't leave your premises | Any of the three, depending on your data type |
-| Operate fully disconnected or air-gapped | Not supported. |
+| Operate fully disconnected or air-gapped | Foundry Local on Azure Local (preview) |
 
 ## Related content
 
 - [Azure Arc-enabled Kubernetes overview](/azure/azure-arc/kubernetes/overview)
 - [What is Foundry Local on Azure Local?](/azure/azure-sovereign-clouds/private/foundry-local/what-is-foundry-local-on-azure-local)
-- [What is Edge RAG Preview?](/azure/azure-arc/edge-rag/overview)
+- [What is Agents and Tools with Foundry Local?](/azure/azure-arc/edge-rag/overview)
 - [What is Azure AI Video Indexer enabled by Azure Arc?](/azure/azure-video-indexer/arc/azure-video-indexer-enabled-by-arc-overview)
