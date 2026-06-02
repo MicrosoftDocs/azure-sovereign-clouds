@@ -20,7 +20,7 @@ Foundry Local on Azure Local brings AI inference to your Azure Local environment
 
 This deployment model is designed for organizations that need local control, low-latency inference, and integration with existing Kubernetes operations on Azure Local.
 
-Foundry Local on Azure Local is one of two runtime options for running AI models locally. Foundry Local on Azure Local is designed for organizations that need enterprise-scale AI inference on on-premises infrastructure with Kubernetes-native operations and Azure Arc management. If your scenario is embedding AI directly into a client application that runs on end-user hardware—where data stays on-device, works offline, and no Azure subscription is required—see [Foundry Local](/azure/foundry-local/what-is-foundry-local).
+Foundry Local on Azure Local is one of two options to run AI models locally. It is built for organizations that need enterprise-scale inference on on-premises infrastructure, with Kubernetes-native operations and Azure Arc management. If you want to embed AI in a client app that runs on end-user hardware, see [Foundry Local](/azure/foundry-local/what-is-foundry-local). With that option, data stays on the device, the app can work offline, and you do not need an Azure subscription.
 
 [!INCLUDE [foundry-local-preview](includes/foundry-local-preview.md)]
 
