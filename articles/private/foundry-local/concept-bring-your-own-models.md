@@ -253,7 +253,7 @@ For the full task flow, see [Package and deploy a bring-your-own model on Foundr
 
 ## Validation pipeline
 
-When a BYO model is downloaded, it goes through a four-stage validation pipeline before being pushed to the internal model store:
+When a BYO model is downloaded, it goes through a validation pipeline before being pushed to the internal model store:
 
 1. **Integrity check** - Scans for zero-byte files (indicates failed or truncated download).
 1. **Format validation** - Validates .safetensors file headers and .json file parsing.
@@ -276,7 +276,7 @@ The operator validates BYO registry hostnames to prevent server-side request for
 
 ### vLLM blocked preferences
 
-When you use the vLLM runtime, the operator blocks certain engine parameters through `spec.vllm.preferences` for security reasons:
+When you use the vLLM runtime, the operator blocks certain engine parameters through `spec.vllm.preferences` for security or correctness reasons. Key examples include:
 
 - **trust_remote_code** - Prevents arbitrary Python code execution from model files.
 - **hf_token** - Prevents credential exposure.
@@ -309,7 +309,6 @@ Review the following limitations before you package and deploy a BYO model.
 | **No raw IPs in registry URL** | SSRF protection rejects raw IP addresses and localhost. |
 | **tar.gz packaging assumed** | BYO models should be packaged as tar.gz archives for proper extraction. |
 | **trust_remote_code blocked** | Models requiring custom Python code execution like `modeling_*.py` files aren't supported through vLLM preferences. |
-| **Single GPU only** | You configure multi-GPU and tensor parallel through `vllm.preferences`, not through BYO-specific configuration. |
 | **Tensors only (predictive)** | ONNX predictive models must use tensor inputs and outputs only. Sequences, maps, and optionals aren't supported. |
 | **Single input (predictive)** | ONNX predictive models must have exactly one input tensor. |
 | **Single item per request** | The predictive API accepts exactly one item per inference request. |
