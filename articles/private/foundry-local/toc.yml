@@ -53,6 +53,10 @@ items:
       href: concept-gpu-inference-planner.md
     - name: Run inference
       href: how-to-run-inference.md
+  - name: Troubleshoot
+    items:
+    - name: Troubleshoot deployment
+      href: troubleshoot.md
   - name: Disconnected operations
     items:
     - name: Overview
