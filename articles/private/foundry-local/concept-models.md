@@ -8,14 +8,14 @@ appliesto:
 ms.topic: article
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/12/2026
+ms.date: 06/03/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand the generative small language models available in Foundry Local on Azure Local so that I can choose the right model for my workload.
 ---
 
 # Generative small language models in Foundry Local
 
-Foundry Local on Azure Local includes a curated catalog of generative small language models (SLMs) that you can deploy for on-premises inference. These models are optimized to run on constrained hardware while delivering strong performance on tasks like chat completion, code generation, and reasoning. Inference is performed using [vLLM](https://docs.vllm.ai), an open-source, high-throughput serving engine that efficiently manages model execution, memory, and request batching on your local hardware.
+Foundry Local on Azure Local includes a curated catalog of generative small language models (SLMs) that you can deploy for on-premises inference. These models are optimized to run on constrained hardware while delivering strong performance on tasks like chat completion, code generation, and reasoning. Depending on the model entry you choose, generative inference uses either ONNX Runtime or vLLM.
 
 This article provides guidance on choosing the right model for your workload.
 
@@ -34,6 +34,10 @@ SLMs trade some breadth of general knowledge for efficiency, but advances in tra
 ## Choose a model
 
 The Foundry Local catalog includes generative models from different providers. All models support the chat completion task and use OpenAI-compatible REST API patterns. The **CC** value in the table refers to the NVIDIA GPU compute capability version.
+
+Use [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md) to compare ONNX Runtime and vLLM for hardware requirements and performance characteristics.
+
+The following table highlights representative examples only. For the complete and most current list, see [Foundry Local model catalog](https://aka.ms/FL_Models).
 
 | Model | Publisher | Max context length | Recommended minimal GPU generation | Required GPU memory |
 |---|---|---|---|---|

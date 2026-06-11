@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot Foundry Local on Azure Local in Disconnected Environments"
-description: "Troubleshoot problems with your Foundry Local on Azure Local deployment in a disconnected environment, including expansion pack installation, extension installation, model syncing, authentication and authorization, and GPU deployments."
+description: "Diagnose and resolve common issues in disconnected Foundry Local on Azure Local deployments, including expansion pack installation, extension installation, model syncing, authentication, and GPU deployments."
 ms.service: azure
 ms.subservice: sovereign-private-clouds
 appliesto:
@@ -8,9 +8,9 @@ appliesto:
 ms.topic: how-to
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 05/31/2026
+ms.date: 06/04/2026
 ai-usage: ai-assisted
-customer intent: As a platform engineer, I want to find and fix issues with my Foundry Local deployment in a disconnected environment.
+customer intent: As a platform engineer, I want to find and fix issues with my Foundry Local deployment in a disconnected environment so I can restore local operations.
 ---
 
 # Troubleshoot Foundry Local on Azure Local in disconnected environments
@@ -110,6 +110,7 @@ In disconnected Autonomous environments, ensure `nvidia/k8s-device-plugin:v0.11.
 
 ## Related content
 
-* [Prepare to deploy Foundry Local on Azure Local in disconnected environments](how-to-prepare.md)
-* [Deploy Foundry Local on Azure Local in a disconnected environment](deploy-platform.md)
+* [Troubleshoot Foundry Local on Azure Local](../troubleshoot.md)
 * [Configure authentication and authorization for Foundry Local on Azure Local in disconnected environments](how-to-authenticate.md)
+* [Troubleshoot Azure Kubernetes Service (AKS) issues](/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes)
+* [kubectl reference](https://kubernetes.io/docs/reference/kubectl/generated/)

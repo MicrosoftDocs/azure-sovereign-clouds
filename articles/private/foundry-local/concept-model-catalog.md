@@ -8,7 +8,7 @@ appliesto:
 ms.topic: article
 ms.author: cwatson
 author: cwatson-cat
-ms.date: 04/20/2026
+ms.date: 06/03/2026
 ai-usage: ai-assisted
 customer intent: As a platform engineer or developer, I want to understand how models are sourced and referenced in Foundry Local on Azure Local so that I can deploy catalog and custom models effectively.
 ---
@@ -82,9 +82,34 @@ BYO models let you deploy any model you package as an OCI artifact in a containe
 
 For generative models, package your model in ONNX format. The inference runtime (ONNX Runtime GenAI) loads it directly. For predictive models, package your ONNX model and any preprocessing logic.
 
+### Runtime diversity in the curated catalog
+
+The curated catalog includes hundreds of supported models across multiple publishers, formats, and runtimes. Many model families appear as separate ONNX and vLLM catalog entries, while some models are available only for one runtime depending on framework packaging and hardware profile.
+
+The following table shows a representative sample to illustrate the breadth of the catalog. It isn't an exhaustive list.
+
+| Model | Publisher | Runtime | Primary use case | Notes |
+| --- | --- | --- | --- | --- |
+| Phi-4 | Microsoft | ONNX, vLLM | General reasoning and chat | Strong reasoning with efficient deployment options |
+| Phi-4 Mini Instruct | Microsoft | ONNX, vLLM | Lightweight instruction following | Optimized for smaller footprints |
+| Mistral 7B Instruct v0.2 | Mistral AI | ONNX, vLLM | General-purpose chat | Widely adopted open instruct model |
+| Mixtral-8x7B Instruct | Mistral AI | vLLM | High-quality chat and multi-turn conversation | Mixture-of-experts architecture |
+| DeepSeek R1 Distill Qwen 7B | DeepSeek | ONNX, vLLM | Reasoning-focused workloads | Distilled model optimized for reasoning |
+| DeepSeek R1 Distill Qwen 14B | DeepSeek | ONNX, vLLM | Higher-capacity reasoning | Higher-capacity reasoning model |
+| Qwen2.5 7B Instruct | Alibaba | ONNX, vLLM | Multilingual chat | Strong general and multilingual performance |
+| Qwen2.5 14B Instruct | Alibaba | ONNX, vLLM | High-quality chat | Larger variant for improved response quality |
+| Qwen2.5 Coder 7B Instruct | Alibaba | ONNX, vLLM | Code generation and developer workflows | Optimized for developer workflows |
+| gpt-oss-20b | OpenAI (OSS) | ONNX, vLLM | Large open-weight inference | Open-weight GPT-style model |
+| Nemotron family | NVIDIA | vLLM | High-throughput GPU inference | Optimized for high-performance GPU deployments |
+| Whisper Large v3 Turbo | OpenAI | ONNX, vLLM | Speech-to-text transcription | High-accuracy transcription |
+
+For the complete and most current model list, see [Foundry Local model catalog](https://aka.ms/FL_Models).
+
+Use [Inference runtimes in Foundry Local on Azure Local](concept-inference-runtimes.md) to compare runtime behavior and selection criteria.
+
 ## Three ways to reference a model
 
-When you create a model deployment, you can reference a model using one of three approaches, depending on your model source and deployment needs.
+When you create a model deployment, reference a model by using one of three approaches, depending on your model source and deployment needs.
 
 ### Catalog reference (`model.catalog`)
 
