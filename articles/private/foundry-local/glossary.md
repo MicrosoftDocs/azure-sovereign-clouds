@@ -71,7 +71,7 @@ The underlying on-device AI inference runtime that runs models on local hardware
 
 ### Generative model
 
-An AI model that generates content - typically free-form text - in response to prompts. These models produce novel output rather than selecting from predefined categories. Examples include language models used for chat, question answering, and text generation.
+An AI model that generates content, typically free-form text, in response to prompts. These models produce novel output rather than selecting from predefined categories. Examples include language models used for chat, question answering, and text generation.
 
 ## I
 
