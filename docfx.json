@@ -57,7 +57,15 @@
     "fileMetadata": {
       "ms.service": {
         "**/*.md": "azure"
-      }
+      },
+      "ms.collection": {
+        "articles/private/foundry-local/**/*.md": "ce-skilling-ai-copilot",
+        "articles/private/foundry-local/**/*.yml": "ce-skilling-ai-copilot"
+      },
+      "ms.update-cycle": {
+        "articles/private/foundry-local/**/*.md": "180-days",
+        "articles/private/foundry-local/**/*.yml": "180-days"
+       }
     },
     "template": []
   }
