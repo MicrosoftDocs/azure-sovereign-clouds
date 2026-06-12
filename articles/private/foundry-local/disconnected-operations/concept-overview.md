@@ -19,6 +19,8 @@ You can deploy Foundry Local on Azure Local in disconnected environments by usin
 
 This article explains how disconnected deployments of Foundry Local on Azure Local differ from connected deployments, so you can plan secure, offline model operations.
 
+[!INCLUDE [foundry-local-preview](../includes/foundry-local-preview.md)]
+
 ## What changes in disconnected deployments
 
 In disconnected environments, extension availability, certificate management, model artifact sourcing, telemetry behavior, identity, and access flows differ from connected deployments.
