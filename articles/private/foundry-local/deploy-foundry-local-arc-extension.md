@@ -149,7 +149,7 @@ separate from `spec.endpoint.exposure`, which controls individual model data-pla
 By default, `api.exposure` is set to `internal`, so the operator creates an HTTPRoute through the cluster-internal
 Gateway and the API is reachable inside the cluster at the `/inference-api` path.
 Set `api.exposure: external` when the Inference API must be reachable through the external LoadBalancer Gateway; this
-attaches the API route to the external Gateway and exposes it at `https://<external-gateway-address>/inference-api`.
+setting attaches the API route to the external Gateway and exposes it at `https://<external-gateway-address>/inference-api`.
 Set `api.exposure: none` to skip Gateway routing and keep the API reachable only through its ClusterIP service, for
 example by using `kubectl port-forward`.
 
