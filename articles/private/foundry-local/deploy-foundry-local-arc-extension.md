@@ -145,7 +145,7 @@ You can configure the following optional parameters during inference operator in
 
 **Configure Inference API exposure**
 The `api.exposure` Helm value controls how the Foundry Local Inference API control-plane endpoint is exposed. This value
-separate from `spec.endpoint.exposure`, which controls individual model data-plane endpoints.
+is separate from `spec.endpoint.exposure`, which controls individual model data-plane endpoints.
 By default, `api.exposure` is set to `internal`, so the operator creates an HTTPRoute through the cluster-internal
 Gateway and the API is reachable inside the cluster at the `/inference-api` path.
 Set `api.exposure: external` when the Inference API must be reachable through the external LoadBalancer Gateway; this
