@@ -144,7 +144,7 @@ You can configure the following optional parameters during inference operator in
 | `watch.namespaces` | Array of strings. Configure this parameter if you want the operator to manage resources across multiple namespaces. By default, the operator manages the `foundry-local-operator` namespace where models and inference workloads are deployed. Pass the installation command as: `--config watch.namespaces[0]="NS1" --config watch.namespaces[1]="NS2"`. For more information, see [Namespace configuration for model deployments](concept-inference-operator.md#namespace-configuration-for-model-deployments). |
 
 **Configure Inference API exposure**
-The `api.exposure` Helm value controls how the Foundry Local Inference API control-plane endpoint is exposed. This is
+The `api.exposure` Helm value controls how the Foundry Local Inference API control-plane endpoint is exposed. This value
 separate from `spec.endpoint.exposure`, which controls individual model data-plane endpoints.
 By default, `api.exposure` is set to `internal`, so the operator creates an HTTPRoute through the cluster-internal
 Gateway and the API is reachable inside the cluster at the `/inference-api` path.
